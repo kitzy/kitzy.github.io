@@ -110,7 +110,7 @@ a
   color: #f2f2f2;
   text-align: center;
   z-index: 3;
-  font-size: 5em;
+  /* font-size: 5em; */
   position: absolute;
   text-transform: uppercase;
   margin: 0 auto;
@@ -135,35 +135,15 @@ a
   animation-delay: 2s;   
 }
 
-@media (max-width:500px) {
+@media (min-width:500px) {
 	#header-headlines {
-	  font-family: 'Roboto Slab', serif;
-	  color: #f2f2f2;
-	  text-align: center;
-	  z-index: 3;
-	  font-size: 3em;
-	  position: absolute;
-	  text-transform: uppercase;
-	  margin: 0 auto;
-	  width: 100%;
-	  font-weight: 700;
-	  margin-top: -120.5px;
-	  top: 50%;
-	  -moz-animation-iteration-count: 1 !important;
-	  -webkit-animation-iteration-count: 1 !important;
-	  -ms-animation-iteration-count: 1 !important;
-	  -o-animation-iteration-count: 1 !important;
-	  animation-iteration-count: 1 !important;
-	  -moz-animation-duration: 1s;
-	  -webkit-animation-duration: 1s;
-	  -ms-animation-duration: 1s;
-	  -o-animation-duration: 1s;
-	  animation-duration: 1s;
-	  -moz-animation-delay: 2s;
-	  -webkit-animation-delay: 2s;
-	  -ms-animation-delay: 2s;
-	  -o-animation-delay: 2s;
-	  animation-delay: 2s;   
+	  font-size: 5em;  
+	}
+}
+
+@media (max-width:499px) {
+	#header-headlines {
+	  font-size: 3em;  
 	}
 }
 
