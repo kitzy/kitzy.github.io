@@ -8,12 +8,10 @@ const CONFIG = {
     api: {
         featuredProjects: [
             // Just add repository names here - everything else auto-populates!
-            'fleet',
-            'docker-fleetdm-stack',
             'fleet-gitops',
+            'docker-fleetdm-stack',
             'fleet-autopkg-recipes',
-            'dns',
-            'autopkg-runner'
+            '/fleetdm/fleet'
         ]
     }
 };
@@ -626,7 +624,12 @@ async function loadProjectsContent() {
         const projects = await Promise.all(
             CONFIG.api.featuredProjects.map(async (repoName) => {
                 try {
-                    const response = await fetch(`${GITHUB_API}/repos/${CONFIG.username}/${repoName}`);
+                    // Handle both personal repos (just repo name) and org repos (org/repo)
+                    const repoPath = repoName.startsWith('/') ? 
+                        repoName.substring(1) : // Remove leading slash for org repos
+                        `${CONFIG.username}/${repoName}`; // Add username for personal repos
+                    
+                    const response = await fetch(`${GITHUB_API}/repos/${repoPath}`);
                     if (response.ok) {
                         return await response.json();
                     }
