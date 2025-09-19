@@ -51,26 +51,59 @@ function handleInitialRoute() {
     const urlParams = new URLSearchParams(window.location.search);
     const routeParam = urlParams.get('route');
     
-    if (routeParam && ['about', 'readme', 'projects', 'blog'].includes(routeParam)) {
-        console.log('Using route parameter:', routeParam);
-        currentTab = routeParam;
-        updateUIForTab(routeParam);
-        
-        // Clean up the URL by replacing with clean path
-        window.history.replaceState(null, null, `/${routeParam}${window.location.hash}`);
-        
-        // Handle any hash anchor
-        const hash = window.location.hash.substring(1);
-        if (hash) {
-            window.pendingScrollTarget = hash;
+    if (routeParam) {
+        // Handle blog post routes (blog/post-slug)
+        if (routeParam.startsWith('blog/')) {
+            console.log('Blog post route parameter:', routeParam);
+            currentTab = 'blog';
+            updateUIForTab('blog');
+            
+            // Extract post slug and store for later loading
+            const postSlug = routeParam.substring(5); // Remove 'blog/'
+            if (postSlug) {
+                window.pendingBlogPost = postSlug;
+            }
+            
+            // Clean up the URL by replacing with clean path
+            window.history.replaceState(null, null, `/${routeParam}${window.location.hash}`);
+            return;
         }
-        return;
+        // Handle regular routes
+        else if (['about', 'readme', 'projects', 'blog'].includes(routeParam)) {
+            console.log('Using route parameter:', routeParam);
+            currentTab = routeParam;
+            updateUIForTab(routeParam);
+            
+            // Clean up the URL by replacing with clean path
+            window.history.replaceState(null, null, `/${routeParam}${window.location.hash}`);
+            
+            // Handle any hash anchor
+            const hash = window.location.hash.substring(1);
+            if (hash) {
+                window.pendingScrollTarget = hash;
+            }
+            return;
+        }
     }
     
     // Check for clean URLs (/about, /readme, etc.)
     const path = window.location.pathname;
     const cleanRoute = path.substring(1); // Remove leading slash
     const hash = window.location.hash.substring(1); // Get any hash/anchor
+    
+    // Handle blog post URLs like /blog/post-slug
+    if (cleanRoute.startsWith('blog/')) {
+        console.log('Blog post URL detected:', cleanRoute);
+        currentTab = 'blog';
+        updateUIForTab('blog');
+        
+        // Extract post slug and store for later loading
+        const postSlug = cleanRoute.substring(5); // Remove 'blog/'
+        if (postSlug) {
+            window.pendingBlogPost = postSlug;
+        }
+        return;
+    }
     
     if (cleanRoute && ['about', 'readme', 'projects', 'blog'].includes(cleanRoute)) {
         console.log('Using clean route:', cleanRoute);
@@ -843,6 +876,13 @@ async function loadBlogContent() {
         
         if (files && files.length > 0) {
             await displayBlogPosts(files);
+            
+            // Check if there's a pending blog post to load
+            if (window.pendingBlogPost) {
+                const filename = `${window.pendingBlogPost}.md`;
+                await loadBlogPost(filename);
+                window.pendingBlogPost = null; // Clear the pending post
+            }
         } else {
             displayNoBlogPosts();
         }
@@ -862,14 +902,24 @@ async function displayBlogPosts(files) {
             const response = await fetch(file.download_url);
             const content = await response.text();
             
+            console.log(`Processing blog post: ${file.name}`);
+            console.log(`Content preview:`, content.substring(0, 200));
+            
             // Extract title from first heading (H1) or filename as fallback
             const lines = content.split('\n');
             let title = file.name.replace('.md', '').replace(/[-_]/g, ' '); // Default fallback
             
+            console.log(`Lines preview:`, lines.slice(0, 5));
+            
             // Look for the first H1 heading (# Title)
             const firstHeadingLine = lines.find(line => line.trim().startsWith('# '));
+            console.log(`First heading line found:`, firstHeadingLine);
+            
             if (firstHeadingLine) {
                 title = firstHeadingLine.replace(/^#+\s*/, '').trim();
+                console.log(`Extracted title: "${title}"`);
+            } else {
+                console.log(`No H1 found, using filename title: "${title}"`);
             }
             
             // Extract excerpt (first paragraph after title/headings)
@@ -880,9 +930,12 @@ async function displayBlogPosts(files) {
             // Get file date (using current date for now - could be enhanced to use git commit date)
             const date = new Date().toLocaleDateString();
             
+            // Create URL slug from filename
+            const slug = file.name.replace('.md', '');
+            
             html += `
                 <div class="blog-post-item">
-                    <a href="#" class="blog-post-title" data-file="${file.name}">${title}</a>
+                    <a href="/blog/${slug}" class="blog-post-title" data-file="${file.name}" data-slug="${slug}">${title}</a>
                     <div class="blog-post-meta">Published on ${date}</div>
                     <div class="blog-post-excerpt">${excerpt}</div>
                 </div>
@@ -900,6 +953,12 @@ async function displayBlogPosts(files) {
         link.addEventListener('click', async (e) => {
             e.preventDefault();
             const filename = e.target.dataset.file;
+            const slug = e.target.dataset.slug;
+            
+            // Update URL
+            window.history.pushState(null, null, `/blog/${slug}`);
+            
+            // Load the blog post
             await loadBlogPost(filename);
         });
     });
