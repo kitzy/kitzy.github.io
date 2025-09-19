@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     setupEventListeners();
     await loadUserData();
     await loadGitHubStats();
+    await loadSidebarData(); // Load sidebar data independent of tab
     await loadTabContent();
 });
 
@@ -255,6 +256,51 @@ function displayStatsError() {
     document.getElementById('total-stars').textContent = '-';
 }
 
+// Load sidebar data (languages and organizations)
+async function loadSidebarData() {
+    try {
+        console.log('Loading sidebar data...');
+        
+        // Fetch organizations and repositories
+        const [orgsResponse, reposResponse] = await Promise.all([
+            fetch(`${GITHUB_API}/users/${CONFIG.username}/orgs`),
+            fetch(`${GITHUB_API}/users/${CONFIG.username}/repos?per_page=100&sort=updated`)
+        ]);
+        
+        const orgs = orgsResponse.ok ? await orgsResponse.json() : [];
+        const repos = reposResponse.ok ? await reposResponse.json() : [];
+        
+        console.log('Sidebar data loaded:', { orgs: orgs.length, repos: repos.length });
+        
+        // Calculate top languages
+        const languages = repos
+            .filter(repo => repo.language)
+            .reduce((acc, repo) => {
+                acc[repo.language] = (acc[repo.language] || 0) + 1;
+                return acc;
+            }, {});
+        
+        const topLanguages = Object.entries(languages)
+            .sort(([,a], [,b]) => b - a)
+            .slice(0, 5)
+            .map(([lang]) => lang);
+        
+        // Populate sidebar sections
+        populateSidebarLanguages(topLanguages);
+        populateSidebarOrganizations(orgs);
+        
+        console.log('Sidebar data populated successfully');
+        
+    } catch (error) {
+        console.error('Error loading sidebar data:', error);
+        // Show empty sections if loading fails
+        const languagesContainer = document.getElementById('sidebar-languages');
+        const orgsContainer = document.getElementById('sidebar-organizations');
+        if (languagesContainer) languagesContainer.innerHTML = '';
+        if (orgsContainer) orgsContainer.innerHTML = '';
+    }
+}
+
 // Load GitHub organizations and stats for the about section
 async function loadGitHubOrganizations(container) {
     try {
@@ -292,10 +338,6 @@ async function loadGitHubOrganizations(container) {
         const oneWeekAgo = new Date();
         oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
         const recentEvents = events.filter(event => new Date(event.created_at) > oneWeekAgo);
-        
-        // Populate sidebar sections
-        populateSidebarLanguages(topLanguages);
-        populateSidebarOrganizations(orgs);
         
         // Create simplified stats section for About page
         const statsHTML = `
