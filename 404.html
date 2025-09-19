@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitzy - Redirecting...</title>
+    <script>
+        // GitHub Pages URL routing for clean URLs
+        // This script captures the current path and redirects to index.html with the correct route
+        
+        const path = window.location.pathname.substring(1); // Remove leading slash
+        const validRoutes = ['about', 'readme', 'projects', 'blog'];
+        
+        if (validRoutes.includes(path)) {
+            // Redirect to index.html but keep the path for our router to handle
+            const newUrl = `${window.location.origin}/?route=${path}${window.location.hash}`;
+            window.location.replace(newUrl);
+        } else {
+            // Invalid route, redirect to about page
+            window.location.replace(`${window.location.origin}/?route=about`);
+        }
+    </script>
+</head>
+<body>
+    <div style="text-align: center; padding: 50px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+        <h1>Redirecting...</h1>
+        <p>Taking you to the right page...</p>
+    </div>
+</body>
+</html>
