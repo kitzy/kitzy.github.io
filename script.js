@@ -541,6 +541,11 @@ function switchTab(tabName) {
 
     currentTab = tabName;
     
+    // Reset meta tags to default site values when leaving a blog post
+    if (tabName !== 'blog') {
+        updateSocialPreview('Kitzy', 'Documenting my journey in Computer Science'); // Reset to site defaults
+    }
+    
     // Update URL with clean path (no hash)
     window.history.pushState(null, null, `/${tabName}`);
     
@@ -992,8 +997,49 @@ async function displayBlogPosts(files) {
     });
 }
 
+// Update social preview meta tags dynamically
+function updateSocialPreview(title, description = "Always automating, always iterating, always helping others.", image = "https://github.com/kitzy.png") {
+    // Update document title
+    document.title = title;
+    
+    // Update or create meta tags
+    const metaTags = [
+        { property: 'og:title', content: title },
+        { property: 'og:description', content: description },
+        { property: 'og:image', content: image },
+        { name: 'twitter:title', content: title },
+        { name: 'twitter:description', content: description },
+        { name: 'twitter:image', content: image },
+        { name: 'description', content: description }
+    ];
+    
+    metaTags.forEach(tag => {
+        let selector = tag.property ? `meta[property="${tag.property}"]` : `meta[name="${tag.name}"]`;
+        let element = document.querySelector(selector);
+        
+        if (element) {
+            element.setAttribute('content', tag.content);
+        } else {
+            // Create the meta tag if it doesn't exist
+            element = document.createElement('meta');
+            if (tag.property) {
+                element.setAttribute('property', tag.property);
+            } else {
+                element.setAttribute('name', tag.name);
+            }
+            element.setAttribute('content', tag.content);
+            document.head.appendChild(element);
+        }
+    });
+    
+    console.log(`Updated social preview: ${title}`);
+}
+
 // Back to blog function - updates URL and loads blog list
 function backToBlog() {
+    // Reset meta tags to default site values
+    updateSocialPreview('Kitzy');
+    
     // Update URL back to /blog
     window.history.pushState(null, null, '/blog');
     
@@ -1047,6 +1093,19 @@ async function loadBlogPost(filename) {
                 content = atob(data.content);
             }
         }
+        
+        // Extract blog post title for social preview
+        const lines = content.split('\n');
+        let blogTitle = filename.replace('.md', '').replace(/[-_]/g, ' '); // Default fallback
+        
+        // Look for the first H1 heading (# Title)
+        const firstHeadingLine = lines.find(line => line.trim().startsWith('# '));
+        if (firstHeadingLine) {
+            blogTitle = firstHeadingLine.replace(/^#+\s*/, '').trim();
+        }
+        
+        // Update social preview meta tags for this blog post
+        updateSocialPreview(`Kitzy - ${blogTitle}`);
         
         // Check if marked is available and convert markdown to HTML
         let html;
