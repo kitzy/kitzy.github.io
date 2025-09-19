@@ -40,35 +40,79 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 // Handle URL routing on page load
 function handleInitialRoute() {
-    const hash = window.location.hash.substring(1); // Remove the #
-    const [tabPart, sectionPart] = hash.split('#');
+    // Check for route parameter from 404 redirect first
+    const urlParams = new URLSearchParams(window.location.search);
+    const routeParam = urlParams.get('route');
+    
+    if (routeParam && ['about', 'readme', 'projects', 'blog'].includes(routeParam)) {
+        currentTab = routeParam;
+        updateUIForTab(routeParam);
+        
+        // Clean up the URL by replacing with clean path
+        window.history.replaceState(null, null, `/${routeParam}${window.location.hash}`);
+        
+        // Handle any hash anchor
+        const hash = window.location.hash.substring(1);
+        if (hash) {
+            window.pendingScrollTarget = hash;
+        }
+        return;
+    }
+    
+    // Check for clean URLs (/about, /readme, etc.)
+    const path = window.location.pathname;
+    const cleanRoute = path.substring(1); // Remove leading slash
+    const hash = window.location.hash.substring(1); // Get any hash/anchor
+    
+    if (cleanRoute && ['about', 'readme', 'projects', 'blog'].includes(cleanRoute)) {
+        currentTab = cleanRoute;
+        
+        // Update the UI to match the URL
+        updateUIForTab(cleanRoute);
+        
+        // Store section to scroll to after content loads
+        if (hash) {
+            window.pendingScrollTarget = hash;
+        }
+        return;
+    }
+    
+    // Fallback to hash-based routing (for backwards compatibility)
+    const hashPath = window.location.hash.substring(1); // Remove the #
+    const [tabPart, sectionPart] = hashPath.split('#');
     
     if (tabPart && ['about', 'readme', 'projects', 'blog'].includes(tabPart)) {
         currentTab = tabPart;
         
-        // Update the UI to match the URL
-        // Update active tab button
-        document.querySelectorAll('.tab-button').forEach(button => {
-            button.classList.remove('active');
-        });
-        const targetButton = document.querySelector(`[data-tab="${tabPart}"]`);
-        if (targetButton) {
-            targetButton.classList.add('active');
-        }
-
-        // Update active tab content
-        document.querySelectorAll('.tab-pane').forEach(pane => {
-            pane.classList.remove('active');
-        });
-        const targetPane = document.getElementById(`${tabPart}-content`);
-        if (targetPane) {
-            targetPane.classList.add('active');
+        // Update the UI to match the URL and migrate to clean URL
+        updateUIForTab(tabPart);
+        window.history.replaceState(null, null, `/${tabPart}`);
+        
+        // Store section to scroll to after content loads
+        if (sectionPart) {
+            window.pendingScrollTarget = sectionPart;
         }
     }
-    
-    // Store section to scroll to after content loads
-    if (sectionPart) {
-        window.pendingScrollTarget = sectionPart;
+}
+
+// Update UI elements for the given tab
+function updateUIForTab(tabName) {
+    // Update active tab button
+    document.querySelectorAll('.tab-button').forEach(button => {
+        button.classList.remove('active');
+    });
+    const targetButton = document.querySelector(`[data-tab="${tabName}"]`);
+    if (targetButton) {
+        targetButton.classList.add('active');
+    }
+
+    // Update active tab content
+    document.querySelectorAll('.tab-pane').forEach(pane => {
+        pane.classList.remove('active');
+    });
+    const targetPane = document.getElementById(`${tabName}-content`);
+    if (targetPane) {
+        targetPane.classList.add('active');
     }
 }
 
@@ -90,6 +134,12 @@ window.addEventListener('hashchange', () => {
             }
         }, 100);
     }
+});
+
+// Listen for browser back/forward navigation
+window.addEventListener('popstate', () => {
+    handleInitialRoute();
+    loadTabContent();
 });
 
 // Wait for marked library to be available
@@ -437,11 +487,8 @@ function switchTab(tabName) {
 
     currentTab = tabName;
     
-    // Update URL hash
-    const currentHash = window.location.hash.substring(1);
-    const [, sectionPart] = currentHash.split('#');
-    const newHash = sectionPart ? `${tabName}#${sectionPart}` : tabName;
-    window.history.pushState(null, null, `#${newHash}`);
+    // Update URL with clean path (no hash)
+    window.history.pushState(null, null, `/${tabName}`);
     
     loadTabContent();
 }
@@ -726,18 +773,34 @@ async function loadBlogContent() {
     const container = document.getElementById('blog-content');
     
     try {
-        // Try to load blog posts from this repository's blog folder
-        const response = await fetch(`${GITHUB_API}/repos/${CONFIG.username}/${CONFIG.username}.github.io/contents/blog`);
-        
-        if (response.ok) {
-            const files = await response.json();
-            const markdownFiles = files.filter(file => file.name.endsWith('.md'));
-            
-            if (markdownFiles.length > 0) {
-                await displayBlogPosts(markdownFiles);
+        // Try local blog folder first (for local development)
+        let files;
+        try {
+            const localResponse = await fetch('blog/');
+            if (localResponse.ok) {
+                // For local development, we need to manually list the files
+                // Since we know there's at least one file, let's try to load it directly
+                const knownPosts = ['first-week-at-fleet.md']; // We can expand this list
+                files = knownPosts.map(name => ({ name, download_url: `blog/${name}` }));
+                console.log('Using local blog files');
             } else {
-                displayNoBlogPosts();
+                throw new Error('Local blog folder not accessible');
             }
+        } catch (localError) {
+            // Fallback to GitHub API
+            console.log('Trying GitHub API for blog posts');
+            const response = await fetch(`${GITHUB_API}/repos/${CONFIG.username}/kitzy.github.io/contents/blog`);
+            
+            if (response.ok) {
+                const apiFiles = await response.json();
+                files = apiFiles.filter(file => file.name.endsWith('.md'));
+            } else {
+                throw new Error('GitHub API failed');
+            }
+        }
+        
+        if (files && files.length > 0) {
+            await displayBlogPosts(files);
         } else {
             displayNoBlogPosts();
         }
@@ -799,11 +862,26 @@ async function loadBlogPost(filename) {
     const container = document.getElementById('blog-content');
     
     try {
-        const response = await fetch(`${GITHUB_API}/repos/${CONFIG.username}/${CONFIG.username}.github.io/contents/blog/${filename}`);
-        if (!response.ok) throw new Error(`Failed to fetch ${filename}`);
+        let content;
         
-        const data = await response.json();
-        const content = atob(data.content);
+        // Try local file first (for local development)
+        try {
+            const localResponse = await fetch(`blog/${filename}`);
+            if (localResponse.ok) {
+                content = await localResponse.text();
+                console.log('Successfully loaded blog post from local file');
+            } else {
+                throw new Error('Local blog post not found');
+            }
+        } catch (localError) {
+            console.log('Trying GitHub API for blog post');
+            // Fallback to GitHub API
+            const response = await fetch(`${GITHUB_API}/repos/${CONFIG.username}/kitzy.github.io/contents/blog/${filename}`);
+            if (!response.ok) throw new Error(`Failed to fetch ${filename}`);
+            
+            const data = await response.json();
+            content = atob(data.content);
+        }
         
         // Check if marked is available and convert markdown to HTML
         let html;
@@ -852,7 +930,7 @@ function addHeadingAnchors(container) {
         
         // Create the anchor link
         const anchor = document.createElement('a');
-        anchor.href = `#${currentTab}#${slug}`;
+        anchor.href = `/${currentTab}#${slug}`;
         anchor.className = 'heading-anchor';
         anchor.innerHTML = '🔗';
         anchor.title = 'Copy link to this section';
@@ -862,12 +940,11 @@ function addHeadingAnchors(container) {
         anchor.addEventListener('click', async (e) => {
             e.preventDefault();
             
-            // Update URL
-            const newHash = `${currentTab}#${slug}`;
-            window.history.pushState(null, null, `#${newHash}`);
+            // Update URL with clean path and hash
+            window.history.pushState(null, null, `/${currentTab}#${slug}`);
             
             // Copy full URL to clipboard
-            const fullUrl = `${window.location.origin}${window.location.pathname}#${newHash}`;
+            const fullUrl = `${window.location.origin}/${currentTab}#${slug}`;
             try {
                 await navigator.clipboard.writeText(fullUrl);
                 
