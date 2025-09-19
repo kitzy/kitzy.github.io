@@ -260,6 +260,11 @@ body {
 }
 
 /* Markdown content styling */
+.markdown-content {
+    max-width: none;
+    line-height: 1.6;
+}
+
 .markdown-content h1,
 .markdown-content h2,
 .markdown-content h3,
@@ -271,6 +276,15 @@ body {
     margin-bottom: 16px;
     font-weight: 600;
     line-height: 1.25;
+}
+
+.markdown-content h1:first-child,
+.markdown-content h2:first-child,
+.markdown-content h3:first-child,
+.markdown-content h4:first-child,
+.markdown-content h5:first-child,
+.markdown-content h6:first-child {
+    margin-top: 0;
 }
 
 .markdown-content h1 { font-size: 32px; border-bottom: 1px solid #30363d; padding-bottom: 8px; }
@@ -379,6 +393,162 @@ body {
 
 .blog-post-excerpt {
     color: #e6edf3;
+    font-size: 14px;
+}
+
+/* Projects specific styles */
+.projects-header {
+    margin-bottom: 24px;
+}
+
+.projects-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #f0f6fc;
+    margin-bottom: 8px;
+}
+
+.projects-subtitle {
+    font-size: 16px;
+    color: #7d8590;
+    margin-bottom: 0;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.project-card {
+    background: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding: 16px;
+    transition: all 0.2s ease;
+    position: relative;
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    border-color: #58a6ff;
+    background: #161b22;
+}
+
+.project-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.project-icon {
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+    opacity: 0.8;
+}
+
+.project-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #58a6ff;
+    text-decoration: none;
+    flex: 1;
+}
+
+.project-name:hover {
+    text-decoration: underline;
+}
+
+.project-visibility {
+    font-size: 12px;
+    color: #7d8590;
+    background: #21262d;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    padding: 2px 8px;
+    margin-left: auto;
+}
+
+.project-description {
+    color: #e6edf3;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+    flex: 1; /* Make description take available space */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.project-stats {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 12px;
+    color: #7d8590;
+    margin-top: auto; /* Push stats to bottom */
+}
+
+.project-stat {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.project-stat-icon {
+    width: 12px;
+    height: 12px;
+}
+
+.project-language {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: auto;
+}
+
+.language-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+/* Language colors (GitHub standard) */
+.language-color.javascript { background: #f1e05a; }
+.language-color.python { background: #3572A5; }
+.language-color.typescript { background: #2b7489; }
+.language-color.go { background: #00ADD8; }
+.language-color.rust { background: #dea584; }
+.language-color.java { background: #b07219; }
+.language-color.html { background: #e34c26; }
+.language-color.css { background: #563d7c; }
+.language-color.shell { background: #89e051; }
+.language-color.dockerfile { background: #384d54; }
+.language-color.yaml { background: #cb171e; }
+.language-color.json { background: #292929; }
+.language-color.markdown { background: #083fa1; }
+.language-color.hcl { background: #844FBA; }
+
+.projects-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    color: #7d8590;
+    font-size: 14px;
+}
+
+.projects-error {
+    text-align: center;
+    padding: 48px 24px;
+    color: #f85149;
     font-size: 14px;
 }
 
@@ -496,6 +666,25 @@ body {
     .legend-color {
         width: 8px;
         height: 8px;
+    }
+
+    /* Projects mobile styles */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .project-card {
+        padding: 12px;
+    }
+
+    .project-stats {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .project-language {
+        margin-left: 0;
     }
 }
 
