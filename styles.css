@@ -58,9 +58,9 @@ body {
     color: #f0f6fc;
 }
 
-.username {
-    font-size: 20px;
-    font-weight: 300;
+.pronouns {
+    font-size: 16px;
+    font-weight: 400;
     color: #7d8590;
     margin-bottom: 16px;
 }
@@ -69,33 +69,6 @@ body {
     font-size: 16px;
     margin-bottom: 16px;
     color: #e6edf3;
-}
-
-.stats {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 16px;
-    font-size: 14px;
-}
-
-.stat {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-}
-
-.stat-number {
-    font-weight: 600;
-    color: #f0f6fc;
-}
-
-.stat-label {
-    color: #7d8590;
-}
-
-.stat-separator {
-    color: #7d8590;
 }
 
 .profile-details {
@@ -116,6 +89,17 @@ body {
     text-align: center;
 }
 
+.detail-icon.social-icon {
+    width: 16px;
+    height: 16px;
+    fill: #7d8590;
+    transition: fill 0.2s ease;
+}
+
+.detail-item:hover .detail-icon.social-icon {
+    fill: #58a6ff;
+}
+
 .detail-text {
     color: #e6edf3;
 }
@@ -127,6 +111,12 @@ body {
 
 .detail-link:hover {
     text-decoration: underline;
+}
+
+.social-links {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid #30363d;
 }
 
 /* Contributions section */
@@ -146,18 +136,16 @@ body {
     margin-bottom: 8px;
     min-height: 104px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     font-size: 12px;
     color: #7d8590;
+    overflow-x: auto;
 }
 
 .contributions-calendar {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 10px);
-    gap: 2px;
-    max-width: 100%;
-    overflow-x: auto;
+    /* Grid properties set dynamically in JavaScript */
+    min-width: fit-content;
 }
 
 .contribution-day {
@@ -165,6 +153,7 @@ body {
     height: 10px;
     border-radius: 2px;
     cursor: pointer;
+    border: 1px solid #1b1f23;
 }
 
 .contribution-day.level-0 { background-color: #161b22; }

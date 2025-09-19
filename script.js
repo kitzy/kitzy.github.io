@@ -113,19 +113,15 @@ function displayUserData() {
     document.getElementById('avatar').src = userData.avatar_url;
     document.getElementById('avatar').alt = `${userData.name || userData.login}'s avatar`;
     document.getElementById('name').textContent = userData.name || userData.login;
-    document.getElementById('username').textContent = `@${userData.login}`;
-    document.getElementById('bio').textContent = userData.bio || '';
+    
+    // Use fallback bio if none provided
+    const fallbackBio = 'Customer Support Engineer at Fleet | Infrastructure Nerd | Dog & Motorcycle Lover';
+    document.getElementById('bio').textContent = userData.bio || fallbackBio;
 
-    // Stats
-    document.getElementById('followers').textContent = userData.followers || 0;
-    document.getElementById('following').textContent = userData.following || 0;
-
-    // Profile details
+    // Profile details (only show if available)
     updateDetailItem('company', userData.company);
     updateDetailItem('location', userData.location);
     updateDetailItem('email', userData.email);
-    updateDetailItem('website', userData.blog);
-    updateDetailItem('twitter', userData.twitter_username);
 }
 
 // Update a detail item in the profile
@@ -137,26 +133,19 @@ function updateDetailItem(id, value) {
     }
 
     element.style.display = 'flex';
-    
-    if (id === 'website' || id === 'twitter') {
-        const link = element.querySelector('.detail-link');
-        if (id === 'website') {
-            link.href = value.startsWith('http') ? value : `https://${value}`;
-            link.textContent = value;
-        } else if (id === 'twitter') {
-            link.href = `https://twitter.com/${value}`;
-            link.textContent = `@${value}`;
-        }
-    } else {
-        const text = element.querySelector('.detail-text');
-        text.textContent = value;
-    }
+    const text = element.querySelector('.detail-text');
+    text.textContent = value;
 }
 
 // Display user data loading error
 function displayUserError() {
-    document.getElementById('name').textContent = 'Error loading profile';
-    document.getElementById('bio').textContent = 'Unable to fetch user data from GitHub';
+    document.getElementById('name').textContent = 'Kitzy';
+    document.getElementById('bio').textContent = 'Customer Support Engineer at Fleet | Infrastructure Nerd | Dog & Motorcycle Lover';
+    
+    // Show basic info even if API fails
+    updateDetailItem('company', 'Fleet');
+    updateDetailItem('location', null); // Hide if no data
+    updateDetailItem('email', null); // Hide if no data
 }
 
 // Load GitHub contributions data
@@ -197,15 +186,33 @@ function createContributionsGrid(startDate, endDate, events = []) {
         contributionMap.set(eventDate, (contributionMap.get(eventDate) || 0) + 1);
     });
 
-    // Generate grid for the date range
-    const currentDate = new Date(startDate);
-    const days = [];
+    // Calculate the number of weeks to display
+    const msPerDay = 24 * 60 * 60 * 1000;
+    const daysDiff = Math.ceil((endDate - startDate) / msPerDay);
+    const weeks = Math.ceil(daysDiff / 7);
+    
+    // Set grid to show weeks properly
+    calendar.style.display = 'grid';
+    calendar.style.gridTemplateColumns = `repeat(${Math.min(weeks, 13)}, 12px)`;
+    calendar.style.gridTemplateRows = 'repeat(7, 12px)';
+    calendar.style.gap = '2px';
+    calendar.style.gridAutoFlow = 'column';
 
-    while (currentDate <= endDate) {
+    // Generate grid for the date range, organized by weeks
+    const currentDate = new Date(startDate);
+    
+    // Start from the beginning of the week
+    const startOfWeek = new Date(currentDate);
+    startOfWeek.setDate(currentDate.getDate() - currentDate.getDay());
+    
+    const today = new Date();
+    const tempDate = new Date(startOfWeek);
+
+    while (tempDate <= endDate) {
         const day = document.createElement('div');
         day.className = 'contribution-day';
         
-        const dateString = currentDate.toDateString();
+        const dateString = tempDate.toDateString();
         const count = contributionMap.get(dateString) || 0;
         
         // Map count to contribution level (0-4)
@@ -215,14 +222,20 @@ function createContributionsGrid(startDate, endDate, events = []) {
         if (count > 5) level = 3;
         if (count > 10) level = 4;
         
+        // Don't show future dates
+        if (tempDate > today) {
+            level = 0;
+            day.style.opacity = '0.3';
+        }
+        
         day.classList.add(`level-${level}`);
         
         // Add tooltip with date and count
-        const dateStr = currentDate.toLocaleDateString();
+        const dateStr = tempDate.toLocaleDateString();
         day.title = `${dateStr}: ${count} contribution${count !== 1 ? 's' : ''}`;
         
         calendar.appendChild(day);
-        currentDate.setDate(currentDate.getDate() + 1);
+        tempDate.setDate(tempDate.getDate() + 1);
     }
 
     container.innerHTML = '';
@@ -277,13 +290,23 @@ async function loadMarkdownContent(tabId, repo, filename) {
     container.innerHTML = '<div class="loading">Loading content...</div>';
     
     try {
-        const response = await fetch(`${GITHUB_API}/repos/${CONFIG.username}/${repo}/contents/${filename}`);
-        if (!response.ok) {
-            throw new Error(`Failed to fetch ${filename}: ${response.status} ${response.statusText}`);
-        }
+        // Try to load local file first (for local development)
+        let response = await fetch(filename);
+        let content;
         
-        const data = await response.json();
-        const content = atob(data.content); // Decode base64 content
+        if (response.ok) {
+            // Local file exists, use it directly
+            content = await response.text();
+        } else {
+            // Fallback to GitHub API
+            response = await fetch(`${GITHUB_API}/repos/${CONFIG.username}/${repo}/contents/${filename}`);
+            if (!response.ok) {
+                throw new Error(`Failed to fetch ${filename}: ${response.status} ${response.statusText}`);
+            }
+            
+            const data = await response.json();
+            content = atob(data.content); // Decode base64 content
+        }
         
         // Check if marked is available and convert markdown to HTML
         let html;
