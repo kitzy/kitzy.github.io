@@ -24,15 +24,3 @@
 ![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat&logo=amazon-aws&logoColor=white)
 <br>
 💻 Infrastructure automation, endpoint management, and all things IT.
-
----
-
-### 📫 Connect with Me
-
-- [LinkedIn](https://linkedin.com/in/kitzy)
-- [Bluesky](https://bsky.app/profile/kitzy.com)
-- 💬 Message me on [MacAdmins Slack](https://www.macadmins.org/) (`@kitzy`)
-
----
-
-> _Always automating, always iterating, always helping others._
