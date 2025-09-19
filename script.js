@@ -40,11 +40,18 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 // Handle URL routing on page load
 function handleInitialRoute() {
+    console.log('handleInitialRoute called with:', {
+        pathname: window.location.pathname,
+        search: window.location.search,
+        hash: window.location.hash
+    });
+    
     // Check for route parameter from 404 redirect first
     const urlParams = new URLSearchParams(window.location.search);
     const routeParam = urlParams.get('route');
     
     if (routeParam && ['about', 'readme', 'projects', 'blog'].includes(routeParam)) {
+        console.log('Using route parameter:', routeParam);
         currentTab = routeParam;
         updateUIForTab(routeParam);
         
@@ -65,6 +72,7 @@ function handleInitialRoute() {
     const hash = window.location.hash.substring(1); // Get any hash/anchor
     
     if (cleanRoute && ['about', 'readme', 'projects', 'blog'].includes(cleanRoute)) {
+        console.log('Using clean route:', cleanRoute);
         currentTab = cleanRoute;
         
         // Update the UI to match the URL
@@ -82,6 +90,7 @@ function handleInitialRoute() {
     const [tabPart, sectionPart] = hashPath.split('#');
     
     if (tabPart && ['about', 'readme', 'projects', 'blog'].includes(tabPart)) {
+        console.log('Using hash route:', tabPart);
         currentTab = tabPart;
         
         // Update the UI to match the URL and migrate to clean URL
@@ -92,6 +101,17 @@ function handleInitialRoute() {
         if (sectionPart) {
             window.pendingScrollTarget = sectionPart;
         }
+        return;
+    }
+    
+    // If no route matched, check if we're at root and default to about
+    if (window.location.pathname === '/' || window.location.pathname === '') {
+        console.log('Defaulting to about page');
+        currentTab = 'about';
+        updateUIForTab('about');
+        window.history.replaceState(null, null, '/about');
+    } else {
+        console.log('No route matched, staying with current tab:', currentTab);
     }
 }
 
@@ -789,7 +809,7 @@ async function loadBlogContent() {
         } catch (localError) {
             // Fallback to GitHub API
             console.log('Trying GitHub API for blog posts');
-            const response = await fetch(`${GITHUB_API}/repos/${CONFIG.username}/kitzy.github.io/contents/blog`);
+            const response = await fetch(`${GITHUB_API}/repos/${CONFIG.username}/${CONFIG.repositories.about}/contents/blog`);
             
             if (response.ok) {
                 const apiFiles = await response.json();
@@ -876,7 +896,7 @@ async function loadBlogPost(filename) {
         } catch (localError) {
             console.log('Trying GitHub API for blog post');
             // Fallback to GitHub API
-            const response = await fetch(`${GITHUB_API}/repos/${CONFIG.username}/kitzy.github.io/contents/blog/${filename}`);
+            const response = await fetch(`${GITHUB_API}/repos/${CONFIG.username}/${CONFIG.repositories.about}/contents/blog/${filename}`);
             if (!response.ok) throw new Error(`Failed to fetch ${filename}`);
             
             const data = await response.json();
