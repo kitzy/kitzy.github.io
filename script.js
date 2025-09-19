@@ -46,6 +46,25 @@ function handleInitialRoute() {
     
     if (tabPart && ['about', 'readme', 'projects', 'blog'].includes(tabPart)) {
         currentTab = tabPart;
+        
+        // Update the UI to match the URL
+        // Update active tab button
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.classList.remove('active');
+        });
+        const targetButton = document.querySelector(`[data-tab="${tabPart}"]`);
+        if (targetButton) {
+            targetButton.classList.add('active');
+        }
+
+        // Update active tab content
+        document.querySelectorAll('.tab-pane').forEach(pane => {
+            pane.classList.remove('active');
+        });
+        const targetPane = document.getElementById(`${tabPart}-content`);
+        if (targetPane) {
+            targetPane.classList.add('active');
+        }
     }
     
     // Store section to scroll to after content loads
@@ -563,7 +582,7 @@ async function loadProjectsContent() {
     
     try {
         const projects = await Promise.all(
-            CONFIG.featuredProjects.map(async (repoName) => {
+            CONFIG.api.featuredProjects.map(async (repoName) => {
                 try {
                     const response = await fetch(`${GITHUB_API}/repos/${CONFIG.username}/${repoName}`);
                     if (response.ok) {
