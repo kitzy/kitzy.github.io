@@ -1,4 +1,5 @@
 // Configuration
+// Last updated: 2025-09-19 - Blog debugging version
 const CONFIG = {
     username: 'kitzy',
     repositories: {
@@ -807,15 +808,36 @@ async function loadBlogContent() {
                 throw new Error('Local blog folder not accessible');
             }
         } catch (localError) {
-            // Fallback to GitHub API
-            console.log('Trying GitHub API for blog posts');
-            const response = await fetch(`${GITHUB_API}/repos/${CONFIG.username}/${CONFIG.repositories.about}/contents/blog`);
+            // For production, use known blog posts since GitHub API might not be accessible
+            console.log('Using hardcoded blog posts for production');
+            const knownPosts = ['first-week-at-fleet.md']; // Add more posts here as needed
+            files = knownPosts.map(name => ({ 
+                name, 
+                download_url: `https://raw.githubusercontent.com/${CONFIG.username}/${CONFIG.repositories.about}/main/blog/${name}` 
+            }));
             
-            if (response.ok) {
-                const apiFiles = await response.json();
-                files = apiFiles.filter(file => file.name.endsWith('.md'));
-            } else {
-                throw new Error('GitHub API failed');
+            // Still try GitHub API as backup, but don't fail if it doesn't work
+            try {
+                console.log('Also trying GitHub API for blog posts');
+                console.log('API URL:', `${GITHUB_API}/repos/${CONFIG.username}/${CONFIG.repositories.about}/contents/blog`);
+                const response = await fetch(`${GITHUB_API}/repos/${CONFIG.username}/${CONFIG.repositories.about}/contents/blog`);
+                
+                console.log('GitHub API response status:', response.status);
+                if (response.ok) {
+                    const apiFiles = await response.json();
+                    console.log('GitHub API files:', apiFiles);
+                    const apiMarkdownFiles = apiFiles.filter(file => file.name.endsWith('.md'));
+                    console.log('Filtered markdown files from API:', apiMarkdownFiles);
+                    // Use API files if available, otherwise stick with hardcoded
+                    if (apiMarkdownFiles.length > 0) {
+                        files = apiMarkdownFiles;
+                    }
+                } else {
+                    const errorText = await response.text();
+                    console.warn('GitHub API not accessible:', response.status, errorText);
+                }
+            } catch (apiError) {
+                console.warn('GitHub API failed, using hardcoded posts:', apiError);
             }
         }
         
@@ -894,13 +916,34 @@ async function loadBlogPost(filename) {
                 throw new Error('Local blog post not found');
             }
         } catch (localError) {
-            console.log('Trying GitHub API for blog post');
-            // Fallback to GitHub API
-            const response = await fetch(`${GITHUB_API}/repos/${CONFIG.username}/${CONFIG.repositories.about}/contents/blog/${filename}`);
-            if (!response.ok) throw new Error(`Failed to fetch ${filename}`);
-            
-            const data = await response.json();
-            content = atob(data.content);
+            console.log('Trying direct raw GitHub URL for blog post');
+            try {
+                // Try raw GitHub URL first (more reliable for public repos)
+                const rawUrl = `https://raw.githubusercontent.com/${CONFIG.username}/${CONFIG.repositories.about}/main/blog/${filename}`;
+                console.log('Raw URL:', rawUrl);
+                const rawResponse = await fetch(rawUrl);
+                if (rawResponse.ok) {
+                    content = await rawResponse.text();
+                    console.log('Successfully loaded blog post from raw URL');
+                } else {
+                    throw new Error('Raw URL failed');
+                }
+            } catch (rawError) {
+                console.log('Raw URL failed, trying GitHub API for blog post');
+                console.log('API URL:', `${GITHUB_API}/repos/${CONFIG.username}/${CONFIG.repositories.about}/contents/blog/${filename}`);
+                // Fallback to GitHub API
+                const response = await fetch(`${GITHUB_API}/repos/${CONFIG.username}/${CONFIG.repositories.about}/contents/blog/${filename}`);
+                console.log('GitHub API response status for blog post:', response.status);
+                if (!response.ok) {
+                    const errorText = await response.text();
+                    console.error('GitHub API error for blog post:', response.status, errorText);
+                    throw new Error(`Failed to fetch ${filename}: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                console.log('Blog post data from API:', data);
+                content = atob(data.content);
+            }
         }
         
         // Check if marked is available and convert markdown to HTML
