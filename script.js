@@ -992,6 +992,15 @@ async function displayBlogPosts(files) {
     });
 }
 
+// Back to blog function - updates URL and loads blog list
+function backToBlog() {
+    // Update URL back to /blog
+    window.history.pushState(null, null, '/blog');
+    
+    // Load the blog list content
+    loadBlogContent();
+}
+
 // Load individual blog post
 async function loadBlogPost(filename) {
     const container = document.getElementById('blog-content');
@@ -1053,7 +1062,7 @@ async function loadBlogPost(filename) {
         
         container.innerHTML = `
             <div class="markdown-content">
-                <button onclick="loadBlogContent()" style="margin-bottom: 16px; background: #21262d; color: #e6edf3; border: 1px solid #30363d; border-radius: 6px; padding: 8px 16px; cursor: pointer;">← Back to Blog</button>
+                <button onclick="backToBlog()" style="margin-bottom: 16px; background: #21262d; color: #e6edf3; border: 1px solid #30363d; border-radius: 6px; padding: 8px 16px; cursor: pointer;">← Back to Blog</button>
                 ${html}
             </div>
         `;
