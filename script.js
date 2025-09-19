@@ -30,10 +30,48 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Wait for marked library to load
     await waitForMarked();
     
+    // Handle initial URL hash
+    handleInitialRoute();
+    
     setupEventListeners();
     await loadUserData();
     await loadGitHubStats();
     await loadTabContent();
+});
+
+// Handle URL routing on page load
+function handleInitialRoute() {
+    const hash = window.location.hash.substring(1); // Remove the #
+    const [tabPart, sectionPart] = hash.split('#');
+    
+    if (tabPart && ['about', 'readme', 'projects', 'blog'].includes(tabPart)) {
+        currentTab = tabPart;
+    }
+    
+    // Store section to scroll to after content loads
+    if (sectionPart) {
+        window.pendingScrollTarget = sectionPart;
+    }
+}
+
+// Listen for hash changes
+window.addEventListener('hashchange', () => {
+    const hash = window.location.hash.substring(1);
+    const [tabPart, sectionPart] = hash.split('#');
+    
+    if (tabPart && ['about', 'readme', 'projects', 'blog'].includes(tabPart) && tabPart !== currentTab) {
+        switchTab(tabPart);
+    }
+    
+    // Handle section scrolling
+    if (sectionPart) {
+        setTimeout(() => {
+            const element = document.getElementById(sectionPart);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }, 100);
+    }
 });
 
 // Wait for marked library to be available
@@ -339,6 +377,13 @@ function switchTab(tabName) {
     document.getElementById(`${tabName}-content`).classList.add('active');
 
     currentTab = tabName;
+    
+    // Update URL hash
+    const currentHash = window.location.hash.substring(1);
+    const [, sectionPart] = currentHash.split('#');
+    const newHash = sectionPart ? `${tabName}#${sectionPart}` : tabName;
+    window.history.pushState(null, null, `#${newHash}`);
+    
     loadTabContent();
 }
 
@@ -439,6 +484,20 @@ async function loadMarkdownContent(tabId, repo, filename) {
         }
         
         container.innerHTML = `<div class="markdown-content">${html}</div>`;
+        
+        // Add anchor links to headings
+        addHeadingAnchors(container);
+        
+        // Handle pending scroll target
+        if (window.pendingScrollTarget) {
+            setTimeout(() => {
+                const element = document.getElementById(window.pendingScrollTarget);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+                window.pendingScrollTarget = null;
+            }, 100);
+        }
         
         // If this is the about tab, add GitHub organizations section
         if (tabId === 'about') {
@@ -716,6 +775,75 @@ function displayNoBlogPosts() {
             <p>Blog posts should be stored as <code>.md</code> files in the <code>blog</code> directory of this repository.</p>
         </div>
     `;
+}
+
+// Add anchor links to headings
+function addHeadingAnchors(container) {
+    const headings = container.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    
+    headings.forEach(heading => {
+        // Create a slug from the heading text
+        const slug = createSlug(heading.textContent);
+        heading.id = slug;
+        
+        // Create the anchor link
+        const anchor = document.createElement('a');
+        anchor.href = `#${currentTab}#${slug}`;
+        anchor.className = 'heading-anchor';
+        anchor.innerHTML = '🔗';
+        anchor.title = 'Copy link to this section';
+        anchor.setAttribute('aria-label', 'Link to this section');
+        
+        // Add click handler for URL update and clipboard copy
+        anchor.addEventListener('click', async (e) => {
+            e.preventDefault();
+            
+            // Update URL
+            const newHash = `${currentTab}#${slug}`;
+            window.history.pushState(null, null, `#${newHash}`);
+            
+            // Copy full URL to clipboard
+            const fullUrl = `${window.location.origin}${window.location.pathname}#${newHash}`;
+            try {
+                await navigator.clipboard.writeText(fullUrl);
+                
+                // Show brief feedback
+                const originalText = anchor.innerHTML;
+                anchor.innerHTML = '✅';
+                setTimeout(() => {
+                    anchor.innerHTML = originalText;
+                }, 1000);
+            } catch (err) {
+                console.error('Failed to copy URL:', err);
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = fullUrl;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                
+                const originalText = anchor.innerHTML;
+                anchor.innerHTML = '✅';
+                setTimeout(() => {
+                    anchor.innerHTML = originalText;
+                }, 1000);
+            }
+        });
+        
+        // Add the anchor to the heading
+        heading.appendChild(anchor);
+    });
+}
+
+// Create URL-friendly slug from text
+function createSlug(text) {
+    return text
+        .toLowerCase()
+        .trim()
+        .replace(/[^\w\s-]/g, '') // Remove special characters
+        .replace(/[\s_-]+/g, '-') // Replace spaces and underscores with hyphens
+        .replace(/^-+|-+$/g, ''); // Remove leading/trailing hyphens
 }
 
 // Utility function to format dates
