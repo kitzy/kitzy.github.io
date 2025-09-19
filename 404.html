@@ -11,7 +11,11 @@
         const path = window.location.pathname.substring(1); // Remove leading slash
         const validRoutes = ['about', 'readme', 'projects', 'blog'];
         
-        if (validRoutes.includes(path)) {
+        // Handle blog post URLs (blog/post-slug)
+        if (path.startsWith('blog/')) {
+            const newUrl = `${window.location.origin}/?route=${path}${window.location.hash}`;
+            window.location.replace(newUrl);
+        } else if (validRoutes.includes(path)) {
             // Redirect to index.html but keep the path for our router to handle
             const newUrl = `${window.location.origin}/?route=${path}${window.location.hash}`;
             window.location.replace(newUrl);
