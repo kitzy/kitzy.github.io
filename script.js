@@ -2,30 +2,28 @@
 const CONFIG = {
     username: 'kitzy',
     repositories: {
-        readme: 'kitzy.github.io', // Changed to use this repository
-        usermanual: 'kitzy.github.io' // Changed to use this repository
+        about: 'kitzy.github.io', // Changed to use this repository
+        readme: 'kitzy.github.io' // Changed to use this repository
     },
-    contributions: {
-        months: 3 // Number of months to show in contributions grid
-    },
-    featuredProjects: [
-        // Just add repository names here - everything else auto-populates!
-        'fleet',
-        'docker-fleetdm-stack',
-        'fleet-gitops',
-        'fleet-autopkg-recipes',
-        'dns',
-        'autopkg-runner'
-    ]
+    api: {
+        featuredProjects: [
+            // Just add repository names here - everything else auto-populates!
+            'fleet',
+            'docker-fleetdm-stack',
+            'fleet-gitops',
+            'fleet-autopkg-recipes',
+            'dns',
+            'autopkg-runner'
+        ]
+    }
 };
 
 // GitHub API base URL
 const GITHUB_API = 'https://api.github.com';
 
 // Application state
-let currentTab = 'readme';
+let currentTab = 'about';
 let userData = null;
-let contributionsData = null;
 
 // Initialize the application
 document.addEventListener('DOMContentLoaded', async () => {
@@ -151,22 +149,40 @@ function displayUserError() {
 // Load GitHub stats data
 async function loadGitHubStats() {
     try {
+        console.log('Loading GitHub stats...');
+        
         // Get user data for basic stats
         const userResponse = await fetch(`${GITHUB_API}/users/${CONFIG.username}`);
+        if (!userResponse.ok) {
+            throw new Error(`User API failed: ${userResponse.status}`);
+        }
         const userData = await userResponse.json();
+        console.log('User data loaded:', userData);
         
         // Get repositories for star count
         const reposResponse = await fetch(`${GITHUB_API}/users/${CONFIG.username}/repos?per_page=100`);
+        if (!reposResponse.ok) {
+            throw new Error(`Repos API failed: ${reposResponse.status}`);
+        }
         const repos = await reposResponse.json();
+        console.log('Repos loaded:', repos.length);
         
         // Calculate total stars
         const totalStars = repos.reduce((sum, repo) => sum + repo.stargazers_count, 0);
+        console.log('Total stars calculated:', totalStars);
         
         // Update stats display
-        document.getElementById('public-repos').textContent = userData.public_repos || 0;
-        document.getElementById('followers').textContent = userData.followers || 0;
-        document.getElementById('following').textContent = userData.following || 0;
-        document.getElementById('total-stars').textContent = totalStars || 0;
+        const publicReposEl = document.getElementById('public-repos');
+        const followersEl = document.getElementById('followers');
+        const followingEl = document.getElementById('following');
+        const totalStarsEl = document.getElementById('total-stars');
+        
+        if (publicReposEl) publicReposEl.textContent = userData.public_repos || 0;
+        if (followersEl) followersEl.textContent = userData.followers || 0;
+        if (followingEl) followingEl.textContent = userData.following || 0;
+        if (totalStarsEl) totalStarsEl.textContent = totalStars || 0;
+        
+        console.log('GitHub stats updated successfully');
         
     } catch (error) {
         console.error('Error loading GitHub stats:', error);
@@ -181,6 +197,132 @@ function displayStatsError() {
     document.getElementById('following').textContent = '-';
     document.getElementById('total-stars').textContent = '-';
 }
+
+// Load GitHub organizations and stats for the about section
+async function loadGitHubOrganizations(container) {
+    try {
+        // Fetch organizations and user data in parallel
+        const [orgsResponse, userResponse, reposResponse, eventsResponse] = await Promise.all([
+            fetch(`${GITHUB_API}/users/${CONFIG.username}/orgs`),
+            fetch(`${GITHUB_API}/users/${CONFIG.username}`),
+            fetch(`${GITHUB_API}/users/${CONFIG.username}/repos?per_page=100&sort=updated`),
+            fetch(`${GITHUB_API}/users/${CONFIG.username}/events/public?per_page=30`)
+        ]);
+        
+        const orgs = orgsResponse.ok ? await orgsResponse.json() : [];
+        const user = userResponse.ok ? await userResponse.json() : null;
+        const repos = reposResponse.ok ? await reposResponse.json() : [];
+        const events = eventsResponse.ok ? await eventsResponse.json() : [];
+        
+        console.log('GitHub data loaded:', { orgs, user, repos: repos.length, events: events.length });
+        
+        // Calculate additional stats
+        const totalStars = repos.reduce((sum, repo) => sum + (repo.stargazers_count || 0), 0);
+        const totalForks = repos.reduce((sum, repo) => sum + (repo.forks_count || 0), 0);
+        const languages = repos
+            .filter(repo => repo.language)
+            .reduce((acc, repo) => {
+                acc[repo.language] = (acc[repo.language] || 0) + 1;
+                return acc;
+            }, {});
+        
+        const topLanguages = Object.entries(languages)
+            .sort(([,a], [,b]) => b - a)
+            .slice(0, 5)
+            .map(([lang]) => lang);
+        
+        // Recent activity - last 7 days
+        const oneWeekAgo = new Date();
+        oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
+        const recentEvents = events.filter(event => new Date(event.created_at) > oneWeekAgo);
+        
+        // Populate sidebar sections
+        populateSidebarLanguages(topLanguages);
+        populateSidebarOrganizations(orgs);
+        
+        // Create simplified stats section for About page
+        const statsHTML = `
+            <div class="github-section">
+                <h3 class="github-section-title">Stats</h3>
+                
+                <div class="github-stats-grid">
+                    <a href="https://github.com/${CONFIG.username}?tab=repositories" target="_blank" class="stat-card">
+                        <div class="stat-number">${user?.public_repos || 0}</div>
+                        <div class="stat-label">Public Repos</div>
+                    </a>
+                    <a href="https://github.com/${CONFIG.username}?tab=followers" target="_blank" class="stat-card">
+                        <div class="stat-number">${user?.followers || 0}</div>
+                        <div class="stat-label">Followers</div>
+                    </a>
+                    <a href="https://github.com/${CONFIG.username}?tab=following" target="_blank" class="stat-card">
+                        <div class="stat-number">${user?.following || 0}</div>
+                        <div class="stat-label">Following</div>
+                    </a>
+                    <a href="https://github.com/${CONFIG.username}?tab=repositories" target="_blank" class="stat-card">
+                        <div class="stat-number">${totalStars}</div>
+                        <div class="stat-label">Total Stars</div>
+                    </a>
+                    <a href="https://github.com/${CONFIG.username}?tab=repositories" target="_blank" class="stat-card">
+                        <div class="stat-number">${totalForks}</div>
+                        <div class="stat-label">Total Forks</div>
+                    </a>
+                    <a href="https://github.com/${CONFIG.username}" target="_blank" class="stat-card">
+                        <div class="stat-number">${recentEvents.length}</div>
+                        <div class="stat-label">Recent Activity</div>
+                        <div class="stat-subtitle">(7 days)</div>
+                    </a>
+                </div>
+            </div>
+        `;
+        
+        container.insertAdjacentHTML('beforeend', statsHTML);
+        
+    } catch (error) {
+        console.error('Error loading GitHub data:', error);
+        // Silently fail - don't show error if we can't load GitHub data
+    }
+}
+
+// Populate sidebar languages section
+function populateSidebarLanguages(languages) {
+    const container = document.getElementById('sidebar-languages');
+    if (!container || languages.length === 0) return;
+    
+    const languagesHTML = `
+        <h3 class="sidebar-section-title">Top Languages</h3>
+        <div class="sidebar-languages-list">
+            ${languages.map(lang => `
+                <span class="sidebar-language-tag">${lang}</span>
+            `).join('')}
+        </div>
+    `;
+    
+    container.innerHTML = languagesHTML;
+}
+
+// Populate sidebar organizations section
+function populateSidebarOrganizations(orgs) {
+    const container = document.getElementById('sidebar-organizations');
+    if (!container || orgs.length === 0) return;
+    
+    const orgsHTML = `
+        <h3 class="sidebar-section-title">Organizations</h3>
+        <div class="sidebar-organizations-list">
+            ${orgs.map(org => `
+                <a href="${org.html_url || `https://github.com/${org.login}`}" 
+                   target="_blank" 
+                   class="sidebar-org-link"
+                   title="${org.login}${org.description ? ': ' + org.description : ''}">
+                    <img src="${org.avatar_url}" alt="${org.login}" class="sidebar-org-icon">
+                </a>
+            `).join('')}
+        </div>
+    `;
+    
+    container.innerHTML = orgsHTML;
+}
+
+
 
 // Switch between tabs
 function switchTab(tabName) {
@@ -203,11 +345,11 @@ function switchTab(tabName) {
 // Load content for the current tab
 async function loadTabContent() {
     switch (currentTab) {
+        case 'about':
+            await loadMarkdownContent('about', CONFIG.repositories.about, 'ABOUT.md');
+            break;
         case 'readme':
             await loadMarkdownContent('readme', CONFIG.repositories.readme, 'README.md');
-            break;
-        case 'usermanual':
-            await loadMarkdownContent('usermanual', CONFIG.repositories.usermanual, 'USERMANUAL.md');
             break;
         case 'projects':
             await loadProjectsContent();
@@ -297,6 +439,11 @@ async function loadMarkdownContent(tabId, repo, filename) {
         }
         
         container.innerHTML = `<div class="markdown-content">${html}</div>`;
+        
+        // If this is the about tab, add GitHub organizations section
+        if (tabId === 'about') {
+            await loadGitHubOrganizations(container);
+        }
     } catch (error) {
         console.error(`Error loading ${filename}:`, error);
         container.innerHTML = `
