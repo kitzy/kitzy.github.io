@@ -830,24 +830,52 @@ async function loadBlogContent() {
         // Try local blog folder first (for local development)
         let files;
         try {
-            const localResponse = await fetch('blog/');
+            const localResponse = await fetch('/blog/');
             if (localResponse.ok) {
                 // For local development, we need to manually list the files
                 // Since we know there's at least one file, let's try to load it directly
                 const knownPosts = ['first-week-at-fleet.md']; // We can expand this list
-                files = knownPosts.map(name => ({ name, download_url: `blog/${name}` }));
+                files = knownPosts.map(name => ({ name, download_url: `/blog/${name}` }));
                 console.log('Using local blog files');
             } else {
                 throw new Error('Local blog folder not accessible');
             }
         } catch (localError) {
-            // For production, use known blog posts since GitHub API might not be accessible
-            console.log('Using hardcoded blog posts for production');
+            // For production, use multiple fallback strategies
+            console.log('Local files not accessible, trying multiple fallback strategies');
             const knownPosts = ['first-week-at-fleet.md']; // Add more posts here as needed
+            
+            // Try different approaches for fetching blog content
             files = knownPosts.map(name => ({ 
+                name, 
+                download_url: `/blog/${name}` // Use absolute path to avoid double /blog/blog/
+            }));
+            
+            // Also add raw GitHub URLs as backup
+            const githubFiles = knownPosts.map(name => ({ 
                 name, 
                 download_url: `https://raw.githubusercontent.com/${CONFIG.username}/${CONFIG.repositories.about}/main/blog/${name}` 
             }));
+            
+            // Test if any of these work
+            let workingFiles = [];
+            for (const fileGroup of [files, githubFiles]) {
+                for (const file of fileGroup) {
+                    try {
+                        const testResponse = await fetch(file.download_url);
+                        if (testResponse.ok) {
+                            console.log(`Working URL found: ${file.download_url}`);
+                            workingFiles.push(file);
+                            break; // Found a working approach, use it
+                        }
+                    } catch (e) {
+                        console.log(`Failed URL: ${file.download_url}`);
+                    }
+                }
+                if (workingFiles.length > 0) break; // Found working files
+            }
+            
+            files = workingFiles.length > 0 ? workingFiles : files; // Use working files or fallback
             
             // Still try GitHub API as backup, but don't fail if it doesn't work
             try {
@@ -861,7 +889,7 @@ async function loadBlogContent() {
                     console.log('GitHub API files:', apiFiles);
                     const apiMarkdownFiles = apiFiles.filter(file => file.name.endsWith('.md'));
                     console.log('Filtered markdown files from API:', apiMarkdownFiles);
-                    // Use API files if available, otherwise stick with hardcoded
+                    // Use API files if available, otherwise stick with working files
                     if (apiMarkdownFiles.length > 0) {
                         files = apiMarkdownFiles;
                     }
@@ -870,7 +898,7 @@ async function loadBlogContent() {
                     console.warn('GitHub API not accessible:', response.status, errorText);
                 }
             } catch (apiError) {
-                console.warn('GitHub API failed, using hardcoded posts:', apiError);
+                console.warn('GitHub API failed, using fallback files:', apiError);
             }
         }
         
@@ -973,7 +1001,7 @@ async function loadBlogPost(filename) {
         
         // Try local file first (for local development)
         try {
-            const localResponse = await fetch(`blog/${filename}`);
+            const localResponse = await fetch(`/blog/${filename}`);
             if (localResponse.ok) {
                 content = await localResponse.text();
                 console.log('Successfully loaded blog post from local file');
