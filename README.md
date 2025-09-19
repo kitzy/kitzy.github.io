@@ -1,4 +1,4 @@
-# Kitzy’s personal user manual
+# README.md
 
 *Because people don’t come with instruction booklets (but wouldn’t it be easier if they did?). This is mine. It’s here to help you understand how I tick, how I work best, and how we can collaborate without stepping on rakes together.*  
 
