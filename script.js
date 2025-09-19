@@ -277,33 +277,65 @@ async function loadMarkdownContent(tabId, repo, filename) {
     container.innerHTML = '<div class="loading">Loading content...</div>';
     
     try {
-        const response = await fetch(`${GITHUB_API}/repos/${CONFIG.username}/${repo}/contents/${filename}`);
-        if (!response.ok) {
-            throw new Error(`Failed to fetch ${filename}: ${response.status} ${response.statusText}`);
+        // Try direct raw content URL first (avoids base64 encoding issues)
+        const rawUrl = `https://raw.githubusercontent.com/${CONFIG.username}/${repo}/main/${filename}`;
+        console.log('Trying raw URL:', rawUrl);
+        
+        let content;
+        try {
+            const rawResponse = await fetch(rawUrl);
+            if (rawResponse.ok) {
+                content = await rawResponse.text();
+                console.log('Successfully loaded from raw URL');
+            } else {
+                throw new Error('Raw URL failed, trying API');
+            }
+        } catch (rawError) {
+            console.log('Raw URL failed, falling back to GitHub API');
+            // Fallback to GitHub API
+            const response = await fetch(`${GITHUB_API}/repos/${CONFIG.username}/${repo}/contents/${filename}`);
+            if (!response.ok) {
+                throw new Error(`Failed to fetch ${filename}: ${response.status} ${response.statusText}`);
+            }
+            
+            const data = await response.json();
+            console.log('GitHub API response type:', data.type);
+            console.log('Content encoding:', data.encoding);
+            
+            // Properly decode base64 content with UTF-8 support
+            try {
+                if (data.encoding === 'base64') {
+                    // Use TextDecoder for proper UTF-8 handling
+                    const binaryString = atob(data.content);
+                    const bytes = new Uint8Array(binaryString.length);
+                    for (let i = 0; i < binaryString.length; i++) {
+                        bytes[i] = binaryString.charCodeAt(i);
+                    }
+                    const decoder = new TextDecoder('utf-8');
+                    content = decoder.decode(bytes);
+                } else {
+                    content = data.content;
+                }
+            } catch (error) {
+                console.error('Error decoding content:', error);
+                // Fallback to simple atob
+                content = atob(data.content);
+            }
         }
         
-        const data = await response.json();
-        const content = atob(data.content); // Decode base64 content
+        console.log('Decoded content preview:', content.substring(0, 100) + '...');
         
         // Check if marked is available and convert markdown to HTML
         let html;
-        console.log('Processing markdown content. Marked available:', typeof marked !== 'undefined');
-        console.log('Content preview:', content.substring(0, 100) + '...');
-        
         if (typeof marked !== 'undefined' && marked.parse) {
-            console.log('Using marked.parse');
             html = marked.parse(content);
         } else if (typeof marked !== 'undefined') {
-            console.log('Using marked (legacy)');
             // Fallback for older versions of marked
             html = marked(content);
         } else {
-            console.log('Using fallback markdown converter');
             // Fallback: basic markdown-like formatting
             html = convertBasicMarkdown(content);
         }
-        
-        console.log('Rendered HTML preview:', html.substring(0, 200) + '...');
         
         container.innerHTML = `<div class="markdown-content">${html}</div>`;
     } catch (error) {
