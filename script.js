@@ -862,17 +862,23 @@ async function displayBlogPosts(files) {
             const response = await fetch(file.download_url);
             const content = await response.text();
             
-            // Extract title from first line or filename
+            // Extract title from first heading (H1) or filename as fallback
             const lines = content.split('\n');
-            const title = lines[0].startsWith('#') ? 
-                lines[0].replace('#', '').trim() : 
-                file.name.replace('.md', '').replace(/[-_]/g, ' ');
+            let title = file.name.replace('.md', '').replace(/[-_]/g, ' '); // Default fallback
             
-            // Extract excerpt (first paragraph after title)
-            const excerpt = lines.slice(1).find(line => line.trim() && !line.startsWith('#'))?.trim() || '';
+            // Look for the first H1 heading (# Title)
+            const firstHeadingLine = lines.find(line => line.trim().startsWith('# '));
+            if (firstHeadingLine) {
+                title = firstHeadingLine.replace(/^#+\s*/, '').trim();
+            }
             
-            // Get file date (using commit date would be better, but this is simpler)
-            const date = new Date(file.sha ? Date.now() : Date.now()).toLocaleDateString();
+            // Extract excerpt (first paragraph after title/headings)
+            const excerpt = lines
+                .filter(line => line.trim() && !line.startsWith('#'))
+                .find(line => line.trim())?.trim() || '';
+            
+            // Get file date (using current date for now - could be enhanced to use git commit date)
+            const date = new Date().toLocaleDateString();
             
             html += `
                 <div class="blog-post-item">
