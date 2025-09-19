@@ -7,7 +7,16 @@ const CONFIG = {
     },
     contributions: {
         months: 3 // Number of months to show in contributions grid
-    }
+    },
+    featuredProjects: [
+        // Just add repository names here - everything else auto-populates!
+        'fleet',
+        'docker-fleetdm-stack',
+        'fleet-gitops',
+        'fleet-autopkg-recipes',
+        'dns',
+        'autopkg-runner'
+    ]
 };
 
 // GitHub API base URL
@@ -20,11 +29,39 @@ let contributionsData = null;
 
 // Initialize the application
 document.addEventListener('DOMContentLoaded', async () => {
+    // Wait for marked library to load
+    await waitForMarked();
+    
     setupEventListeners();
     await loadUserData();
     await loadContributions();
     await loadTabContent();
 });
+
+// Wait for marked library to be available
+function waitForMarked() {
+    return new Promise((resolve) => {
+        if (typeof marked !== 'undefined') {
+            resolve();
+            return;
+        }
+        
+        // Check every 100ms for marked to be available
+        const checkInterval = setInterval(() => {
+            if (typeof marked !== 'undefined') {
+                clearInterval(checkInterval);
+                resolve();
+            }
+        }, 100);
+        
+        // Timeout after 5 seconds
+        setTimeout(() => {
+            clearInterval(checkInterval);
+            console.warn('Marked library not loaded, using fallback renderer');
+            resolve();
+        }, 5000);
+    });
+}
 
 // Event listeners
 function setupEventListeners() {
@@ -225,6 +262,9 @@ async function loadTabContent() {
         case 'usermanual':
             await loadMarkdownContent('usermanual', CONFIG.repositories.usermanual, 'USERMANUAL.md');
             break;
+        case 'projects':
+            await loadProjectsContent();
+            break;
         case 'blog':
             await loadBlogContent();
             break;
@@ -245,8 +285,26 @@ async function loadMarkdownContent(tabId, repo, filename) {
         const data = await response.json();
         const content = atob(data.content); // Decode base64 content
         
-        // Convert markdown to HTML
-        const html = marked.parse(content);
+        // Check if marked is available and convert markdown to HTML
+        let html;
+        console.log('Processing markdown content. Marked available:', typeof marked !== 'undefined');
+        console.log('Content preview:', content.substring(0, 100) + '...');
+        
+        if (typeof marked !== 'undefined' && marked.parse) {
+            console.log('Using marked.parse');
+            html = marked.parse(content);
+        } else if (typeof marked !== 'undefined') {
+            console.log('Using marked (legacy)');
+            // Fallback for older versions of marked
+            html = marked(content);
+        } else {
+            console.log('Using fallback markdown converter');
+            // Fallback: basic markdown-like formatting
+            html = convertBasicMarkdown(content);
+        }
+        
+        console.log('Rendered HTML preview:', html.substring(0, 200) + '...');
+        
         container.innerHTML = `<div class="markdown-content">${html}</div>`;
     } catch (error) {
         console.error(`Error loading ${filename}:`, error);
@@ -258,6 +316,148 @@ async function loadMarkdownContent(tabId, repo, filename) {
             </div>
         `;
     }
+}
+
+// Basic markdown converter as fallback
+function convertBasicMarkdown(text) {
+    return text
+        // Escape any existing HTML
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        // Headers
+        .replace(/^#### (.*$)/gim, '<h4>$1</h4>')
+        .replace(/^### (.*$)/gim, '<h3>$1</h3>')
+        .replace(/^## (.*$)/gim, '<h2>$1</h2>')
+        .replace(/^# (.*$)/gim, '<h1>$1</h1>')
+        // Bold
+        .replace(/\*\*(.*?)\*\*/gim, '<strong>$1</strong>')
+        // Italic
+        .replace(/\*(.*?)\*/gim, '<em>$1</em>')
+        // Links
+        .replace(/\[([^\]]*)\]\(([^\)]*)\)/gim, '<a href="$2" target="_blank">$1</a>')
+        // Code blocks (must come before inline code)
+        .replace(/```([^`]*)```/gims, '<pre><code>$1</code></pre>')
+        // Inline code
+        .replace(/`([^`]*)`/gim, '<code>$1</code>')
+        // Lists
+        .replace(/^\* (.*)$/gim, '<li>$1</li>')
+        .replace(/^- (.*)$/gim, '<li>$1</li>')
+        // Wrap consecutive list items in ul
+        .replace(/(<li>.*<\/li>)/gims, '<ul>$1</ul>')
+        // Fix multiple ul tags
+        .replace(/<\/ul>\s*<ul>/gim, '')
+        // Line breaks and paragraphs
+        .split('\n\n')
+        .map(paragraph => {
+            if (paragraph.trim() === '') return '';
+            if (paragraph.includes('<h') || paragraph.includes('<ul') || paragraph.includes('<pre')) {
+                return paragraph;
+            }
+            return `<p>${paragraph.replace(/\n/g, '<br>')}</p>`;
+        })
+        .join('\n');
+}
+
+// Load projects content
+async function loadProjectsContent() {
+    const container = document.getElementById('projects-content');
+    container.innerHTML = '<div class="projects-loading">Loading featured projects...</div>';
+    
+    try {
+        const projects = await Promise.all(
+            CONFIG.featuredProjects.map(async (repoName) => {
+                try {
+                    const response = await fetch(`${GITHUB_API}/repos/${CONFIG.username}/${repoName}`);
+                    if (response.ok) {
+                        return await response.json();
+                    }
+                    return null;
+                } catch (error) {
+                    console.error(`Error fetching ${repoName}:`, error);
+                    return null;
+                }
+            })
+        );
+
+        // Filter out failed requests
+        const validProjects = projects.filter(project => project !== null);
+        
+        if (validProjects.length > 0) {
+            displayProjects(validProjects);
+        } else {
+            displayProjectsError('No projects could be loaded');
+        }
+    } catch (error) {
+        console.error('Error loading projects:', error);
+        displayProjectsError('Failed to load projects');
+    }
+}
+
+// Display projects in grid layout
+function displayProjects(projects) {
+    const container = document.getElementById('projects-content');
+    
+    let html = `
+        <div class="projects-header">
+            <h2 class="projects-title">Github Projects</h2>
+            <p class="projects-subtitle">Showcasing ${projects.length} featured repositories</p>
+        </div>
+        <div class="projects-grid">
+    `;
+
+    projects.forEach(project => {
+        const languageClass = project.language ? project.language.toLowerCase().replace(/[^a-z]/g, '') : '';
+        const updatedDate = new Date(project.updated_at).toLocaleDateString();
+        
+        html += `
+            <div class="project-card">
+                <div class="project-header">
+                    <svg class="project-icon" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"/>
+                    </svg>
+                    <a href="${project.html_url}" target="_blank" class="project-name">${project.name}</a>
+                    <span class="project-visibility">${project.private ? 'Private' : 'Public'}</span>
+                </div>
+                <p class="project-description">${project.description || 'No description available'}</p>
+                <div class="project-stats">
+                    <div class="project-stat">
+                        <svg class="project-stat-icon" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"/>
+                        </svg>
+                        <span>${project.stargazers_count}</span>
+                    </div>
+                    <div class="project-stat">
+                        <svg class="project-stat-icon" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878z"/>
+                        </svg>
+                        <span>${project.forks_count}</span>
+                    </div>
+                    ${project.language ? `
+                        <div class="project-language">
+                            <div class="language-color ${languageClass}"></div>
+                            <span>${project.language}</span>
+                        </div>
+                    ` : ''}
+                </div>
+            </div>
+        `;
+    });
+
+    html += '</div>';
+    container.innerHTML = html;
+}
+
+// Display projects error
+function displayProjectsError(message) {
+    const container = document.getElementById('projects-content');
+    container.innerHTML = `
+        <div class="projects-error">
+            <h3>Unable to load projects</h3>
+            <p>${message}</p>
+            <p>Please check your internet connection and try again.</p>
+        </div>
+    `;
 }
 
 // Load blog content
@@ -343,7 +543,18 @@ async function loadBlogPost(filename) {
         
         const data = await response.json();
         const content = atob(data.content);
-        const html = marked.parse(content);
+        
+        // Check if marked is available and convert markdown to HTML
+        let html;
+        if (typeof marked !== 'undefined' && marked.parse) {
+            html = marked.parse(content);
+        } else if (typeof marked !== 'undefined') {
+            // Fallback for older versions of marked
+            html = marked(content);
+        } else {
+            // Fallback: basic markdown-like formatting
+            html = convertBasicMarkdown(content);
+        }
         
         container.innerHTML = `
             <div class="markdown-content">
