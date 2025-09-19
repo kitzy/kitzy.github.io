@@ -71,43 +71,29 @@
                 </div>
             </div>
 
-            <div class="github-stats-section">
-                <h3 class="stats-title">GitHub Stats</h3>
-                <div id="github-stats" class="github-stats">
-                    <a href="https://github.com/kitzy?tab=repositories" target="_blank" class="stat-item">
-                        <div class="stat-number" id="public-repos">-</div>
-                        <div class="stat-label">Public Repos</div>
-                    </a>
-                    <a href="https://github.com/kitzy?tab=followers" target="_blank" class="stat-item">
-                        <div class="stat-number" id="followers">-</div>
-                        <div class="stat-label">Followers</div>
-                    </a>
-                    <a href="https://github.com/kitzy?tab=following" target="_blank" class="stat-item">
-                        <div class="stat-number" id="following">-</div>
-                        <div class="stat-label">Following</div>
-                    </a>
-                    <a href="https://github.com/kitzy?tab=repositories" target="_blank" class="stat-item">
-                        <div class="stat-number" id="total-stars">-</div>
-                        <div class="stat-label">Total Stars</div>
-                    </a>
-                </div>
+            <div id="sidebar-languages" class="sidebar-languages-section">
+                <!-- Languages will be populated by JavaScript -->
+            </div>
+
+            <div id="sidebar-organizations" class="sidebar-organizations-section">
+                <!-- Organizations will be populated by JavaScript -->
             </div>
         </aside>
 
         <main class="main-content">
             <nav class="tab-navigation">
-                <button class="tab-button active" data-tab="readme">README</button>
-                <button class="tab-button" data-tab="usermanual">User Manual</button>
+                <button class="tab-button active" data-tab="about">About</button>
+                <button class="tab-button" data-tab="readme">README.md</button>
                 <button class="tab-button" data-tab="projects">Projects</button>
                 <button class="tab-button" data-tab="blog">Blog</button>
             </nav>
 
             <div class="tab-content">
-                <div id="readme-content" class="tab-pane active">
-                    <div class="loading">Loading README...</div>
+                <div id="about-content" class="tab-pane active">
+                    <div class="loading">Loading About...</div>
                 </div>
-                <div id="usermanual-content" class="tab-pane">
-                    <div class="loading">Loading User Manual...</div>
+                <div id="readme-content" class="tab-pane">
+                    <div class="loading">Loading README.md...</div>
                 </div>
                 <div id="projects-content" class="tab-pane">
                     <div class="loading">Loading Projects...</div>
