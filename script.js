@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     
     setupEventListeners();
     await loadUserData();
-    await loadContributions();
+    await loadGitHubStats();
     await loadTabContent();
 });
 
@@ -115,11 +115,11 @@ function displayUserData() {
     document.getElementById('name').textContent = userData.name || userData.login;
     
     // Use fallback bio if none provided
-    const fallbackBio = 'Customer Support Engineer at Fleet | Infrastructure Nerd | Dog & Motorcycle Lover';
+    const fallbackBio = 'Always automating, always iterating, always helping others.';
     document.getElementById('bio').textContent = userData.bio || fallbackBio;
 
     // Profile details (only show if available)
-    updateDetailItem('company', userData.company);
+    updateDetailItem('company', null); // Hide company info
     updateDetailItem('location', userData.location);
     updateDetailItem('email', userData.email);
 }
@@ -140,112 +140,46 @@ function updateDetailItem(id, value) {
 // Display user data loading error
 function displayUserError() {
     document.getElementById('name').textContent = 'Kitzy';
-    document.getElementById('bio').textContent = 'Customer Support Engineer at Fleet | Infrastructure Nerd | Dog & Motorcycle Lover';
+    document.getElementById('bio').textContent = 'Always automating, always iterating, always helping others.';
     
     // Show basic info even if API fails
-    updateDetailItem('company', 'Fleet');
+    updateDetailItem('company', null); // Hide company info
     updateDetailItem('location', null); // Hide if no data
     updateDetailItem('email', null); // Hide if no data
 }
 
-// Load GitHub contributions data
-async function loadContributions() {
+// Load GitHub stats data
+async function loadGitHubStats() {
     try {
-        // Calculate date range (last 3 months by default)
-        const endDate = new Date();
-        const startDate = new Date();
-        startDate.setMonth(startDate.getMonth() - CONFIG.contributions.months);
-
-        // Fetch events from GitHub API to simulate contributions
-        const eventsResponse = await fetch(`${GITHUB_API}/users/${CONFIG.username}/events/public?per_page=100`);
-        let events = [];
+        // Get user data for basic stats
+        const userResponse = await fetch(`${GITHUB_API}/users/${CONFIG.username}`);
+        const userData = await userResponse.json();
         
-        if (eventsResponse.ok) {
-            events = await eventsResponse.json();
-        }
-
-        createContributionsGrid(startDate, endDate, events);
+        // Get repositories for star count
+        const reposResponse = await fetch(`${GITHUB_API}/users/${CONFIG.username}/repos?per_page=100`);
+        const repos = await reposResponse.json();
+        
+        // Calculate total stars
+        const totalStars = repos.reduce((sum, repo) => sum + repo.stargazers_count, 0);
+        
+        // Update stats display
+        document.getElementById('public-repos').textContent = userData.public_repos || 0;
+        document.getElementById('followers').textContent = userData.followers || 0;
+        document.getElementById('following').textContent = userData.following || 0;
+        document.getElementById('total-stars').textContent = totalStars || 0;
+        
     } catch (error) {
-        console.error('Error loading contributions:', error);
-        displayContributionsError();
+        console.error('Error loading GitHub stats:', error);
+        displayStatsError();
     }
 }
 
-// Create contributions grid
-function createContributionsGrid(startDate, endDate, events = []) {
-    const container = document.getElementById('contributions-grid');
-    const calendar = document.createElement('div');
-    calendar.className = 'contributions-calendar';
-
-    // Create a map of dates to contribution counts
-    const contributionMap = new Map();
-    
-    // Process events to count contributions per day
-    events.forEach(event => {
-        const eventDate = new Date(event.created_at).toDateString();
-        contributionMap.set(eventDate, (contributionMap.get(eventDate) || 0) + 1);
-    });
-
-    // Calculate the number of weeks to display
-    const msPerDay = 24 * 60 * 60 * 1000;
-    const daysDiff = Math.ceil((endDate - startDate) / msPerDay);
-    const weeks = Math.ceil(daysDiff / 7);
-    
-    // Set grid to show weeks properly
-    calendar.style.display = 'grid';
-    calendar.style.gridTemplateColumns = `repeat(${Math.min(weeks, 13)}, 12px)`;
-    calendar.style.gridTemplateRows = 'repeat(7, 12px)';
-    calendar.style.gap = '2px';
-    calendar.style.gridAutoFlow = 'column';
-
-    // Generate grid for the date range, organized by weeks
-    const currentDate = new Date(startDate);
-    
-    // Start from the beginning of the week
-    const startOfWeek = new Date(currentDate);
-    startOfWeek.setDate(currentDate.getDate() - currentDate.getDay());
-    
-    const today = new Date();
-    const tempDate = new Date(startOfWeek);
-
-    while (tempDate <= endDate) {
-        const day = document.createElement('div');
-        day.className = 'contribution-day';
-        
-        const dateString = tempDate.toDateString();
-        const count = contributionMap.get(dateString) || 0;
-        
-        // Map count to contribution level (0-4)
-        let level = 0;
-        if (count > 0) level = 1;
-        if (count > 2) level = 2;
-        if (count > 5) level = 3;
-        if (count > 10) level = 4;
-        
-        // Don't show future dates
-        if (tempDate > today) {
-            level = 0;
-            day.style.opacity = '0.3';
-        }
-        
-        day.classList.add(`level-${level}`);
-        
-        // Add tooltip with date and count
-        const dateStr = tempDate.toLocaleDateString();
-        day.title = `${dateStr}: ${count} contribution${count !== 1 ? 's' : ''}`;
-        
-        calendar.appendChild(day);
-        tempDate.setDate(tempDate.getDate() + 1);
-    }
-
-    container.innerHTML = '';
-    container.appendChild(calendar);
-}
-
-// Display contributions loading error
-function displayContributionsError() {
-    const container = document.getElementById('contributions-grid');
-    container.innerHTML = '<div class="error">Unable to load contributions</div>';
+// Display stats loading error
+function displayStatsError() {
+    document.getElementById('public-repos').textContent = '-';
+    document.getElementById('followers').textContent = '-';
+    document.getElementById('following').textContent = '-';
+    document.getElementById('total-stars').textContent = '-';
 }
 
 // Switch between tabs
