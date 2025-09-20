@@ -25,14 +25,6 @@ permalink: /blog/
                     {% else %}
                         <p>{{ post.excerpt | strip_html | truncate: 200 }}</p>
                     {% endif %}
-                    
-                    {% if post.tags %}
-                        <div class="post-tags">
-                            {% for tag in post.tags %}
-                                <span class="tag">{{ tag }}</span>
-                            {% endfor %}
-                        </div>
-                    {% endif %}
                 </article>
             {% endfor %}
         </div>
