@@ -935,3 +935,144 @@ body {
 .external-content-error p:last-child {
     margin-bottom: 0;
 }
+
+/* Projects page styles */
+.loading-projects {
+    color: #7d8590;
+    font-style: italic;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.projects-error {
+    color: #f78166;
+    background: rgba(248, 81, 73, 0.1);
+    border: 1px solid rgba(248, 81, 73, 0.2);
+    border-radius: 6px;
+    padding: 16px;
+    margin: 16px 0;
+}
+
+.project-card {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: border-color 0.2s ease;
+}
+
+.project-card:hover {
+    border-color: #58a6ff;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.project-header h3 {
+    margin: 0;
+    flex: 1;
+    min-width: 200px;
+}
+
+.project-header h3 a {
+    color: #58a6ff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.project-header h3 a:hover {
+    text-decoration: underline;
+}
+
+.project-meta {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.project-language {
+    background: #21262d;
+    color: #58a6ff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    border: 1px solid #30363d;
+}
+
+.project-stars, .project-forks {
+    color: #7d8590;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.project-description {
+    color: #e6edf3;
+    margin: 12px 0;
+    line-height: 1.5;
+}
+
+.project-topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 12px 0;
+}
+
+.project-topic {
+    background: #0969da;
+    color: #ffffff;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.75em;
+    text-transform: lowercase;
+}
+
+.project-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+}
+
+.project-link {
+    background: #21262d;
+    color: #e6edf3;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: all 0.2s ease;
+}
+
+.project-link:hover {
+    background: #30363d;
+    border-color: #58a6ff;
+    color: #58a6ff;
+}
+
+/* Responsive design for projects */
+@media (max-width: 768px) {
+    .project-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .project-meta {
+        justify-content: flex-start;
+    }
+    
+    .project-links {
+        flex-direction: column;
+    }
+}
