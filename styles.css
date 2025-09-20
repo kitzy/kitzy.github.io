@@ -953,126 +953,119 @@ body {
     margin: 16px 0;
 }
 
-.project-card {
-    background: #161b22;
+/* GitHub Pinned Repos Style */
+.pinned-repo {
     border: 1px solid #30363d;
     border-radius: 6px;
-    padding: 20px;
-    margin-bottom: 20px;
-    transition: border-color 0.2s ease;
+    padding: 16px;
+    margin-bottom: 16px;
+    background-color: #0d1117;
+    transition: border-color 0.15s ease-in-out;
 }
 
-.project-card:hover {
+.pinned-repo:hover {
     border-color: #58a6ff;
 }
 
-.project-header {
+.pinned-repo-header {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 12px;
-    flex-wrap: wrap;
-    gap: 12px;
+    align-items: center;
+    margin-bottom: 8px;
 }
 
-.project-header h3 {
-    margin: 0;
-    flex: 1;
-    min-width: 200px;
+.repo-icon {
+    fill: #7d8590;
+    margin-right: 8px;
+    flex-shrink: 0;
 }
 
-.project-header h3 a {
+.repo-name {
+    font-weight: 600;
     color: #58a6ff;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 14px;
+    margin-right: 8px;
 }
 
-.project-header h3 a:hover {
+.repo-name:hover {
     text-decoration: underline;
 }
 
-.project-meta {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.project-language {
-    background: #21262d;
-    color: #58a6ff;
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 0.85em;
+.repo-visibility {
     border: 1px solid #30363d;
+    border-radius: 2em;
+    padding: 0 7px;
+    font-size: 12px;
+    color: #7d8590;
+    font-weight: 500;
+    line-height: 18px;
 }
 
-.project-stars, .project-forks {
+.repo-description {
+    color: #8b949e;
+    font-size: 12px;
+    margin: 0 0 8px 0;
+    line-height: 1.5;
+}
+
+.repo-footer {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 12px;
     color: #7d8590;
-    font-size: 0.9em;
+}
+
+.repo-language {
     display: flex;
     align-items: center;
     gap: 4px;
 }
 
-.project-description {
-    color: #e6edf3;
-    margin: 12px 0;
-    line-height: 1.5;
+.language-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
 }
 
-.project-topics {
+.repo-stat {
     display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin: 12px 0;
+    align-items: center;
+    gap: 4px;
+    color: #7d8590;
 }
 
-.project-topic {
-    background: #0969da;
-    color: #ffffff;
-    padding: 2px 8px;
-    border-radius: 12px;
-    font-size: 0.75em;
-    text-transform: lowercase;
+.repo-stat .repo-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
 }
 
-.project-links {
-    display: flex;
-    gap: 12px;
-    margin-top: 16px;
-    flex-wrap: wrap;
-}
+/* Language colors matching GitHub */
+.language-color[data-language="shell"] { background-color: #89e051; }
+.language-color[data-language="python"] { background-color: #3572A5; }
+.language-color[data-language="go"] { background-color: #00ADD8; }
+.language-color[data-language="hcl"] { background-color: #844FBA; }
+.language-color[data-language="javascript"] { background-color: #f1e05a; }
+.language-color[data-language="typescript"] { background-color: #2b7489; }
+.language-color[data-language="dockerfile"] { background-color: #384d54; }
 
-.project-link {
-    background: #21262d;
-    color: #e6edf3;
-    border: 1px solid #30363d;
-    border-radius: 6px;
-    padding: 8px 16px;
-    text-decoration: none;
-    font-size: 0.9em;
-    transition: all 0.2s ease;
-}
-
-.project-link:hover {
-    background: #30363d;
-    border-color: #58a6ff;
-    color: #58a6ff;
+/* Projects grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+    margin-top: 24px;
 }
 
 /* Responsive design for projects */
 @media (max-width: 768px) {
-    .project-header {
-        flex-direction: column;
-        align-items: stretch;
+    .projects-grid {
+        grid-template-columns: 1fr;
     }
     
-    .project-meta {
-        justify-content: flex-start;
-    }
-    
-    .project-links {
-        flex-direction: column;
+    .pinned-repo {
+        padding: 12px;
     }
 }
