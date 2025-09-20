@@ -1,12 +1,10 @@
 ---
 layout: post
-title: "Experimental Fleet AutoPkg processor ready for Fleet v4.73.0 gitops YAML changes"
+title: "My experimental Fleet AutoPkg processor is ready for Fleet v4.73.0 gitops YAML changes"
 description: "Fleet v4.73.0 will introduce breaking changes to gitops YAML. My experimental Fleet autopkg processor is already updated to handle the new schema, automatically detecting your server version via the Fleet API and outputting the correct format, no recipe changes needed."
 date: 2025-09-20
 tags: [fleet, autopkg, projects, experiments]
 ---
-
-# My experimental Fleet autopkg processor is ready for Fleet v4.73.0
 
 Breaking changes aren’t fun, but sometimes they’re necessary. Fleet v4.73.0 will change how `gitops` YAML is structured, so anything that writes those files will need to adapt.
 
