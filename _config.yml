@@ -7,7 +7,7 @@ author: "Kitzy"
 
 # GitHub settings
 github_username: kitzy
-repository: kitzy.github.io
+repository: kitzy/kitzy.github.io
 
 # Build settings
 markdown: kramdown
