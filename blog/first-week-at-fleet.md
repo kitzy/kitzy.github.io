@@ -2,7 +2,7 @@
 
 Starting a new job is always a leap of faith. You hope the company is what it claims to be. You hope the culture matches the words on the careers page. You hope you'll belong.  
 
-In my first week at Fleet, I've already felt something I rarely have in past roles: alignment. Fleet’s [company values](https://fleetdm.com/handbook/company#values) don't just sound good on paper. They mirror my own [personal values](https://kitzy.com/#readme#my-values). And more importantly, they're lived every day.  
+In my first week at Fleet, I've already felt something I rarely have in past roles: alignment. Fleet’s [company values](https://fleetdm.com/handbook/company#values) don't just sound good on paper. They mirror my own [personal values](https://kitzy.com/readme/#my-values). And more importantly, they're lived every day.  
 
 ## Empathy in action  
 
