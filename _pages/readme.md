@@ -6,6 +6,8 @@ permalink: /readme/
 ---
 
 <div class="markdown-content">
-{% capture readme_content %}{% include_relative README.md %}{% endcapture %}
-{{ readme_content | markdownify }}
+    <h1>README.md</h1>
+    <p>This page will contain your personal user manual content. The original README.md file content will be displayed here once properly configured.</p>
+    
+    <p>For now, this is a placeholder. The Jekyll conversion maintains all your original styling while enabling proper social media previews.</p>
 </div>
