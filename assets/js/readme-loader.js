@@ -13,8 +13,15 @@ async function loadReadmeContent() {
     try {
         console.log('Loading README.md content...');
         
-        // Fetch the raw README.md from the repository
-        const response = await fetch('https://raw.githubusercontent.com/kitzy/kitzy.github.io/main/README.md');
+        // Try fetching from relative path first, then fallback to GitHub raw
+        let response;
+        try {
+            response = await fetch('/README.md');
+            if (!response.ok) throw new Error('Local fetch failed');
+        } catch (localError) {
+            console.log('Local fetch failed, trying GitHub raw URL...');
+            response = await fetch('https://raw.githubusercontent.com/kitzy/kitzy.github.io/main/README.md');
+        }
         
         if (!response.ok) {
             throw new Error(`Failed to fetch README.md: ${response.status}`);
