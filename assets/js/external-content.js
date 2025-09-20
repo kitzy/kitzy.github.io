@@ -22,26 +22,38 @@ async function loadExternalAboutContent() {
         
         const data = await response.json();
         
-        // Decode base64 content
-        const content = atob(data.content);
+        // Properly decode base64 content with UTF-8 support
+        const binaryString = atob(data.content);
+        const bytes = new Uint8Array(binaryString.length);
+        for (let i = 0; i < binaryString.length; i++) {
+            bytes[i] = binaryString.charCodeAt(i);
+        }
+        const content = new TextDecoder('utf-8').decode(bytes);
+        
+        console.log('Decoded content:', content.substring(0, 200) + '...');
         
         // Convert markdown to HTML using marked.js (already loaded on page)
+        if (typeof marked === 'undefined') {
+            throw new Error('marked.js library not loaded');
+        }
+        
         const htmlContent = marked.parse(content);
+        console.log('Converted HTML:', htmlContent.substring(0, 200) + '...');
         
         // Update the container with fetched content
         aboutContainer.innerHTML = htmlContent;
         
-        // Fix any relative links to point to the source repo
-        const links = aboutContainer.querySelectorAll('a[href^="#"], a[href^="./"], a[href^="../"]');
-        links.forEach(link => {
+        // Fix specific link - the README link should point to the /readme/ page
+        const readmeLinks = aboutContainer.querySelectorAll('a[href*="README"]');
+        readmeLinks.forEach(link => {
+            link.setAttribute('href', '/readme/');
+        });
+        
+        // Fix any other relative links to point to the source repo
+        const relativeLinks = aboutContainer.querySelectorAll('a[href^="./"], a[href^="../"]');
+        relativeLinks.forEach(link => {
             const href = link.getAttribute('href');
-            if (href.startsWith('#')) {
-                // Convert anchor links to point to kitzy.com
-                link.setAttribute('href', `https://kitzy.com/${href}`);
-            } else if (href.startsWith('./') || href.startsWith('../')) {
-                // Convert relative links to point to source repo
-                link.setAttribute('href', `https://github.com/kitzy/kitzy/blob/main/${href}`);
-            }
+            link.setAttribute('href', `https://github.com/kitzy/kitzy/blob/main/${href}`);
         });
         
         console.log('External About content loaded successfully');
@@ -49,35 +61,25 @@ async function loadExternalAboutContent() {
     } catch (error) {
         console.error('Error loading external About content:', error);
         
-        // Fallback: show message about using local content
+        // Show fallback content immediately
         aboutContainer.innerHTML = `
-            <div class="external-content-error">
-                <p><em>Loading content from source repository...</em></p>
-                <p>If content doesn't appear, showing local version:</p>
-            </div>
+            <h1>Hi, I'm Kitzy 👋</h1>
+            
+            <p><strong>Customer Support Engineer at <a href="https://github.com/fleetdm">@fleetdm</a> | Infrastructure Nerd | Dog & Motorcycle Lover</strong></p>
+            
+            <hr>
+            
+            <h3>👨‍💻 About Me</h3>
+            
+            <ul>
+                <li>🏳️‍⚧️ Pronouns: they/them/theirs or she/her/hers (either is equally fine)</li>
+                <li>🏆 Over 15 years in endpoint management & IT engineering</li>
+                <li>🛠️ Previously Sr. IT Engineering Manager at Fastly and Professional Services Engineer at Jamf</li>
+                <li>🍏 Got my start at Apple Retail, configuring demo systems and imaging devices</li>
+                <li>🌍 Passionate about infrastructure, automation, and making IT work smarter</li>
+                <li>📖 Curious how I work best? Check out my <a href="/readme/">personal user manual</a></li>
+            </ul>
         `;
-        
-        // After a short delay, show the local fallback content
-        setTimeout(() => {
-            aboutContainer.innerHTML = `
-                <h1>Hi, I'm Kitzy 👋</h1>
-                
-                <p><strong>Customer Support Engineer at <a href="https://github.com/fleetdm">@fleetdm</a> | Infrastructure Nerd | Dog & Motorcycle Lover</strong></p>
-                
-                <hr>
-                
-                <h3>👨‍💻 About Me</h3>
-                
-                <ul>
-                    <li>🏳️‍⚧️ Pronouns: they/them/theirs or she/her/hers (either is equally fine)</li>
-                    <li>🏆 Over 15 years in endpoint management & IT engineering</li>
-                    <li>🛠️ Previously Sr. IT Engineering Manager at Fastly and Professional Services Engineer at Jamf</li>
-                    <li>🍏 Got my start at Apple Retail, configuring demo systems and imaging devices</li>
-                    <li>🌍 Passionate about infrastructure, automation, and making IT work smarter</li>
-                    <li>📖 Curious how I work best? Check out my <a href="/readme/">personal user manual</a></li>
-                </ul>
-            `;
-        }, 3000);
     }
 }
 
