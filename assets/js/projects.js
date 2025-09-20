@@ -4,7 +4,7 @@
  */
 
 async function loadFeaturedProjects() {
-    const projectsContainer = document.getElementById('featured-projects');
+    const projectsContainer = document.getElementById('projects-container');
     
     if (!projectsContainer) {
         return; // Only run on projects page
@@ -77,7 +77,7 @@ async function loadFeaturedProjects() {
             `;
         }).join('');
         
-        // Update the container with projects
+        // Update the container with the projects
         projectsContainer.innerHTML = projectsHTML;
         
         console.log('Featured projects loaded successfully');
