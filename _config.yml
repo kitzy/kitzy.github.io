@@ -1,0 +1,78 @@
+# Site settings
+title: "Kitzy"
+description: "Always automating, always iterating, always helping others."
+baseurl: ""
+url: "https://kitzy.com"
+author: "Kitzy"
+
+# GitHub settings
+github_username: kitzy
+repository: kitzy.github.io
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-github-metadata
+  - jekyll-sitemap
+  - jekyll-feed
+
+# GitHub Pages specific settings
+github: [metadata]
+
+# Permalink settings
+permalink: /:categories/:title/
+
+# Blog settings
+blog_path: blog
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:title/
+
+# Exclude files
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+  - .jekyll-metadata
+
+# Include files
+include:
+  - _pages
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Kitzy"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+# Social media defaults
+social:
+  image: "https://github.com/kitzy.png"
+  type: "website"
+
+# Site navigation
+navigation:
+  - title: "About"
+    url: "/"
+  - title: "README"
+    url: "/readme/"
+  - title: "Projects" 
+    url: "/projects/"
+  - title: "Blog"
+    url: "/blog/"

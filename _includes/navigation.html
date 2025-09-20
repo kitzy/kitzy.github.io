@@ -1,0 +1,9 @@
+<nav class="navigation">
+    {% for nav_item in site.navigation %}
+        <a href="{{ nav_item.url | relative_url }}" 
+           class="tab-button{% if page.url == nav_item.url %} active{% endif %}"
+           data-tab="{{ nav_item.title | downcase }}">
+            {{ nav_item.title }}
+        </a>
+    {% endfor %}
+</nav>

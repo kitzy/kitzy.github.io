@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include head.html %}
+</head>
+<body>
+    <div class="container">
+        {% include sidebar.html %}
+
+        <main class="main-content">
+            <nav class="tab-navigation">
+                {% for nav_item in site.navigation %}
+                    <a href="{{ nav_item.url | relative_url }}" 
+                       class="tab-button{% if page.url == nav_item.url or (nav_item.title == 'About' and page.url == '/') %} active{% endif %}"
+                       data-tab="{{ nav_item.title | downcase }}">
+                        {{ nav_item.title }}
+                    </a>
+                {% endfor %}
+            </nav>
+
+            <div class="tab-content">
+                <div class="tab-pane active">
+                    {{ content }}
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked@4.3.0/marked.min.js"></script>
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>
