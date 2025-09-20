@@ -910,3 +910,28 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: #484f58;
 }
+
+/* External content loading states */
+.loading-external {
+    color: #7d8590;
+    font-style: italic;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.external-content-error {
+    color: #f78166;
+    background: rgba(248, 81, 73, 0.1);
+    border: 1px solid rgba(248, 81, 73, 0.2);
+    border-radius: 6px;
+    padding: 16px;
+    margin: 16px 0;
+}
+
+.external-content-error p {
+    margin-bottom: 8px;
+}
+
+.external-content-error p:last-child {
+    margin-bottom: 0;
+}
