@@ -25,6 +25,14 @@ async function loadGitHubData() {
         const orgs = await orgsResponse.json();
 
         console.log(`Loaded ${repos.length} repositories and ${orgs.length} organizations`);
+        console.log('User data:', user);
+
+        // Update bio if available
+        const bioContainer = document.getElementById('github-bio');
+        if (bioContainer && user.bio) {
+            bioContainer.textContent = user.bio;
+            console.log('Updated bio:', user.bio);
+        }
 
         // Debug: Log all repositories and their languages
         console.log('All repositories:');
