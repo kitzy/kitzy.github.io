@@ -26,19 +26,36 @@ async function loadGitHubData() {
 
         console.log(`Loaded ${repos.length} repositories and ${orgs.length} organizations`);
 
+        // Debug: Log all repositories and their languages
+        console.log('All repositories:');
+        repos.forEach(repo => {
+            console.log(`- ${repo.name}: ${repo.language || 'No language'} (fork: ${repo.fork}, stars: ${repo.stargazers_count})`);
+        });
+
         // Calculate top languages from repositories
         const languages = {};
+        let processedRepos = 0;
+        
         repos.forEach(repo => {
             if (repo.language && !repo.fork) { // Only count non-forked repos
                 languages[repo.language] = (languages[repo.language] || 0) + repo.stargazers_count + 1;
+                processedRepos++;
+                console.log(`Added ${repo.language} from ${repo.name} (score: ${repo.stargazers_count + 1})`);
             }
         });
 
+        console.log(`Processed ${processedRepos} repositories with languages`);
+        console.log('Language counts:', languages);
+
         // Get top 6 languages sorted by usage (stars + count)
-        const topLanguages = Object.entries(languages)
-            .sort(([,a], [,b]) => b - a)
-            .slice(0, 6)
-            .map(([lang]) => lang);
+        const languageEntries = Object.entries(languages);
+        console.log('Language entries before sorting:', languageEntries);
+        
+        const sortedLanguages = languageEntries.sort(([,a], [,b]) => b - a);
+        console.log('Sorted languages:', sortedLanguages);
+        
+        const topLanguages = sortedLanguages.slice(0, 6).map(([lang]) => lang);
+        console.log('Top 6 languages:', topLanguages);
 
         // Update languages in sidebar
         const languagesContainer = document.getElementById('github-languages');
