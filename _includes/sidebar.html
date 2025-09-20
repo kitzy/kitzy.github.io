@@ -59,44 +59,15 @@
         
         <div class="sidebar-languages-section">
             <h3 class="sidebar-section-title">Top Languages</h3>
-            <div class="sidebar-languages-list">
-                {% if site.github.public_repositories %}
-                    {% assign unique_languages = '' | split: '' %}
-                    {% for repo in site.github.public_repositories limit:15 %}
-                        {% if repo.language and repo.language != '' %}
-                            {% unless unique_languages contains repo.language %}
-                                {% assign unique_languages = unique_languages | push: repo.language %}
-                                <span class="sidebar-language-tag">{{ repo.language }}</span>
-                            {% endunless %}
-                        {% endif %}
-                    {% endfor %}
-                {% else %}
-                    <!-- Fallback languages based on your known work -->
-                    <span class="sidebar-language-tag">JavaScript</span>
-                    <span class="sidebar-language-tag">Python</span>
-                    <span class="sidebar-language-tag">Shell</span>
-                    <span class="sidebar-language-tag">YAML</span>
-                    <span class="sidebar-language-tag">HTML</span>
-                    <span class="sidebar-language-tag">CSS</span>
-                {% endif %}
+            <div id="github-languages" class="sidebar-languages-list">
+                <div class="loading">Loading languages...</div>
             </div>
         </div>
         
         <div class="sidebar-organizations-section">
             <h3 class="sidebar-section-title">Organizations</h3>
-            <div class="sidebar-organizations-list">
-                {% if site.github.organization_members and site.github.organization_members.size > 0 %}
-                    {% for org in site.github.organization_members %}
-                        <a href="{{ org.html_url }}" target="_blank" class="sidebar-org-link">
-                            <img src="{{ org.avatar_url }}" alt="{{ org.login }}" class="sidebar-org-icon">
-                        </a>
-                    {% endfor %}
-                {% else %}
-                    <!-- Fallback: Show Fleet organization -->
-                    <a href="https://github.com/fleetdm" target="_blank" class="sidebar-org-link">
-                        <img src="https://avatars.githubusercontent.com/u/65584068?s=200&v=4" alt="Fleet" class="sidebar-org-icon">
-                    </a>
-                {% endif %}
+            <div id="github-organizations" class="sidebar-organizations-list">
+                <div class="loading">Loading organizations...</div>
             </div>
         </div>
     </div>
