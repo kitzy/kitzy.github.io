@@ -64,8 +64,9 @@ async function loadGitHubData() {
         const orgsContainer = document.getElementById('github-organizations');
         if (orgsContainer) {
             if (orgs.length > 0) {
+                console.log('Organizations data:', orgs); // Debug log
                 orgsContainer.innerHTML = orgs.map(org => 
-                    `<a href="${org.html_url}" target="_blank" class="sidebar-org-link" title="${org.login}">
+                    `<a href="https://github.com/${org.login}" target="_blank" class="sidebar-org-link" title="${org.login}">
                         <img src="${org.avatar_url}&s=40" alt="${org.login}" class="sidebar-org-icon">
                     </a>`
                 ).join('');
