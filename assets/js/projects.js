@@ -14,6 +14,8 @@ async function loadFeaturedProjects() {
         'kitzy/fleet-gitops',
         'kitzy/docker-fleetdm-stack', 
         'kitzy/fleet-autopkg-recipes',
+        'autopkg/kitzy-recipes',
+        'kitzy/dns',
         'fleetdm/fleet'
     ];
     
