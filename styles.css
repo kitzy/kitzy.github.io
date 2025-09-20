@@ -1069,3 +1069,33 @@ body {
         padding: 12px;
     }
 }
+
+/* README page styles */
+.loading-readme {
+    color: #7d8590;
+    font-style: italic;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.readme-error {
+    color: #f78166;
+    background: rgba(248, 81, 73, 0.1);
+    border: 1px solid rgba(248, 81, 73, 0.2);
+    border-radius: 6px;
+    padding: 16px;
+    margin: 16px 0;
+}
+
+.readme-error h2 {
+    margin-top: 0;
+    color: #f78166;
+}
+
+.readme-error a {
+    color: #58a6ff;
+}
+
+.readme-error a:hover {
+    text-decoration: underline;
+}
