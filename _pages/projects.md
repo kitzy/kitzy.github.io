@@ -5,12 +5,6 @@ description: "My open source projects and contributions"
 permalink: /projects/
 ---
 
----
-layout: default
-title: Projects
-permalink: /projects/
----
-
 # Projects
 
 Here are some of my featured open source projects and contributions:
