@@ -1,4 +1,7 @@
+
 # README.md
+
+_updated: September 20, 2025_
 
 *Because people don’t come with instruction booklets (but wouldn’t it be easier if they did?). This is mine. It’s here to help you understand how I tick, how I work best, and how we can collaborate without stepping on rakes together.*  
 
@@ -12,7 +15,7 @@ I’m a mix of big-heartedness, curiosity, and creativity. My [Enneagram](https:
 
 I’m also **[AuDHD](https://embrace-autism.com/an-introduction-to-audhd/) (autism + ADHD)**, which colors how I think and work:  
 - I usually have about seven trains of thought running at once, sometimes in different directions, sometimes colliding in a glorious mental pile-up.  
-- Time blindness is real. If I’m late to a meeting, I didn’t forget you—I just fell down a rabbit hole. A quick ping is like tossing me a rope.  
+- Time blindness is real. If I’m late to a meeting, I didn’t forget you; I just fell down a rabbit hole. A quick ping is like tossing me a rope.  
 - I sometimes interrupt because I think I can already see where you’re going, but I’m learning to hit pause and let people land their sentences.  
 - Also, did anyone see where I left my AirPods? No, seriously.  
 
@@ -55,13 +58,14 @@ I’m also **[AuDHD](https://embrace-autism.com/an-introduction-to-audhd/) (auti
 - **Watch for signals.** If I get snappy, bossy, or perfectionistic, I’m probably feeling unappreciated or overloaded. A little acknowledgment helps more than you’d think.  
 - **Remind me of boundaries.** Sometimes I try to be everyone’s emotional support human. Remind me it’s okay to step back.  
 - **Anchor me in priorities.** When stress hits, my inner Type 7 scatters like confetti. Help me pick up the right piece first.  
-- **Allow my moods.** My Type 4 side sometimes goes “moody indie soundtrack.” I don’t need fixing—just space.  
+- **Allow my moods.** My Type 4 side sometimes goes “moody indie soundtrack.” I don’t need fixing; I just need space.  
 - **Humor works.** A well-timed joke resets me better than a motivational poster ever could.  
 
 ---
 
 ## How I like to receive feedback
-- **Direct is best.** I don’t do well with vague hints. If something’s off, say it plainly.  
+
+- **Direct is best.** I don’t do well with vague hints. If something’s off, say it plainly. I can't fix what I don't know is broken.  
 - **Kindness matters.** I’m open to constructive criticism, but I’ll absorb it more easily if it’s framed with care.  
 - **Timely > perfect.** Don’t wait weeks to craft the perfect message, tell me soon while it’s fresh and actionable.  
 - **Private first, public later.** Critical feedback lands best in private. Positive feedback can be anywhere (and I’ll probably beam like a proud raccoon).  
@@ -71,9 +75,9 @@ I’m also **[AuDHD](https://embrace-autism.com/an-introduction-to-audhd/) (auti
 
 ## What I value in coworkers
 - Authenticity and honesty (yes, even blunt honesty).  
-- Thoughtfulness—small kindnesses land big with me.  
-- Curiosity and playfulness—problem-solving doesn’t have to be boring.  
-- Respect for different rhythms and quirks—neurodivergence is part of the team, not a bug.  
+- Thoughtfulness. Small kindnesses land big with me.  
+- Curiosity and playfulness. Problem-solving doesn’t have to be boring.  
+- Respect for different rhythms and quirks. Neurodivergence is part of the team, not a bug.  
 
 ---
 
