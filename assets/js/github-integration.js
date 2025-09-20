@@ -37,10 +37,10 @@ async function loadGitHubData() {
         let processedRepos = 0;
         
         repos.forEach(repo => {
-            if (repo.language && !repo.fork) { // Only count non-forked repos
+            if (repo.language) { // Count all repos with languages (including forks)
                 languages[repo.language] = (languages[repo.language] || 0) + repo.stargazers_count + 1;
                 processedRepos++;
-                console.log(`Added ${repo.language} from ${repo.name} (score: ${repo.stargazers_count + 1})`);
+                console.log(`Added ${repo.language} from ${repo.name} (score: ${repo.stargazers_count + 1}, fork: ${repo.fork})`);
             }
         });
 
