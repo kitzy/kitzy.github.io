@@ -11,10 +11,12 @@ async function loadGitHubData() {
         
         // Try to use build-time generated language data first
         if (window.githubLanguagesData && window.githubLanguagesData.languages) {
-            console.log('Using build-time generated language data');
+            console.log('✅ Using build-time generated language data');
+            console.log('📊 Build-time languages:', window.githubLanguagesData.languages);
             updateLanguagesDisplay(window.githubLanguagesData.languages);
         } else {
-            console.log('No build-time data available, fetching from API...');
+            console.log('⚠️ No build-time data available, fetching from API...');
+            console.log('🔍 Checking window.githubLanguagesData:', window.githubLanguagesData);
             await loadLanguagesFromAPI(username);
         }
         
@@ -46,7 +48,13 @@ async function loadLanguagesFromAPI(username) {
     const user = await userResponse.json();
     const repos = await reposResponse.json();
 
-    console.log(`Loaded ${repos.length} repositories from API`);
+    console.log(`📦 Loaded ${repos.length} repositories from API`);
+
+    // Debug: Log all repositories and their languages
+    console.log('🔍 All repositories found:');
+    repos.forEach(repo => {
+        console.log(`  📂 ${repo.name}: ${repo.language || 'No language'} (stars: ${repo.stargazers_count}, fork: ${repo.fork})`);
+    });
 
     // Calculate top languages from repositories
     const languages = {};
@@ -56,11 +64,12 @@ async function loadLanguagesFromAPI(username) {
         if (repo.language) { // Count all repos with languages (including forks)
             languages[repo.language] = (languages[repo.language] || 0) + repo.stargazers_count + 1;
             processedRepos++;
+            console.log(`  ✅ Added ${repo.language} from ${repo.name} (weight: ${repo.stargazers_count + 1})`);
         }
     });
 
-    console.log(`Processed ${processedRepos} repositories with languages`);
-    console.log('Language counts:', languages);
+    console.log(`📊 Processed ${processedRepos} repositories with languages`);
+    console.log('🎯 Final language counts:', languages);
 
     // Get top 6 languages sorted by usage (stars + count)
     const sortedLanguages = Object.entries(languages).sort(([,a], [,b]) => b - a);
@@ -137,16 +146,18 @@ function setFallbackContent() {
 }
 
 function setFallbackLanguages() {
+    console.log('🔄 Using fallback language data');
     const languagesContainer = document.getElementById('github-languages');
     if (languagesContainer) {
         languagesContainer.innerHTML = `
             <span class="sidebar-language-tag">JavaScript</span>
+            <span class="sidebar-language-tag">TypeScript</span>
             <span class="sidebar-language-tag">Python</span>
             <span class="sidebar-language-tag">Shell</span>
-            <span class="sidebar-language-tag">YAML</span>
-            <span class="sidebar-language-tag">HTML</span>
-            <span class="sidebar-language-tag">CSS</span>
+            <span class="sidebar-language-tag">Go</span>
+            <span class="sidebar-language-tag">HCL</span>
         `;
+        console.log('✅ Fallback languages set successfully');
     }
 }
 
