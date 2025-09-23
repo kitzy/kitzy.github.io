@@ -20,8 +20,8 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
 
-# GitHub Pages specific settings
-github: [metadata]
+# GitHub Pages specific settings (for Actions deployment)
+# github: [metadata]  # Commented out for custom Actions deployment
 
 # Permalink settings
 permalink: /:categories/:title/
