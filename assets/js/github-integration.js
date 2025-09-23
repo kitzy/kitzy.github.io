@@ -9,23 +9,62 @@ async function loadGitHubData() {
     try {
         console.log('Loading GitHub data for', username);
         
-        // Fetch user data, repositories, and organizations
+        // Check for GitHub token (for private repos access)
+        const token = getGitHubToken();
+        const headers = token ? { 'Authorization': `token ${token}` } : {};
+        
+        console.log('Using GitHub token:', token ? 'Yes (private repos included)' : 'No (public repos only)');
+        
+        // Fetch user data, repositories (including private if token provided), and organizations
         const [userResponse, reposResponse, orgsResponse] = await Promise.all([
-            fetch(`https://api.github.com/users/${username}`),
-            fetch(`https://api.github.com/users/${username}/repos?per_page=100&sort=updated&type=owner`),
-            fetch(`https://api.github.com/users/${username}/orgs`)
+            fetch(`https://api.github.com/users/${username}`, { headers }),
+            fetch(`https://api.github.com/user/repos?per_page=100&sort=updated&type=all&affiliation=owner`, { headers }),
+            fetch(`https://api.github.com/users/${username}/orgs`, { headers })
         ]);
 
         if (!userResponse.ok || !reposResponse.ok || !orgsResponse.ok) {
-            throw new Error('Failed to fetch GitHub data');
+            console.warn('Some GitHub API calls failed, falling back to public-only data');
+            
+            // Fallback to public-only endpoints if authenticated calls fail
+            const [fallbackReposResponse] = await Promise.all([
+                fetch(`https://api.github.com/users/${username}/repos?per_page=100&sort=updated&type=owner`)
+            ]);
+            
+            if (!userResponse.ok || !fallbackReposResponse.ok) {
+                throw new Error('Failed to fetch GitHub data');
+            }
+            
+            const user = await userResponse.json();
+            const repos = await fallbackReposResponse.json();
+            const orgs = orgsResponse.ok ? await orgsResponse.json() : [];
+            
+            processGitHubData(user, repos, orgs, false);
+        } else {
+            const user = await userResponse.json();
+            const repos = await reposResponse.json();
+            const orgs = await orgsResponse.json();
+            
+            processGitHubData(user, repos, orgs, token ? true : false);
         }
 
-        const user = await userResponse.json();
-        const repos = await reposResponse.json();
-        const orgs = await orgsResponse.json();
+    } catch (error) {
+        console.error('Error loading GitHub data:', error);
+        
+        // Fallback content on error
+        setFallbackContent();
+    }
+}
+
+function getGitHubToken() {
+    // Check for token in localStorage (set by user)
+    return localStorage.getItem('github_token');
+}
+
+function processGitHubData(user, repos, orgs, includesPrivateRepos) {
 
         console.log(`Loaded ${repos.length} repositories and ${orgs.length} organizations`);
         console.log('User data:', user);
+        console.log('Includes private repos:', includesPrivateRepos);
 
         // Update bio if available
         const bioContainer = document.getElementById('github-bio');
@@ -37,7 +76,7 @@ async function loadGitHubData() {
         // Debug: Log all repositories and their languages
         console.log('All repositories:');
         repos.forEach(repo => {
-            console.log(`- ${repo.name}: ${repo.language || 'No language'} (fork: ${repo.fork}, stars: ${repo.stargazers_count})`);
+            console.log(`- ${repo.name}: ${repo.language || 'No language'} (fork: ${repo.fork}, stars: ${repo.stargazers_count}, private: ${repo.private})`);
         });
 
         // Calculate top languages from repositories
@@ -45,10 +84,10 @@ async function loadGitHubData() {
         let processedRepos = 0;
         
         repos.forEach(repo => {
-            if (repo.language) { // Count all repos with languages (including forks)
+            if (repo.language) { // Count all repos with languages (including forks and private repos)
                 languages[repo.language] = (languages[repo.language] || 0) + repo.stargazers_count + 1;
                 processedRepos++;
-                console.log(`Added ${repo.language} from ${repo.name} (score: ${repo.stargazers_count + 1}, fork: ${repo.fork})`);
+                console.log(`Added ${repo.language} from ${repo.name} (score: ${repo.stargazers_count + 1}, fork: ${repo.fork}, private: ${repo.private})`);
             }
         });
 
@@ -106,10 +145,9 @@ async function loadGitHubData() {
         }
 
         console.log('GitHub data loaded successfully');
+}
 
-    } catch (error) {
-        console.error('Error loading GitHub data:', error);
-        
+function setFallbackContent() {
         // Fallback content on error
         const languagesContainer = document.getElementById('github-languages');
         if (languagesContainer) {
@@ -131,7 +169,6 @@ async function loadGitHubData() {
                 </a>
             `;
         }
-    }
 }
 
 // Load GitHub data when the DOM is ready
