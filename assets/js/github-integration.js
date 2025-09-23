@@ -120,9 +120,38 @@ async function loadBioFromAPI(username) {
     // Update bio if available
     const bioContainer = document.getElementById('github-bio');
     if (bioContainer && user.bio) {
-        bioContainer.textContent = user.bio;
-        console.log('Updated bio:', user.bio);
+        // Remove @fleetdm from bio and add sponsors badge
+        let cleanBio = user.bio.replace(/@fleetdm/g, '').replace(/\s+/g, ' ').trim();
+        bioContainer.textContent = cleanBio;
+        
+        // Add sponsors badge after bio
+        addSponsorsBadge(bioContainer);
+        
+        console.log('Updated bio:', cleanBio);
     }
+}
+
+function addSponsorsBadge(bioContainer) {
+    // Remove any existing sponsors badge
+    const existingBadge = document.querySelector('.sponsors-badge-container');
+    if (existingBadge) {
+        existingBadge.remove();
+    }
+    
+    // Create sponsors badge container
+    const sponsorsBadge = document.createElement('div');
+    sponsorsBadge.className = 'sponsors-badge-container';
+    sponsorsBadge.style.marginTop = '10px';
+    sponsorsBadge.innerHTML = `
+        <a href="https://github.com/sponsors/kitzy" target="_blank">
+            <img src="https://img.shields.io/github/sponsors/kitzy?style=flat&logo=github&logoColor=white&labelColor=gray&color=pink" 
+                 alt="GitHub Sponsors" 
+                 style="max-width: 100%; height: auto;" />
+        </a>
+    `;
+    
+    // Insert after the bio container
+    bioContainer.parentNode.insertBefore(sponsorsBadge, bioContainer.nextSibling);
 }
 
 function updateLanguagesDisplay(languages) {
@@ -143,6 +172,7 @@ function updateLanguagesDisplay(languages) {
 function setFallbackContent() {
     setFallbackLanguages();
     setFallbackOrganizations();
+    setFallbackBio();
 }
 
 function setFallbackLanguages() {
@@ -169,6 +199,19 @@ function setFallbackOrganizations() {
                 <img src="https://avatars.githubusercontent.com/u/65584068?s=40&v=4" alt="Fleet" class="sidebar-org-icon">
             </a>
         `;
+    }
+}
+
+function setFallbackBio() {
+    const bioContainer = document.getElementById('github-bio');
+    if (bioContainer) {
+        // Set fallback bio without @fleetdm mention
+        bioContainer.textContent = 'Customer Support Engineer | Infrastructure Nerd | Dog & Motorcycle Lover';
+        
+        // Add sponsors badge
+        addSponsorsBadge(bioContainer);
+        
+        console.log('✅ Fallback bio and sponsors badge set successfully');
     }
 }
 

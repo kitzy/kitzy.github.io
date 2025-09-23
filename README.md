@@ -1,4 +1,3 @@
-
 # README.md
 
 _updated: September 23, 2025_
@@ -115,4 +114,4 @@ These are the principles that guide how I see the world and how I show up at wor
 - Ambiguity and unclear expectations (my brain fills in the blanks with chaos)  
 - Endless repetitive tasks  
 - Being taken for granted when I’ve overextended  
-- Feeling like I have to “mask” my quirks  
+- Feeling like I have to “mask” my quirks
