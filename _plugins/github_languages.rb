@@ -123,14 +123,14 @@ module Jekyll
       # Fallback language data when token is not available
       site.data['github_languages'] = {
         'languages' => [
-          { 'name' => 'Shell', 'weight' => 50, 'percentage' => 25.0 },
-          { 'name' => 'Python', 'weight' => 40, 'percentage' => 20.0 },
-          { 'name' => 'HCL', 'weight' => 30, 'percentage' => 15.0 },
-          { 'name' => 'Go', 'weight' => 25, 'percentage' => 12.5 },
-          { 'name' => 'JavaScript', 'weight' => 20, 'percentage' => 10.0 },
-          { 'name' => 'HTML', 'weight' => 15, 'percentage' => 7.5 },
-          { 'name' => 'CSS', 'weight' => 10, 'percentage' => 5.0 },
-          { 'name' => 'YAML', 'weight' => 10, 'percentage' => 5.0 }
+          { 'name' => 'JavaScript', 'weight' => 50, 'percentage' => 20.0 },
+          { 'name' => 'TypeScript', 'weight' => 45, 'percentage' => 18.0 },
+          { 'name' => 'Shell', 'weight' => 40, 'percentage' => 16.0 },
+          { 'name' => 'Python', 'weight' => 35, 'percentage' => 14.0 },
+          { 'name' => 'Go', 'weight' => 30, 'percentage' => 12.0 },
+          { 'name' => 'HCL', 'weight' => 25, 'percentage' => 10.0 },
+          { 'name' => 'HTML', 'weight' => 15, 'percentage' => 6.0 },
+          { 'name' => 'CSS', 'weight' => 10, 'percentage' => 4.0 }
         ],
         'total_repos' => 0,
         'updated_at' => Time.now.iso8601,
