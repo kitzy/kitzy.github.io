@@ -11,11 +11,11 @@ module Jekyll
       puts "🔍 GitHubLanguagesGenerator: Starting language data generation..."
       
       # Get GitHub token from environment variable
-      token = ENV['GITHUB_TOKEN_LANGUAGES']
+      token = ENV['PERSONAL_GITHUB_TOKEN']
       username = site.config['github_username'] || 'kitzy'
       
       if token.nil? || token.empty?
-        puts "⚠️  No GITHUB_TOKEN_LANGUAGES found, using fallback data"
+        puts "⚠️  No PERSONAL_GITHUB_TOKEN found, using fallback data"
         generate_fallback_data(site)
         return
       end
