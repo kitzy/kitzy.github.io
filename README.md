@@ -45,7 +45,7 @@ I’m also **[AuDHD](https://embrace-autism.com/an-introduction-to-audhd/) (auti
 ---
 
 ## How I work best
-- I get inspired at odd hours. If I message you at midnight, that’s just the hamster in my brain choosing to sprint on the wheel. Please don’t feel pressure to respond outside your normal hours.  
+- I get inspired at odd hours. If you see me filing issues and creating pull requests at midnight, that’s just the hamster in my brain choosing to sprint on the wheel. Please don’t ever feel pressure to respond outside your normal working hours.  
 - Collaboration fuels me. I’m happiest when I can bounce ideas around like mental ping-pong.  
 - Variety keeps me energized. Give me a buffet of tasks, and I’ll happily graze.  
 - Clear priorities help me focus. Otherwise I may try to juggle flaming torches *and* chainsaws simultaneously.  
