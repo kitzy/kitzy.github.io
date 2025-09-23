@@ -9,6 +9,9 @@ author: "Kitzy"
 github_username: kitzy
 repository: kitzy/kitzy.github.io
 
+# GitHub token for build-time language calculation (set in environment)
+# Set GITHUB_TOKEN_LANGUAGES in your build environment for private repo access
+
 # Build settings
 markdown: kramdown
 highlighter: rouge
