@@ -129,6 +129,21 @@ async function loadBioFromAPI(username) {
         
         console.log('Updated bio:', cleanBio);
     }
+    
+    // Remove any company details that mention Fleet
+    removeFleetCompanyDetails();
+}
+
+function removeFleetCompanyDetails() {
+    // Look for company detail items and remove ones that mention Fleet
+    const detailItems = document.querySelectorAll('.detail-item');
+    detailItems.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        if (text.includes('fleet') || text.includes('@fleetdm')) {
+            console.log('Removing Fleet company detail:', item.textContent);
+            item.style.display = 'none';
+        }
+    });
 }
 
 function addSponsorsBadge(bioContainer) {
@@ -210,6 +225,9 @@ function setFallbackBio() {
         
         // Add sponsors badge
         addSponsorsBadge(bioContainer);
+        
+        // Remove Fleet company details
+        removeFleetCompanyDetails();
         
         console.log('✅ Fallback bio and sponsors badge set successfully');
     }
