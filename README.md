@@ -21,6 +21,20 @@ I’m also **[AuDHD](https://embrace-autism.com/an-introduction-to-audhd/) (auti
 
 ---
 
+## Things to know about me
+- I sometimes overcommit because my enthusiasm writes checks my calendar can’t cash. A reminder to pace myself is always welcome.  
+- I can get so busy helping others that I forget to drink water or breathe. Gentle nudges to take care of myself are appreciated.  
+- My brain alternates between hyperfocus (deep in the matrix) and scatter (every shiny thing is suddenly fascinating). Both are normal settings for me.  
+- Authenticity matters to me. If something’s off, just tell me. I’ll take honesty over guesswork any day.
+- I’m generally non-confrontational, I don’t like telling people things they don’t want to hear.
+- Most of the time, I consider myself a reasonable person.
+- I want people to get along, I want to like people, and I want people to like me.
+- I want to understand viewpoints that differ from mine.
+- If my tombstone someday says *“she was nice to work with,”* I’ll have done alright.  
+
+
+---
+
 ## My values
 - **Empathy as a baseline:** I believe life is better when people look out for each other. Thoughtfulness and small acts of care go a long way with me.  
 - **Curiosity first:** I’d rather ask questions and explore possibilities than pretend to know everything. For me, curiosity is the gateway to clarity.  
@@ -38,19 +52,19 @@ I’m also **[AuDHD](https://embrace-autism.com/an-introduction-to-audhd/) (auti
 
 ---
 
+## What I value in coworkers
+- Authenticity and honesty (yes, even blunt honesty).  
+- Thoughtfulness. Small kindnesses land big with me.  
+- Curiosity and playfulness. Problem-solving doesn’t have to be boring.  
+- Respect for different rhythms and quirks. Neurodivergence is part of the team, not a bug.  
+
+---
+
 ## How to communicate with me
 - **Be clear and kind.** I love warmth, but I also need straightforwardness.  
 - **Explicit is better than implicit.** Subtle hints often sneak right past me.  
 - **Quick check-ins help.** A simple “just confirming you’re good with this?” is magic.  
 - **Ping me if I’m late.** Think of it as tapping me on the shoulder in the time-fog.  
-
----
-
-## Things to know about me
-- I sometimes overcommit because my enthusiasm writes checks my calendar can’t cash. A reminder to pace myself is always welcome.  
-- I can get so busy helping others that I forget to drink water or breathe. Gentle nudges to take care of myself are appreciated.  
-- My brain alternates between hyperfocus (deep in the matrix) and scatter (every shiny thing is suddenly fascinating). Both are normal settings for me.  
-- Authenticity matters to me. If something’s off, just tell me. I’ll take honesty over guesswork any day.  
 
 ---
 
@@ -73,13 +87,20 @@ I’m also **[AuDHD](https://embrace-autism.com/an-introduction-to-audhd/) (auti
 
 ---
 
-## What I value in coworkers
-- Authenticity and honesty (yes, even blunt honesty).  
-- Thoughtfulness. Small kindnesses land big with me.  
-- Curiosity and playfulness. Problem-solving doesn’t have to be boring.  
-- Respect for different rhythms and quirks. Neurodivergence is part of the team, not a bug.  
+## My beliefs
+These are the principles that guide how I see the world and how I show up at work and in life:  
 
----
+- Honest, practical education is better than pretending tough topics don’t exist.  
+- When we care for our environment, it has a way of caring for us in return.  
+- To quote Adam Savage: *I believe that inside every tool is a hammer.*  
+- Every person has the right to make their own choices about their own body.  
+- Everyone has the right to show up in the world as the identity that feels true to them, whether that’s gender, name, pronouns, or any other expression of self.  
+- Communities thrive when we step up for each other in times of need.  
+- “Perfect” doesn’t exist, the real magic is in making small improvements, again and again.  
+- Don’t do to others what you wouldn’t want done to you.  
+- While not everyone is inherently good, most people are at least trying.  
+- Morality comes from love and compassion, not from a checklist of rules.  
+
 
 ## Quick reference
 
