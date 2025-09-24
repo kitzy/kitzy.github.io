@@ -10,11 +10,12 @@ permissions:
 
 jobs:
   enable-auto-merge:
-    name: Enable auto-merge for Dependabot PRs
+    name: Enable auto-merge for Dependabot security PRs
     runs-on: ubuntu-latest
+    # Only when the PR is opened by Dependabot and marked as security
     if: >-
-      github.actor == 'dependabot[bot]' ||
-      contains(github.event.pull_request.labels.*.name, 'dependencies')
+      github.actor == 'dependabot[bot]' &&
+      contains(github.event.pull_request.labels.*.name, 'security')
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
