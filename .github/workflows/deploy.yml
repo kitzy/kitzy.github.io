@@ -33,7 +33,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1'
+          ruby-version: '3.2.9'
           bundler-cache: false  # Disable cache since we changed dependencies
           
       - name: Setup Pages

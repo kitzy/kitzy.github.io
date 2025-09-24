@@ -22,7 +22,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1'
+          ruby-version: '3.2.9'
           bundler-cache: false
           
       - name: Install dependencies
@@ -43,10 +43,9 @@ jobs:
         id: vulnerability-check
         run: |
           # Parse results and set output
-          # Uses .bundler-audit.yml to temporarily ignore google-protobuf CVE-2024-7254 until Ruby can be updated to 2.7+
           if bundle audit check --format text; then
             echo "vulnerabilities=false" >> $GITHUB_OUTPUT
-            echo "✅ No known vulnerabilities found (excluding known google-protobuf issue)"
+            echo "✅ No known vulnerabilities found"
           else
             echo "vulnerabilities=true" >> $GITHUB_OUTPUT
             echo "⚠️ Security vulnerabilities detected"
@@ -56,11 +55,6 @@ jobs:
             bundle audit check --format text >> $GITHUB_STEP_SUMMARY
             echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
           fi
-          
-          # Always report the google-protobuf vulnerability as a known issue
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "### Known Issues (Temporarily Ignored)" >> $GITHUB_STEP_SUMMARY
-          echo "- google-protobuf CVE-2024-7254: Requires Ruby 2.7+ for fix. Will resolve when Ruby is updated." >> $GITHUB_STEP_SUMMARY
           
       - name: Upload security report
         uses: actions/upload-artifact@v4
@@ -99,7 +93,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1'
+          ruby-version: '3.2.9'
           bundler-cache: false
           
       - name: Check for outdated dependencies
