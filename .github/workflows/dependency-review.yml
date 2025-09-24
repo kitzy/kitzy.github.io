@@ -11,6 +11,8 @@ jobs:
   dependency-review:
     name: Dependency Review
     runs-on: ubuntu-latest
+    # This action requires GitHub Advanced Security for private repos; skip if repo is private
+    if: github.event.repository.private == false
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
