@@ -19,17 +19,16 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.3'
-          # Important: do not run `bundle install`; bundler 1.x in lockfile is incompatible with Ruby 3.3
-          bundler-cache: false
+          bundler-cache: true
 
-      - name: Install bundler-audit
+      - name: Ensure bundler-audit installed
         run: |
-          gem install bundler-audit
+          bundle show bundler-audit >/dev/null 2>&1 || bundle add bundler-audit --group development
       
       - name: Update advisory database
         run: |
-          bundler-audit update
+          bundle exec bundler-audit update
 
       - name: Audit Gemfile.lock for vulnerabilities
         run: |
-          bundler-audit check --gemfile Gemfile.lock --ignore CVE-2015-9284
+          bundle exec bundler-audit check --ignore CVE-2015-9284

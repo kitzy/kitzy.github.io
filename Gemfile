@@ -10,6 +10,11 @@ group :jekyll_plugins do
   gem "jekyll-feed"
 end
 
+# Development tools
+group :development do
+  gem "bundler-audit", require: false
+end
+
 # Windows and JRuby compatibility
 platforms :mingw, :x64_mingw, :mswin, :jruby do
   gem "tzinfo", ">= 1", "< 3"
