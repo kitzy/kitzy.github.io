@@ -56,6 +56,38 @@ Located in `.github/workflows/security-audit.yml`, this workflow:
 
 ## 🛠️ Manual Tools
 
+### Ruby Environment Setup
+
+The project uses **Ruby 3.2.9** managed by rbenv for consistent, secure dependency management:
+
+**Quick Setup:**
+```bash
+# Initialize Ruby environment and run commands
+./scripts/setup-ruby-env.sh
+
+# Or combine with other commands
+./scripts/setup-ruby-env.sh bundle install
+./scripts/setup-ruby-env.sh jekyll serve
+```
+
+**Manual Setup:**
+```bash
+# Load Homebrew and rbenv
+eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(rbenv init -)"
+
+# Verify Ruby version
+ruby -v  # Should show Ruby 3.2.9
+```
+
+**Environment Details:**
+- **Ruby Version**: 3.2.9 (specified in `.ruby-version`)
+- **Bundler**: 2.7.2+ for modern gem management
+- **Package Manager**: Homebrew for rbenv installation
+- **Version Manager**: rbenv for consistent Ruby versions
+
+This setup resolves security issues like CVE-2024-7254 that affected older Ruby versions and provides access to modern gem versions with the latest security patches.
+
 ### Local Dependency Script
 
 The `scripts/update-deps.sh` script provides local dependency management:

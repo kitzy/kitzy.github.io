@@ -1,3 +1,0 @@
----
-ignore:
-  - CVE-2024-7254  # Temporarily ignore until Ruby can be updated to 2.7+
