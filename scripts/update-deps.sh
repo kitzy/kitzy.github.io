@@ -106,8 +106,9 @@ bundle audit update
 
 # Run security audit
 print_status "Running security audit..."
-if bundle audit check; then
-    print_success "No known security vulnerabilities found!"
+# Temporarily ignore google-protobuf CVE-2024-7254 until Ruby can be updated to 2.7+
+if bundle audit check --ignore CVE-2024-7254; then
+    print_success "No known security vulnerabilities found (excluding known google-protobuf issue)!"
 else
     print_error "Security vulnerabilities detected!"
     if [[ "$SECURITY_ONLY" == "true" ]]; then
@@ -158,8 +159,8 @@ else
     
     # Run security audit again after updates
     print_status "Running security audit after updates..."
-    if bundle audit check; then
-        print_success "No security vulnerabilities after updates!"
+    if bundle audit check --ignore CVE-2024-7254; then
+        print_success "No security vulnerabilities after updates (excluding known google-protobuf issue)!"
     else
         print_error "Security vulnerabilities still exist after updates!"
         print_warning "Manual intervention may be required."
