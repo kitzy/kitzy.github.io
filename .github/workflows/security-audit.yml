@@ -1,0 +1,124 @@
+name: Security Audit
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  # Run security audit weekly
+  schedule:
+    - cron: '0 8 * * 1'  # Weekly on Monday at 8 AM
+  # Allow manual triggering
+  workflow_dispatch:
+
+jobs:
+  security-audit:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+          bundler-cache: false
+          
+      - name: Install dependencies
+        run: |
+          bundle config path vendor/bundle
+          bundle install --jobs 4 --retry 3
+          
+      - name: Run Bundle Audit
+        run: |
+          # Install bundle-audit if not present
+          gem install bundle-audit
+          # Update the vulnerability database
+          bundle audit check --update
+          # Run the audit and fail on vulnerabilities
+          bundle audit check --format json --output security-report.json || true
+          
+      - name: Check for vulnerabilities
+        id: vulnerability-check
+        run: |
+          # Parse results and set output
+          if bundle audit check --format text; then
+            echo "vulnerabilities=false" >> $GITHUB_OUTPUT
+            echo "✅ No known vulnerabilities found"
+          else
+            echo "vulnerabilities=true" >> $GITHUB_OUTPUT
+            echo "⚠️ Security vulnerabilities detected"
+            echo "## Security Vulnerabilities Found" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+            bundle audit check --format text >> $GITHUB_STEP_SUMMARY
+            echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+      - name: Upload security report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: security-report
+          path: security-report.json
+          retention-days: 30
+          
+      - name: Comment on PR
+        if: github.event_name == 'pull_request' && steps.vulnerability-check.outputs.vulnerabilities == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '⚠️ **Security vulnerabilities detected!** Please check the security audit results in the Actions tab before merging.'
+            });
+            
+      - name: Fail on vulnerabilities
+        if: steps.vulnerability-check.outputs.vulnerabilities == 'true'
+        run: |
+          echo "Security vulnerabilities found. Please update vulnerable dependencies."
+          exit 1
+
+  dependency-check:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+          bundler-cache: false
+          
+      - name: Check for outdated dependencies
+        run: |
+          bundle config path vendor/bundle
+          bundle install --jobs 4 --retry 3
+          
+          echo "## Dependency Status Report" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          # Check for outdated gems
+          outdated_output=$(bundle outdated --parseable || true)
+          
+          if [ -n "$outdated_output" ]; then
+            echo "### Outdated Dependencies" >> $GITHUB_STEP_SUMMARY
+            echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+            echo "$outdated_output" >> $GITHUB_STEP_SUMMARY
+            echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "✅ All dependencies are up to date!" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+      - name: Generate dependency tree
+        run: |
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Current Dependencies" >> $GITHUB_STEP_SUMMARY
+          echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+          bundle list >> $GITHUB_STEP_SUMMARY
+          echo "\`\`\`" >> $GITHUB_STEP_SUMMARY

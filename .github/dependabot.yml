@@ -1,0 +1,62 @@
+version: 2
+updates:
+  # Ruby/Bundler dependencies
+  - package-ecosystem: "bundler"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "America/Los_Angeles"
+    # Security updates get priority - check daily
+    open-pull-requests-limit: 10
+    # Auto-approve security updates
+    allow:
+      - dependency-type: "all"
+    commit-message:
+      prefix: "deps"
+      prefix-development: "deps-dev"
+      include: "scope"
+    # Group related updates together
+    groups:
+      jekyll-plugins:
+        patterns:
+          - "jekyll-*"
+        update-types:
+          - "minor"
+          - "patch"
+  # GitHub Actions dependencies  
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly" 
+      day: "monday"
+      time: "09:00"
+      timezone: "America/Los_Angeles"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "ci"
+      include: "scope"
+    # Group Actions updates
+    groups:
+      actions:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
+
+# Additional security-focused updates - daily check
+  - package-ecosystem: "bundler"
+    directory: "/"
+    schedule:
+      interval: "daily"
+      time: "06:00"
+      timezone: "America/Los_Angeles"
+    open-pull-requests-limit: 5
+    # Focus on all dependencies for security
+    allow:
+      - dependency-type: "all"
+    commit-message:
+      prefix: "security"
+      include: "scope"

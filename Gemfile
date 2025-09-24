@@ -10,6 +10,11 @@ group :jekyll_plugins do
   gem "jekyll-feed"
 end
 
+# Development and security tools
+group :development do
+  gem "bundle-audit", "~> 0.1"  # Security vulnerability scanning
+end
+
 # Windows and JRuby compatibility
 platforms :mingw, :x64_mingw, :mswin, :jruby do
   gem "tzinfo", ">= 1", "< 3"
