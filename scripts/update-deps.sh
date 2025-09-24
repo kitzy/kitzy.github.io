@@ -106,8 +106,8 @@ bundle audit update
 
 # Run security audit
 print_status "Running security audit..."
-# Temporarily ignore google-protobuf CVE-2024-7254 until Ruby can be updated to 2.7+
-if bundle audit check --ignore CVE-2024-7254; then
+# Uses .bundler-audit.yml to temporarily ignore google-protobuf CVE-2024-7254 until Ruby can be updated to 2.7+
+if bundle audit check; then
     print_success "No known security vulnerabilities found (excluding known google-protobuf issue)!"
 else
     print_error "Security vulnerabilities detected!"
@@ -159,7 +159,7 @@ else
     
     # Run security audit again after updates
     print_status "Running security audit after updates..."
-    if bundle audit check --ignore CVE-2024-7254; then
+    if bundle audit check; then
         print_success "No security vulnerabilities after updates (excluding known google-protobuf issue)!"
     else
         print_error "Security vulnerabilities still exist after updates!"
