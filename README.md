@@ -4,7 +4,7 @@ _updated: September 23, 2025_
 
 ---
 
-## Who I am
+## whoami
 I’m a mix of big-heartedness, curiosity, and creativity. My [Enneagram](https://en.wikipedia.org/wiki/Enneagram_of_Personality) results put me as:  
 - **Type 2 (Helper):** Warm, caring, people-oriented. I want to support others and make the team feel like a safe, connected place.  
 - **Type 7 (Enthusiast):** Energetic, curious, and idea-hungry. I thrive on variety and love chasing possibilities.  
