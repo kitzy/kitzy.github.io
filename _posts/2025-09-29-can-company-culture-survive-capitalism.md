@@ -24,7 +24,7 @@ Unfortunately, we have all been forced into the system that is capitalism. Wheth
 
 ## Is there another way?
 
-Some people argue this erosion is not inevitable. They point to companies like Patagonia, which legally restructured itself to ensure environmental responsibility outweighs shareholder return. Others highlight private companies that have stayed independent for decades, prioritizing mission over market share.
+Some people argue this erosion is not inevitable. They point to companies like Patagonia, which [legally restructured itself to ensure environmental responsibility outweighs shareholder return](https://www.patagoniaworks.com/press/2022/9/14/patagonias-next-chapter-earth-is-now-our-only-shareholder). Others highlight private companies that have stayed independent for decades, prioritizing mission over market share.
 
 But these are exceptions, not the rule. In tech especially, it often feels like the only alternatives to an acquisition or an IPO are stagnation or outright failure, which only tightens the pressure to follow the well-worn path of capital markets. The gravitational pull of capital markets is incredibly strong. Even well-intentioned founders can find themselves making tradeoffs they once swore they would never make. The system itself creates incentives that are difficult to resist. For every Patagonia, there are countless other stories where once-beloved companies lost their way after going public or being acquired.
 
