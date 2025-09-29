@@ -18,7 +18,7 @@ This pattern raises a troubling question: is it even possible for a company to m
 
 By design, capitalism pushes businesses toward profit maximization. Once shareholders are in the picture, the pressure gets codified into law and governance. Boards are expected to act in the best interest of shareholders, and shareholder interests usually boil down to financial return. Culture and values become nice-to-haves, only until they interfere with growth.
 
-This does not mean values disappear overnight, but it does mean they are subordinated. Culture becomes another input to manage, a means to an end. A healthy, fun work environment is valuable only if it increases productivity and retention. A beloved product is worth investing in only if it drives revenue expansion. It can feel like something essential has been hollowed out.
+This does not mean values disappear overnight, but it does mean they are subordinated. Culture becomes another input to manage, a means to an end. A healthy, fun work environment is valuable only if it increases productivity and profits. A beloved product is worth investing in only if it drives revenue expansion. It can feel like something essential has been hollowed out.
 
 Unfortunately, we have all been forced into the system that is capitalism. Whether we like it or not, it is the water we swim in, and is the system within which we all must operate. That reality shapes what is possible for culture, and what will inevitably be sacrificed to the demands of growth.
 
