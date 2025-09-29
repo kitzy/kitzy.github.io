@@ -56,7 +56,7 @@ bundle exec jekyll serve --port 4000
 ### JavaScript Architecture
 - **Core**: `assets/js/main.js` - mobile menu, heading anchors, code block enhancements
 - **GitHub**: `assets/js/github-integration.js` - API calls, fallback handling, dynamic content
-- **External**: `assets/js/external-content.js`, `projects.js`, `readme.js` - content loading
+- **External**: `assets/js/external-content.js`, `projects.js` - content loading
 - **Pattern**: Vanilla JS, async/await, graceful degradation
 
 ## Configuration Files
