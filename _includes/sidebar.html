@@ -1,9 +1,13 @@
 <aside class="sidebar">
     <div class="profile-section">
         <div class="avatar-container">
-            <img class="avatar" src="{{ site.github.owner.avatar_url | default: 'https://github.com/kitzy.png' }}" alt="Profile Avatar">
+            <a href="{{ '/' | relative_url }}" class="avatar-link">
+                <img class="avatar" src="{{ site.github.owner.avatar_url | default: 'https://github.com/kitzy.png' }}" alt="Profile Avatar">
+            </a>
         </div>
-        <h1 class="name">{{ site.github.owner.name | default: site.title }}</h1>
+        <a href="{{ '/' | relative_url }}" class="name-link">
+            <h1 class="name">{{ site.github.owner.name | default: site.title }}</h1>
+        </a>
         <p class="pronouns">they/she</p>
         <p class="bio" id="github-bio">{{ site.github.owner.bio | default: site.description }}</p>
         

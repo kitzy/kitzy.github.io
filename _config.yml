@@ -70,8 +70,6 @@ social:
 
 # Site navigation
 navigation:
-  - title: "About"
-    url: "/"
   - title: "README"
     url: "/readme/"
   - title: "Projects" 

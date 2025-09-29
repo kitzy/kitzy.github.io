@@ -3,14 +3,6 @@ layout: default
 ---
 
 <div class="markdown-content">
-    <div style="margin-bottom: 16px;">
-        <a href="{{ '/blog/' | relative_url }}" style="background: #21262d; color: #e6edf3; border: 1px solid #30363d; border-radius: 6px; padding: 8px 16px; text-decoration: none; display: inline-block;">← Back to Blog</a>
-    </div>
-    
-    {% if page.title %}
-        <h1>{{ page.title }}</h1>
-    {% endif %}
-    
     {% if page.date %}
         <p class="post-meta">
             <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>

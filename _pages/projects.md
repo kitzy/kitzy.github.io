@@ -5,8 +5,6 @@ description: "My projects and contributions"
 permalink: /projects/
 ---
 
-# Projects
-
 Here are some of my featured projects and contributions
 
 <div class="projects-grid" id="projects-container">
