@@ -6,8 +6,6 @@ permalink: /blog/
 ---
 
 <div class="markdown-content">
-    <h2>Blog</h2>
-    
     {% if site.posts.size > 0 %}
         <div class="blog-posts">
             {% for post in site.posts %}

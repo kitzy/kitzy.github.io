@@ -13,8 +13,6 @@
                     {% assign is_active = false %}
                     {% if page.url == nav_item.url %}
                         {% assign is_active = true %}
-                    {% elsif nav_item.title == 'About' and page.url == '/' %}
-                        {% assign is_active = true %}
                     {% endif %}
                     
                     <a href="{{ nav_item.url | relative_url }}" 
@@ -24,6 +22,8 @@
                     </a>
                 {% endfor %}
             </nav>
+
+            {% include breadcrumbs.html %}
 
             <div class="tab-content">
                 <div class="tab-pane active">
