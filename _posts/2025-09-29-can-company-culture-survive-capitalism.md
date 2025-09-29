@@ -36,7 +36,7 @@ For employees, cultural erosion can feel devastatingly personal. Many people joi
 
 I know this feeling because I lived it. For a while I was in denial about what was happening, telling myself that if I just cared enough, if I just tried hard enough, I could keep at least some of what I loved about the company culture alive. And for a short time I did, at least within my own team. But I was fighting a battle I was never going to win.
 
-The long hours, the creative energy, and the relationships I built were all rooted in a shared belief about what the company stood for. When that belief dissolved, it was heartbreaking. It felt like a personal loss, because I poured so much of myself into trying to hold on. It completely shook my sense of purpose, and although it is one of the most common stories in modern work life, living through it feelt anything but common.
+The long hours, the creative energy, and the relationships I built were all rooted in a shared belief about what the company stood for. When that belief dissolved, it was heartbreaking. It felt like a personal loss, because I poured so much of myself into trying to hold on. It completely shook my sense of purpose, and although it is one of the most common stories in modern work life, living through it felt anything but common.
 
 ## The bigger question
 
