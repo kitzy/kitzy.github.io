@@ -27,7 +27,7 @@ permalink: /blog/
             {% endfor %}
         </div>
     {% else %}
-        <p>No blog posts found. Create markdown files in the <code>_posts</code> folder to get started!</p>
-        <p>Blog posts should be stored as <code>.md</code> files in the <code>_posts</code> directory with the format <code>YYYY-MM-DD-title.md</code>.</p>
+        <p>No blog posts found. Create markdown files in the <code>content/_posts</code> folder to get started!</p>
+        <p>Blog posts should be stored as <code>.md</code> files in the <code>content/_posts</code> directory with the format <code>YYYY-MM-DD-title.md</code>.</p>
     {% endif %}
 </div>

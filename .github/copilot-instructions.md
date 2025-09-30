@@ -1,6 +1,13 @@
 # Copilot Instructions for kitzy.github.io
 
-This is Kitzy's personal Jekyll site hosted on GitHub Pages with custom GitHub Actions deployment. The site showcases professional profile, blog posts, and projects with dynamic GitHub integration.
+This is Kitzy's personal Jekyll site hosted on GitHub Pages with custom GitHub Actions deployment. The site showcases professional profile, ### File Management
+
+### Important Patterns
+- **Generated**: `_site/` directory is Jekyll output, git-ignored
+- **Cache**: `.jekyll-cache/` for build performance
+- **Assets**: JavaScript files in `assets/js/`, single CSS file
+- **Content**: All content files in `content/` directory (_posts, pages, redirects, assets)
+- **Code vs Content**: `content/` directory separates personal content from open-source codests, and projects with dynamic GitHub integration.
 
 ## Architecture Overview
 
@@ -48,8 +55,10 @@ bundle exec jekyll serve --port 4000
 - **Fallback**: Static language array when token unavailable
 
 ### Content Organization
-- **Posts**: `_posts/YYYY-MM-DD-title.md` format with post layout
-- **Pages**: `_pages/*.md` with default layout, custom permalinks
+- **Posts**: `content/_posts/YYYY-MM-DD-title.md` format with post layout (underscore required)
+- **Pages**: `content/pages/*.md` with default layout, custom permalinks
+- **Redirects**: `content/redirects/*.md` with redirect layout
+- **Assets**: `content/assets/` for static content files (favicon, images)
 - **Navigation**: Configured in `_config.yml` navigation array
 - **Dynamic Content**: README.md serves as personal user manual
 
@@ -147,7 +156,7 @@ permalink: /custom-url/  # Optional
 ## Common Tasks
 
 ### Adding Blog Post
-1. Create `_posts/YYYY-MM-DD-title.md` with required frontmatter
+1. Create `content/_posts/YYYY-MM-DD-title.md` with required frontmatter
 2. Test locally: `bundle exec jekyll serve`
 3. Follow branch workflow: feature branch → PR → merge
 

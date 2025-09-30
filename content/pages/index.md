@@ -2,6 +2,7 @@
 layout: default
 title: About
 description: "Customer Support Engineer at Fleet | Infrastructure Nerd | Dog & Motorcycle Lover"
+permalink: /
 ---
 
 <div class="markdown-content">
