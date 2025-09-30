@@ -34,6 +34,14 @@ collections:
   posts:
     output: true
     permalink: /blog/:title/
+  pages:
+    output: true
+    permalink: /:name/
+  redirects:
+    output: true
+
+# Collections paths - all content is in the content/ directory
+collections_dir: content
 
 # Exclude files
 exclude:
@@ -45,9 +53,9 @@ exclude:
   - .jekyll-cache
   - .jekyll-metadata
 
-# Include files
+# Include static content assets (Jekyll copies these to _site)
 include:
-  - _pages
+  - content/assets
 
 # Default front matter
 defaults:
@@ -62,6 +70,11 @@ defaults:
       type: "pages"
     values:
       layout: "default"
+  - scope:
+      path: ""
+      type: "redirects"
+    values:
+      layout: "redirect"
 
 # Social media defaults
 social:

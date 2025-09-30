@@ -4,6 +4,14 @@ Personal Jekyll site hosted on GitHub Pages showcasing professional profile, blo
 
 🌐 **Live Site**: [kitzy.com](https://kitzy.com)  
 
+## Open Source + Personal Content
+
+This repository contains:
+- ✅ **Open-source code**: Jekyll configuration, plugins, layouts, and JavaScript
+- ❌ **Private content**: Blog posts, pages, and personal information (in `content/` directory)
+
+The `content/` directory is excluded from the public repository via `.gitignore`. If you fork this project, you'll need to create your own `content/` directory with your content files.  
+
 ## Architecture Overview
 
 This is a Jekyll 4.x site with custom Ruby plugins and GitHub Pages hosting via Actions. The site features a hybrid data loading approach:
@@ -75,17 +83,24 @@ kitzy.github.io/
 │   ├── default.html         # Main layout
 │   ├── post.html           # Blog post layout
 │   └── redirect.html       # Redirect template
-├── _pages/                  # Static pages
-│   ├── blog.md
-│   ├── projects.md
-│   └── readme.md           # Personal user manual
 ├── _plugins/               # Custom Jekyll plugins
 │   └── github_languages.rb # Language stats generator
-├── _posts/                 # Blog posts (YYYY-MM-DD-title.md)
 ├── assets/js/              # JavaScript modules
 │   ├── main.js            # Core functionality
 │   ├── github-integration.js
 │   └── projects.js
+├── content/                 # All site content (not open-sourced)
+│   ├── _posts/             # Blog posts (YYYY-MM-DD-title.md)
+│   ├── assets/             # Static content assets (favicon, etc.)
+│   ├── pages/              # Static pages
+│   │   ├── blog.md
+│   │   ├── projects.md
+│   │   ├── readme.md       # Personal user manual
+│   │   └── index.md        # About/home page
+│   └── redirects/          # Redirect pages
+│       ├── broadcast.md
+│       ├── live.md
+│       └── studio.md
 ├── styles.css              # Main stylesheet
 └── README.md              # This file
 ```
@@ -105,10 +120,21 @@ kitzy.github.io/
    - Provides fallbacks when build-time data unavailable
    - Handles API rate limiting gracefully
 
-### Content Management
+## Content Management
+
+### Content Directory Structure
+
+All site content is organized in the `content/` directory (not included in public repository):
+
+- `content/_posts/` - Blog posts with `YYYY-MM-DD-title.md` naming (underscore required)
+- `content/pages/` - Static pages (about, blog index, projects, readme)
+- `content/redirects/` - Simple redirect pages
+- `content/assets/` - Static content assets (favicon, images, etc.)
+
+### Creating Content
 
 #### Blog Posts
-Create posts in `_posts/` with frontmatter:
+Create posts in `content/_posts/` with frontmatter:
 
 ```yaml
 ---
@@ -125,7 +151,7 @@ Your content here...
 Posts are accessible at `/blog/post-title/`
 
 #### Pages
-Create pages in `_pages/` or root with:
+Create pages in `content/pages/` with:
 
 ```yaml
 ---
