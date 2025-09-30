@@ -5,8 +5,6 @@ description: "Personal user manual and work philosophy - Because people don't co
 permalink: /readme/
 ---
 
-<div class="markdown-content">
-
 _updated: September 23, 2025_
 
 *Because people don't come with instruction booklets (but wouldn't it be easier if they did?). This is mine. It's here to help you understand how I tick, how I work best, and how we can collaborate without stepping on rakes together.*  
@@ -122,5 +120,3 @@ These are the principles that guide how I see the world and how I show up at wor
 - Endless repetitive tasks  
 - Being taken for granted when I've overextended  
 - Feeling like I have to "mask" my quirks
-
-</div>
