@@ -294,8 +294,3 @@ This is a personal site, but if you notice issues:
 ## License
 
 This project is open source. Feel free to use as inspiration for your own Jekyll site.
-
-- Ambiguity and unclear expectations (my brain fills in the blanks with chaos)  
-- Endless repetitive tasks  
-- Being taken for granted when I’ve overextended  
-- Feeling like I have to “mask” my quirks
