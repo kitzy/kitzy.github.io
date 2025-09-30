@@ -34,6 +34,9 @@
 <!-- Canonical URL -->
 <link rel="canonical" href="{{ site.url }}{{ page.url }}">
 
+<!-- RSS Feed -->
+<link rel="alternate" type="application/atom+xml" title="{{ site.title }} - Feed" href="{{ '/feed.xml' | relative_url }}">
+
 <title>{% if page.title %}{{ site.title }} - {{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 <link rel="icon" type="image/svg+xml" href="{{ '/content/assets/favicon.svg' | relative_url }}">
 <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">

@@ -3,8 +3,8 @@
   Generates breadcrumb trail based on page URL and site navigation
 {% endcomment %}
 
-<nav class="breadcrumb-nav" aria-label="Breadcrumb navigation">
-  <ol class="breadcrumb">
+<nav class="breadcrumb-nav" aria-label="Breadcrumb navigation" style="display: flex; justify-content: space-between; align-items: center;">
+  <ol class="breadcrumb" style="margin: 0;">
     <!-- Home breadcrumb -->
     <li class="breadcrumb-item">
       {% if page.url == "/" %}
@@ -72,4 +72,11 @@
       {% endif %}
     {% endunless %}
   </ol>
+  
+  {% comment %}
+    RSS feed link - only show on blog pages
+  {% endcomment %}
+  {% if page.layout == "post" or page.url contains "/blog/" %}
+    <a href="{{ '/feed.xml' | relative_url }}" style="font-size: 0.85rem; color: #666; text-decoration: none; white-space: nowrap; margin-left: 1rem;" title="Subscribe to RSS feed">📡 RSS</a>
+  {% endif %}
 </nav>
