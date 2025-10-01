@@ -50,7 +50,7 @@ async function loadExternalAboutContent() {
             <hr>
             <h3>💖 Support My Work</h3>
             <p>If you enjoy my content and want to support my blogging and open-source work, consider becoming a sponsor on <a href="https://github.com/sponsors/kitzy" target="_blank">GitHub Sponsors</a>. Your support helps me continue creating and sharing valuable resources!</p>
-            <p>
+            <p style="text-align: center;">
                 <a href="https://github.com/sponsors/kitzy" target="_blank">
                     <img src="https://img.shields.io/github/sponsors/kitzy?style=for-the-badge&logo=github&logoColor=white&labelColor=gray&color=pink" alt="GitHub Sponsors" />
                 </a>
@@ -101,7 +101,7 @@ async function loadExternalAboutContent() {
             
             <p>If you enjoy my content and want to support my blogging and open-source work, consider becoming a sponsor on <a href="https://github.com/sponsors/kitzy" target="_blank">GitHub Sponsors</a>. Your support helps me continue creating and sharing valuable resources!</p>
             
-            <p>
+            <p style="text-align: center;">
                 <a href="https://github.com/sponsors/kitzy" target="_blank">
                     <img src="https://img.shields.io/github/sponsors/kitzy?style=for-the-badge&logo=github&logoColor=white&labelColor=gray&color=pink" alt="GitHub Sponsors" />
                 </a>
