@@ -7,7 +7,7 @@ permalink: /readme/
 
 <div class="markdown-content" markdown="1">
 
-_updated: September 23, 2025_
+_updated: October 2, 2025_
 
 *Because people don't come with instruction booklets (but wouldn't it be easier if they did?). This is mine. It's here to help you understand how I tick, how I work best, and how we can collaborate without stepping on rakes together.*  
 
@@ -92,21 +92,6 @@ I'm also **[AuDHD](https://embrace-autism.com/an-introduction-to-audhd/) (autism
 - **Pair it with clarity.** If you can, include specific examples or suggestions. Otherwise my brain may spiral trying to fill in the blanks.  
 
 ---
-
-## My beliefs
-These are the principles that guide how I see the world and how I show up at work and in life:  
-
-- Honest, practical education is better than pretending tough topics don't exist.  
-- When we care for our environment, it has a way of caring for us in return.  
-- To quote Adam Savage: *I believe that inside every tool is a hammer.*  
-- Every person has the right to make their own choices about their own body.  
-- Everyone has the right to show up in the world as the identity that feels true to them, whether that's gender, name, pronouns, or any other expression of self.  
-- Communities thrive when we step up for each other in times of need.  
-- "Perfect" doesn't exist, the real magic is in making small improvements, again and again.  
-- Don't do to others what you wouldn't want done to you.  
-- While not everyone is inherently good, most people are at least trying.  
-- Morality comes from love and compassion, not from a checklist of rules.  
-
 
 ## Quick reference
 
