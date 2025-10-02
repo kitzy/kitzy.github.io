@@ -7,7 +7,7 @@ permalink: /readme/
 
 <div class="markdown-content" markdown="1">
 
-_updated: October 2, 2025_
+_[updated: October 2, 2025](https://github.com/kitzy/kitzy.github.io/commits/main/content/pages/readme.md)_
 
 *Because people don't come with instruction booklets (but wouldn't it be easier if they did?). This is mine. It's here to help you understand how I tick, how I work best, and how we can collaborate without stepping on rakes together.*  
 
