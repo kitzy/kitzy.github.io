@@ -11,12 +11,12 @@ This directory contains all the personal content for the site. It is intentional
 
 ## Why This Exists
 
-This site's **code** is open source, but the **content** (blog posts, personal information, etc.) is not. By keeping all content in this single directory, it's easy to:
+This site's **code** is open source (MIT License), but the **content** (blog posts, personal information, etc.) is publicly viewable but not open source licensed. By keeping all content in this single directory, it's easy to:
 
-1. Exclude it from public repositories
+1. Make the distinction between code and content explicit
 2. Back it up separately
-3. Make the boundary between code and content explicit
+3. Indicate clearly what is open source vs. publicly viewable
 
-## Not Open-Sourced
+## Licensing Note
 
-This directory is listed in `.gitignore` and should not be committed to the public repository. If you fork this project, you'll need to create your own `content/` directory with your own content files.
+While this content is publicly viewable on the website and in this repository, it is **not open source**. All content in this directory is © Kitzy and all rights reserved. If you fork this project, please create your own original content files.

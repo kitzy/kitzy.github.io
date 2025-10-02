@@ -1,6 +1,6 @@
-# Copilot Instructions for kitzy.github.io
+# Copilot Instructions
 
-This is Kitzy's personal Jekyll site hosted on GitHub Pages with custom GitHub Actions deployment. The site showcases professional profile, ### File Management
+This is a personal Jekyll site hosted on GitHub Pages with custom GitHub Actions deployment. The site showcases professional profile, ### File Management
 
 ### Important Patterns
 - **Generated**: `_site/` directory is Jekyll output, git-ignored
@@ -110,11 +110,11 @@ permalink: /custom-url/  # Optional
 ---
 ```
 
-### Personal Context (from README.md)
-- **Identity**: AuDHD (autism + ADHD), Customer Support Engineer at Fleet
-- **Communication**: Direct, clear, authentic preferred
+### Content Guidelines
+- **Code License**: MIT License (open source)
+- **Content License**: All rights reserved (publicly viewable but not open source)
+- **Communication Style**: Direct, clear, authentic
 - **Values**: Empathy, curiosity, authenticity, growth, playfulness
-- **Work Style**: Collaborative, variety-loving, needs clear priorities
 
 ## Component Patterns
 
