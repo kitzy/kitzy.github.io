@@ -19,7 +19,7 @@ I'm a mix of big-heartedness, curiosity, and creativity. My [Enneagram](https://
 - **Type 7 (Enthusiast):** Energetic, curious, and idea-hungry. I thrive on variety and love chasing possibilities.  
 - **Type 4 (Individualist):** Authentic, creative, and reflective. I bring depth and individuality, sometimes with a flair of moodiness.  
 
-I'm also **[AuDHD](https://embrace-autism.com/an-introduction-to-audhd/) (autism + ADHD)**, which colors how I think and work:  
+I have **[AuDHD](https://embrace-autism.com/an-introduction-to-audhd/) (autism + ADHD)**, which colors how I think and work:  
 - I usually have about seven trains of thought running at once, sometimes in different directions, sometimes colliding in a glorious mental pile-up.  
 - Time blindness is real. If I'm late to a meeting, I didn't forget you; I just fell down a rabbit hole. A quick ping is like tossing me a rope.  
 - I sometimes interrupt because I think I can already see where you're going, but I'm learning to hit pause and let people land their sentences.  
