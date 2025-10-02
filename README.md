@@ -4,13 +4,13 @@ Personal Jekyll site hosted on GitHub Pages showcasing professional profile, blo
 
 🌐 **Live Site**: [kitzy.com](https://kitzy.com)  
 
-## Open Source + Personal Content
+## Open Source Code + Public Content
 
 This repository contains:
-- ✅ **Open-source code**: Jekyll configuration, plugins, layouts, and JavaScript
-- ❌ **Private content**: Blog posts, pages, and personal information (in `content/` directory)
+- ✅ **Open-source code**: Jekyll configuration, plugins, layouts, and JavaScript (MIT License)
+- 📝 **Public content**: Blog posts, pages, and personal information (in `content/` directory)
 
-The `content/` directory is excluded from the public repository via `.gitignore`. If you fork this project, you'll need to create your own `content/` directory with your content files.  
+The **code** is open source and free to use. The **content** (blog posts, pages, personal information) is publicly viewable on the website but retains all rights reserved - it is not licensed for reuse. If you fork this project, please create your own original content in the `content/` directory.  
 
 ## Architecture Overview
 
@@ -319,4 +319,8 @@ This is a personal site, but if you notice issues:
 
 ## License
 
-This project is open source. Feel free to use as inspiration for your own Jekyll site.
+**Code**: Open source under the MIT License. Feel free to use, modify, and distribute the code.
+
+**Content**: All content in the `content/` directory (blog posts, pages, personal information) is © Kitzy and all rights reserved. The content is publicly viewable but not licensed for reuse or redistribution.
+
+Feel free to use the code as inspiration for your own Jekyll site, but please create your own original content.
