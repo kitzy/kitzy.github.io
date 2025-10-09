@@ -42,7 +42,7 @@ Communities are living organisms. They molt, they shed, they regrow. They forget
 
 Recently, I found myself with the energy to rejoin the community again. I wasn’t looking to lead, just to participate. But things had changed.  
 
-These days, I work for a vendor that happens to be the community’s [biggest sponsor](https://www.businesswire.com/news/home/20251007275877/en/Mac-Admins-Foundation-and-Fleet-Device-Management-Announce-Expanded-Partnership-to-Support-Global-IT-Community). When I joined [discussions](https://github.com/macadminsdotorg/codeofconduct/pull/24#issuecomment-3387541856) again, some members pushed back on my involvement, worried that my employment might compromise neutrality.  
+These days, I work for a vendor that happens to be the community’s [biggest sponsor](https://www.businesswire.com/news/home/20251007275877/en/Mac-Admins-Foundation-and-Fleet-Device-Management-Announce-Expanded-Partnership-to-Support-Global-IT-Community). When I joined a [discussion](https://github.com/macadminsdotorg/codeofconduct/pull/24#issuecomment-3387541856) on some proposed changes to the Code of Conduct, some members pushed back on my involvement, worried that my employment might compromise neutrality.  
 
 I understand that instinct completely. Communities need to protect themselves from bias and influence. What surprised me wasn’t the pushback, it was that the people raising concerns had no idea I’d been there at the start.  
 
