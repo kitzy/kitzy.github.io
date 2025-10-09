@@ -10,7 +10,9 @@ Ten years ago, [I helped start a community](https://macadmins.slack.com/archives
 
 In those early days, there was no roadmap, no funding, no committee. Just a handful of people improvising. We built channels as the needs arose, wrote guidelines that evolved on the fly, and made judgment calls we hoped were fair. It was exhilarating, exhausting, and deeply human.  
 
-For a few years, I poured everything I had into it. I helped write the first versions of our rules, mediated conflicts, onboarded volunteers, and spent countless nights defusing tension before it spread. It was meaningful work, but it came at a cost. The bigger the community grew, the heavier the responsibility became. I started to feel like a permanent host at a party that never ended. Always welcoming, always listening, rarely able to relax.  
+For a few years, I poured everything I had into it. I helped write the first versions of our rules, mediated conflicts, onboarded volunteers, and spent countless nights defusing tension before it spread. It was meaningful work, but it came at a cost. The bigger the community grew, the heavier the responsibility became. 
+
+And the cost wasn’t only professional or emotional. My life became so entangled with the community that when tensions flared, the fallout bled into places it shouldn’t have. I even lost a relationship because of it; someone I cared deeply about had a falling out with the community and felt they needed to cut ties completely, including with me. That’s the part no one warns you about. When your work and your world overlap too much, a rift in one can break the other.
 
 Eventually, I had to step away. The constant emotional load was taking a toll on my mental health, and I needed to reclaim some space for myself. I thought I’d take a short break. Instead, it turned into years.
 
