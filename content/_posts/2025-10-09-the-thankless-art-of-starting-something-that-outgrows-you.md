@@ -54,7 +54,7 @@ And that’s okay. It’s what happens when something thrives long enough to evo
 
 ### The paradox of success
 
-If you do community work well, it scales. Growth is proof of life, but it also changes everything. What began as an intimate circle of shared understanding becomes a sprawling ecosystem. The sense of closeness that defined the early days gives way to new challenges: misunderstandings, mismatched expectations, and the natural tension that comes from trying to serve thousands of people instead of dozens.  
+If you do community work well, it scales. Growth is proof of life, but it also changes everything. What began as an intimate circle of shared understanding becomes a sprawling ecosystem. The sense of closeness that defined the early days gives way to new challenges: misunderstandings, mismatched expectations, and the natural tension that comes from trying to serve tens of thousands of people instead of dozens.  
 
 At scale, rules replace relationships. The tone of the place changes, sometimes in ways that feel alien to those who were there at the beginning. You tweak policies, try to preserve the spirit of what once was, and remind yourself that this is what success looks like. You’ve built something people care about.  
 
