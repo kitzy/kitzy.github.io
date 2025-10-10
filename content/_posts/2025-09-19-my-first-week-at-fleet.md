@@ -3,7 +3,7 @@ layout: post
 title: "My first week at Fleet: finding alignment"
 description: "Starting a new job is always a leap of faith. In my first week at Fleet, I've already felt something I rarely have in past roles: alignment."
 date: 2025-09-19
-tags: [fleet, work, culture, remote-work]
+tags: [fleet, work, company culture, workplace values]
 ---
 
 Starting a new job is always a leap of faith. You hope the company is what it claims to be. You hope the culture matches the words on the careers page. You hope you'll belong.  

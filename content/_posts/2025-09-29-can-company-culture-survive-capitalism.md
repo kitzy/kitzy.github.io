@@ -3,7 +3,7 @@ layout: post
 title: "Can company culture survive capitalism?"
 description: "When growth collides with capitalism, company culture is often the first casualty. Values erode after IPOs and acquisitions, leaving employees to grapple with cultural loss and the question of whether a values-driven company can truly survive shareholder demands."
 date: 2025-09-29
-tags: [company culture, capitalism, workplace values, IPOs and acquisitions, organizational change]
+tags: [company culture, capitalism, workplace values, organizational change]
 ---
 
 Growth is usually framed as the holy grail of business. Bigger numbers, more customers, new markets, an eventual IPO. But lurking behind the glossy press releases and investor decks is a quieter question: can a company hold on to its culture as it scales? Or is erosion inevitable, especially once outside money and shareholders come into play?
