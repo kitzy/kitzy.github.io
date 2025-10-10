@@ -6,7 +6,7 @@ date: 2025-10-10
 tags: [community building, burnout, legacy, belonging, mental health]
 ---
 
-Ten years ago, [I helped start a community](https://macadmins.slack.com/archives/C04QVKV08/p1431448586000003). It wasn’t some grand act of vision, it was a practical solution to a shared problem. My best friend and I wanted a space to talk, trade ideas, and feel a little less alone in the work we were doing. That small spark became the [Mac Admins Slack](https://www.macadmins.org/), which has since grown into one of the largest and most active communities of its kind.  
+Ten years ago, [I helped start a community](https://macadmins.slack.com/archives/C04QVKV08/p1431448586000003). It wasn’t some grand act of vision, it was a practical solution to a shared problem. Two friends wanted a space to talk, trade ideas, and feel a little less alone in the work we were doing. That small spark became the [Mac Admins Slack](https://www.macadmins.org/), which has since grown into one of the largest and most active communities of its kind.  
 
 In those early days, there was no roadmap, no funding, no committee. Just a handful of people improvising. We built channels as the needs arose, wrote guidelines that evolved on the fly, and made judgment calls we hoped were fair. It was exhilarating, exhausting, and deeply human.  
 
