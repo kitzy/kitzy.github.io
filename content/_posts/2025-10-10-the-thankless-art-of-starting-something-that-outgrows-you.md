@@ -30,7 +30,7 @@ The irony of community work is that its success is measured by its invisibility.
 
 ### The quiet erasure
 
-A few years after stepping down, I came across a public post thanking the people who’d helped start the Mac Admins Slack. My name wasn’t there. Instead, I was referred to simply as “a compatriot.”  
+A few years after stepping down, I came across a public [post](https://www.macadmins.org/news/2024/3/4/a-special-announcement-and-a-special-thanks) thanking my co-founder of the Mac Admins Slack. My name wasn’t there. Instead, I was referred to simply as “a compatriot.”  
 
 It caught me off guard. Not in a way that made me angry. More like a soft sting, the ache of being gently erased. The work I’d done still mattered to me, but it no longer existed in the community’s collective memory. And that’s the thing about building something that lasts: it eventually outgrows you.  
 
@@ -56,7 +56,7 @@ And that’s okay. It’s what happens when something thrives long enough to evo
 
 If you do community work well, it scales. Growth is proof of life, but it also changes everything. What began as an intimate circle of shared understanding becomes a sprawling ecosystem. The sense of closeness that defined the early days gives way to new challenges: misunderstandings, mismatched expectations, and the natural tension that comes from trying to serve tens of thousands of people instead of dozens.  
 
-At scale, rules replace relationships. The tone of the place changes, sometimes in ways that feel alien to those who were there at the beginning. You tweak policies, try to preserve the spirit of what once was, and remind yourself that this is what success looks like. You’ve built something people care about.  
+At scale, rules replace relationships. The [tone](https://github.com/macadminsdotorg/codeofconduct/pull/24#issuecomment-3367800947) of the place changes, sometimes in ways that feel alien to those who were there at the beginning. You tweak policies, try to preserve the spirit of what once was, and remind yourself that this is what success looks like. You’ve built something people care about.  
 
 And yet, there’s a quiet grief that comes with realizing that the community no longer needs you. And maybe doesn’t even want you. The better you do your job, the less it depends on you. The more vibrant it becomes, the more it forgets your name.
 
