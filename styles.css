@@ -555,6 +555,74 @@ body {
     font-size: 14px;
 }
 
+/* Post metadata styles */
+.post-meta {
+    font-size: 14px;
+    color: #7d8590;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.post-meta-separator {
+    margin: 0 4px;
+    color: #484f58;
+}
+
+.post-word-count,
+.post-read-time {
+    color: #7d8590;
+}
+
+/* Tag styles */
+.post-tags {
+    display: inline;
+    margin-left: 4px;
+}
+
+.post-tag,
+.markdown-content .post-tag {
+    display: inline;
+    padding: 0;
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    color: #7d8590 !important;
+    text-decoration: none !important;
+    transition: color 0.2s ease;
+    position: relative;
+}
+
+.post-tag:hover,
+.markdown-content .post-tag:hover {
+    color: #c9d1d9 !important;
+    text-decoration: none !important;
+}
+
+.post-tag:hover::after {
+    text-decoration: none !important;
+}
+
+.post-tag::after {
+    content: " • ";
+    color: #484f58;
+    padding: 0 4px;
+    text-decoration: none !important;
+}
+
+.post-tag:last-child::after {
+    content: "";
+}
+
+.tag-icon {
+    font-size: 14px;
+    margin-right: 4px;
+    opacity: 0.5;
+    filter: grayscale(100%);
+}
+
 /* Projects specific styles */
 .projects-header {
     margin-bottom: 24px;
