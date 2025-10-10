@@ -16,7 +16,7 @@ For a few years, I poured everything I had into it. I helped write the first ver
 
 And the cost wasn’t only professional or emotional. My life became so entangled with the community that when tensions flared, the fallout bled into places it shouldn’t have. I even lost a relationship because of it; someone I cared deeply about had a falling out with the community and felt they needed to cut ties completely, including with me. That’s the part no one warns you about. When your work and your world overlap too much, a rift in one can break the other.
 
-Eventually, I had to step away. The constant emotional load was taking a toll on my mental health, and I needed to reclaim some space for myself. I thought I’d take a short break. Instead, it turned into years.
+Eventually, I had to [step away](https://github.com/macadminsdotorg/slack-assets/commit/4f1ed83ca5244eb8b2b46b3160a27e5768390981#diff-3f7511f726439e509b6502de9c65439acbec737b9aa93072c7093a35876cd3ddL15-R23). The constant emotional load was taking a toll on my mental health, and I needed to reclaim some space for myself. I thought I’d take a short break. Instead, it turned into years.
 
 ---
 
