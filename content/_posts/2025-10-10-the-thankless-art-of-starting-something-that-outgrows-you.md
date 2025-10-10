@@ -2,7 +2,7 @@
 layout: post
 title: "The thankless art of starting something that outgrows you"
 description: "A reflection on the emotional cost of building an online community, how it feels to see your work forgotten, your role erased, and yet still find meaning in what remains."
-date: 2025-10-09
+date: 2025-10-10
 tags: [community building, burnout, legacy, belonging, mental health]
 ---
 
