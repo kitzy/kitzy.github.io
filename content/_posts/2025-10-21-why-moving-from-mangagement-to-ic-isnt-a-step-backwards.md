@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Why moving from management to IC isn't a step backwards"
-description: ""
+description: "I became a manager to protect my team, but realized management wasn't lighting me up. Here's why moving to an IC role was the right step forward, not backwards."
 date: 2025-10-21
 tags: [fleet, work, company culture, workplace values, management, leadership, career]
 ---
