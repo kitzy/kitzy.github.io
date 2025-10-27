@@ -56,6 +56,8 @@ This system is working exactly as designed. The problem is the design.
 
 We've built a society where basic human needs - food, healthcare, housing - are treated as privileges to be earned rather than rights to be protected. We've built a government where political leverage is more valuable than human welfare. We've built an economy where record corporate profits and all-time stock market highs can coexist with food banks running empty.
 
+We've built a system where economic health is measured by wealth at the top, not by whether people at the bottom have enough. Where a thriving economy means stock portfolios grow, not that fewer people go hungry.
+
 That's not a bug. That's the system functioning as intended.
 
 
