@@ -3,7 +3,7 @@ layout: post
 title: "When did caring about people became political?"
 description: "I've spent most of my career trying to stay out of political discussions in professional spaces. Not because I don't have opinions, but because in tech communities, we've generally agreed that keeping our professional spaces focused on the work creates room for everyone. That's still true. This isn't about that."
 date: 2025-10-27
-tags: [leadership, values, capitalism, community-building]
+tags: [leadership, values, capitalism, community building]
 ---
 
 I've spent most of my career trying to stay out of political discussions in professional spaces. Not because I don't have opinions, but because in tech communities, we've generally agreed that keeping our professional spaces focused on the work creates room for everyone. That's still true. This isn't about that.
