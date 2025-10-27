@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "When did caring about people became controversial?"
+title: "When did caring about people became political?"
 description: "I've spent most of my career trying to stay out of political discussions in professional spaces. Not because I don't have opinions, but because in tech communities, we've generally agreed that keeping our professional spaces focused on the work creates room for everyone. That's still true. This isn't about that."
 date: 2025-10-27
 tags: [leadership, values, capitalism, community-building]
@@ -61,7 +61,7 @@ We've built a system where economic health is measured by wealth at the top, not
 That's not a bug. That's the system functioning as intended.
 
 
-## When did caring become controversial?
+## When did caring become political?
 
 Somewhere along the way, we decided that caring about our neighbors' wellbeing is a political position rather than a baseline human value.
 
