@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "Why moving from management to IC isn't a step backwards"
-description: "I became a manager to protect my team, but realized management wasn't lighting me up. Here's why moving to an IC role was the right step forward, not backwards."
+description: "Moving from management to individual contributor isn't a demotion or a step backward. It's a deliberate choice to align your work with what you actually want to do."
 date: 2025-10-21
-tags: [fleet, work, company culture, workplace values, management, leadership, career]
+tags: [fleet, work, company culture, values, management, leadership, career]
 ---
 
 I've been fielding the same question a lot lately, even though no one actually says it out loud.
