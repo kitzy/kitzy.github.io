@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "My first month at Fleet: the onboarding paradox"
-description: "One month into my new role at Fleet, I'm learning that being excited about work creates its own challenges. The onboarding paradox, empty inboxes, and what impatience really means."
+description: "After one month at Fleet Device Management, here's what I've learned about remote work, open-source product development, and building something that matters."
 date: 2025-10-15
-tags: [fleet, work, company culture, workplace values]
+tags: [fleet, work, company culture, values]
 ---
 
 One month in, and I'm discovering something frustrating: onboarding at a place you're excited about is harder than onboarding at a place you're indifferent about.
