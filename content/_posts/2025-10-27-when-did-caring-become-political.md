@@ -36,9 +36,7 @@ Here's what I want to be extremely clear about: this situation is not the result
 
 There were options. There are always options. Leaders chose not to take them.
 
-When you have the power to prevent people from going hungry and you don't use it, that's a choice. When you have the power to ensure people can see doctors and you don't use it, that's a choice. When you have the power to make sure people can pay their rent and you don't use it, that's a choice.
-
-When air traffic controllers keeping our skies safe have to drive for DoorDash between shifts to pay their bills while lawmakers continue collecting their six figure salaries, that's a choice.
+When you have the power to prevent people from going hungry and you don't use it, that's a choice. When you have the power to ensure people can see doctors and you don't use it, that's a choice. When you have the power to make sure people can pay their rent and you don't use it, that's a choice. When air traffic controllers keeping our skies safe have to drive for DoorDash between shifts to pay their bills while lawmakers continue collecting their six figure salaries, that's a choice.
 
 Any leader who allows their people to go hungry and lose their homes has fundamentally failed.
 
@@ -69,7 +67,7 @@ If I say "people shouldn't go hungry," that's somehow political.
 
 If I say "people should be able to see a doctor when they're sick," that's political.
 
-If I say "people should be able to afford the medication they neet do survive, that's political.
+If I say "people should be able to afford the medication they need to survive," that's political.
 
 If I say "people should be able to afford a place to live," that's political.
 
