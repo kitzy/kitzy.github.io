@@ -7,7 +7,7 @@ permalink: /readme/
 
 <div class="markdown-content" markdown="1">
 
-_[updated: October 2, 2025](https://github.com/kitzy/kitzy.github.io/commits/main/content/pages/readme.md)_
+_[updated: October 28, 2025](https://github.com/kitzy/kitzy.github.io/commits/main/content/pages/readme.md)_
 
 *Because people don't come with instruction booklets (but wouldn't it be easier if they did?). This is mine. It's here to help you understand how I tick, how I work best, and how we can collaborate without stepping on rakes together.*  
 
@@ -23,6 +23,8 @@ I have **[AuDHD](https://embrace-autism.com/an-introduction-to-audhd/) (autism +
 - I usually have about seven trains of thought running at once, sometimes in different directions, sometimes colliding in a glorious mental pile-up.  
 - Time blindness is real. If I'm late to a meeting, I didn't forget you; I just fell down a rabbit hole. A quick ping is like tossing me a rope.  
 - I sometimes interrupt because I think I can already see where you're going, but I'm learning to hit pause and let people land their sentences.  
+- I tend to infodump when I get excited about a topic. If I'm going too deep into the weeds, just redirect me. I won't be offended.  
+- Indirect social cues often fly right over my head. If you need something from me, please just say it directly.
 - Also, did anyone see where I left my AirPods? No, seriously.  
 
 ---
