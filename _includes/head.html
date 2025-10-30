@@ -38,7 +38,15 @@
 <link rel="alternate" type="application/atom+xml" title="{{ site.title }} - Feed" href="{{ '/feed.xml' | relative_url }}">
 
 <title>{% if page.title %}{{ site.title }} - {{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-<link rel="icon" type="image/svg+xml" href="{{ '/content/assets/favicon.svg' | relative_url }}">
+
+<!-- Favicons -->
+<link rel="icon" type="image/png" sizes="32x32" href="{{ '/content/assets/favicon-32x32.png' | relative_url }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ '/content/assets/favicon-16x16.png' | relative_url }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ '/content/assets/apple-touch-icon.png' | relative_url }}">
+<link rel="icon" type="image/png" sizes="192x192" href="{{ '/content/assets/android-chrome-192x192.png' | relative_url }}">
+<link rel="icon" type="image/png" sizes="512x512" href="{{ '/content/assets/android-chrome-512x512.png' | relative_url }}">
+<link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
+
 <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
