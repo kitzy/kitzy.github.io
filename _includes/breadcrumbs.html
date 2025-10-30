@@ -26,48 +26,37 @@
         <li class="breadcrumb-item">
           <span class="breadcrumb-separator" aria-hidden="true">/</span>
           {% if page.url == "/blog/" %}
-            <span class="breadcrumb-current" aria-current="page">Blog</span>
+            <span class="breadcrumb-current" aria-current="page">blog</span>
           {% else %}
-            <a href="{{ '/blog/' | relative_url }}" class="breadcrumb-link">Blog</a>
+            <a href="{{ '/blog/' | relative_url }}" class="breadcrumb-link">blog</a>
           {% endif %}
         </li>
-        
-        <!-- Individual post breadcrumb -->
-        {% if page.layout == "post" %}
-          <li class="breadcrumb-item">
-            <span class="breadcrumb-separator" aria-hidden="true">/</span>
-            <span class="breadcrumb-current" aria-current="page">{{ page.title }}</span>
-          </li>
-        {% endif %}
         
       {% comment %}
         Handle other main navigation pages - direct URL matching
       {% endcomment %}
       {% else %}
         {% comment %}
-          Find the matching navigation item for the current page
+          Extract the URL slug for breadcrumb display
         {% endcomment %}
-        {% assign page_title = "" %}
-        {% for nav_item in site.navigation %}
-          {% if page.url == nav_item.url %}
-            {% assign page_title = nav_item.title %}
-            {% break %}
+        {% assign url_parts = page.url | remove_first: "/" | remove_last: "/" | split: "/" %}
+        {% if url_parts.size > 0 %}
+          {% assign page_slug = url_parts.first %}
+          {% comment %}
+            Keep README uppercase, lowercase everything else
+          {% endcomment %}
+          {% if page_slug == "readme" %}
+            {% assign breadcrumb_title = "README" %}
+          {% else %}
+            {% assign breadcrumb_title = page_slug %}
           {% endif %}
-        {% endfor %}
-        
-        {% comment %}
-          If no match found, use the page title or capitalize the URL part
-        {% endcomment %}
-        {% if page_title == "" %}
-          {% assign url_parts = page.url | remove_first: "/" | remove_last: "/" | split: "/" %}
-          {% if url_parts.size > 0 %}
-            {% assign page_title = url_parts.first | capitalize %}
-          {% endif %}
+        {% else %}
+          {% assign breadcrumb_title = page.title %}
         {% endif %}
         
         <li class="breadcrumb-item">
           <span class="breadcrumb-separator" aria-hidden="true">/</span>
-          <span class="breadcrumb-current" aria-current="page">{{ page_title }}</span>
+          <span class="breadcrumb-current" aria-current="page">{{ breadcrumb_title }}</span>
         </li>
       {% endif %}
     {% endunless %}

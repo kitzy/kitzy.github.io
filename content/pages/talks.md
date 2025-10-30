@@ -1,96 +1,65 @@
 ---
 layout: default
-title: Speaking
-description: "Podcast appearances and conference talks"
-permalink: /speaking/
+title: Talks
+description: "Conference talks and technical presentations"
+permalink: /talks/
 ---
 
 <div class="markdown-content">
-    <div class="speaking-section">
-        <h2>Podcast Appearances</h2>
-        <div class="speaking-grid">
-            <div class="speaking-item">
-                <div class="speaking-header">
-                    <h3 class="speaking-title">
-                        <a href="[PODCAST_URL]" target="_blank" rel="noopener noreferrer">
-                            [PODCAST_TITLE] - [EPISODE_TITLE]
-                        </a>
-                    </h3>
-                    <div class="speaking-meta">
-                        <span class="speaking-date">[DATE]</span>
-                        <span class="speaking-type">Podcast</span>
-                    </div>
-                </div>
-                <p class="speaking-description">
-                    [DESCRIPTION_OF_TOPICS_DISCUSSED]
-                </p>
-            </div>
-        </div>
-    </div>
-    
     <div class="speaking-section archived-talks">
-        <h2>Archive</h2>
-        <p class="archive-note">These are appearances from earlier in my career that I'm still proud to share, though they may reflect an earlier version of myself.</p>
+        <p class="archive-note">These are talks from earlier in my life that I'm still proud to share, though they reflect an earlier version of myself that I no longer identify with.</p>
         
-        <h3 class="archive-subsection-title">Podcast Appearances</h3>
         <div class="speaking-grid">
             <div class="speaking-item archived">
+                <div class="speaking-thumbnail">
+                    <a href="https://www.youtube.com/watch?v=eHAYJrgPHzc" target="_blank" rel="noopener noreferrer">
+                        <img src="https://img.youtube.com/vi/eHAYJrgPHzc/maxresdefault.jpg" alt="Getting Started With The Jamf Pro API Part 1 - Penn State MacAdmins 2019" class="video-thumbnail">
+                        <div class="play-overlay">
+                            <div class="play-button">▶</div>
+                        </div>
+                    </a>
+                </div>
                 <div class="speaking-header">
                     <h3 class="speaking-title">
-                        <a href="https://podcast.macadmins.org/2017/08/31/episode-49-scripting-your-entire-life-with-mike-dodge/" target="_blank" rel="noopener noreferrer">
-                            MacAdmins Podcast - Episode 49: Scripting Your Entire Life with Mike Dodge
+                        <a href="https://www.youtube.com/watch?v=eHAYJrgPHzc" target="_blank" rel="noopener noreferrer">
+                            Getting Started With The Jamf Pro API Part 1
                         </a>
                     </h3>
                     <div class="speaking-meta">
-                        <span class="speaking-date">August 31, 2017</span>
-                        <span class="speaking-type">Podcast</span>
-                        <span class="speaking-venue">MacAdmins Podcast</span>
+                        <span class="speaking-date">2019</span>
+                        <span class="speaking-venue">Penn State MacAdmins</span>
                     </div>
                 </div>
                 <p class="speaking-description">
-                    A discussion about automation, scripting, and how to streamline workflows to make IT management more efficient. I joined the conversation about scripting practices and automation strategies in Mac administration.
+                    An introduction to working with the Jamf Pro API, covering the fundamentals of API authentication, making basic requests, and understanding API endpoints. This first part laid the groundwork for Mac admins looking to extend and automate their Jamf Pro workflows through programmatic access.
                 </p>
             </div>
             
             <div class="speaking-item archived">
+                <div class="speaking-thumbnail">
+                    <a href="https://www.youtube.com/watch?v=IQdqm2ks_Sc" target="_blank" rel="noopener noreferrer">
+                        <img src="https://img.youtube.com/vi/IQdqm2ks_Sc/maxresdefault.jpg" alt="Getting Started With The Jamf Pro API Part 2 - Penn State MacAdmins 2019" class="video-thumbnail">
+                        <div class="play-overlay">
+                            <div class="play-button">▶</div>
+                        </div>
+                    </a>
+                </div>
                 <div class="speaking-header">
                     <h3 class="speaking-title">
-                        <a href="https://podcast.macadmins.org/2017/08/20/episode-47-excitability-as-feature-with-allister-banks/" target="_blank" rel="noopener noreferrer">
-                            MacAdmins Podcast - Episode 47: Excitability as Feature with Allister Banks
+                        <a href="https://www.youtube.com/watch?v=IQdqm2ks_Sc" target="_blank" rel="noopener noreferrer">
+                            Getting Started With The Jamf Pro API Part 2
                         </a>
                     </h3>
                     <div class="speaking-meta">
-                        <span class="speaking-date">August 20, 2017</span>
-                        <span class="speaking-type">Podcast</span>
-                        <span class="speaking-venue">MacAdmins Podcast</span>
+                        <span class="speaking-date">2019</span>
+                        <span class="speaking-venue">Penn State MacAdmins</span>
                     </div>
                 </div>
                 <p class="speaking-description">
-                    A conversation about passion, enthusiasm, and how excitement can be a valuable feature in technical work and community building. I participated in discussions about bringing energy and positivity to the Mac admin community.
+                    Building on the foundations from Part 1, this session dove deeper into practical API use cases, advanced querying techniques, and real-world automation examples. I demonstrated how to leverage the Jamf Pro API to build custom workflows and integrations for more efficient Mac fleet management.
                 </p>
             </div>
             
-            <div class="speaking-item archived">
-                <div class="speaking-header">
-                    <h3 class="speaking-title">
-                        <a href="https://podcast.macadmins.org/2017/03/01/episode-25-you-cant-spell-function-without-fun-with-kitzy/" target="_blank" rel="noopener noreferrer">
-                            MacAdmins Podcast - Episode 25: You Can't Spell Function Without Fun with Kitzy
-                        </a>
-                    </h3>
-                    <div class="speaking-meta">
-                        <span class="speaking-date">March 1, 2017</span>
-                        <span class="speaking-type">Podcast</span>
-                        <span class="speaking-venue">MacAdmins Podcast</span>
-                    </div>
-                </div>
-                <p class="speaking-description">
-                    A feature episode focused on my approach to Mac administration, community building, and the importance of making technical work enjoyable. I discussed my philosophy on bringing fun and creativity to systems administration and fostering inclusive technical communities.
-                </p>
-            </div>
-        </div>
-        
-        <h3 class="archive-subsection-title">Conference Talks</h3>
-        <div class="speaking-grid">
             <div class="speaking-item archived">
                 <div class="speaking-thumbnail">
                     <a href="https://www.youtube.com/watch?v=Od3M_OxfdSk" target="_blank" rel="noopener noreferrer">
@@ -108,7 +77,6 @@ permalink: /speaking/
                     </h3>
                     <div class="speaking-meta">
                         <span class="speaking-date">2017</span>
-                        <span class="speaking-type">Conference</span>
                         <span class="speaking-venue">MacADUK</span>
                     </div>
                 </div>
@@ -134,7 +102,6 @@ permalink: /speaking/
                     </h3>
                     <div class="speaking-meta">
                         <span class="speaking-date">2017</span>
-                        <span class="speaking-type">Panel</span>
                         <span class="speaking-venue">Penn State MacAdmins</span>
                     </div>
                 </div>
@@ -160,7 +127,6 @@ permalink: /speaking/
                     </h3>
                     <div class="speaking-meta">
                         <span class="speaking-date">2016</span>
-                        <span class="speaking-type">Conference</span>
                         <span class="speaking-venue">XWorld</span>
                     </div>
                 </div>
@@ -186,7 +152,6 @@ permalink: /speaking/
                     </h3>
                     <div class="speaking-meta">
                         <span class="speaking-date">2016</span>
-                        <span class="speaking-type">Conference</span>
                         <span class="speaking-venue">XWorld</span>
                     </div>
                 </div>
@@ -212,7 +177,6 @@ permalink: /speaking/
                     </h3>
                     <div class="speaking-meta">
                         <span class="speaking-date">2016</span>
-                        <span class="speaking-type">Conference</span>
                         <span class="speaking-venue">MacADUK</span>
                     </div>
                 </div>
@@ -238,7 +202,6 @@ permalink: /speaking/
                     </h3>
                     <div class="speaking-meta">
                         <span class="speaking-date">2015</span>
-                        <span class="speaking-type">Conference</span>
                         <span class="speaking-venue">Penn State MacAdmins</span>
                     </div>
                 </div>
