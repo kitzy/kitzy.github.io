@@ -7,7 +7,7 @@ permalink: /talks/
 
 <div class="markdown-content">
     <div class="speaking-section archived-talks">
-        <p class="archive-note">These are talks from earlier in my life that I'm still proud to share, though they reflect an earlier version of myself that I no longer identify with.</p>
+        <p class="archive-note">These are talks from earlier in my life that I'm still proud of, though they reflect an earlier version of myself that I no longer identify with.</p>
         
         <div class="speaking-grid">
             <div class="speaking-item archived">
