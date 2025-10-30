@@ -85,7 +85,9 @@ social:
 navigation:
   - title: "README"
     url: "/readme/"
-  - title: "Projects" 
-    url: "/projects/"
   - title: "Blog"
     url: "/blog/"
+  - title: "Conference Talks"
+    url: "/talks/"
+  - title: "Podcasts"
+    url: "/podcasts/"
