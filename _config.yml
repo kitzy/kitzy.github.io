@@ -87,7 +87,5 @@ navigation:
     url: "/readme/"
   - title: "Blog"
     url: "/blog/"
-  - title: "Conference Talks"
-    url: "/talks/"
   - title: "Podcasts"
     url: "/podcasts/"
