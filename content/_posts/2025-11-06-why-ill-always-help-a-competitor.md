@@ -14,12 +14,12 @@ Rich was seeing weird behavior with virtual machines running macOS 26.1.0—they
 
 Here's what that person maybe didn't know: Rich and I go way back. Long before I worked for Fleet. Long before he worked for Jamf. When we lived closer together, we used to meet halfway for lunch once a month. We've presented at conferences together. We've helped each other through tough problems and tougher days.
 
-The fact that our paychecks come from different companies now? That changes nothing.
+The fact that our paychecks come from competing companies now? That changes nothing.
 
 
 ## Friends across the aisle
 
-I have friends at most of Fleet's competitors. Not just acquaintances. Friends. People I've known for years, sometimes over a decade. People I respect deeply. People who've helped me more times than I can count.
+I have friends at most of my employer's competitors. Not just acquaintances. Friends. People I've known for years, some over a decade. People I respect deeply. People who've helped me more times than I can count.
 
 When I see them struggling with a problem, I don't think "competitor." I think "friend needs help." The response is automatic. It's not strategic. It's not calculated. It's just what we do.
 
