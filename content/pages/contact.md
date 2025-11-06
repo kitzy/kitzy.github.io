@@ -23,7 +23,7 @@ permalink: /contact/
 
 ## Slack
 
-The best place to contact me is the [MacAdmins Slack](https://macadmins.org). I' m [@kitzy](https://macadmins.slack.com/team/U04QVKUR4).
+The best place to contact me is the [MacAdmins Slack](https://macadmins.org). I'm [@kitzy](https://macadmins.slack.com/team/U04QVKUR4).
 
 ## LinkedIn
 
