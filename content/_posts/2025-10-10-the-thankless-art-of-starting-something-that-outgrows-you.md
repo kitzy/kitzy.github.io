@@ -3,7 +3,7 @@ layout: post
 title: "The thankless art of starting something that outgrows you"
 description: "A reflection on the emotional cost of building an online community, how it feels to see your work forgotten, your role erased, and yet still find meaning in what remains."
 date: 2025-10-10
-tags: [community building, burnout, belonging, mental health]
+tags: [community, burnout, belonging, mental health]
 ---
 
 _Note: This is a personal reflection. The thoughts here are my own and don’t represent my employer or the Mac Admins Foundation._
