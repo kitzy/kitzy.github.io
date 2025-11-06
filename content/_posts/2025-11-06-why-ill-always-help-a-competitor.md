@@ -19,15 +19,15 @@ The fact that our paychecks come from different companies now? That changes noth
 
 ## Friends across the aisle
 
-I have friends at every single one of Fleet's competitors. Not just acquaintances. Friends. People I've known for years, sometimes over a decade. People I respect deeply. People who've helped me more times than I can count.
+I have friends at most of Fleet's competitors. Not just acquaintances. Friends. People I've known for years, sometimes over a decade. People I respect deeply. People who've helped me more times than I can count.
 
 When I see them struggling with a problem, I don't think "competitor." I think "friend needs help." The response is automatic. It's not strategic. It's not calculated. It's just what we do.
 
 And they do the same for me. Always have.
 
-This isn't unique to me. Look around Mac Admins Slack on any given day. You'll see someone from Jamf helping someone from Kandji. Someone from Mosyle helping someone from Fleet. Someone from Addigy jumping in with a solution for anyone who needs it. We don't check employment history before offering help.
+This isn't unique to me. Look around the Mac Admins Slack on any given day. You'll see someone from Jamf helping someone from Kandji. Someone from Mosyle helping someone from Fleet. Someone from Addigy jumping in with a solution for anyone who needs it. We don't check employment history before offering help.
 
-That's not naivety. That's the foundation this community was built on.
+That's the foundation this community was built on.
 
 
 ## Small world, big problems
