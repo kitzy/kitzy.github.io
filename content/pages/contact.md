@@ -30,7 +30,7 @@ The best place to contact me is the [MacAdmins Slack](https://macadmins.org). I'
 ### I am more than happy to connect with you on LinkedIn if:
 
 - You're from the MacAdmin community
-- You work in an adjacent IT/tech/engineering/etc dicipline
+- You work in an adjacent IT/tech/engineering/etc discipline
 - We are current or former co-workers
 
 [linkedin.com/in/kitzy](https://www.linkedin.com/in/kitzy)
