@@ -89,3 +89,5 @@ navigation:
     url: "/blog/"
   - title: "Podcasts"
     url: "/podcasts/"
+  - title: "Contact"
+    url: "/contact/"
