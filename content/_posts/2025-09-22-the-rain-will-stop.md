@@ -3,7 +3,7 @@ layout: post
 title: "The rain will stop"
 description: "One stormy night, my basement started to flood. My friend Andrea and I were exhausted, soaked, and fighting a battle we were clearly losing. At my lowest moment, Andrea said something so simple that it completely changed..."
 date: 2025-09-22
-tags: [resilience, mental health, life lessons]
+tags: [resilience, mental health, life]
 ---
 
 During storms, my basement sometimes floods. It starts with a trickle that seems manageable, almost harmless. But the last time it happened, the rain was relentless. Before long, water was pouring in faster than any pump could keep up.  

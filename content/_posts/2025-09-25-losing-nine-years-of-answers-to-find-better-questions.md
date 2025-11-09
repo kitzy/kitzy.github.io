@@ -3,7 +3,7 @@ layout: post
 title: "Losing nine years of answers to find better questions"
 description: "Leaving behind nearly a decade of institutional knowledge means trading expertise for curiosity. This post explores the discomfort and growth that comes from no longer being the one with all the answers."
 date: 2025-09-25
-tags: [career growth, company culture, professional identity, institutional knowledge]
+tags: [career, company culture, professional identity, institutional knowledge]
 ---
 
 I worked at my last company for just shy of nine years. In the end, I was the person who knew where all the ghosts were buried. I could tell you not just how a system worked, but why it worked that way. I had the lore. I carried the oral history of every weird decision, half-forgotten workaround, and obscure bit of technical trivia. For the last four years, I was the longest-tenured person in my department. If something didn’t make sense, chances were good I had the backstory. People came to me like a human footnote section.  
