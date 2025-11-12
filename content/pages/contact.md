@@ -11,7 +11,7 @@ permalink: /contact/
 
 - If you need help with the MacAdmins Slack, please contact [The MacAdmins Foundation](https://www.macadmins.org/contact)
 - If you need help with Fleet, please contact [Fleet support](https://fleetdm.com/support)
-- If you need help with one of my [AutoPkg recipes](https://github.com/autopkg/kitzy-recipes), or the [Fleetimporter AutoPkg processor](https://github.com/kitzy/fleet-recipes), please open an issue in one of those repos, or post in the [#autopkg](https://macadmins.slack.com/archives/C056155B4) channel on the MacAdmins slack
+- If you need help with one of my [AutoPkg recipes](https://github.com/autopkg/kitzy-recipes), or the [Fleetimporter AutoPkg processor](https://github.com/autopkg/fleet-recipes), please open an issue in one of those repos, or post in the [#autopkg](https://macadmins.slack.com/archives/C056155B4) channel on the MacAdmins slack
 - If you have a question/concern or need help with one of my other [GitHub projects](https://github.com/kitzy?tab=repositories), please open an issue in that project's repo
 
 ### Please **do not** contact me or send me a connection request on LinkedIn if:
