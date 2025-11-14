@@ -26,7 +26,9 @@ The automation was the point. I literally said on stage: "I really hate having t
 
 ## The next logical step I couldn't take
 
-What I was striving towards in 2017 was essentially GitOps for endpoint management. The problem? There was no way to actually implement it with the tools available. Jamf, like every other MDM at the time (and most still today), stored everything in a proprietary database. You could export some things via API, but you couldn't define your entire configuration as code and have the system enforce it.
+The approach in this talk was inspired by some work I had done with Chef for managing our Jamf servers. I immediatly saw the power of being able to define, in code, what I wanted the state of the device to be, and leaving it up to the tooling to figure out the how. What I _really_ wanted was essentially GitOps for endpoint management.
+
+The problem? There was no way to actually implement it with the tools available. Jamf, like every other MDM at the time (and most still today), stored everything in a proprietary database. You could export some things via API, but you couldn't define your entire configuration as code and have the system enforce it.
 
 I was trying to achieve declarative management through imperative tools. Smart groups and ongoing policies were as close as I could get, but I was still clicking through interfaces, still manually creating policies, still hoping someone documented what changed and why.
 
