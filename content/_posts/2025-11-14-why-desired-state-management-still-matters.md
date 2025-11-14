@@ -6,7 +6,7 @@ date: 2025-11-14
 tags: [fleet, device management]
 ---
 
-Eight years ago at MacADUK 2017, I gave a talk about something I called "Desired State Management." I won't be linking to that recording — it's from a past version of me that I've moved on from — but the ideas remain as relevant today as ever. The core concept was simple: define how you want your systems configured, verify they're actually configured that way, and automatically fix them if they're not. No manual checking. No configuration drift. Just automation keeping everything in line.
+Eight years ago at MacADUK 2017, I gave a talk about something I called "Desired State Management." I won't be linking to that recording — it's from a past version of me that I no longer identify with — but the ideas remain as relevant today as ever. The core concept was simple: define how you want your systems configured, verify they're actually configured that way, and automatically fix them if they're not. No manual checking. No configuration drift. Just automation keeping everything in line.
 
 Fast forward to today, and Apple's given us Declarative Device Management (DDM). Vendors are rushing to implement it, marketing teams are crafting glossy presentations about it, and admins are left wondering if this is actually the revolution we were promised. 
 
