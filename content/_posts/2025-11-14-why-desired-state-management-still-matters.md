@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The real promise of DDM: why desired state management still matters"
-description: ""
+description: "In 2017, I pitched the idea of 'Desired State Management' at MacADUK but couldn't quite build it — the tooling just wasn't there yet. Today's DDM profiles aren't the whole answer either. Real declarative management means GitOps, and it's finally possible."
 date: 2025-11-14
 tags: [fleet, device management]
 ---
