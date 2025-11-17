@@ -7,7 +7,7 @@ author: "Kitzy"
 
 # GitHub settings
 github_username: kitzy
-repository: kitzy/kitzy.github.io
+repository: kitzy/kitzy.com
 
 # GitHub token for build-time language calculation (set in environment)
 # Set PERSONAL_GITHUB_TOKEN in your build environment for private repo access
