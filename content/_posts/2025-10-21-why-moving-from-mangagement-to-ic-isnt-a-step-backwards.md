@@ -27,20 +27,20 @@ Not every manager is a leader. We've all worked for managers who checked boxes, 
 
 And not every leader is a manager. Some of the most influential people I've worked with had zero direct reports. They led through expertise, through building trust, through showing up consistently and making everyone around them better.
 
-When people ask about stepping backwards, they're really asking: "Don't you miss being important?" But leadership was never about the title. It was about impact.
+When people ask about stepping backwards, they're really asking: "Don't you miss being important?" But for me, leadership was never about the title. It was about impact.
 
 
 ## I became a manager to protect my team
 
 I didn't pursue management because I wanted to climb a ladder. I became a manager because my team needed protection.
 
-We had an incredible manager who really understood us. He created psychological safety. He ran interference with bureaucracy. He gave us room to do our best work. When He left for another opportunity, I saw what was coming and I didn't like the look of it.
+We had an incredible manager who really understood us. He created psychological safety. He ran interference with bureaucracy. He gave us room to do our best work. When he left for another opportunity, I saw what was coming and I didn't like the look of it.
 
 I'd seen bad management before. The kind that micromanages away autonomy. The kind that adds process for process's sake. The kind that optimizes for appearance over outcomes. My team didn't deserve that.
 
 So I stepped into the role. Not because I dreamed of being a manager, but because someone needed to continue what was already working. The goal was simple: keep the team healthy, keep morale high, keep the bureaucracy at bay.
 
-At the core of that decision was a desire to help people. That mattered more than the title ever did.
+At the core of that decision was a desire to help people. That mattered more to me than the title ever did.
 
 
 ## Management came with tradeoffs I didn't expect
