@@ -1,4 +1,4 @@
-# kitzy.github.io
+# kitzy.com
 
 Personal Jekyll site hosted on GitHub Pages showcasing professional profile, blog posts, and projects with dynamic GitHub integration.
 
