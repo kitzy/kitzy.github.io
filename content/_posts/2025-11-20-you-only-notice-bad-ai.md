@@ -2,7 +2,7 @@
 layout: post
 title: "You only notice bad AI"
 description: "Think you can spot AI content? You're probably missing the good stuff. Like CGI in movies, you only notice bad AI - great AI-assisted work is invisible."
-date: 2025-11-21
+date: 2025-11-20
 tags: [AI]
 ---
 
