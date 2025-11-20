@@ -12,9 +12,9 @@ Here's the thing, though. I don't think AI-generated content looks bad. I think 
 
 This is exactly the same logical fallacy people fall into with CGI in movies. They see bad CGI and conclude that CGI always looks bad and practical effects are always better. But they're not counting all the times they watched CGI and never noticed it. [This video breaks down why you only notice bad CGI](https://www.youtube.com/watch?v=bL6hp8BKB24), and it's the perfect parallel to what's happening with AI-generated content right now.
 
-Amazing, well-executed AI is everywhere. You just don't know it. When done well and paired with actual human judgment, you'll rarely notice that what you're reading or seeing was churned out by a transformer model. Great AI-assisted work serves the goal and the audience. And in doing so, it's by definition invisible.
+Amazing, well-executed AI is everywhere. You just don't notice it. When done well and paired with actual human judgment, you'll rarely realize that what you're reading or seeing was churned out by an AI model. Great AI-assisted work serves the goal and the audience. And in doing so, it's by definition invisible.
 
-The way you get great results has nothing to do with avoiding AI altogether, although certainly you can create great work without it. It has to do with understanding the strengths and weaknesses of what AI can do and playing to those strengths while supplementing the weaknesses with human judgment, creativity, and editing.
+The way you get great results has nothing to do with avoiding AI altogether, although you certainly can create great work without it. It has to do with understanding the strengths and weaknesses of what AI can do and playing to those strengths while supplementing the weaknesses with human judgment, creativity, and editing.
 
 
 ## What AI actually does well
