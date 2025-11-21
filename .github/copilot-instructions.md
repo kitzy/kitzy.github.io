@@ -121,8 +121,9 @@ permalink: /custom-url/  # Optional
 ### Sidebar Dynamic Content (`_includes/sidebar.html`)
 - **Languages**: Populated by JavaScript from build-time or API data
 - **Organizations**: Always fetched from public GitHub API
-- **Bio**: API-fetched, removes @fleetdm mentions, adds sponsors badge
+- **Bio**: API-fetched, removes @fleetdm mentions
 - **Social Links**: Hardcoded GitHub, LinkedIn, Bluesky, Slack
+- **Email**: Removed from display (not shown in sidebar)
 
 ### Navigation System (`_layouts/default.html`)
 - **Active State**: Compares `page.url` with navigation URLs
