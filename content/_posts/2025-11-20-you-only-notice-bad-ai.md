@@ -99,6 +99,6 @@ The question isn't whether to use AI. For most knowledge work, that ship has sai
 
 And maybe the first step is recognizing that you're already consuming AI-assisted content all the time. You just don't notice it when it's good. Which kind of proves the point.
 
----
+\---
 
 If you'd like, I can help you create a LinkedIn post to promote this article, develop some discussion questions for social media engagement, or write a follow-up piece exploring specific industries where AI integration has been particularly successful.
