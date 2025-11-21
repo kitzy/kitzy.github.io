@@ -43,21 +43,6 @@ async function loadExternalAboutContent() {
         // Update the container with fetched content
         aboutContainer.innerHTML = htmlContent;
         
-        // Add GitHub Sponsors CTA after the main content
-        const sponsorCTA = document.createElement('div');
-        sponsorCTA.className = 'sponsor-cta';
-        sponsorCTA.innerHTML = `
-            <hr>
-            <h3>💖 Support My Work</h3>
-            <p>If you enjoy my content and want to support my blogging and open-source work, consider becoming a sponsor on <a href="https://github.com/sponsors/kitzy" target="_blank">GitHub Sponsors</a>. Your support helps me continue creating and sharing valuable resources!</p>
-            <p style="text-align: center;">
-                <a href="https://github.com/sponsors/kitzy" target="_blank">
-                    <img src="https://img.shields.io/github/sponsors/kitzy?style=for-the-badge&logo=github&logoColor=white&labelColor=gray&color=pink" alt="GitHub Sponsors" />
-                </a>
-            </p>
-        `;
-        aboutContainer.appendChild(sponsorCTA);
-        
         // Fix specific link - the README link should point to the /readme/ page
         const readmeLinks = aboutContainer.querySelectorAll('a[href*="README"]');
         readmeLinks.forEach(link => {
@@ -95,17 +80,6 @@ async function loadExternalAboutContent() {
                 <li>📖 Curious how I work best? Check out my <a href="/readme/">personal user manual</a></li>
             </ul>
             
-            <hr>
-            
-            <h3>💖 Support My Work</h3>
-            
-            <p>If you enjoy my content and want to support my blogging and open-source work, consider becoming a sponsor on <a href="https://github.com/sponsors/kitzy" target="_blank">GitHub Sponsors</a>. Your support helps me continue creating and sharing valuable resources!</p>
-            
-            <p style="text-align: center;">
-                <a href="https://github.com/sponsors/kitzy" target="_blank">
-                    <img src="https://img.shields.io/github/sponsors/kitzy?style=for-the-badge&logo=github&logoColor=white&labelColor=gray&color=pink" alt="GitHub Sponsors" />
-                </a>
-            </p>
         `;
     }
 }
