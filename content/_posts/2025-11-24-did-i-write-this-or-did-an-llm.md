@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Did I write this, or did an LLM?"
-description: "A colleague told me my AI-assisted writing felt like 'liking the robot.' That reaction made me realize: I don't know if AI-assisted writing is 'real' writing. You might be right that it isn't. But my blog posts haven't changed, only the knowledge of how I made them. Does that change everything? And if so, why? These questions are more complicated than the answers we're giving, and the uncertainty might be the most important part. None of us have this figured out yet."
+description: "A colleague recently found out that I use an LLM as part of my blog writing process, and they told me that this changes how they see my writing. But my blog posts haven't changed, only the knowledge of how I made them. Does that change the value of my writing? And if so, why? These questions are more complicated than the answers we're giving, and I don't have the answers. Neither do you."
 date: 2025-11-24
 tags: [AI]
 ---
@@ -39,7 +39,7 @@ I honestly don't know. And I think that uncertainty is important to sit with.
 
 ## The code question
 
-In tech, using AI to help write code has become mostly accepted. Developers use GitHub Copilot or ChatGPT to generate code, review the output, modify it, and ship it. Generally, no one questions whether they "really" wrote that code.
+In tech, using AI to help write code has become somewhat accepted. Developers use GitHub Copilot or ChatGPT to generate code, review the output, modify it, and ship it. Generally, no one questions whether they "really" wrote that code.
 
 But suggest using an LLM to help organize your writing? Very different reaction.
 
@@ -77,7 +77,7 @@ Let's break down what goes into creating a piece of writing:
 
 If someone does four out of five of those things themselves, and uses an LLM to help with organization, did they write it?
 
-Here's where it gets complicated: Maybe organization isn't just one mechanical step. Maybe the way you structure an argument IS the argument. Where you put emphasis, how you sequence ideas, what you juxtapose - these might not be just presentation choices. They might be fundamental to meaning.
+Maybe organization isn't just one mechanical step. Maybe the way you structure an argument IS the argument. Where you put emphasis, how you sequence ideas, what you juxtapose - these might not be just presentation choices. They might be fundamental to meaning.
 
 If that's true, then "helping with organization" is actually helping with core intellectual work. And that changes the equation significantly.
 
@@ -103,13 +103,13 @@ Or maybe the difference is more fundamental: A human editor suggests changes to 
 
 ## Not all AI assistance is the same
 
-Here's something I think gets lost in these debates: There are fundamentally different ways to use an LLM, and they produce fundamentally different results.
+Something I think often gets lost in these debates is that there are fundamentally different ways to use an LLM, and they produce fundamentally different results.
 
 Compare these approaches:
 
 **Approach 1**: "AI, write me a blog post about the future of device management."
 
-**Approach 2**: "Here are my thoughts about where device management is heading. I think X because of Y and Z. I'm concerned about A but excited about B. Help me organize these ideas into something coherent."
+**Approach 2**: "Here are my thoughts about where device management is heading. I think X because of Y and Z. I'm concerned about A but excited about B. Help me organize these ideas into a blog post."
 
 The first is asking AI to generate ideas and content. The second is bringing your own ideas and asking for help with structure and clarity.
 
@@ -130,15 +130,19 @@ I'm neurodivergent. My brain doesn't work in straight lines. My thinking is abst
 
 I've always struggled to translate what's in my head into linear prose that other people can parse. It's not that I can't think clearly. It's that the way I think clearly doesn't match the way neurotypical communication works.
 
-So I use an LLM to help bridge that gap. I come to it with my thesis and arguments already formed. It helps me organize the chaos into something that follows neurotypical writing conventions. Then I edit heavily to make sure it says exactly what I meant.
+So I use an LLM to help bridge that gap. I come to it with my thesis and arguments already formed. It helps me organize the chaos into something that follows neurotypical writing conventions. 
+
+But that's not where the process ends. What comes next looks a lot like working with a human editor. I review what the LLM produces. I question whether it captures what I meant. I ask for revisions. We go back and forth - sometimes multiple times - refining structure, adjusting emphasis, clarifying points that feel muddled. I cut sections that don't work. I rephrase things that don't sound like me or don't say exactly what I'm trying to say.
+
+This iterative process continues until the final product communicates the message I'm trying to communicate. And here's the important part: I don't publish anything unless I stand behind every single word of it. If something doesn't represent my actual thinking, it gets changed or cut. The LLM might help me organize my thoughts, but I'm responsible for what gets published.
 
 For me, this is assistive technology. It helps me express ideas I already have in a format other people can understand.
 
 But here's the question this raises: Where's the line between assistive technology and outsourcing intellectual work?
 
-Speech-to-text helps people with motor disabilities, but it's translating their actual speech. An LLM that "organizes thoughts" is doing something more than translation. It's generating new prose.
+Speech-to-text helps people with motor disabilities, but it's translating their actual speech. An LLM that "organizes thoughts" is doing something more than translation. It's generating new prose that I then refine through collaboration.
 
-Is that the next logical evolution of assistive technology? Or is it a categorical shift?
+Is that the next logical evolution of assistive technology? Or is it a categorical shift? Maybe it's both?
 
 I think it's an important question, and I don't think the answer is obvious.
 
@@ -187,16 +191,14 @@ I don't have all the answers here. Maybe there ARE important skills that atrophy
 
 The Luddites weren't entirely wrong to worry about industrialization's impact on workers and communities, even if the transformation was ultimately inevitable. Tools change us. They change what skills we develop, what we value, how we think.
 
-AI won't just make writing faster. It will transform what "writing" means. Is that good or bad? I don't know. Neither do you. Neither does anyone yet.
+AI won't just make writing faster. It will transform what "writing" means. Is that good or bad? I don't know. No one does yet.
 
 But I think refusing to engage with the technology out of fear or principle means we won't have a voice in shaping how that transformation happens. We'll just be left behind, complaining about change we didn't help direct.
 
 
 ## The experiment
 
-I'm not going to tell you which parts of this post involved an LLM. I'm not going to explain my exact process for this specific piece.
-
-Does that bother you? Does it make you want to analyze every sentence, looking for tells? Does it make you trust this post less?
+I'm not going to tell you which parts of this post involved an LLM. Does that bother you? Does it make you want to analyze every sentence, looking for tells? Does it make you trust this post less?
 
 If you can't tell the difference, what exactly are you reacting to? The work itself? Or just the idea that AI might have been involved?
 
@@ -213,14 +215,15 @@ I think we're asking the wrong question when we argue about whether AI-assisted 
 
 The right questions might be:
 - What are we actually valuing in different kinds of creative work?
+- Does the purpose or goal of the work change what we value about it?
 - Where are the meaningful boundaries between assistance and replacement?
 - What skills and practices do we want to preserve, and why?
 - How do we develop norms around disclosure and attribution?
 - What does it mean for accessibility when AI can help bridge cognitive differences?
 
-These are complicated questions. They don't have simple answers. And I think the only way we're going to answer them is by engaging thoughtfully with the technology, not by rejecting it outright.
+These are complicated questions, and I don't have the answers. Neither do you. Not yet.
 
-That doesn't mean uncritically embracing AI. It means being willing to use it, understand it, question it, and develop informed opinions based on actual experience rather than abstract fear.
+And I think the only way we're going to answer them is by engaging thoughtfully with the technology, not by rejecting it outright. That doesn't mean uncritically embracing AI. It means being willing to use it, understand it, question it, and develop informed opinions based on actual experience rather than abstract fear.
 
 I might be wrong about parts of this. You might read this and think I'm too cavalier about real concerns. That's fair. These are genuine questions, and I'm genuinely uncertain about many of them.
 
