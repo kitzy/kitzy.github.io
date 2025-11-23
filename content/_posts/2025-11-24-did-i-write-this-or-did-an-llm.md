@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Did I write this, or did an LLM?"
-description: "A colleague recently found out that I use an LLM as part of my blog writing process, and they told me that this changes how they see my writing. But my blog posts haven't changed, only the knowledge of how I made them. Does that change the value of my writing? And if so, why? These questions are more complicated than the answers we're giving, and I don't have the answers. Neither do you."
+description: "A colleague recently found out that I use an LLM as part of my blog writing process, and they told me that this changes how they see my writing. But my blog posts haven't changed, only the knowledge of how I made them. Does that change the value of my writing? And if so, why? These questions are complicated, and I don't have the answers. Neither do you."
 date: 2025-11-24
 tags: [AI]
 ---
