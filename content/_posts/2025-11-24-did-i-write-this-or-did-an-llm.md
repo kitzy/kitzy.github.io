@@ -225,5 +225,3 @@ That doesn't mean uncritically embracing AI. It means being willing to use it, u
 I might be wrong about parts of this. You might read this and think I'm too cavalier about real concerns. That's fair. These are genuine questions, and I'm genuinely uncertain about many of them.
 
 But I think the uncertainty is valuable. I think sitting with the complexity is important. And I think we need to move past knee-jerk reactions - in either direction - and start having more nuanced conversations about what we're actually worried about and what we actually value.
-
-What do you think?
