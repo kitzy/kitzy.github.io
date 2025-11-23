@@ -178,7 +178,7 @@ Maybe it's just new and we don't trust it yet. We've seen enough tech hype cycle
 
 But here's what I find interesting: people who have that strong reaction will still tell me they love my blog posts. The content resonates. The ideas are useful. The voice feels authentic.
 
-Until they find out an LLM touched it somewhere in the process. Then suddenly it feels less real - even though nothing about the actual content changed.
+Until they find out an LLM touched it somewhere in the process. Then suddenly it feels less real, even though nothing about the actual content changed.
 
 What does that tell us? That we're reacting to the idea of AI involvement more than to any actual quality difference? Or that there's something we value about purely human creation that we can't quite articulate?
 
@@ -187,7 +187,7 @@ Both might be true.
 
 ## What we might be losing (or not)
 
-I don't have all the answers here. Maybe there ARE important skills that atrophy when we rely on AI for organization. Maybe the process of struggling with prose does refine thinking in ways I'm missing when I use an LLM. Maybe we should be more concerned about this than I am.
+I don't have all the answers here. Maybe there ARE important skills that atrophy when we rely on AI for organization. Maybe the process of struggling with prose does refine thinking in ways I'm missing when I use an LLM. Maybe I should be more concerned about this than I am.
 
 The Luddites weren't entirely wrong to worry about industrialization's impact on workers and communities, even if the transformation was ultimately inevitable. Tools change us. They change what skills we develop, what we value, how we think.
 
@@ -221,7 +221,7 @@ The right questions might be:
 - How do we develop norms around disclosure and attribution?
 - What does it mean for accessibility when AI can help bridge cognitive differences?
 
-These are complicated questions, and I don't have the answers. Neither do you. Not yet.
+These are complicated questions, and I don't have the answers. Neither do you.
 
 And I think the only way we're going to answer them is by engaging thoughtfully with the technology, not by rejecting it outright. That doesn't mean uncritically embracing AI. It means being willing to use it, understand it, question it, and develop informed opinions based on actual experience rather than abstract fear.
 
