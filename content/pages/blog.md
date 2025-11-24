@@ -9,7 +9,7 @@ permalink: /blog/
     {% if site.posts.size > 0 %}
         <div class="blog-posts">
             {% for post in site.posts %}
-                <article class="blog-post-preview">
+                <article class="blog-post-preview" data-post-index="{{ forloop.index0 }}">
                     <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
                     
                     {% if post.date %}
@@ -42,6 +42,12 @@ permalink: /blog/
                     {% endif %}
                 </article>
             {% endfor %}
+        </div>
+        <div class="blog-load-more-container" style="text-align: center; margin: 2rem 0;">
+            <button id="load-more-posts" class="load-more-button" style="display: none; padding: 0.75rem 2rem; font-size: 1rem; background: var(--link-color, #0066cc); color: white; border: none; border-radius: 4px; cursor: pointer;">
+                Load More Posts
+            </button>
+            <p id="posts-status" style="color: var(--text-secondary, #666); font-size: 0.9rem;"></p>
         </div>
     {% else %}
         <p>No blog posts found. Create markdown files in the <code>content/_posts</code> folder to get started!</p>
