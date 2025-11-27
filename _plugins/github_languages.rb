@@ -88,28 +88,54 @@ module Jekyll
 
     def calculate_language_stats(repos)
       language_stats = {}
+      token = ENV['PERSONAL_GITHUB_TOKEN']
       
       repos.each do |repo|
-        language = repo['language']
-        next unless language
+        # Fetch language breakdown for each repository
+        languages_url = repo['languages_url']
+        next unless languages_url
         
-        # Weight calculation: stars + forks + 1 (base weight)
-        weight = (repo['stargazers_count'] || 0) + (repo['forks_count'] || 0) + 1
-        
-        language_stats[language] = (language_stats[language] || 0) + weight
-        
-        puts "  📝 #{repo['name']}: #{language} (weight: #{weight})"
+        begin
+          uri = URI(languages_url)
+          http = Net::HTTP.new(uri.host, uri.port)
+          http.use_ssl = true
+          
+          request = Net::HTTP::Get.new(uri)
+          request['Authorization'] = "token #{token}"
+          request['Accept'] = 'application/vnd.github.v3+json'
+          request['User-Agent'] = 'Jekyll-GitHub-Languages-Plugin'
+          
+          response = http.request(request)
+          
+          if response.code.to_i == 200
+            languages = JSON.parse(response.body)
+            
+            # Add bytes for each language
+            languages.each do |lang, bytes|
+              language_stats[lang] = (language_stats[lang] || 0) + bytes
+            end
+            
+            puts "  📝 #{repo['name']}: #{languages.keys.join(', ')}"
+          else
+            puts "  ⚠️  Could not fetch languages for #{repo['name']}"
+          end
+          
+          # GitHub API rate limiting - be nice
+          sleep(0.1)
+        rescue => e
+          puts "  ❌ Error fetching languages for #{repo['name']}: #{e.message}"
+        end
       end
       
-      # Sort by weight and return top languages
-      sorted_languages = language_stats.sort_by { |lang, weight| -weight }
+      # Sort by bytes and return top languages
+      sorted_languages = language_stats.sort_by { |lang, bytes| -bytes }
       
-      # Return top 8 languages with their weights
-      sorted_languages.first(8).map do |lang, weight|
+      # Return top 8 languages with their byte counts
+      sorted_languages.first(8).map do |lang, bytes|
         {
           'name' => lang,
-          'weight' => weight,
-          'percentage' => calculate_percentage(weight, language_stats.values.sum)
+          'weight' => bytes,
+          'percentage' => calculate_percentage(bytes, language_stats.values.sum)
         }
       end
     end
