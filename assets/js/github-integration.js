@@ -23,9 +23,6 @@ async function loadGitHubData() {
         // Always fetch organizations from API (these don't change often and don't need private access)
         await loadOrganizationsFromAPI(username);
         
-        // Always try to update bio from API
-        await loadBioFromAPI(username);
-        
         console.log('GitHub data loaded successfully');
 
     } catch (error) {
@@ -108,40 +105,7 @@ async function loadOrganizationsFromAPI(username) {
     }
 }
 
-async function loadBioFromAPI(username) {
-    const userResponse = await fetch(`https://api.github.com/users/${username}`);
-    
-    if (!userResponse.ok) {
-        throw new Error('Failed to fetch user data');
-    }
-    
-    const user = await userResponse.json();
-    
-    // Update bio if available
-    const bioContainer = document.getElementById('github-bio');
-    if (bioContainer && user.bio) {
-        // Remove @fleetdm from bio
-        let cleanBio = user.bio.replace(/@fleetdm/g, '').replace(/\s+/g, ' ').trim();
-        bioContainer.textContent = cleanBio;
-        
-        console.log('Updated bio:', cleanBio);
-    }
-    
-    // Remove any company details that mention Fleet
-    removeFleetCompanyDetails();
-}
 
-function removeFleetCompanyDetails() {
-    // Look for company detail items and remove ones that mention Fleet
-    const detailItems = document.querySelectorAll('.detail-item');
-    detailItems.forEach(item => {
-        const text = item.textContent.toLowerCase();
-        if (text.includes('fleet') || text.includes('@fleetdm')) {
-            console.log('Removing Fleet company detail:', item.textContent);
-            item.style.display = 'none';
-        }
-    });
-}
 
 function updateLanguagesDisplay(languages) {
     const languagesContainer = document.getElementById('github-languages');
@@ -161,7 +125,6 @@ function updateLanguagesDisplay(languages) {
 function setFallbackContent() {
     setFallbackLanguages();
     setFallbackOrganizations();
-    setFallbackBio();
 }
 
 function setFallbackLanguages() {
@@ -188,19 +151,6 @@ function setFallbackOrganizations() {
                 <img src="https://avatars.githubusercontent.com/u/65584068?s=40&v=4" alt="Fleet" class="sidebar-org-icon">
             </a>
         `;
-    }
-}
-
-function setFallbackBio() {
-    const bioContainer = document.getElementById('github-bio');
-    if (bioContainer) {
-        // Set fallback bio without @fleetdm mention
-        bioContainer.textContent = 'Customer Support Engineer | Infrastructure Nerd | Dog & Motorcycle Lover';
-        
-        // Remove Fleet company details
-        removeFleetCompanyDetails();
-        
-        console.log('✅ Fallback bio set successfully');
     }
 }
 
