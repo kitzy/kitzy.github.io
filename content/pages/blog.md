@@ -32,11 +32,12 @@ permalink: /blog/
                     
                     {% if post.tags and post.tags.size > 0 %}
                         <p class="post-meta">
-                            <span class="tag-icon">🏷️</span>
-                            <span class="post-tags">
-                                {% for tag in post.tags %}
-                                    <a href="/tag/{{ tag | slugify }}/" class="post-tag">{{ tag }}</a>
-                                {% endfor %}
+                            <span style="display: inline-flex; align-items: flex-start;">
+                                <span class="tag-icon">🏷️</span><span class="post-tags">
+                                    {% for tag in post.tags %}
+                                        <a href="/tag/{{ tag | slugify }}/" class="post-tag">{{ tag }}</a>
+                                    {% endfor %}
+                                </span>
                             </span>
                         </p>
                     {% endif %}
