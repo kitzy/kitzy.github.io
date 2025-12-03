@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The spark bird theory of career growth"
+title: "Find your spark bird"
 description: "Before Fleet, I joined Jamf and Fastly early. Both grew explosively, Now I'm making the same bet again. Here's the pattern I follow."
 date: 2025-12-03
 tags: [values, career]
