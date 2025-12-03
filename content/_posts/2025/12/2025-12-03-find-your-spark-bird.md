@@ -41,13 +41,13 @@ I got to work side by side with Jon for a while. Then he became my boss. Then on
 
 ## Fleet: Zay
 
-I first met Zay when Fastly became a customer of Fleet. That feeling came back—finding someone really smart and passionate about what they do, and wanting to work with them. The more people at Fleet I met, the stronger it got. But Zay was first. She was my spark bird.
+I first met Zay when Fastly became a customer of Fleet. That feeling came back — finding someone really smart and passionate about what they do, and wanting to work with them. The more people at Fleet I met, the stronger it got. But Zay was first. She was my spark bird.
 
-We kept in touch after I left Fastly and explored the idea of me working at Fleet a few different times. She actually talked me out of it once because I was exploring a role that I ultimately would have hated. That's the kind of person she is—more interested in the right fit than just filling a seat.
+We kept in touch after I left Fastly and explored the idea of me working at Fleet a few different times. She actually talked me out of it once because I was exploring a role that I ultimately would have hated. That's the kind of person she is, more interested in the right fit than just filling a seat.
 
 Eventually, the timing was right. Now I'm here, surrounded every day by smart people who are passionate about what they do.
 
-Around the same time I was deciding, a FAANG company offered me more than twice what Fleet did. More than twice. I'd be lying if I said I didn't think hard about it. That kind of money would've changed things for me and my family.
+Around the same time I was deciding, a FAANG company offered me more than twice what Fleet did. _More than twice_. I'd be lying if I said I didn't think hard about it. That kind of money would've been life-changing.
 
 But the interview process felt hollow. I kept waiting to meet someone who made me feel that spark, that sense of "I want to work with this person." It never came. The compensation package was incredible. The title would be very impressive on my resume. The work seemed fine. The people seemed competent. But I didn't _feel_ anything.
 
