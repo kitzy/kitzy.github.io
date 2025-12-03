@@ -41,19 +41,25 @@ I got to work side by side with Jon for a while. Then he became my boss. Then on
 
 ## Fleet: Zay
 
-I first met Zay when Fastly became a Fleet customer. That feeling instantly came back — finding someone really smart and passionate about what they do, and wanting to work with them. The more people at Fleet I met, the stronger it got. But Zay was first. She was my Fleet spark bird.
+I first met Zay when Fastly became a customer of Fleet. That feeling came back—finding someone really smart and passionate about what they do, and wanting to work with them. The more people at Fleet I met, the stronger it got. But Zay was first. She was my spark bird.
 
-We kept in touch after I left Fastly and explored the idea of me working at Fleet a few different times. She actually talked me out of it once because I was exploring a role that I ultimately would have hated. That's the kind of person she is — more interested in the right fit than just filling a seat.
+We kept in touch after I left Fastly and explored the idea of me working at Fleet a few different times. She actually talked me out of it once because I was exploring a role that I ultimately would have hated. That's the kind of person she is—more interested in the right fit than just filling a seat.
 
 Eventually, the timing was right. Now I'm here, surrounded every day by smart people who are passionate about what they do.
 
-Around the same time I was deciding, a FAANG company offered me more than _twice_ what Fleet did. I turned them down. The interview process felt hollow. They didn't have that same spark, that passion I saw in the people at Fleet.
+Around the same time I was deciding, a FAANG company offered me more than twice what Fleet did. More than twice. I'd be lying if I said I didn't think hard about it. That kind of money would've changed things for me and my family.
+
+But the interview process felt hollow. I kept waiting to meet someone who made me feel that spark, that sense of "I want to work with this person." It never came. The compensation package was incredible. The title would be very impressive on my resume. The work seemed fine. The people seemed competent. But I didn't _feel_ anything.
+
+I turned them down and took the Fleet offer. Did I make the right choice? Only time will tell.
 
 
 ## The pattern
 
 Every time I've found smart, passionate people and convinced them to let me join them, it's paid off for me. Some people chase money, some chase a higher spot on the org chart. If that's what fuels you, by all means chase it.
 
-For me, I've found that chasing passion works. Because the thing about smart, passionate people is that they tend to gravitate toward other smart, passionate people. If you're surrounded by them, you end up building something that matters.
+For me, chasing money has always left me feeling hollow. It doesn't fuel me. Don't get me wrong, money matters. It's a means to survive in the capitalist hellscape we're all forced into. I need it just like everyone else. But when I've made career decisions based primarily on compensation, I've ended up miserable. The money didn't make up for the lack of passion, the lack of connection to the work and the people.
 
-That's my career advice: find people who are passionate about what they do and passionate about the same things you are. Then go where they are.
+Chasing passion works for me. Because the thing about smart, passionate people is that they tend to gravitate toward other smart, passionate people. If you're surrounded by them, you end up building something that matters. And in my experience, when you're part of building something that matters, the money tends to follow anyway.
+
+That's my career advice: find people who are passionate about what they do and passionate about the same things you are. Then go where they are. It might not be the safe choice. It might not be the lucrative choice. But it will probably be the right choice.
