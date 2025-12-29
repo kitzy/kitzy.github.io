@@ -116,19 +116,19 @@ And for some people, there is no line. Everything is neutral. It's all just tool
 I don't know where my line is yet. I'm trying to figure it out. All I know for sure is that I have one.
 
 
-## The rationalization I keep coming back to
+## The Rationalization That Tempts Us
 
-There's a voice in my head that says: "Even if you quit over this, they'll just hire someone else. Your protest won't change anything. The company you're uncomfortable with will keep doing what they do regardless. At least this way, you're employed. At least your company can take that revenue and use it to serve customers you *do* believe in. At least you can try to do some good from within the system."
+Here's a rationalization I hear a lot — and that I find myself considering: "If you quit over something like this, they'll just hire someone else. Your individual protest won't change anything. The organization you're uncomfortable with will keep doing what they do regardless. At least if you stay, you're employed. At least the company can take that revenue and use it to serve customers you do support. At least you might be able to do some good from within the system."
 
-And you know what? That voice isn't entirely wrong. Individual actions often feel futile. One person rarely changes corporate behavior. One company refusing a customer just means that customer goes elsewhere.
+And you know what? There's some truth to this logic. Individual actions often feel futile. One person leaving a job rarely changes corporate behavior. One company refusing a customer just means that customer goes elsewhere.
 
-But here's what bothers me about this logic: you can use it to justify almost anything.
+But here's what bothers me about this reasoning: you can use it to justify almost anything.
 
 "If I don't build this, someone else will" is how surveillance tools get built. It's how weapons get manufactured. It's how every ethically questionable technology ends up in the world. At some point, "someone else will do it anyway" stops being a reason and becomes an excuse.
 
 And the "at least we can take their money to do good" part? That's just sanitizing a moral compromise. You're still enabling the harm. You're just trying to balance it out with good things, and hoping the math works out in your favor.
 
-I don't know if this rationalization is wrong. But I don't think I believe it either. Or maybe I do believe it, and I just don't like what that says about me.
+This rationalization is seductive because it contains truth. But I'm not sure it's sufficient justification for participation in harm. Or maybe it is, and I just haven't figured out when it applies and when it doesn't.
 
 
 ## What I'm sitting with
