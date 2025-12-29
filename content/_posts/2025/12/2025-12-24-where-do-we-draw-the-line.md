@@ -37,7 +37,7 @@ This is just how it works. Except... is that okay?
 
 ## The line we don't talk about
 
-I keep thinking about this metaphor: imagine you're a tool maker, and you build a beautiful hammer. You're proud of it. It's well crafted, it does exactly what it's supposed to do. You sell it or give it away, and someone uses it to build houses for people who need them. Great! That's what you wanted.
+I keep thinking about this metaphor: imagine you're a tool maker, and you build a hammer. You're proud of it. It's well crafted, it does exactly what it's supposed to do. You sell it or give it away, and someone uses it to build houses for people who need them. Great! That's what you wanted.
 
 But then you find out someone else is using your hammer to break windows. Or worse.
 
