@@ -10,7 +10,7 @@ Breaking changes aren’t fun, but sometimes they’re necessary. Fleet v4.74.0 
 
 I’ve been tinkering with an [experimental Fleet autopkg processor](https://github.com/kitzy/fleet-autopkg-recipes) that ties [autopkg](https://github.com/autopkg/autopkg) into Fleet. I’ve already updated the processor so it understands the new schema that’s coming in Fleet v4.74.0.  
 
-It’s still experimental and not in active use anywhere (as far as I know), but it’s now in a good place if you want to kick the tires — and it’s ready ahead of the breaking changes in Fleet.
+It’s still experimental and not in active use anywhere (as far as I know), but it’s now in a good place if you want to kick the tires - and it’s ready ahead of the breaking changes in Fleet.
 
 ## What’s changing in Fleet
 
@@ -36,7 +36,7 @@ The goal is to cut manual toil from keeping software definitions up to date. Sch
 
 By automatically querying the Fleet API and writing the right YAML for the server you’re targeting, the processor quietly does the right thing. That means fewer surprises when Fleet upgrades land and less fiddling to keep workflows moving.
 
-Even if this isn’t running in production anywhere, it’s a working reference — and maybe a starting point — for folks exploring the same idea.
+Even if this isn’t running in production anywhere, it’s a working reference - and maybe a starting point - for folks exploring the same idea.
 
 ## What’s next
 

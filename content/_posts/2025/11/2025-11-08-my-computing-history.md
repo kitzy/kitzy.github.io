@@ -24,7 +24,7 @@ It was either Christmas of 1993 or my birthday in 1994 when my grandparents gift
 
 I remember sitting at my computer, pretending I was Lex, saying "It's a [Unix](https://en.wikipedia.org/wiki/Unix) system, I know this!" and saving the day by rebooting all of the systems just before the raptors could force their way through my bedroom door. I didn't even know what a Unix system was, I just thought it sounded cool.
 
-If you could've told me then that someday I'd be able to turn on my lights, lock the door to my house, and even open my garage door — not just from a computer, but from a phone in my pocket — I wouldn't have believed you. A phone! In my pocket!
+If you could've told me then that someday I'd be able to turn on my lights, lock the door to my house, and even open my garage door - not just from a computer, but from a phone in my pocket - I wouldn't have believed you. A phone! In my pocket!
 
 Around this time, my special interest became marine biology. I attribute this partially to my grandparents taking me to [Sea World](https://en.wikipedia.org/wiki/SeaWorld) for my birthday, and partly to another masterpiece of 1993 media: [SeaQuest DSV](https://en.wikipedia.org/wiki/SeaQuest_DSV). I promise I'm going to tie this back into computers, just bear with me.
 
@@ -35,7 +35,7 @@ There was a "game" on the Performa called [Mouse Practice](https://en.wikipedia.
 
 ## The internet arrives
 
-Not long after getting the Performa, the internet arrived. I remember the modem — a separate box that connected to the computer and our home phone line. Connecting to the internet, you would hear the modem [screech](https://www.youtube.com/watch?v=gsNaR6FRuO0) in all of its 28.8k glory. I'm still not sure why we had to listen to the computer scream before we could conntect to the internet. Maybe that was a harbinger of what was to come. But that's another blog post.
+Not long after getting the Performa, the internet arrived. I remember the modem - a separate box that connected to the computer and our home phone line. Connecting to the internet, you would hear the modem [screech](https://www.youtube.com/watch?v=gsNaR6FRuO0) in all of its 28.8k glory. I'm still not sure why we had to listen to the computer scream before we could conntect to the internet. Maybe that was a harbinger of what was to come. But that's another blog post.
 
 I remember finding bulletin board systems, and niche websites created by amateur enthusiasts on extremely specific topics. How, at this point, I didn't end up getting into [amateur radio](https://en.wikipedia.org/wiki/Amateur_radio), or building my own games, or some other extremely nerdy technical pursuit, is beyond me. Had I stumbled into the right corner of the internet, I probably would have. I saw the potential there, but I didn't know how to access it. It just seemed like something that was beyond my reach, and all school was teaching me was how to type and play Oregon Trail. 
 
@@ -78,6 +78,6 @@ But here's the thing: I knew the basics of how to use a computer - I had plenty 
 
 After leaving Apple, I got a job at a digital marketing agency managing a small farm of [Xserves](https://en.wikipedia.org/wiki/Xserve) running [Snow Leopard Server](https://en.wikipedia.org/wiki/Mac_OS_X_Server#Mac_OS_X_Server_10.6_(Snow_Leopard)), and a couple of [Xserve RAIDs](https://en.wikipedia.org/wiki/Xserve_RAID). Six months later, Apple discontinued the Xserve. Less than a year after that, I was laid off.
 
-The rest of my career has been me trying to catch up to the computer education I never had but in hindsight so clearly was desperate for. Every job has been another lesson I should've learned in school. Managing those Xserves taught me about servers and networking. Other roles taught me scripting, system administration, how to actually understand what's happening under the hood. I've learned more from online communities, documentation, and trial and error than I ever did in a classroom. It's been like filling in a coloring book backward — learning the advanced stuff first and only later discovering the fundamentals that were supposed to come first.
+The rest of my career has been me trying to catch up to the computer education I never had but in hindsight so clearly was desperate for. Every job has been another lesson I should've learned in school. Managing those Xserves taught me about servers and networking. Other roles taught me scripting, system administration, how to actually understand what's happening under the hood. I've learned more from online communities, documentation, and trial and error than I ever did in a classroom. It's been like filling in a coloring book backward - learning the advanced stuff first and only later discovering the fundamentals that were supposed to come first.
 
 But my love for the Apple platform has stuck with me. Since that day I turned on the black MacBook, my primary computer has always been some form of Mac laptop.

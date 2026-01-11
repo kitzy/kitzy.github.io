@@ -20,7 +20,7 @@ Andrea looked at me and said something simple but profound:
 
 At first, the words barely registered. They did not magically make the water recede or lighten the work still ahead of us. But they shifted something inside me. Andrea was not promising an instant solution. She was reminding me of something I had lost sight of. No storm lasts forever. The sky would eventually clear. The rain would eventually stop.  
 
-Those words became a seed that rooted itself in my mind. Since that night, they have grown into a mantra I return to again and again. Whenever I have faced something difficult—heartbreak, grief, exhaustion, moments when life feels unmanageable—I have thought of those four words.  
+Those words became a seed that rooted itself in my mind. Since that night, they have grown into a mantra I return to again and again. Whenever I have faced something difficult - heartbreak, grief, exhaustion, moments when life feels unmanageable - I have thought of those four words.  
 
 And I have realized they have always been true. Every painful season I have lived through has eventually passed. The floodwater receded. The heartache softened. The uncertainty found clarity. The rain always stopped.  
 

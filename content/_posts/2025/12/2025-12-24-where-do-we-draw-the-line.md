@@ -15,7 +15,7 @@ I realize that's a heavy way to start a blog post. But I think a lot of us in te
 
 I didn't get into technology to get rich or because I thought it would be easy. I got into it because I'm a problem solver, and I genuinely wanted to make things better. I wanted to build tools that help people do their jobs more easily, that reduce friction, that make someone's day a little less frustrating.
 
-I think a lot of us started with some version of that. We believed — maybe still believe — that technology can be a force for good. If we build the right things in the right ways, we can actually improve people's lives.
+I think a lot of us started with some version of that. We believed - maybe still believe - that technology can be a force for good. If we build the right things in the right ways, we can actually improve people's lives.
 
 And then reality gets complicated.
 
@@ -74,7 +74,7 @@ This is where I land most days, but it's deeply uncomfortable because it means I
 
 ## The open source dilemma
 
-Open source makes this even more complicated. The whole ethos of open source is about freedom — freedom to use, modify, distribute. You don't put restrictions on who can use it because that undermines the entire point.
+Open source makes this even more complicated. The whole ethos of open source is about freedom - freedom to use, modify, distribute. You don't put restrictions on who can use it because that undermines the entire point.
 
 But what if someone you fundamentally oppose uses your code? What if your contribution to the commons ends up being used to surveil people, or enforce policies you find unjust, or enable systems you'd actively work against if you could?
 
@@ -118,7 +118,7 @@ I don't know where my line is yet. I'm trying to figure it out. All I know for s
 
 ## The Rationalization That Tempts Us
 
-Here's a rationalization I hear a lot — and that I find myself considering: "If you quit over something like this, they'll just hire someone else. Your individual protest won't change anything. The organization you're uncomfortable with will keep doing what they do regardless. At least if you stay, you're employed. At least the company can take that revenue and use it to serve customers you do support. At least you might be able to do some good from within the system."
+Here's a rationalization I hear a lot - and that I find myself considering: "If you quit over something like this, they'll just hire someone else. Your individual protest won't change anything. The organization you're uncomfortable with will keep doing what they do regardless. At least if you stay, you're employed. At least the company can take that revenue and use it to serve customers you do support. At least you might be able to do some good from within the system."
 
 And you know what? There's some truth to this logic. Individual actions often feel futile. One person leaving a job rarely changes corporate behavior. One company refusing a customer just means that customer goes elsewhere.
 
@@ -135,7 +135,7 @@ This rationalization is seductive because it contains truth. But I'm not sure it
 
 Here are the questions I keep coming back to:
 
-**If I see harm happening and I have the ability to speak up, and I don't — what does that make me?**
+**If I see harm happening and I have the ability to speak up, and I don't - what does that make me?**
 
 Not speaking up because I'm scared of consequences is human. But at some point, does fear become an excuse for complicity?
 
@@ -179,6 +179,6 @@ Have you found ways to advocate for change within a company, or does that feel f
 
 Do you think it's even possible to work in tech without some level of ethical compromise, or am I being too pessimistic?
 
-I don't know if there are "right" answers to any of this. But I think the conversation itself matters. Because the alternative — just not thinking about it, just building whatever we're asked to build and collecting our paychecks and telling ourselves it's not our problem — that feels worse.
+I don't know if there are "right" answers to any of this. But I think the conversation itself matters. Because the alternative - just not thinking about it, just building whatever we're asked to build and collecting our paychecks and telling ourselves it's not our problem - that feels worse.
 
 At least if we're struggling with it, we're paying attention.
