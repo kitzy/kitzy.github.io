@@ -39,7 +39,7 @@ Let's talk about compliance. Some industries have requirements that make automat
 
 Medical device software often requires validation testing before any update. Financial services companies need to document changes for audit purposes. Government contractors may have specific approval processes for any software change.
 
-These aren't theoretical concerns. They're regulatory requirements with real consequences. An IT team that can't demonstrate control over their software deployment process isn't just making a technical choice—they're creating compliance risk.
+These aren't theoretical concerns. They're regulatory requirements with real consequences. An IT team that can't demonstrate control over their software deployment process isn't just making a technical choice-they're creating compliance risk.
 
 And it's not just highly regulated industries. Any organization with a robust quality assurance process needs control over when changes happen. If you're running a design studio and Adobe releases a new version of Creative Cloud, you don't want it auto-installing the day before a major client presentation. You want to schedule that update for a maintenance window after the project ships.
 
@@ -88,7 +88,7 @@ App catalogs are great for the simple things. They make it easy to deploy common
 
 But enterprise IT is rarely simple. You've got legacy applications, regulatory requirements, change control processes, and specialized tools that don't exist anywhere else. You need the ability to manage both the standard apps and the edge cases.
 
-That's why vendor-managed catalogs can't be the only option. As long as organizations need control over their software deployment process—and they will always need that control—there will be a need for platforms that support both approaches.
+That's why vendor-managed catalogs can't be the only option. As long as organizations need control over their software deployment process-and they will always need that control-there will be a need for platforms that support both approaches.
 
 
 ## The path forward
@@ -99,7 +99,7 @@ The right vendor won't force you into a single model. They'll give you options. 
 
 And they'll understand that while their app catalog might cover 80% or even 95% of what most customers need, that last 5% is often the most critical. Those are the apps that make your organization unique. Those are the tools your team depends on.
 
-Package automation tools have been solving this problem for years. They're still solving it today. And they'll keep solving it for years to come, because the fundamental problem—the need for controlled, reliable, repeatable software deployment—isn't going away.
+Package automation tools have been solving this problem for years. They're still solving it today. And they'll keep solving it for years to come, because the fundamental problem-the need for controlled, reliable, repeatable software deployment-isn't going away.
 
 The app catalog arms race will continue. Vendors will keep adding more apps and better automation. That's good. We should welcome improvements.
 

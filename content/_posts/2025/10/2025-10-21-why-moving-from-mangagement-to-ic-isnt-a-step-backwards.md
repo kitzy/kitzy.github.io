@@ -23,7 +23,7 @@ We confuse leadership with management all the time. We treat them like synonyms 
 
 Management is a role. It comes with direct reports, budget authority, and a spot in the hierarchy. Leadership is a mindset. It's influence. It's the ability to move people toward better outcomes, regardless of where you sit in the org chart.
 
-Not every manager is a leader. We've all worked for managers who checked boxes, ran meetings, and approved time off—but never actually led anyone anywhere. They managed processes. They didn't inspire change or growth.
+Not every manager is a leader. We've all worked for managers who checked boxes, ran meetings, and approved time off-but never actually led anyone anywhere. They managed processes. They didn't inspire change or growth.
 
 And not every leader is a manager. Some of the most influential people I've worked with had zero direct reports. They led through expertise, through building trust, through showing up consistently and making everyone around them better.
 
@@ -126,7 +126,7 @@ I'm still leading. I'm just doing it differently now.
 
 When people dance around asking about my transition, they're usually asking one of two things:
 
-Either they're worried about me: did I get pushed out, am I okay, is this really what I want? (I appreciate the concern. I'm good. This was my choice, and I'm excited about it.)
+Either they're worried about me: am I okay, is this really what I want? (I appreciate the concern. I'm good. This was my choice, and I'm excited about it.)
 
 Or they're asking for themselves: is it okay to want something different than the path I'm on? Is it okay to step away from management? Is it okay to optimize for happiness over hierarchy?
 

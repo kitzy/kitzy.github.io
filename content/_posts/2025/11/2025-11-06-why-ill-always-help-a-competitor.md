@@ -10,7 +10,7 @@ I got a DM this week that made me pause. Someone in Mac Admins Slack was surpris
 
 Yes. And yes.
 
-Rich was seeing weird behavior with virtual machines running macOS 26.1.0—they weren't reporting serial numbers. I jumped in to reproduce it because that's what you do when someone's stuck. I spun up a test VM, confirmed I was seeing the same thing, and let him know. That was it. I didn't solve his problem, just verified he wasn't going crazy.
+Rich was seeing weird behavior with virtual machines running macOS 26.1.0-they weren't reporting serial numbers. I jumped in to reproduce it because that's what you do when someone's stuck. I spun up a test VM, confirmed I was seeing the same thing, and let him know. That was it. I didn't solve his problem, just verified he wasn't going crazy.
 
 Here's what that person maybe didn't know: Rich and I go way back. Long before I worked for Fleet. Long before he worked for Jamf. When we lived closer together, we used to meet halfway for lunch once a month. We've presented at conferences together. We've helped each other through tough problems and tougher days.
 
