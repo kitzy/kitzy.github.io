@@ -7,7 +7,7 @@ permalink: /readme/
 
 <div class="markdown-content" markdown="1">
 
-_[updated: October 28, 2025](https://github.com/kitzy/kitzy.github.io/commits/main/content/pages/readme.md)_
+_[updated: January 14, 2026](https://github.com/kitzy/kitzy.github.io/commits/main/content/pages/readme.md)_
 
 *Because people don't come with instruction booklets (but wouldn't it be easier if they did?). This is mine. It's here to help you understand how I tick, how I work best, and how we can collaborate without stepping on rakes together.*  
 
@@ -38,8 +38,6 @@ I have **[AuDHD](https://embrace-autism.com/an-introduction-to-audhd/) (autism +
 - Most of the time, I consider myself a reasonable person.
 - I want people to get along, I want to like people, and I want people to like me.
 - I want to understand viewpoints that differ from mine.
-- If my tombstone someday says *"she was nice to work with,"* I'll have done alright.  
-
 
 ---
 
