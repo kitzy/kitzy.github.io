@@ -6,9 +6,6 @@ date: 2026-01-28
 tags: [values, AI, community, politics]
 ---
 
-*"The Party told you to reject the evidence of your eyes and ears. It was their final, most essential command."* 
--- George Orwell, *1984*
-
 Fascism in the digital age requires two machines working in tandem: a propaganda apparatus to control what people believe, and a surveillance apparatus to find, track, and remove the people targeted by those narratives.
 
 The tech industry built both.
