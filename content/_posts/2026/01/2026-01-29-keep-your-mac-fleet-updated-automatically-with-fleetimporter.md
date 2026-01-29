@@ -3,7 +3,7 @@ layout: post
 title: "Keep your Mac fleet updated automatically with FleetImporter"
 description: "FleetImporter's new automatic update policies make it easier to keep your Mac fleet running the latest software versions without manual intervention."
 date: 2026-01-29
-tags: [Fleet, AutoPkg, Mac Admin, automation]
+tags: [fleet, autopkg, mac admin, automation]
 ---
 
 I've added automatic update policies to FleetImporter, making it easier to keep your Mac fleet running the latest software versions. When you enable this feature, FleetImporter creates Fleet policies that detect outdated applications and automatically install updates.
