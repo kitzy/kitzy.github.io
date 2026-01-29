@@ -11,7 +11,7 @@ I've added automatic update policies to FleetImporter, making it easier to keep 
 
 ## Why this matters
 
-Before automatic updates, you had to manually create policies to check software versions and trigger installations. Now FleetImporter handles this for you during your AutoPkg runs. Each time you process a new software version, FleetImporter creates or updates a policy that finds devices running older versions and installs the update automatically.
+Before automatic updates, you had to manually [create policies](https://fleetdm.com/guides/how-to-use-policies-for-patch-management-in-fleet#basic-article) to check software versions and trigger installations. Now FleetImporter handles this for you during your AutoPkg runs. Each time you process a new software version, FleetImporter creates or updates a policy that finds devices running older versions and installs the update automatically.
 
 This works with both direct mode and GitOps mode workflows, so you can use it regardless of how you manage Fleet.
 
