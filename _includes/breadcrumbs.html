@@ -63,9 +63,11 @@
   </ol>
   
   {% comment %}
-    RSS feed link - only show on blog pages
+    RSS feed link - show on blog pages and tag pages
   {% endcomment %}
   {% if page.layout == "post" or page.url contains "/blog/" %}
     <a href="{{ '/feed.xml' | relative_url }}" style="font-size: 0.85rem; color: #666; text-decoration: none; white-space: nowrap; margin-left: 1rem;" title="Subscribe to RSS feed">📡 RSS</a>
+  {% elsif page.layout == "tag" %}
+    <a href="{{ '/tag/' | append: page.tag | slugify | append: '/feed.xml' | relative_url }}" style="font-size: 0.85rem; color: #666; text-decoration: none; white-space: nowrap; margin-left: 1rem;" title="Subscribe to {{ page.tag }} RSS feed">📡 RSS</a>
   {% endif %}
 </nav>
