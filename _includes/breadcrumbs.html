@@ -67,7 +67,8 @@
   {% endcomment %}
   {% if page.layout == "post" or page.url contains "/blog/" %}
     <a href="{{ '/feed.xml' | relative_url }}" style="font-size: 0.85rem; color: #666; text-decoration: none; white-space: nowrap; margin-left: 1rem;" title="Subscribe to RSS feed">📡 RSS</a>
-  {% elsif page.layout == "tag" %}
-    <a href="{{ '/tag/' | append: page.tag | slugify | append: '/feed.xml' | relative_url }}" style="font-size: 0.85rem; color: #666; text-decoration: none; white-space: nowrap; margin-left: 1rem;" title="Subscribe to {{ page.tag }} RSS feed">📡 RSS</a>
+  {% elsif page.url contains "/tag/" and page.tag %}
+    {% assign tag_slug = page.tag | downcase | replace: ' ', '-' %}
+    <a href="/tag/{{ tag_slug }}/feed.xml" style="font-size: 0.85rem; color: #666; text-decoration: none; white-space: nowrap; margin-left: 1rem;" title="Subscribe to {{ page.tag }} RSS feed">📡 RSS</a>
   {% endif %}
 </nav>
