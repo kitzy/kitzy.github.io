@@ -3,7 +3,7 @@ layout: post
 title: "Where do we draw the line? On building tools and unintended consequences"
 description: "What happens when a tool you built with good intentions ends up causing harm? Exploring where we draw the line between building tools and responsibility."
 date: 2025-12-24
-tags: [career, life, values]
+tags: [career, life, values, open source]
 ---
 
 I've been having trouble sleeping lately because of a question I can't shake: **If something I built is being used to cause harm, am I responsible for that harm?**

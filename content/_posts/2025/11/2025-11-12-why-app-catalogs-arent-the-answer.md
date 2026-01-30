@@ -3,7 +3,7 @@ layout: post
 title: "Why vendor-managed app catalogs aren't the answer"
 description: "Vendor app catalogs are useful, but they're not the complete answer. Why IT teams still need control over software deployment timing and custom packages."
 date: 2025-11-12
-tags: [autopkg, device management, software deployment]
+tags: [autopkg, device management, software deployment, mac admin]
 ---
 
 If you've been watching the device management space lately, you've noticed something: every vendor is racing to build the biggest app catalog. It's become a feature war, with companies competing on who can offer more automatically-updating applications. "Deploy Chrome with one click!" "Keep Slack updated automatically!" "Thousands of apps, always current!"
