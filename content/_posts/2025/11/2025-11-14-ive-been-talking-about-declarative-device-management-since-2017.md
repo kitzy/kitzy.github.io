@@ -3,7 +3,7 @@ layout: post
 title: "I've been taking about Declarative Device Management since 2017. Most vendors still don't get it."
 description: "Vendors sell 'DDM' but still make you click through GUIs. Real declarative management means your git repo IS your device configuration. Here's the difference."
 date: 2025-11-14
-tags: [fleet, device management]
+tags: [fleet, device management, mac admin]
 ---
 
 Eight years ago at MacADUK 2017, I gave a talk about something I called "Desired State Management." I won't be linking to that recording - it's from a previous iteration of me that I no longer identify with - but the ideas remain as relevant today as ever. The core concept was simple: define how you want your systems configured, verify they're actually configured that way, and automatically fix them if they're not. No manual checking. No configuration drift. Just automation keeping everything in line.

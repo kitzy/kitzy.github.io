@@ -5,7 +5,7 @@ description: "I recently told the MacAdmins podcast that when I applied to work 
 
 That's not entirely true. I've actually been using Macs for most of my life."
 date: 2025-11-08
-tags: [career, life]
+tags: [career, life, mac admin]
 ---
 
 I recently told the [MacAdmins podcast](https://podcast.macadmins.org/2025/10/28/episode-434-learning-new-lore-with-kitzy/) that when I applied to work at the Apple Store in 2008, I didn't know anything about computers and I had never used a Mac before.
