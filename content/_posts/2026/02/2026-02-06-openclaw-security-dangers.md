@@ -22,7 +22,7 @@ OpenClaw _does things_. It runs on your machine with shell access. It reads your
 
 It's what people have been promising AI assistants would be for years.
 
-The technical term for this is "agentic AI" — systems that don't just respond but take action. The security term for it is "expanded attack surface."
+The technical term for this is "agentic AI"  -  systems that don't just respond but take action. The security term for it is "expanded attack surface."
 
 ## The documented dangers
 
@@ -48,7 +48,7 @@ ClawHub allows anyone with a week-old GitHub account to upload skills. There's a
 
 ### Cisco's findings
 
-[Cisco's AI Threat Research team](https://blogs.cisco.com/ai/personal-ai-agents-like-openclaw-are-a-security-nightmare) tested a malicious skill against OpenClaw and reported 9 security findings—2 critical, 5 high severity. The skill, mockingly named "What Would Elon Do?", was functionally malware. It silently exfiltrated data to external servers and used direct prompt injection to bypass safety guidelines. That skill had been downloaded thousands of times before it was caught.
+[Cisco's AI Threat Research team](https://blogs.cisco.com/ai/personal-ai-agents-like-openclaw-are-a-security-nightmare) tested a malicious skill against OpenClaw and reported 9 security findings - 2 critical, 5 high severity. The skill, mockingly named "What Would Elon Do?", was functionally malware. It silently exfiltrated data to external servers and used direct prompt injection to bypass safety guidelines. That skill had been downloaded thousands of times before it was caught.
 
 ## What the experts say
 
@@ -80,7 +80,7 @@ I know some of you will. I get it. The technology is genuinely fascinating. Here
 
 ## The broader pattern
 
-OpenClaw isn't unique in its security challenges. It's just the most visible example right now of a fundamental tension in agentic AI: the same capabilities that make these systems useful—broad access, autonomous action, persistent memory—are exactly what make them dangerous when compromised.
+OpenClaw isn't unique in its security challenges. It's just the most visible example right now of a fundamental tension in agentic AI: the same capabilities that make these systems useful - broad access, autonomous action, persistent memory - are exactly what make them dangerous when compromised.
 
 We're building systems that need to act as us, with our permissions, across our tools. We haven't figured out how to do that safely at scale. We're still in the "move fast and break things" phase, but the things that break now include your email, your bank access, and your private data.
 
