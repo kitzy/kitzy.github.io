@@ -3,7 +3,7 @@ layout: post
 title: "It's time to let go of your local admin account"
 description: "That shared admin password across your entire Mac fleet? It's not a safety net - it's a liability."
 date: 2026-02-12
-tags: [mac admin, work]
+tags: [mac admin, fleet]
 ---
 
 Why do so many Mac admin teams still maintain a local administrator account with the same password across their entire fleet?
