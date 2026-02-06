@@ -124,7 +124,7 @@ This isn't about dumping git on people and expecting them to figure it out. This
 
 Start with the basics. Use GUI tools if the command line is intimidating. Focus on the workflow - clone, branch, commit, PR - and the *why* behind each step. Make it relevant to the work people are actually doing.
 
-Your junior engineers can learn this. Your helpdesk staff can learn this. I know this because I've taught junior engineers and helpdesk staff do it successfully. The barrier isn't capability. The barrier is our assumption that it's too hard, combined with our unwillingness to invest in teaching it properly.
+Your junior engineers can learn this. Your helpdesk staff can learn this. I know this because I've taught junior engineers and helpdesk staff to do it successfully. The barrier isn't capability. The barrier is our assumption that it's too hard, combined with our unwillingness to invest in teaching it properly.
 
 ## The real question
 
