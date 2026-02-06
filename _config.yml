@@ -4,6 +4,7 @@ description: "Always automating, always iterating, always helping others."
 baseurl: ""
 url: "https://kitzy.com"
 author: "Kitzy"
+timezone: America/New_York
 
 # GitHub settings
 github_username: kitzy
