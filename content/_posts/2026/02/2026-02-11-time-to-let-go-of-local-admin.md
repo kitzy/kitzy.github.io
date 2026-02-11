@@ -2,7 +2,7 @@
 layout: post
 title: "It's time to let go of your local admin account"
 description: "That shared admin password across your entire Mac fleet? It's not a safety net - it's a liability."
-date: 2026-02-12
+date: 2026-02-11
 tags: [mac admin, fleet]
 ---
 
