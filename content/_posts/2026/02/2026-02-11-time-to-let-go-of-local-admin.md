@@ -56,7 +56,7 @@ Let me walk through some scenarios. Not hypothetical "what if a nation-state act
 
 **You need to investigate something.** There's suspicious activity on a device. You check the logs. You see logins with your shared admin account. Is it legitimate? Is someone on your team troubleshooting? Is it an attacker who found the password? You don't know. You can't know. Because that account is used by everyone on your team, and maybe some people who aren't on your team anymore, and you have no logging or alerting set up to distinguish legitimate use from compromise.
 
-**Someone gets curious.** A user finds the password in a deployment script or a configuration file or a screenshot. They're not malicious. They're just curious what happens if they use it. Now they have admin access to their device. They install something they shouldn't. Or they break something. Or they just poke around. You'll never know, because you're not monitoring for it.
+**Someone gets curious.** A user finds the password in a deployment script or a configuration file or a screenshot. They're not malicious. They're just curious what happens if they use it. Now they have admin access to every device in your fleet. You'll never know, because you're not monitoring for it.
 
 **The password is just sitting there.** In GitHub. In an old Jamf policy. In a configuration profile. In documentation that got shared externally by accident. In a support ticket. In a hundred places you've forgotten about because it was set up years ago.
 
