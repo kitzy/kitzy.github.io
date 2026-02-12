@@ -31,7 +31,8 @@ layout: default
     {% endif %}
     
     {{ content }}
-    
+
+    {% unless page.comments == false %}
     <script src="https://giscus.app/client.js"
             data-repo="kitzy/kitzy.com"
             data-repo-id="R_kgDOPzH2CA"
@@ -47,4 +48,5 @@ layout: default
             crossorigin="anonymous"
             async>
     </script>
+    {% endunless %}
 </div>
