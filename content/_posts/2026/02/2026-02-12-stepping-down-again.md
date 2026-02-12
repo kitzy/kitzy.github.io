@@ -58,4 +58,5 @@ And to whoever's reading this and thinking about sending me another harassing me
 
 ---
 
+
 If you're interested in becoming a MacAdmins Slack admin, [nominations are open until February 20th](https://macadmins.slack.com/archives/C04QVKV08/p1768898129970819). They need good people who genuinely care about the community. Maybe that's you.
