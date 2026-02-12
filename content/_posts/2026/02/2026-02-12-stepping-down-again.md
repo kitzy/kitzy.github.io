@@ -46,7 +46,7 @@ I'm not usually one to let bullies win. I've dealt with this kind of thing befor
 
 I don't have the spoons for this particular fight right now. That's not defeat - that's recognizing my limits. That's choosing where to put my energy. That's understanding that sometimes the cost of staying is higher than the value I can provide.
 
-The MacAdmins Slack admin team is currently accepting nominations for new admins through February 20th. They need people who can focus on the community without becoming the center of unnecessary drama. I can't be that person right now.
+The MacAdmins Slack admin team is currently accepting [nominations for new admins](https://macadmins.slack.com/archives/C04QVKV08/p1768898129970819) through February 20th. They need good people who genuinely care about the community. Maybe that's you.
 
 I still care about the Mac Admin community. I'm not going anywhere - I'll still be around, still contributing in the ways I can. Just not as an admin.
 
@@ -55,8 +55,3 @@ To the current admin team: thank you for welcoming me back. I'm sorry I couldn't
 To the community: be kind to your moderators. The work they do is so much harder than it looks.
 
 And to whoever's reading this and thinking about sending me another harassing message: I see you. I'm not afraid of you. I'm just tired of giving you my energy.
-
----
-
-
-If you're interested in becoming a MacAdmins Slack admin, [nominations are open until February 20th](https://macadmins.slack.com/archives/C04QVKV08/p1768898129970819). They need good people who genuinely care about the community. Maybe that's you.
