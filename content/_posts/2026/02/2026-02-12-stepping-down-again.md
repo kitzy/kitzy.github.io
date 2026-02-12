@@ -9,7 +9,7 @@ comments: false
 
 I'm stepping down as an admin of the MacAdmins Slack workspace. Again.
 
-I know how this looks. I rejoined the team just a couple months ago, and now I'm leaving. I want to offer an explanation, even though I don't owe anyone a justification.
+I want to offer an explanation, even though I don't owe anyone a justification.
 
 *This post reflects my personal experiences and perspective. I'm not speaking on behalf of the Mac Admins Foundation or the current admin team.*
 
@@ -49,7 +49,7 @@ I don't have the spoons for this particular fight right now. That's not defeat -
 
 The MacAdmins Slack admin team is currently accepting [nominations for new admins](https://macadmins.slack.com/archives/C04QVKV08/p1768898129970819) through February 20th. They need good people who genuinely care about the community. Maybe that's you.
 
-I still care about the Mac Admin community. I'm not going anywhere - I'll still be around, still contributing in the ways I can. Just not as an admin.
+I still care about the Mac Admin community. I'm not going anywhere - I'll still be around, still contributing in the ways I can.
 
 To the current admin team: thank you for welcoming me back. I'm sorry I couldn't stay longer.
 
