@@ -4,6 +4,7 @@ title: "Stepping down (again) from the MacAdmins Slack admin team"
 description: "On burnout, harassment, and knowing when to step back"
 date: 2026-02-12
 tags: [community, mental health, burnout, personal]
+comments: false
 ---
 
 I'm stepping down as an admin of the MacAdmins Slack workspace. Again.
