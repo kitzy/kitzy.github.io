@@ -88,7 +88,3 @@ navigation:
     url: "/"
   - title: "README"
     url: "/readme/"
-  - title: "Podcasts"
-    url: "/podcasts/"
-  - title: "Contact"
-    url: "/contact/"
