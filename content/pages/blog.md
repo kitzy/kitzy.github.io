@@ -2,7 +2,7 @@
 layout: default
 title: Blog
 description: "My thoughts on infrastructure, automation, and IT engineering"
-permalink: /blog/
+permalink: /
 ---
 
 <div class="markdown-content">
