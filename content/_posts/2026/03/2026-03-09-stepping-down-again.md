@@ -42,7 +42,7 @@ I've had anonymous messages sent to friends, to family members, to my employer, 
 
 The harassment ramped up *significantly* after I rejoined the admin team.
 
-Someone gained access to my email and other personal accounts by exploiting a Tailscale OAuth token I'd accidentally exposed in GitHub Actions logs. Then they posted my home address and personal phone number in an online forum dedicated to harassing trans people. Police showed up at my door for a "wellness check" I never requested. Now I'm getting mail addressed to my deadname - strangers know where I live and exactly what name will hurt most.
+Someone gained access to my email and other personal accounts by exploiting a Tailscale OAuth token I'd accidentally exposed in GitHub Actions logs. Then they posted my home address and personal phone number in an online forum dedicated to harassing trans people. Police showed up at my door for a "wellness check" I never requested. Now I'm getting junk mail addressed to my deadname sent to my home.
 
 I'm not usually one to let bullies win. I've dealt with this kind of thing before, and I'll deal with it again. But what I didn't anticipate was how someone's attempt at bullying me would spread into the MacAdmins community itself. Watching people I respect have to spend their time and energy dealing with the fallout from harassment aimed at me - that's different. That affects people I care about. That affects a community I helped build.
 
