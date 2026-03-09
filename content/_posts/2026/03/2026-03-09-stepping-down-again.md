@@ -36,7 +36,7 @@ But underneath those questions was something else. The thread got heated. There 
 
 ## The part people don't see
 
-I'm a semi-public figure who happens to be transgender. That means I face more harassment than most people probably realize. Most of it gets deleted quickly enough that you never see it - the comments in Slack, the replies on social media. But there's also the private harassment. Anonymous emails. Text messages to my personal phone number. I had to remove the contact form from my website because of the abuse coming through it.
+I'm a semi-public figure in niche circles who happens to be transgender. That means I face more harassment than most people probably realize. Most of it gets deleted quickly enough that you never see it - the comments in Slack, the replies on social media. But there's also the private harassment. Anonymous emails. Text messages to my personal phone number. I had to remove the contact form from my website because of the abuse coming through it.
 
 I've had anonymous messages sent to friends, to family members, to my employer, trying to "expose" me as transgender. As if it's some kind of secret. As if being trans is something shameful that needs to be hidden.
 
