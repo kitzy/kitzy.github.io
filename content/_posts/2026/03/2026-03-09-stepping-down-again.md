@@ -2,10 +2,10 @@
 layout: post
 title: "Stepping down (again) from the MacAdmins Slack admin team"
 description: "On burnout, harassment, and knowing when to step back"
-date: 2026-02-12
+date: 2026-03-09
 tags: [community, mental health, burnout, personal]
 comments: false
-published: false
+published: true
 ---
 
 I'm stepping down as an admin of the MacAdmins Slack workspace. Again.
@@ -18,7 +18,7 @@ I want to offer an explanation, even though I don't owe anyone a justification.
 
 I stepped away from the admin team in the fall of 2021. I was burned out - from the community, from my day job, from the constant low-level stress of moderating a space with tens of thousands of people in it.
 
-People don't talk enough about what it takes to moderate a community at that scale. You're not just removing spam or enforcing a code of conduct. You're navigating interpersonal conflicts, making judgment calls about what crosses a line, absorbing people's anger when they disagree with those calls. You're doing it in your spare time, for free, because you care about the community. And you're doing it knowing that no matter what you decide, someone _will_ be upset with you.
+People don't talk enough about what it takes to moderate a community at that scale. You're navigating interpersonal conflicts, making judgment calls about what crosses a line, absorbing people's anger when they disagree with those calls. You're doing it in your spare time, for free, because you care about the community. And you're doing it knowing that no matter what you decide, someone *will* be upset with you.
 
 The emotional labor is real. The mental health toll is real. I needed to step back, so I did.
 
@@ -36,19 +36,19 @@ But underneath those questions was something else. The thread got heated. There 
 
 ## The part people don't see
 
-I'm a semi-public figure who happens to be transgender. That means I face more harassment than most people probably realize. Most of it gets deleted quickly enough that you never see it - the comments in Slack, the replies on social media. But there's also the private harassment. Anonymous emails. Text messages to my personal phone number. I had to remove the contact form from my website because of the abuse coming through it.
+I'm a semi-public figure in niche circles who happens to be transgender. That means I face more harassment than most people probably realize. Most of it gets deleted quickly enough that you never see it - the comments in Slack, the replies on social media. But there's also the private harassment. Anonymous emails. Text messages to my personal phone number. I had to remove the contact form from my website because of the abuse coming through it.
 
 I've had anonymous messages sent to friends, to family members, to my employer, trying to "expose" me as transgender. As if it's some kind of secret. As if being trans is something shameful that needs to be hidden.
 
 The harassment ramped up *significantly* after I rejoined the admin team.
+
+Someone gained access to my email and other personal accounts by exploiting a Tailscale OAuth token I'd accidentally exposed in GitHub Actions logs. Then they posted my home address and personal phone number in an online forum dedicated to harassing trans people. Police showed up at my door for a "wellness check" I never requested. Now I'm getting junk mail addressed to my deadname sent to my home.
 
 I'm not usually one to let bullies win. I've dealt with this kind of thing before, and I'll deal with it again. But what I didn't anticipate was how someone's attempt at bullying me would spread into the MacAdmins community itself. Watching people I respect have to spend their time and energy dealing with the fallout from harassment aimed at me - that's different. That affects people I care about. That affects a community I helped build.
 
 ## Knowing when to step back
 
 I don't have the spoons for this particular fight right now. That's not defeat - that's recognizing my limits. That's choosing where to put my energy. That's understanding that sometimes the cost of staying is higher than the value I can provide.
-
-The MacAdmins Slack admin team is currently accepting [nominations for new admins](https://macadmins.slack.com/archives/C04QVKV08/p1768898129970819) through February 20th. They need good people who genuinely care about the community. Maybe that's you.
 
 I still care about the Mac Admin community. I'm not going anywhere - I'll still be around, still contributing in the ways I can.
 
