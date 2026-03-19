@@ -5,6 +5,8 @@
 </head>
 <body>
     <div class="container">
+        {% include sidebar.html %}
+
         <main class="main-content">
             <nav class="tab-navigation">
                 {% for nav_item in site.navigation %}
@@ -31,11 +33,13 @@
         </main>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/marked@4.3.0/marked.min.js"></script>
+    <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 
     <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
-    <script src="{{ '/assets/js/external-content.js' | relative_url }}"></script>
-    <script src="{{ '/assets/js/projects.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/blog-pagination.js' | relative_url }}"></script>
 </body>
 </html>
