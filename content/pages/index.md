@@ -1,15 +1,20 @@
 ---
 layout: default
-title: Blog
-description: "My thoughts on infrastructure, automation, and IT engineering"
-permalink: /blog/
+title: About
+description: "Customer Support Engineer at Fleet | Infrastructure Nerd | Dog & Motorcycle Lover"
+permalink: /
 ---
 
 <div class="markdown-content">
+    <div id="external-about-content">
+        <div class="loading-external">Loading content from source repository...</div>
+    </div>
+
     {% if site.posts.size > 0 %}
-        <div class="blog-posts">
-            {% for post in site.posts %}
-                <article class="blog-post-preview" data-post-index="{{ forloop.index0 }}">
+        <div class="latest-blog-posts" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-color, #e1e4e8);">
+            <h2 style="margin-bottom: 1rem;">Recent Blog Posts</h2>
+            {% for post in site.posts limit:3 %}
+                <article class="blog-post-preview" style="{% if forloop.index > 1 %}margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border-color, #e1e4e8);{% endif %}">
                     <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
                     
                     {% if post.date %}
@@ -32,26 +37,20 @@ permalink: /blog/
                     
                     {% if post.tags and post.tags.size > 0 %}
                         <p class="post-meta">
-                            <span style="display: inline-flex; align-items: flex-start;">
-                                <span class="tag-icon">🏷️</span><span class="post-tags">
-                                    {% for tag in post.tags %}
-                                        <a href="/tag/{{ tag | slugify }}/" class="post-tag">{{ tag }}</a>
-                                    {% endfor %}
-                                </span>
+                            <span class="tag-icon">🏷️</span>
+                            <span class="post-tags">
+                                {% for tag in post.tags %}
+                                    <a href="/tag/{{ tag | slugify }}/" class="post-tag">{{ tag }}</a>
+                                {% endfor %}
                             </span>
                         </p>
                     {% endif %}
                 </article>
             {% endfor %}
+            
+            <p style="margin-top: 2rem;">
+                <a href="/blog/" style="text-decoration: underline;">View all posts →</a>
+            </p>
         </div>
-        <div class="blog-load-more-container" style="text-align: center; margin: 2rem 0;">
-            <button id="load-more-posts" class="load-more-button" style="display: none; padding: 0.75rem 2rem; font-size: 1rem; background: var(--link-color, #0066cc); color: white; border: none; border-radius: 4px; cursor: pointer;">
-                Load More Posts
-            </button>
-            <p id="posts-status" style="color: var(--text-secondary, #666); font-size: 0.9rem;"></p>
-        </div>
-    {% else %}
-        <p>No blog posts found. Create markdown files in the <code>content/_posts</code> folder to get started!</p>
-        <p>Blog posts should be stored as <code>.md</code> files in the <code>content/_posts</code> directory with the format <code>YYYY-MM-DD-title.md</code>.</p>
     {% endif %}
 </div>
