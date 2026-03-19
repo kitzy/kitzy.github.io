@@ -6,8 +6,23 @@ permalink: /
 ---
 
 <div class="markdown-content">
-    <div id="external-about-content">
-        <div class="loading-external">Loading content from source repository...</div>
+    <div class="about-content">
+        <h1>Hi, I'm Kitzy 👋</h1>
+
+        <p><strong>Customer Support Engineer at <a href="https://fleetdm.com">Fleet</a> | Infrastructure Nerd | Dog &amp; Motorcycle Lover</strong></p>
+
+        <hr>
+
+        <h3>👨‍💻 About Me</h3>
+
+        <ul>
+            <li>🏳️‍⚧️ Pronouns: they/them/theirs or she/her/hers (either is equally fine)</li>
+            <li>🏆 Over 15 years in endpoint management &amp; IT engineering</li>
+            <li>🛠️ Previously Sr. IT Engineering Manager at Fastly and Professional Services Engineer at Jamf</li>
+            <li>🍏 Got my start at Apple Retail, configuring demo systems and imaging devices</li>
+            <li>🌍 Passionate about infrastructure, automation, and making IT work smarter</li>
+            <li>📖 Curious how I work best? Check out my <a href="/readme/">personal user manual</a></li>
+        </ul>
     </div>
 
     {% if site.posts.size > 0 %}

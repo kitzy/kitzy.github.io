@@ -5,7 +5,6 @@ gem "jekyll", "~> 4.3"
 
 # Jekyll plugins
 group :jekyll_plugins do
-  gem "jekyll-github-metadata"
   gem "jekyll-sitemap"
   gem "jekyll-feed"
 end

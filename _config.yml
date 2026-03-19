@@ -17,7 +17,6 @@ repository: kitzy/kitzy.com
 markdown: kramdown
 highlighter: rouge
 plugins:
-  - jekyll-github-metadata
   - jekyll-sitemap
   - jekyll-feed
 
