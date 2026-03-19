@@ -83,11 +83,9 @@ social:
 
 # Site navigation
 navigation:
-  - title: "README"
-    url: "/readme/"
   - title: "Blog"
-    url: "/blog/"
+    url: "/"
   - title: "Podcasts"
     url: "/podcasts/"
-  - title: "Contact"
-    url: "/contact/"
+  - title: "README"
+    url: "/readme/"
