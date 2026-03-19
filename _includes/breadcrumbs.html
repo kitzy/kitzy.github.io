@@ -13,7 +13,14 @@
         <a href="{{ '/' | relative_url }}" class="breadcrumb-link">kitzy</a>
       {% endif %}
     </li>
-    
+
+    {% if page.url == "/" %}
+      <li class="breadcrumb-item">
+        <span class="breadcrumb-separator" aria-hidden="true">/</span>
+        <span class="breadcrumb-current" aria-current="page">blog</span>
+      </li>
+    {% endif %}
+
     {% comment %}
       Handle different page types
     {% endcomment %}
@@ -65,7 +72,7 @@
   {% comment %}
     RSS feed link - show on blog pages and tag pages
   {% endcomment %}
-  {% if page.layout == "post" or page.url contains "/blog/" %}
+  {% if page.url == "/" or page.layout == "post" or page.url contains "/blog/" %}
     <a href="{{ '/feed.xml' | relative_url }}" style="font-size: 0.85rem; color: #666; text-decoration: none; white-space: nowrap; margin-left: 1rem;" title="Subscribe to RSS feed">📡 RSS</a>
   {% elsif page.url contains "/tag/" and page.tag %}
     {% assign tag_slug = page.tag | downcase | replace: ' ', '-' %}
