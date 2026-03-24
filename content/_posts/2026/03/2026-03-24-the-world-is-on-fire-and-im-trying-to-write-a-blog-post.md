@@ -30,7 +30,7 @@ There is so much happening, so fast, that the idea of carving out a quiet hour t
 
 When the backdrop includes genuine threats to democracy, to people's safety, to institutions we depend on - writing a blog post about endpoint management starts to feel embarrassing. *This* is what I'm spending my finite energy on?
 
-What I know is that the justification layer — the part of my brain that has to answer *why are you spending time on this* before I'm allowed to proceed — is more hostile than it's ever been.
+What I know is that the justification layer - the part of my brain that has to answer *why are you spending time on this* before I'm allowed to proceed - is more hostile than it's ever been.
 
 ## What paralysis actually is
 
@@ -38,7 +38,7 @@ Here's what I've noticed, though: the paralysis isn't really about the writing. 
 
 For me right now, it's two different things wearing the same clothes.
 
-One is guilt about attention — the sense that engaging with my own ideas is indulgent when the world is on fire. When I write about configuration management, I'm not writing about whatever is happening to real people right now. There's a version of interrogating that which is healthy. There's a version that becomes a bar so high nothing clears it, and you end up doing nothing, which helps no one, least of all you.
+One is guilt about attention - the sense that engaging with my own ideas is indulgent when the world is on fire. When I write about configuration management, I'm not writing about whatever is happening to real people right now. There's a version of interrogating that which is healthy. There's a version that becomes a bar so high nothing clears it, and you end up doing nothing, which helps no one, least of all you.
 
 The other is something more like rational caution. I know from direct experience that being visible has a cost. Police at my door, my deadname in my mailbox, months of cleanup. It's not irrational to pause before making myself visible again. But there's a point where rational caution tips into letting someone else control what I do and don't say. Where I'm not protecting myself so much as I'm silencing myself on their behalf.
 
@@ -54,7 +54,7 @@ What I can say is this: the goal of harassment like what I experienced is to mak
 
 I'm aware of that dynamic. I'm trying not to let it win, even when I'm tired of the fight.
 
-And writing from inside all of this — the exhaustion, the wariness, the weird particular grief of having your safety violated — that *is* saying something true about what it's like right now. That's not nothing.
+And writing from inside all of this - the exhaustion, the wariness, the weird particular grief of having your safety violated - that *is* saying something true about what it's like right now. That's not nothing.
 
 The world is on fire. Someone tried to use that to shut me up.
 
