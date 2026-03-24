@@ -30,7 +30,7 @@ There is so much happening, so fast, that the idea of carving out a quiet hour t
 
 When the backdrop includes genuine threats to democracy, to people's safety, to institutions we depend on - writing a blog post about endpoint management starts to feel embarrassing. *This* is what I'm spending my finite energy on?
 
-Maybe all of it. Maybe none of it. What I know is that the justification layer — the part of my brain that has to answer *why are you spending time on this* before I'm allowed to proceed — is more hostile than it's ever been.
+What I know is that the justification layer — the part of my brain that has to answer *why are you spending time on this* before I'm allowed to proceed — is more hostile than it's ever been.
 
 ## What paralysis actually is
 
