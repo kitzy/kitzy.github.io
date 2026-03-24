@@ -38,21 +38,13 @@ bundle exec jekyll serve --port 4000
 
 ### Deployment Process
 - **Trigger**: Push to main branch, PR creation, manual dispatch, weekly cron
-- **Build**: Custom GitHub Actions workflow with Ruby 3.1 + Jekyll + plugins
-- **Token**: Uses `PERSONAL_GITHUB_TOKEN` secret for private repo access during build
+- **Build**: Custom GitHub Actions workflow with Ruby 3.2 + Jekyll + plugins
 - **Deploy**: Automatic to GitHub Pages after successful build
 
 ## Project-Specific Patterns
 
-### Dual GitHub Integration System
-1. **Build-time**: `_plugins/github_languages.rb` calculates language stats from ALL repos (public + private) using token
-2. **Runtime**: `assets/js/github-integration.js` fetches public API data for organizations, bio, fallbacks
-3. **Data Flow**: Build-time data injected via `window.githubLanguagesData` in `_layouts/default.html`
-
-### Custom Language Calculation
-- **Weight Formula**: `(stars + forks + 1)` per repo with that language
-- **Processing**: All repos (including forks) counted, top 8 languages returned
-- **Fallback**: Static language array when token unavailable
+### GitHub Integration
+- **Runtime**: `assets/js/github-integration.js` fetches public API data for organizations, bio, fallbacks
 
 ### Content Organization
 - **Posts**: `content/_posts/YYYY-MM-DD-title.md` format with post layout (underscore required)
@@ -84,8 +76,7 @@ collections:
 ```
 
 ### Required Environment Variables
-- `PERSONAL_GITHUB_TOKEN`: GitHub token for private repo access during build
-- Must be set in GitHub repository secrets for Actions workflow
+- None. The build has no external token dependencies.
 
 ## Content Guidelines
 
@@ -137,11 +128,8 @@ permalink: /custom-url/  # Optional
 
 ## Build System Details
 
-### Custom Plugin: `_plugins/github_languages.rb`
-- **Purpose**: Generate language statistics from authenticated GitHub API
-- **Token Check**: Falls back to static data if `PERSONAL_GITHUB_TOKEN` unavailable
-- **Rate Limiting**: 0.1s sleep between API calls
-- **Output**: `site.data['github_languages']` with languages array + metadata
+### Custom Plugin: `_plugins/tag_generator.rb`
+- **Purpose**: Generate tag index pages and RSS feeds for each post tag
 
 ### Jekyll Processing
 - **Markdown**: kramdown processor
@@ -162,9 +150,8 @@ permalink: /custom-url/  # Optional
 3. Follow branch workflow: feature branch → PR → merge
 
 ### Updating GitHub Integration
-1. **Build-time**: Modify `_plugins/github_languages.rb` for data processing
-2. **Runtime**: Edit `assets/js/github-integration.js` for API calls/display
-3. Test fallback behavior (no token scenario)
+1. Edit `assets/js/github-integration.js` for API calls/display
+2. Test fallback behavior when API is unavailable
 
 ### Modifying Site Structure
 1. **Navigation**: Update `_config.yml` navigation array
@@ -178,7 +165,6 @@ permalink: /custom-url/  # Optional
 - **Solution**: Always use feature branch + PR workflow, never push to main
 
 ### Build Failures
-- **Token Issues**: Check `PERSONAL_GITHUB_TOKEN` secret exists and has repo access
 - **Jekyll Errors**: Validate YAML frontmatter syntax in posts/pages
 - **Plugin Errors**: Check Ruby syntax in `_plugins/` directory
 

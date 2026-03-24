@@ -10,9 +10,6 @@ timezone: America/New_York
 github_username: kitzy
 repository: kitzy/kitzy.com
 
-# GitHub token for build-time language calculation (set in environment)
-# Set PERSONAL_GITHUB_TOKEN in your build environment for private repo access
-
 # Build settings
 markdown: kramdown
 highlighter: rouge

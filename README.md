@@ -39,16 +39,6 @@ bundle exec jekyll serve --port 4000
 
 Visit: [http://localhost:4000](http://localhost:4000)
 
-### Required Environment Variables
-
-For full functionality, set in your build environment:
-
-```bash
-export PERSONAL_GITHUB_TOKEN="your_github_token"
-```
-
-This enables private repository access for language statistics during build.
-
 ## Development Workflow
 
 **⚠️ Important**: Main branch is protected. All changes must go through pull requests.
@@ -84,7 +74,7 @@ kitzy.github.io/
 │   ├── post.html           # Blog post layout
 │   └── redirect.html       # Redirect template
 ├── _plugins/               # Custom Jekyll plugins
-│   └── github_languages.rb # Language stats generator
+│   └── tag_generator.rb    # Tag page generator
 ├── assets/js/              # JavaScript modules
 │   ├── main.js            # Core functionality
 │   ├── github-integration.js
@@ -107,17 +97,11 @@ kitzy.github.io/
 
 ## Key Features
 
-### Dual GitHub Integration System
+### GitHub Integration
 
-1. **Build-time Language Stats** (`_plugins/github_languages.rb`)
-   - Calculates weighted language statistics from all repositories
-   - Requires `PERSONAL_GITHUB_TOKEN` for private repo access
-   - Weight formula: `(stars + forks + 1)` per language per repo
-   - Outputs top 8 languages to `site.data['github_languages']`
-
-2. **Runtime Public Data** (`assets/js/github-integration.js`)
+**Runtime Public Data** (`assets/js/github-integration.js`)
    - Fetches organizations, bio, and public repository data
-   - Provides fallbacks when build-time data unavailable
+   - Provides fallbacks when API is unavailable
    - Handles API rate limiting gracefully
 
 ## Content Management
@@ -184,9 +168,8 @@ Deployment triggers on:
 The `.github/workflows/deploy.yml` workflow:
 
 1. **Build**: Ruby 3.2 + Jekyll + custom plugins
-2. **Authentication**: Uses `PERSONAL_GITHUB_TOKEN` secret
-3. **Deploy**: Automatic to GitHub Pages after successful build
-4. **Permissions**: Pages write access via GITHUB_TOKEN
+2. **Deploy**: Automatic to GitHub Pages after successful build
+3. **Permissions**: Pages write access via GITHUB_TOKEN
 
 ### Manual Deploy
 
@@ -238,14 +221,6 @@ navigation:
 3. **Components**: Create includes in `_includes/`
 4. **Plugins**: Add Ruby plugins to `_plugins/`
 
-### Language Statistics
-
-Modify `_plugins/github_languages.rb` to change:
-- Weighting algorithm
-- Number of languages displayed
-- Excluded repositories
-- Fallback behavior
-
 ### Sidebar Content
 
 Edit `_includes/sidebar.html` to modify:
@@ -259,7 +234,6 @@ Edit `_includes/sidebar.html` to modify:
 ### Common Issues
 
 **Build Failures**
-- Check `PERSONAL_GITHUB_TOKEN` secret exists
 - Validate YAML frontmatter in posts/pages
 - Review Actions workflow logs
 
@@ -294,12 +268,6 @@ bundle exec jekyll serve --port 4001
 - `bundle-audit` for vulnerability scanning
 - Regular dependency updates via Dependabot
 - Security audit workflow in `.github/workflows/`
-
-### Token Permissions
-
-The `PERSONAL_GITHUB_TOKEN` should have minimal required scopes:
-- `repo` (for private repository access)
-- `read:org` (for organization data)
 
 ## Performance
 
