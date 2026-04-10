@@ -6,7 +6,39 @@ permalink: /talks/
 ---
 
 <div class="markdown-content">
-    <div class="speaking-section archived-talks">
+
+    <div class="speaking-section upcoming-talks">
+        <h2>Upcoming Talks</h2>
+        <div class="speaking-grid">
+            <div class="speaking-item upcoming">
+                <div class="speaking-header">
+                    <div class="upcoming-badge">Upcoming</div>
+                    <h3 class="speaking-title">
+                        <a href="https://pshsummit2026.sched.com/event/2AaQT/stop-clicking-and-start-committing-a-gitops-workflow-for-endpoint-management?iframe=no" target="_blank" rel="noopener noreferrer">
+                            Stop clicking and start committing: a GitOps workflow for endpoint management
+                        </a>
+                    </h3>
+                    <div class="speaking-meta">
+                        <span class="speaking-date">April 15, 2026</span>
+                        <span class="speaking-venue">PowerShell + DevOps Global Summit</span>
+                        <span class="speaking-location">Bellevue, WA</span>
+                    </div>
+                </div>
+                <p class="speaking-description">
+                    Every other discipline in IT figured this out years ago. This talk makes the case for moving your MDM into a Git repository — covering why endpoint management got stuck in ClickOps, what config-as-code buys you that a GUI never can (history, diffs, code review, rollbacks), and how AI coding tools accelerate the workflow without removing human review. Includes a live demo of a working sandbox-to-production pipeline with fleetctl and GitHub Actions.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="archived-talks-toggle-container">
+        <button id="toggle-archived-talks" class="toggle-archived-btn">
+            Show archived talks
+        </button>
+    </div>
+
+    <div id="archived-talks-section" class="speaking-section archived-talks" style="display: none;">
+        <h2>Archived Talks</h2>
         <p class="archive-note">These are talks from earlier in my life that I'm still proud of, though they reflect an earlier version of myself that I no longer identify with.</p>
         
         <div class="speaking-grid">
@@ -211,4 +243,5 @@ permalink: /talks/
             </div>
         </div>
     </div>
+
 </div>
