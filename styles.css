@@ -1181,6 +1181,33 @@ body {
 .language-color[data-language="javascript"] { background-color: #f1e05a; }
 .language-color[data-language="typescript"] { background-color: #2b7489; }
 .language-color[data-language="dockerfile"] { background-color: #384d54; }
+.language-color[data-language="swift"] { background-color: #F05138; }
+
+/* Featured projects */
+.featured-projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+    margin-bottom: 32px;
+}
+
+.featured-project {
+    border: 1px solid #388bfd;
+    border-radius: 6px;
+    padding: 20px;
+    background-color: #0d1117;
+    transition: border-color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+.featured-project:hover {
+    border-color: #79c0ff;
+    background-color: #161b22;
+}
+
+.featured-project .repo-description {
+    font-size: 13px;
+}
 
 /* Projects grid */
 .projects-grid {
