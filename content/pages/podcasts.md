@@ -8,6 +8,7 @@ permalink: /podcasts/
 <div class="markdown-content">
     <div class="speaking-section">
         <h2>Podcast Appearances</h2>
+        <div class="speaking-grid">
         <div class="speaking-item">
             <div class="speaking-header">
                 <h3 class="speaking-title">
@@ -70,6 +71,7 @@ permalink: /podcasts/
             <p class="speaking-description">
                 A feature episode focused on my approach to Mac administration, community building, and the importance of making technical work enjoyable. I discussed my philosophy on bringing fun and creativity to systems administration and fostering inclusive technical communities.
             </p>
+        </div>
         </div>
     </div>
 </div>

@@ -84,6 +84,8 @@ navigation:
     url: "/"
   - title: "Projects"
     url: "/projects/"
+  - title: "Talks"
+    url: "/talks/"
   - title: "Podcasts"
     url: "/podcasts/"
   - title: "README"
