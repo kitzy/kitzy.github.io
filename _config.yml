@@ -82,6 +82,8 @@ social:
 navigation:
   - title: "Blog"
     url: "/"
+  - title: "Projects"
+    url: "/projects/"
   - title: "Podcasts"
     url: "/podcasts/"
   - title: "README"
