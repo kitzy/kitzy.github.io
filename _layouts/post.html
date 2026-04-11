@@ -32,6 +32,25 @@ layout: default
     
     {{ content }}
 
+    <nav class="post-nav">
+        {% if page.previous.url %}
+            <a href="{{ page.previous.url | relative_url }}" class="post-nav-link post-nav-prev">
+                <span class="post-nav-arrow">‹</span>
+                <span class="post-nav-label">{{ page.previous.title }}</span>
+            </a>
+        {% else %}
+            <span class="post-nav-link post-nav-prev post-nav-disabled"></span>
+        {% endif %}
+        {% if page.next.url %}
+            <a href="{{ page.next.url | relative_url }}" class="post-nav-link post-nav-next">
+                <span class="post-nav-label">{{ page.next.title }}</span>
+                <span class="post-nav-arrow">›</span>
+            </a>
+        {% else %}
+            <span class="post-nav-link post-nav-next post-nav-disabled"></span>
+        {% endif %}
+    </nav>
+
     {% unless page.comments == false %}
     <script src="https://giscus.app/client.js"
             data-repo="kitzy/kitzy.com"
