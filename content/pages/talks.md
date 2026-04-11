@@ -37,7 +37,7 @@ permalink: /talks/
                     </h3>
                     <div class="speaking-meta">
                         <span class="speaking-date">June 25–26, 2026</span>
-                        <span class="speaking-venue">MacDevOps:YVR</span>
+                        <span class="speaking-venue">MacDevOps</span>
                         <span class="speaking-location">Montreal, QC</span>
                     </div>
                 </div>
@@ -55,7 +55,7 @@ permalink: /talks/
                     </h3>
                     <div class="speaking-meta">
                         <span class="speaking-date">June 25–26, 2026</span>
-                        <span class="speaking-venue">MacDevOps:YVR</span>
+                        <span class="speaking-venue">MacDevOps</span>
                         <span class="speaking-location">Montreal, QC</span>
                     </div>
                     <div class="speaking-cospeaker">
@@ -81,7 +81,7 @@ permalink: /talks/
                     </div>
                 </div>
                 <p class="speaking-description">
-                    A deeper dive than the MacDevOps:YVR session. Learn how to build end-to-end software deployment workflows using AutoPkg and Fleet's open-source platform - covering practical examples of automating everything from package creation to deployment through GitOps workflows. We'll look at how AutoPkg processors integrate with Fleet's API, how to manage software releases declaratively, and how to build repeatable workflows that scale. Includes real recipe demos, common patterns, and a look at community contributions to FleetImporter.
+                    A deeper dive than the MacDevOps session. Learn how to build end-to-end software deployment workflows using AutoPkg and Fleet's open-source platform - covering practical examples of automating everything from package creation to deployment through GitOps workflows. We'll look at how AutoPkg processors integrate with Fleet's API, how to manage software releases declaratively, and how to build repeatable workflows that scale. Includes real recipe demos, common patterns, and a look at community contributions to FleetImporter.
                 </p>
             </div>
 
