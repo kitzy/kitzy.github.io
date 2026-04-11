@@ -3,7 +3,7 @@
 <head>
     {% include head.html %}
 </head>
-<body>
+<body data-layout="{{ page.layout }}" data-permalink="{{ page.permalink | default: page.url }}">
     <div class="container">
         {% include sidebar.html %}
 

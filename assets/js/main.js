@@ -10,8 +10,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Add anchor links to headings
-    addHeadingAnchors();
+    // Add anchor links to headings (only on blog posts and readme page)
+    const body = document.body;
+    const layout = body.getAttribute('data-layout');
+    const permalink = body.getAttribute('data-permalink');
+    if (layout === 'post' || permalink === '/readme/') {
+        addHeadingAnchors();
+    }
     
     // Enhanced code block styling
     enhanceCodeBlocks();
