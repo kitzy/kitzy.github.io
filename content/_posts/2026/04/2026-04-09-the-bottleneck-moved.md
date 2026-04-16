@@ -3,7 +3,7 @@ layout: post
 title: "The bottleneck moved. Are you ready for it?"
 description: "AI is making code cheaper to write. That means the constraint in software development, and device management, has shifted to product design and QA."
 date: 2026-04-09
-tags: [work, AI, projects, mac admin]
+tags: [work, AI, mac admin]
 ---
 
 For most of software development's history, the constraint was writing code. You had an idea, and then you needed someone who could translate that idea into something a computer would execute. That translation step - the actual typing of syntax, the knowing which functions to call and which abstractions to build - was expensive, slow, and scarce.
