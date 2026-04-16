@@ -13,24 +13,6 @@ permalink: /talks/
             <div class="speaking-item upcoming">
                 <div class="speaking-header">
                     <h3 class="speaking-title">
-                        <a href="https://pshsummit2026.sched.com/event/2AaQT/stop-clicking-and-start-committing-a-gitops-workflow-for-endpoint-management?iframe=no" target="_blank" rel="noopener noreferrer">
-                            Stop clicking and start committing: a GitOps workflow for endpoint management
-                        </a>
-                    </h3>
-                    <div class="speaking-meta">
-                        <span class="speaking-date">April 15, 2026</span>
-                        <span class="speaking-venue">PowerShell + DevOps Global Summit</span>
-                        <span class="speaking-location">Bellevue, WA</span>
-                    </div>
-                </div>
-                <p class="speaking-description">
-                    Every other discipline in IT figured this out years ago. This talk makes the case for moving your MDM into a Git repository - covering why endpoint management got stuck in ClickOps, what config-as-code buys you that a GUI never can (history, diffs, code review, rollbacks), and how AI coding tools accelerate the workflow without removing human review. Includes a live demo of a working sandbox-to-production pipeline with fleetctl and GitHub Actions.
-                </p>
-            </div>
-
-            <div class="speaking-item upcoming">
-                <div class="speaking-header">
-                    <h3 class="speaking-title">
                         <a href="https://mdoyvr.com/" target="_blank" rel="noopener noreferrer">
                             Automate software deployment with AutoPkg and Fleet
                         </a>
