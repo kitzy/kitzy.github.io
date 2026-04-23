@@ -35,7 +35,7 @@ Then there are points 21 and 22, which are doing something uglier.
 
 Point 21: "Some cultures have produced vital advances; others remain dysfunctional and regressive."
 
-Let's not be coy about what this means or who it means it about. This is not a critique of institutions. It's not a policy argument about governance structures. It is a statement that certain groups of people are, by the nature of their culture, inferior - a drag on civilization, a problem requiring management. When Karp writes "dysfunctional and regressive," he is not talking about Scandinavians. He is talking about the communities that show up as shapes drawn on a Palantir map. Latino immigrants. Muslim communities. Black neighborhoods. The people ICE is currently running algorithmic raids on. Clinical language. Very old, very ugly work.
+Let's not be coy about what this means or who it means it about. This is not a critique of institutions. It's not a policy argument about governance structures. It is a statement that certain groups of people are, by the nature of their culture, inferior - a drag on civilization, a problem requiring management. We don't need to speculate about who 'dysfunctional and regressive' describes in practice. Look at which neighborhoods end up as shapes on a Palantir map. Latino immigrants. Muslim communities. Black neighborhoods. The people ICE is currently running algorithmic raids on. Clinical language. Very old, very ugly work.
 
 Point 22 follows immediately: pluralism is hollow. "Inclusion into what?" The multicultural democratic project isn't just failing - it was never legitimate to begin with. The hierarchy is the point. The hierarchy has always been the point.
 
