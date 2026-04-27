@@ -4,7 +4,7 @@ title: "The Palantir Manifesto is a technofascist blueprint"
 description: "The Technological Republic isn't political philosophy. It's the ideological scaffolding for technofascism, written by the people who profit from it."
 date: 2026-04-27
 tags: [politics, capitalism, AI, values]
-published: false
+published: true
 ---
 
 Palantir [posted a 22-point summary](https://x.com/PalantirTech/status/2045574398573453312) of *The Technological Republic* on X last week. [The Wall Street Journal called it](https://www.penguinrandomhouse.com/books/760945/the-technological-republic-by-alexander-c-karp-and-nicholas-w-zamiska/) "no less ambitious than a new treatise in political theory." General Mattis blurbed it. [Keir Starmer's government is reportedly inspired by it](https://www.newstatesman.com/politics/health/2025/03/palantir-problem-nhs-andrew-marr). 
