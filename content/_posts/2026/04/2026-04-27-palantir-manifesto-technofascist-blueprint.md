@@ -2,12 +2,12 @@
 layout: post
 title: "The Palantir Manifesto is a technofascist blueprint"
 description: "The Technological Republic isn't political philosophy. It's the ideological scaffolding for technofascism, written by the people who profit from it."
-date: 2026-04-23
+date: 2026-04-27
 tags: [politics, capitalism, AI, values]
 published: false
 ---
 
-Palantir [posted a 22-point summary](https://x.com/PalantirTech/status/2045574398573453312) of *The Technological Republic* on X last week. [The Wall Street Journal called it](https://www.penguinrandomhouse.com/books/760945/the-technological-republic-by-alexander-c-karp-and-nicholas-w-zamiska/) "no less ambitious than a new treatise in political theory." [General Mattis blurbed it](https://techrepublicbook.com/). [Keir Starmer's government is reportedly inspired by it](https://www.newstatesman.com/politics/health/2025/03/palantir-problem-nhs-andrew-marr). [It hit #1 on the New York Times bestseller list](https://techrepublicbook.com/).
+Palantir [posted a 22-point summary](https://x.com/PalantirTech/status/2045574398573453312) of *The Technological Republic* on X last week. [The Wall Street Journal called it](https://www.penguinrandomhouse.com/books/760945/the-technological-republic-by-alexander-c-karp-and-nicholas-w-zamiska/) "no less ambitious than a new treatise in political theory." General Mattis blurbed it. [Keir Starmer's government is reportedly inspired by it](https://www.newstatesman.com/politics/health/2025/03/palantir-problem-nhs-andrew-marr). 
 
 I want to tell you what it actually is, and what it's already doing.
 
@@ -39,11 +39,11 @@ Point 21: "Some cultures have produced vital advances; others remain dysfunction
 
 Let's not be coy about what this means or who it means it about. This is not a critique of institutions. It's not a policy argument about governance structures. It is a statement that certain groups of people are, by the nature of their culture, inferior - a drag on civilization, a problem requiring management. We don't need to speculate about who 'dysfunctional and regressive' describes in practice. Look at which neighborhoods end up as shapes on a Palantir map. Latino immigrants. Muslim communities. Black neighborhoods. The people ICE is currently running algorithmic raids on. Clinical language. Very old, very ugly work.
 
-Point 22 follows immediately: pluralism is hollow. "Inclusion into what?" The multicultural democratic project isn't just failing - it was never legitimate to begin with. The hierarchy is the point. The hierarchy has always been the point.
+Point 22 follows immediately: [pluralism](https://en.wikipedia.org/wiki/Pluralism_(political_theory)) is hollow. "Inclusion into what?" The multicultural democratic project isn't just failing - it was never legitimate to begin with. The hierarchy is the point. The hierarchy has always been the point.
 
 These two points are load-bearing. If some cultures are inherently dysfunctional, then surveillance infrastructure that sorts and targets communities along cultural lines isn't a civil liberties violation. It's a technical solution to a natural problem. The cultural hierarchy argument pre-justifies everything that comes after it. It tells you who deserves to be on the map before the map is drawn.
 
-To be clear: using this infrastructure on undocumented immigrants is already unconscionable. These are human beings - people who came here seeking safety, work, family, survival - being hunted by an algorithm that ingests their medical records and assigns them a score. There is no acceptable version of this. There is no population for whom "target-rich area" is an appropriate phrase.
+To be clear: using this infrastructure on undocumented immigrants is already unconscionable. These are human beings - people who, for the most part, came here seeking safety, work, family, survival - being hunted by an algorithm that ingests their medical records and assigns them a score. There is no acceptable version of this. There is no population for whom "target-rich area" is an appropriate phrase.
 
 But what stops this from expanding? The infrastructure doesn't have opinions. The cultural hierarchy argument doesn't name a stopping point. Once you've built a system that sorts people by who is "dysfunctional and regressive" and routes them toward enforcement, the only thing limiting who gets sorted is the political will of whoever is running it.
 
@@ -65,7 +65,7 @@ That's the press release version. [The operational version is an app called ELIT
 
 And then those arrests end here: [at least 32 people died in ICE custody last year. 2026 is already on track to be worse, with 14 deaths in the first months of the year alone. ICE is now purchasing warehouses to expand detention capacity.](https://www.hrw.org/news/2026/04/09/another-disturbing-surprise-from-ice) [People inside face medical neglect, preventable deaths, solitary confinement, blocked access to lawyers, and racist treatment.](https://immigrantjustice.org/research/policy-brief-snapshot-of-ice-detention-inhumane-conditions-and-alarming-expansion/) [A comprehensive review found 95% of those deaths were preventable with adequate medical care.](https://stateofsurveillance.org/news/ice-detention-deaths-2025-2026-deadliest-year-custody/) Infections. Diabetes. Heart conditions. People denied care until it was too late.
 
-The word "concentration camp" does not require extermination to apply. Historians use it to describe facilities where civilians are mass-incarcerated without due process, in degrading conditions, outside the normal criminal justice system. [Nearly 73% of those detained by ICE have no criminal convictions.](https://jayapal.house.gov/2025/12/03/jayapal-smith-introduce-legislation-to-end-inhumane-immigration-detention-conditions/) [ICE is converting warehouses into facilities holding up to 1,500 people, run by private contractors.](https://www.hrw.org/news/2026/04/09/another-disturbing-surprise-from-ice) People are dying of treatable conditions. Oversight has been gutted. Legal access is obstructed. Decide for yourself what word applies. But don't let squeamishness about the word do the work of pretending the conditions aren't what they are.
+The term "concentration camp" does not require extermination to apply. [Historians use it](https://encyclopedia.ushmm.org/content/en/article/the-nazi-camp-system-terminology) to describe facilities where civilians are mass-incarcerated without due process, in degrading conditions, outside the normal criminal justice system. [Nearly 73% of those detained by ICE have no criminal convictions.](https://jayapal.house.gov/2025/12/03/jayapal-smith-introduce-legislation-to-end-inhumane-immigration-detention-conditions/) [ICE is converting warehouses into facilities holding up to 1,500 people, run by private contractors.](https://www.hrw.org/news/2026/04/09/another-disturbing-surprise-from-ice) People are dying of treatable conditions. Oversight has been gutted. Legal access is obstructed. Decide for yourself what term applies. But don't let squeamishness about the term do the work of pretending the conditions aren't what [they are](https://www.tandfonline.com/doi/full/10.1080/15740773.2025.2543126).
 
 ## This is what technofascism looks like
 
@@ -75,7 +75,7 @@ The sequence isn't complicated. Establish a cultural hierarchy - some groups are
 
 *The Technological Republic* is steps one and two. The ELITE app and ImmigrationOS are step three. Point 5 is step four written in advance as a preemptive defense.
 
-[Over the past year, some 230,000 people were arrested and deported by ICE.](https://www.pbs.org/video/from-facial-recognition-to-geolocation-inside-the-tech-powering-ice-raids-y9adqm/) The tool Palantir built to find them calls neighborhoods "target-rich areas." The book providing the moral framework for that tool just hit #1 on the Times list, and heads of government are calling it inspiring.
+[Over the past year, some 230,000 people were arrested and deported by ICE.](https://www.pbs.org/video/from-facial-recognition-to-geolocation-inside-the-tech-powering-ice-raids-y9adqm/) The tool Palantir built to find them calls neighborhoods "target-rich areas." The book providing the moral framework for that tool is on the New York Times Best Seller list, and heads of government are calling it inspiring.
 
 The manifesto and the machine are the same project. One decides who is dysfunctional. The other finds where they live. The detention facilities hold what's left.
 
