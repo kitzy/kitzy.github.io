@@ -3,7 +3,7 @@ layout: post
 title: "Watch the videos. Then tell me who the terrorists are."
 description: "Federal agents executed two US citizens in Minneapolis in three weeks. Neither was breaking any laws. The administration is now using their deaths to demand access to Minnesota's voter rolls."
 date: 2026-01-25
-tags: [values, community, politics]
+tags: [values, community]
 ---
 
 Two US citizens were executed by federal agents in Minneapolis this month. Neither was breaking any laws. Both were 37 years old. The administration labeled both as violent terrorists. Video evidence contradicts every official claim.

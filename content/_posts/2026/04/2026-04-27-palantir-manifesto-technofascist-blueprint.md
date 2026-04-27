@@ -3,7 +3,7 @@ layout: post
 title: "The Palantir Manifesto is a technofascist blueprint"
 description: "The Technological Republic isn't political philosophy. It's the ideological scaffolding for technofascism, written by the people who profit from it."
 date: 2026-04-27
-tags: [politics, capitalism, AI, values]
+tags: [capitalism, AI, values]
 published: true
 ---
 

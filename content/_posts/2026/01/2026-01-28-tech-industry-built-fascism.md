@@ -3,7 +3,7 @@ layout: post
 title: "The tech industry built the machinery of American fascism"
 description: "Scholars say the U.S. no longer qualifies as a democracy. The tech industry built the tools that made this possible."
 date: 2026-01-28
-tags: [values, AI, community, politics]
+tags: [values, AI, community]
 ---
 
 Fascism in the digital age requires two machines working in tandem: a propaganda apparatus to control what people believe, and a surveillance apparatus to find, track, and remove the people targeted by those narratives.
