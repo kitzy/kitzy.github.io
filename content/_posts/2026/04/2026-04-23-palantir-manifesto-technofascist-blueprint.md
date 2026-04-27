@@ -31,6 +31,8 @@ This doesn't argue that AI weapons are good. It argues that asking whether we sh
 
 Notice what this framework does. It makes "should we?" permanently unanswerable. Every surveillance system, every autonomous targeting platform, every tool ever deployed to harm civilians can be justified by pointing at an adversary who might build it first. There is no technology this logic cannot justify. That is the point. Karp has engineered a philosophy with no ethical off-switch, and he did it while running a company that needs there to be no ethical off-switch.
 
+This isn't a new argument. It's the oldest argument in weapons development. The scientists who built the atomic bomb were told the same thing — Germany might get there first, so the question of whether to build it was already settled. Then Germany surrendered before the bomb was ready. The question of whether to use it was never seriously reopened. [The United States dropped it on Hiroshima and Nagasaki, killing an estimated 110,000 to 210,000 people](https://www.atomicarchive.com/resources/documents/med/med_chp10.html), most of them civilians. The logic that made the bomb inevitable made its use inevitable too. That is what happens when you engineer a philosophy with no ethical off-switch.
+
 Then there are points 21 and 22, which are doing something uglier.
 
 Point 21: "Some cultures have produced vital advances; others remain dysfunctional and regressive."
