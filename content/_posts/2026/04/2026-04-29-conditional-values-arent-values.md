@@ -20,8 +20,6 @@ And then I did the thing anyway.
 
 Not because I was certain it would work out. I wasn't. Not because I'm fearless. I'm not. But because the alternative - staying quiet because I was afraid of what might happen - would have made my values conditional. And conditional values aren't values.
 
----
-
 Companies do this all the time, and we've gotten very good at not noticing.
 
 A company writes values on the wall. Puts them in the handbook. Talks about them in all-hands meetings. And mostly, those values hold - right up until a customer is large enough, or a contract is important enough, or a revenue target is close enough. Then the values get quiet. Nobody says they're abandoning them. They just stop being the thing that drives decisions.
@@ -32,8 +30,6 @@ And that pressure doesn't stay in the boardroom. It flows downstream. Into manag
 
 I think about this a lot. The system is very good at making silence feel like the rational choice.
 
----
-
 I know this from the inside. I haven't always held the line.
 
 I've worked for employers who made it clear, explicitly or otherwise, what I was and wasn't allowed to say publicly. And I complied. I've chosen silence more than once because the economic risk of speaking felt too high. There's a blog I kept from roughly 2010 to 2017 that no longer exists anywhere on the internet - not because I deleted it carelessly, but because I let it be scrubbed. At the time, that felt like the practical choice. Looking back, it feels like something I lost.
@@ -41,8 +37,6 @@ I've worked for employers who made it clear, explicitly or otherwise, what I was
 I'm not beating myself up over it. The pressure was real. The fear was real. Capitalism is very good at making you feel like you have no choice, and sometimes the material stakes are high enough that you genuinely don't. I'm not here to judge anyone who has made the same call.
 
 But I'm older now. The world has changed, and keeps changing, in ways that make silence feel increasingly untenable to me. And I've learned, slowly and not without cost, that compromising my values in the name of economic security isn't a trade I'm willing to keep making. The security it buys is real. What it costs is also real.
-
----
 
 Here's the thing about values: having them is cheap. Saying you have them is cheaper still. The cost comes when you're tested.
 
