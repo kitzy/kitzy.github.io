@@ -1,16 +1,10 @@
 ---
 layout: post
-title: "The abstraction layer moved. The responsibility didn't."
+title: "A response to 'Engineering in the Age of AI'"
 description: "AI didn't change whether you need to understand what you ship. It changed how much of it you wrote yourself."
 date: 2026-04-30
 tags: [AI, mac admin]
 ---
-
-Ideas were never the bottleneck.
-
-For years the constraint wasn't knowing what to build - it was the distance between the idea and the working implementation. The skills gap. The time gap. The gap between being able to describe a solution precisely and being able to produce it.
-
-AI compressed that distance. And that's genuinely liberating - and also where I think a lot of the current anxiety in our community is coming from.
 
 Sam Mills wrote something this week that I keep thinking about. His [piece on engineering in the age of AI](https://mostlymac.blog/2026/04/28/engineering-in-the-age-of-ai/) is worth reading carefully. Not just because I agree with parts of it, but because where I don't, the disagreement reveals something important about what we're actually talking about when we talk about AI in this community.
 
@@ -40,7 +34,7 @@ Sam warns against using an agent to "one-shot" your infrastructure. He's right t
 
 The real work - the work that requires your expertise, your judgment, your understanding of your organization - happens before you write a line of code or craft a single prompt. What are you trying to accomplish? What's the actual problem? What does success look like, and how will you know when you've achieved it? What are the tradeoffs, and who bears the cost of each one? Which things are genuinely important, and which are you doing because they feel like things you should be doing?
 
-That's where the expertise lives. Not in knowing the right key-value pair. Not in remembering command syntax. Not in looking up whether the correct key is `labels_include_any` or `include_any_labels`. That knowledge matters - you need to be able to verify the output is correct - but the ability to recall it from memory is not what makes someone a good platform engineer. What makes someone good at this work is knowing what to build, knowing whether to build it at all, and understanding the downstream implications of the choices they make.
+That's where the expertise lives. Not in knowing the right key-value pair. Not in remembering command syntax. Not in looking up whether the correct key is `labels_include_any` or `include_any_labels`. That knowledge matters - you need to be able to verify the output is correct - but the ability to recall it from memory is not what makes someone a good client platform engineer. What makes someone good at this work is knowing what to build, knowing whether to build it at all, and understanding the downstream implications of the choices they make.
 
 If you've done that work - if you can describe the intended behavior precisely, if you know what the right answer looks like before you ask AI to help you express it - then AI doesn't bypass your expertise. It amplifies it. If you skip that work and hand the problem to an agent wholesale, you don't get AI-assisted engineering. You get expensive autocomplete applied to a problem you haven't thought through.
 
@@ -72,9 +66,9 @@ Staged rollouts, code review, actually reading the output before you ship it - t
 
 ## The regression to the mean
 
-This is Sam's strongest point, and I want to sit with it honestly.
+This is Sam's strongest point.
 
-He argues that LLMs can't produce outlier thinking - that by design, they produce clustered answers that regress toward the average of what's been said before. All great engineering and strategy happen at the edges. So AI can't produce great engineering.
+He argues that LLMs can't produce outlier thinking - that by design, they produce clustered answers that regress toward the average of what's been said before. All great engineering and strategy happen at the edges, so AI can't produce great engineering.
 
 I think this is partially right, in a way that matters. And I think it's mostly irrelevant to what most of us actually do every day.
 
@@ -82,9 +76,9 @@ Device management, especially in the Apple space, is largely a solved problem. A
 
 Writing a FileVault configuration profile by hand isn't groundbreaking. You're not going to find a better way to encrypt your devices. If you're constantly reinventing the wheel while managing your fleet, you're probably doing something wrong. Most of us aren't hand-crafting config profiles today anyway - we're using tools that generate them when we check boxes in a GUI. That's just a different abstraction layer over the same solved problem.
 
-Sam's right that great engineering happens at the edges. The edges are just not where most device management work lives. I'd estimate that 80% of the work is mundane, well-understood, and templated. It's the 80% I'm advocating for handing to an LLM - not because it doesn't matter, but because doing it well doesn't require your best thinking. It requires accuracy and consistency, which AI handles fine under human review.
+Sam's right that great engineering happens at the edges. The edges are just not where most device management work lives. I'd estimate that 80% of the work is mundane, well-understood, and templated. It's this 80% I'm advocating for handing to an LLM - not because it doesn't matter, but because doing it well doesn't require your best thinking. It requires accuracy and consistency, which AI handles fine under human review.
 
-The goal is to free up capacity for the 20%. The hard stuff. The architectural decisions specific to your environment, your risk tolerance, your users. The problems that don't have a Stack Overflow answer. The judgment calls where your institutional knowledge and domain expertise actually matter and can't be templated.
+The goal is to free up capacity for the other 20%. The hard stuff. The architectural decisions specific to your environment, your risk tolerance, your users. The problems that don't have a Stack Overflow answer. The judgment calls where your institutional knowledge and domain expertise actually matter and can't be templated.
 
 AI is a bad source of novel strategic thinking. Use it that way and Sam's critique lands. But if you're using it to handle the solved problems so you can spend more time on the unsolved ones - that's not atrophying your skills. That's directing them where they're most valuable.
 
