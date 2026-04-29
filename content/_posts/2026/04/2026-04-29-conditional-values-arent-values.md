@@ -36,7 +36,7 @@ I think about this a lot. The system is very good at making silence feel like th
 
 I know this from the inside. I haven't always held the line.
 
-I've worked for employers who made clear, explicitly or otherwise, what I was and wasn't allowed to say publicly. And I complied. I've chosen silence more than once because the economic risk of speaking felt too high. There's a blog I kept from roughly 2010 to 2017 that no longer exists anywhere on the internet - not because I deleted it carelessly, but because I let it be scrubbed. At the time, that felt like the practical choice. Looking back, it feels like something I lost.
+I've worked for employers who made it clear, explicitly or otherwise, what I was and wasn't allowed to say publicly. And I complied. I've chosen silence more than once because the economic risk of speaking felt too high. There's a blog I kept from roughly 2010 to 2017 that no longer exists anywhere on the internet - not because I deleted it carelessly, but because I let it be scrubbed. At the time, that felt like the practical choice. Looking back, it feels like something I lost.
 
 I'm not beating myself up over it. The pressure was real. The fear was real. Capitalism is very good at making you feel like you have no choice, and sometimes the material stakes are high enough that you genuinely don't. I'm not here to judge anyone who has made the same call.
 
