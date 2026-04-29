@@ -14,8 +14,6 @@ I've been sitting with a comment someone left on a [Hank Green video](https://yo
 
 I haven't been able to stop thinking about it.
 
----
-
 ## Hank's benchmark
 
 Hank's video proposes what he calls "Shelter Bench" - not whether AI can beat a grandmaster at chess or generate a novel protein, but whether it can help solve the housing crisis. His answer is that it probably can't - not in any meaningful way - because affordable housing isn't blocked by a lack of intelligence applied to it. It's blocked by the fact that people who already have homes have political power over whether new homes get built, and strong incentives to use that power to prevent it.
@@ -27,8 +25,6 @@ His broader point is that we keep telling a story: *this technology is very powe
 He draws a distinction I think is genuinely useful: *intelligence* versus *wisdom*. Intelligence is the ability to manipulate information - process it, sort it, predict from it, generate it. Wisdom is knowing which problems are worth solving and how to solve them without creating worse problems in the process. His argument is that we've been moving from an intelligence-constrained world to a wisdom-constrained one, and AI does nothing to address the wisdom gap.
 
 I think he's right. I think he stops short of the sharpest version of the argument, though.
-
----
 
 ## The question underneath the question
 
@@ -48,8 +44,6 @@ I think we fund cancer research because wealthy people get cancer too, and becau
 
 None of this is cynicism. It's just watching how the money moves.
 
----
-
 ## Where else does it apply
 
 Once you start asking the question, it's hard to stop.
@@ -61,8 +55,6 @@ Maternal mortality. The United States has the [highest maternal mortality rate i
 Climate change. The technology to transition off fossil fuels largely exists. What keeps getting dismantled is the political will to use it in ways that don't protect the wealth of fossil fuel companies and the politicians they fund.
 
 Every one of these is a political problem, not a technical one. The obstacle isn't ignorance. It's incentive.
-
----
 
 ## So where does AI fit
 
@@ -77,8 +69,6 @@ And the energy. The water. The data centers. There is an environmental cost to t
 Maybe AI leads somewhere genuinely better. Maybe cheap intelligence distributed widely actually shifts power in interesting ways - I can imagine it. Maybe the same tools that let a company eliminate a customer service team also let a community organizer analyze voting records or a researcher in a low-income country access diagnostic tools that used to require expensive specialists. Both things can be true at once.
 
 But every major technological shift in my lifetime - the internet, personal computing, the smartphone - was going to democratize everything. Each of them did, in some ways, for some people. Each of them also concentrated enormous wealth in a small number of hands and created new mechanisms for extracting value from people who have less of it. I don't have a principled reason to believe AI will be different.
-
----
 
 ## Back to the question
 
