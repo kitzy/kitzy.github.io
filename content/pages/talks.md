@@ -52,7 +52,7 @@ permalink: /talks/
             <div class="speaking-item upcoming">
                 <div class="speaking-header">
                     <h3 class="speaking-title">
-                        <a href="https://macadmins.psu.edu/" target="_blank" rel="noopener noreferrer">
+                        <a href="https://psumac2026.sched.com/event/2NBqB/from-recipe-to-reality-automating-software-deployment-with-autopkg-and-fleet" target="_blank" rel="noopener noreferrer">
                             From recipe to reality: Automating software deployment with AutoPkg and Fleet
                         </a>
                     </h3>
@@ -70,7 +70,7 @@ permalink: /talks/
             <div class="speaking-item upcoming co-talk">
                 <div class="speaking-header">
                     <h3 class="speaking-title">
-                        <a href="https://macadmins.psu.edu/" target="_blank" rel="noopener noreferrer">
+                        <a href="https://psumac2026.sched.com/event/2NBqn/not-broken-just-different-working-with-adhd-anxiety-and-neurodivergence-in-tech/" target="_blank" rel="noopener noreferrer">
                             Not broken, just different: Working with ADHD, anxiety, and neurodivergence in tech
                         </a>
                     </h3>
