@@ -6,7 +6,7 @@ date: 2026-04-29
 tags: [values, work, capitalism, mac admin]
 ---
 
-People ask me, fairly regularly, whether I'm worried that being outspoken about things that matter to me will cost me opportunities.
+People ask me, fairly regularly, whether I'm worried that being [outspoken](https://kitzy.com/blog/palantir-manifesto-technofascist-blueprint/) about [things](https://kitzy.com/blog/tech-industry-built-fascism/) that matter to me will cost me opportunities.
 
 My answer is always the same: yes, obviously. And it already has.
 
