@@ -1,6 +1,29 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+{% comment %} Resolve social preview image: page.image front matter > first image in rendered content > site default {% endcomment %}
+{% assign social_image = site.social.image %}
+{% assign has_post_image = false %}
+{% if page.image %}
+  {% assign social_image = page.image %}
+  {% assign has_post_image = true %}
+{% elsif page.content contains '<img' %}
+  {% assign _img_split = page.content | split: '<img' %}
+  {% assign _src_split = _img_split[1] | split: 'src="' %}
+  {% if _src_split.size > 1 %}
+    {% assign _extracted = _src_split[1] | split: '"' | first %}
+    {% if _extracted != blank %}
+      {% assign social_image = _extracted %}
+      {% assign has_post_image = true %}
+    {% endif %}
+  {% endif %}
+{% endif %}
+{% if social_image contains '://' %}
+  {% assign social_image_url = social_image %}
+{% else %}
+  {% assign social_image_url = social_image | prepend: site.url %}
+{% endif %}
+
 <!-- SEO and Social Media Meta Tags -->
 <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 <meta name="keywords" content="infrastructure, automation, IT engineering, endpoint management, Fleet, DevOps{% if page.tags %}, {{ page.tags | join: ', ' }}{% endif %}">
@@ -9,16 +32,16 @@
 <!-- Open Graph Meta Tags for Social Previews -->
 <meta property="og:title" content="{% if page.title %}{{ site.title }} - {{ page.title }}{% else %}{{ site.title }}{% endif %}">
 <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-<meta property="og:image" content="{{ site.social.image }}">
+<meta property="og:image" content="{{ social_image_url }}">
 <meta property="og:url" content="{{ site.url }}{{ page.url }}">
 <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}{{ site.social.type }}{% endif %}">
 <meta property="og:site_name" content="{{ site.title }}">
 
 <!-- Twitter Card Meta Tags -->
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="{% if has_post_image %}summary_large_image{% else %}summary{% endif %}">
 <meta name="twitter:title" content="{% if page.title %}{{ site.title }} - {{ page.title }}{% else %}{{ site.title }}{% endif %}">
 <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-<meta name="twitter:image" content="{{ site.social.image }}">
+<meta name="twitter:image" content="{{ social_image_url }}">
 
 <!-- Fediverse/Mastodon -->
 <meta name="fediverse:creator" content="@kitzy@hachyderm.io">
