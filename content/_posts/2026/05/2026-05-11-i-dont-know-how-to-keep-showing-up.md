@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "We will find you and we will kill you"
+title: "I don't know how to keep showing up like everything is normal"
 description: "The viral image is sensationalized. The infrastructure behind it is not."
 date: 2026-05-11
 tags: [mental health, life, AI]
