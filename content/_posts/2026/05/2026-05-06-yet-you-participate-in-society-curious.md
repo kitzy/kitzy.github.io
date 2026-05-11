@@ -6,7 +6,7 @@ date: 2026-05-06
 tags: [capitalism, values, work, mac admin]
 ---
 
-![A two-panel comic. In the first panel, a medieval peasant carrying a bundle of sticks says "We should improve society somewhat." In the second panel, a smug-looking boy replies "Yet you participate in society. Curious! I am very intelligent."](/assets/images/we-should-improve-society.png)
+![A two-panel comic. In the first panel, a medieval peasant carrying a bundle of sticks says "We should improve society somewhat." In the second panel, a smug-looking boy replies "Yet you participate in society. Curious! I am very intelligent."](/content/assets/images/we-should-improve-society.png)
 *[We Should Improve Society Somewhat](https://knowyourmeme.com/memes/we-should-improve-society-somewhat) via Know Your Meme*
 
 I am the peasant with the sticks.

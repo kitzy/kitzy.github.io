@@ -8,7 +8,7 @@ tags: [mental health, life, AI]
 
 An image has been circulating on social media this week. Maybe you've seen it.
 
-![Excerpt from the 2026 U.S. Counterterrorism Strategy, showing language targeting "radically pro-transgender" groups alongside the phrase "We Will Find You and We Will Kill You"](/assets/images/ct-strategy-excerpt.jpg)
+![Excerpt from the 2026 U.S. Counterterrorism Strategy, showing language targeting "radically pro-transgender" groups alongside the phrase "We Will Find You and We Will Kill You"](/content/assets/images/ct-strategy-excerpt.jpg)
 
 I need to tell you something about that image: it's technically misleading. The first passage classifies "radically pro-transgender" ideology as a terrorism priority. The second is the "We Will Find You and We Will Kill You" closer. They're not adjacent in the [actual document](https://www.whitehouse.gov/wp-content/uploads/2026/05/2026-USCT-Strategy-1.pdf). The kill threat appears in the Presidential Foreword, in the context of counterterrorism operations broadly. The transgender language appears pages later, in the Counterterrorism Priorities section. Whoever made that image cut and stitched them together for maximum horror.
 
