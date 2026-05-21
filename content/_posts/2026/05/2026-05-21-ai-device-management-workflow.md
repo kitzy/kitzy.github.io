@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to actually use AI to manage your fleet."
+title: "How to actually use AI to manage your fleet"
 description: "The repo is the surface. The instructions file is the manual. The human review keeps it safe."
 date: 2026-05-21
 tags: [work, AI, mac admin, fleet]
