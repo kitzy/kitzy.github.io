@@ -1390,32 +1390,6 @@ body {
     border-bottom: 1px solid #30363d;
 }
 
-/* Archived talks section */
-.archived-talks h2 {
-    color: #e6edf3;
-}
-
-.archive-note {
-    color: #7d8590;
-    font-style: italic;
-    font-size: 14px;
-    margin-bottom: 16px;
-    padding: 12px 16px;
-    background: #161b22;
-    border: 1px solid #30363d;
-    border-radius: 6px;
-    border-left: 3px solid #58a6ff;
-}
-
-.archive-subsection-title {
-    font-size: 18px;
-    font-weight: 600;
-    color: #e6edf3;
-    margin: 32px 0 16px 0;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #21262d;
-}
-
 .speaking-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -1438,108 +1412,6 @@ body {
 .speaking-item:hover {
     border-color: #58a6ff;
     background: #161b22;
-}
-
-/* Video thumbnail styles */
-.speaking-thumbnail {
-    position: relative;
-    margin-bottom: 8px;
-    border-radius: 6px;
-    overflow: hidden;
-    background: #21262d;
-}
-
-.video-thumbnail {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    transition: all 0.3s ease;
-    display: block;
-}
-
-.speaking-thumbnail:hover .video-thumbnail {
-    transform: scale(1.02);
-}
-
-.play-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0, 0, 0, 0.3);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.speaking-thumbnail:hover .play-overlay {
-    opacity: 1;
-}
-
-.play-button {
-    width: 60px;
-    height: 60px;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    color: #0d1117;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    padding-left: 4px; /* Offset for visual centering of play triangle */
-}
-
-.speaking-thumbnail:hover .play-button {
-    background: #58a6ff;
-    color: white;
-    transform: scale(1.1);
-}
-
-/* Archived item styling */
-.speaking-item.archived {
-    background: #0a0c10;
-    border-color: #21262d;
-    opacity: 0.9;
-    display: grid;
-    grid-template-columns: 1fr 260px;
-    grid-template-rows: auto 1fr;
-    column-gap: 16px;
-}
-
-.speaking-item.archived:hover {
-    border-color: #7d8590;
-    background: #161b22;
-    opacity: 1;
-}
-
-.speaking-item.archived .speaking-thumbnail {
-    grid-column: 2;
-    grid-row: 1 / 3;
-    margin-bottom: 0;
-}
-
-.speaking-item.archived .speaking-header {
-    grid-column: 1;
-    grid-row: 1;
-}
-
-.speaking-item.archived .speaking-description {
-    grid-column: 1;
-    grid-row: 2;
-    align-self: start;
-}
-
-.speaking-item.archived .speaking-title a {
-    color: #7d8590;
-}
-
-.speaking-item.archived .speaking-title a:hover {
-    color: #58a6ff;
 }
 
 .speaking-header {
@@ -1687,29 +1559,6 @@ body {
     text-decoration: underline;
 }
 
-/* Archived talks toggle */
-.archived-talks-toggle-container {
-    margin: 8px 0 24px 0;
-}
-
-.toggle-archived-btn {
-    background: #21262d;
-    color: #7d8590;
-    border: 1px solid #30363d;
-    border-radius: 6px;
-    padding: 8px 16px;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.toggle-archived-btn:hover {
-    background: #30363d;
-    color: #e6edf3;
-    border-color: #484f58;
-}
-
 /* Responsive design for speaking */
 @media (max-width: 768px) {
     .speaking-grid {
@@ -1720,39 +1569,9 @@ body {
         padding: 12px;
     }
 
-    .speaking-item.archived {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    }
-
-    .speaking-item.archived .speaking-thumbnail {
-        grid-column: 1;
-        grid-row: 1;
-    }
-
-    .speaking-item.archived .speaking-header {
-        grid-column: 1;
-        grid-row: 2;
-    }
-
-    .speaking-item.archived .speaking-description {
-        grid-column: 1;
-        grid-row: 3;
-    }
-    
     .speaking-meta {
         flex-direction: column;
         align-items: flex-start;
         gap: 4px;
-    }
-    
-    .video-thumbnail {
-        height: 180px;
-    }
-    
-    .play-button {
-        width: 50px;
-        height: 50px;
-        font-size: 16px;
     }
 }
