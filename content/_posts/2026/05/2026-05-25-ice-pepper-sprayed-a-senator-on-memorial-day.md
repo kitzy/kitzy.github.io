@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "ICE Pepper-Sprayed a Senator on Memorial Day"
+title: "ICE pepper sprayed a senator on Memorial Day"
 description: "What happened at Newark's Delaney Hall ICE detention center over Memorial Day weekend, and the infrastructure that made it possible."
 date: 2026-05-25
 tags: [capitalism, AI, community]
