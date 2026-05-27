@@ -3,7 +3,7 @@ layout: post
 title: "I don't know how to keep showing up like everything is normal"
 description: "The viral image is sensationalized. The infrastructure behind it is not."
 date: 2026-05-11
-tags: [mental health, life, AI]
+tags: [mental health, life, AI, trans rights]
 ---
 
 An image has been circulating on social media this week. Maybe you've seen it.

@@ -3,7 +3,7 @@ layout: post
 title: "Does Idaho's bathroom ban protect women?"
 description: "Idaho's HB 752 creates felony penalties for using the wrong bathroom - harsher than drunk driving. Let's ask honestly whether it accomplishes what it claims."
 date: 2026-03-28
-tags: [community, belonging]
+tags: [community, belonging, trans rights]
 ---
 
 Let me start with something I don't want to gloss over: the concern behind this kind of legislation is real.
