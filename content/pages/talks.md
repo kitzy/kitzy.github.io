@@ -90,4 +90,30 @@ permalink: /talks/
         </div>
     </div>
 
+    <div class="speaking-section past-talks">
+        <h2>Past Talks</h2>
+        <div class="speaking-grid">
+            <div class="speaking-item">
+                <div class="speaking-header">
+                    <h3 class="speaking-title">
+                        <a href="https://www.youtube.com/watch?v=7iu7vTfi9OI" target="_blank" rel="noopener noreferrer">
+                            Stop clicking and start committing: a GitOps workflow for endpoint management
+                        </a>
+                    </h3>
+                    <div class="speaking-meta">
+                        <span class="speaking-date">April 15, 2026</span>
+                        <span class="speaking-venue">PowerShell + DevOps Global Summit</span>
+                        <span class="speaking-location">Bellevue, WA</span>
+                    </div>
+                </div>
+                <p class="speaking-description">
+                    Endpoint management is still mostly clicking through GUIs - and that means no audit trail, no rollbacks, no code review, and no single source of truth. This talk makes the case for treating your device configuration as code: your git repo becomes the source of truth, changes land through pull requests, and CI applies them. We'll walk through a practical GitOps workflow for managing your fleet declaratively, and why this foundation is what makes safe, AI-accelerated device management possible.
+                </p>
+                <p class="speaking-description">
+                    <a href="https://www.youtube.com/watch?v=7iu7vTfi9OI" target="_blank" rel="noopener noreferrer">▶ Watch the recording</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
 </div>
