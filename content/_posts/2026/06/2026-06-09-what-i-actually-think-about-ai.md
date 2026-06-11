@@ -3,7 +3,7 @@ layout: post
 title: "What I actually think about AI"
 description: "I write a lot about using AI as a tool. That probably makes me look like a true believer. The answer is more complicated."
 date: 2026-06-09
-tags: [AI, values, capitalism]
+tags: [AI, capitalism, mac admin]
 ---
 
 If you've been reading my blog for a while, you've probably gotten the impression that I'm an AI true believer. I write about [using it to ship faster](https://kitzy.com/blog/ai-device-management-workflow/). I make the case that [GitOps is a prerequisite for AI-accelerated device management](https://kitzy.com/blog/device-management-about-to-change-ai-gitops/). I get visibly excited about what it can do.
