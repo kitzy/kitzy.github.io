@@ -1,5 +1,4 @@
 ---
-layout: redirect
 redirect_url: https://kitzysound.com
-permalink: /broadcast/
+permalink: /live/
 ---
