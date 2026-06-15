@@ -12,9 +12,7 @@ I'm not sure exactly when this started. Probably sometime in my early teens, whe
 
 The track ["Warakurna"](https://www.youtube.com/watch?v=zT6PcNm-8vQ&list=RDzT6PcNm-8vQ&start_radio=1) is named for a remote Aboriginal community in Western Australia, and it grew directly out of the band's 1986 Blackfella/Whitefella tour - shows in remote central Australian settlements with the [Warumpi Band](https://en.wikipedia.org/wiki/Warumpi_Band), playing for and with Indigenous communities far from any concert venue Midnight Oil would normally call home. They came back having seen, up close, the poverty of those communities in one of the wealthiest countries on earth. The song's refrain is simple: *there is enough for everyone.*
 
-That's a bold claim. And I've been wondering if it's true for a long time.
-
----
+They recorded that in 1987. Nearly 40 years later, I decided to check.
 
 The short answer is: yes.
 
@@ -27,8 +25,6 @@ We've built systems that use wealth records as a proxy for prosperity. A record 
 The pattern holds everywhere you look. [About 2 billion people lack safely managed drinking water](https://en.wikipedia.org/wiki/Water_scarcity) - not because the water doesn't exist, but because of infrastructure and governance failures. [Enough sunlight reaches Earth in approximately 90 minutes to power human civilization for an entire year](https://www.iea.org/reports/solar-energy-perspectives). [Around 300 million people are homeless and nearly 2.8 billion lack adequate shelter](https://social.desa.un.org/world-summit-2025/blog/300million-people-homeless-worldwide) - in a world with millions of vacant homes, where [two thirds of wealthy Americans own more than one](https://finance.yahoo.com/news/two-thirds-wealthy-americans-now-150051439.html).
 
 The economist Amartya Sen [spent decades making this case rigorously](https://en.wikipedia.org/wiki/Poverty_and_Famines): famines aren't caused by food running out. They're caused by people losing the ability to access food that exists. What's missing isn't the stuff. What's missing is the political and economic arrangement that would let people get to it. [More intelligence won't fix that](https://kitzy.com/blog/is-ai-going-to-solve-all-of-our-problems/) - artificial or otherwise.
-
----
 
 Unfortunately it's not *quite* that simple.
 
