@@ -3,6 +3,9 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 
+# Unpublished drafts
+content/_drafts/
+
 # Ruby dependencies
 vendor/
 .bundle/
