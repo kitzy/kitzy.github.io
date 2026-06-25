@@ -7,7 +7,7 @@ permalink: /readme/
 
 <div class="markdown-content" markdown="1">
 
-_[updated: May 28, 2026](https://github.com/kitzy/kitzy.github.io/commits/main/content/pages/readme.md)_
+_[updated: June 24, 2026](https://github.com/kitzy/kitzy.github.io/commits/main/content/pages/readme.md)_
 
 *Because people don't come with instruction booklets (but wouldn't it be easier if they did?). This is mine. It's here to help you understand how I tick, how I work best, and how we can collaborate without stepping on rakes together.*  
 
@@ -34,16 +34,17 @@ I have **[AuDHD](https://embrace-autism.com/an-introduction-to-audhd/) (autism +
 - **Empathy as a baseline:** I believe life is better when people look out for each other. Thoughtfulness and small acts of care go a long way with me.  
 - **Curiosity first:** I'd rather ask questions and explore possibilities than pretend to know everything. For me, curiosity is the gateway to clarity.  
 - **Authenticity over polish:** I'd rather things be real and imperfect than fake and shiny. I value honesty and transparency, even when the truth is messy.  
+- **Willingness to say the hard thing:** I'm generally non-confrontational and I don't love delivering uncomfortable news. But that instinct has a hard limit: when something crosses a line I actually care about, the desire to be liked loses every time. I'll say the uncomfortable thing, and I'll say it in public if that's what it takes.  
 - **Growth and learning:** Mistakes happen; what matters is taking responsibility, adapting, and improving. I'll own my work and my missteps, and I appreciate when others do too.  
 - **Playfulness:** Humor and lightness make hard work more sustainable. I believe we can take our work seriously without taking *ourselves* too seriously.  
 
 ---
 
 ## What I value in coworkers
-- Authenticity and honesty (yes, even blunt honesty).  
-- Thoughtfulness. Small kindnesses land big with me.  
-- Curiosity and playfulness. Problem-solving doesn't have to be boring.  
-- Respect for different rhythms and quirks. Neurodivergence is part of the team, not a bug.  
+- **Authenticity and honesty.** Yes, even blunt honesty. I'll take a direct "I disagree" over a polite non-answer every time. Say what you mean.  
+- **Thoughtfulness.** Small kindnesses land big with me. Noticing when someone's struggling, following up unprompted, saying the encouraging thing - these matter more than people realize.  
+- **Curiosity and playfulness.** Problem-solving doesn't have to be a death march. Bring your weird ideas, your dumb jokes, your "what if we just..." hypotheticals. That's where the good stuff lives.  
+- **Respect for different rhythms and quirks.** Neurodivergence is part of the team, not a bug to route around. I work best with people who understand that "works differently" and "works worse" aren't the same thing.  
 
 ---
 
@@ -57,33 +58,24 @@ I have **[AuDHD](https://embrace-autism.com/an-introduction-to-audhd/) (autism +
 ---
 
 ## Where I struggle
-- **I overcommit.** My enthusiasm says yes before my calendar has done the math. Unchecked, I'll take on too much and end up underwater.  
+- **I overcommit.** My enthusiasm writes checks my calendar can't cash. Unchecked, I'll take on too much and end up underwater.  
 - **Priorities don't self-sort for me.** Five things of equal urgency and I'll freeze on sequencing them, like a browser with forty tabs open and no clue which one's making the noise. Under stress it's worse. Help me name what matters most.  
-- **Time is genuinely slippery.** Time blindness is a real part of my AuDHD, not a figure of speech, and it cuts both ways: hyperfocus and distraction.  
+- **Time is genuinely slippery.** Time blindness is a real part of my AuDHD, not a figure of speech, and it cuts both ways: hyperfocus and distraction. My brain recognizes exactly two times: *now* and *not now*. Things that are not now may as well be scheduled for never, until suddenly they're on fire and very much now.  
 - **I run hot when I'm depleted.** Overloaded or unappreciated, I can get snappy or perfectionistic. It's a signal I've overextended, rarely about you.  
 
 ---
 
-## Things to know about me
-- I want people to get along, I want to like people, and I want people to like me.
-- Most of the time, I consider myself a reasonable person.
-- I want to understand viewpoints that differ from mine.
-- Authenticity matters to me. If something's off, just tell me. I'll take honesty over guesswork any day.
-- I'm generally non-confrontational, I don't like telling people things they don't want to hear. But that instinct has a hard limit: when something crosses a line I actually care about, the desire to be liked loses every time. I'll say the uncomfortable thing, and I'll say it in public if that's what it takes.
-
----
-
 ## How I work best
-- Collaboration fuels me. I'm happiest when I can bounce ideas around like mental ping-pong.  
-- Variety keeps me energized. Give me a buffet of tasks, and I'll happily graze.  
-- Clear priorities help me focus. Otherwise I may try to juggle flaming torches *and* chainsaws simultaneously.  
+- **Collaboration fuels me.** I'm happiest when I can bounce ideas around like mental ping-pong.  
+- **Variety keeps me energized.** Give me a buffet of tasks, and I'll happily graze.  
+- **Clear priorities help me focus.** Otherwise I may try to juggle flaming torches *and* chainsaws simultaneously.  
 
 ---
 
 ## When I'm around
 - **My responsive hours are roughly 10AM–5PM US Eastern.** Treat that as my SLA, not a fence. If you catch me online outside that window, it's completely fine to ping me, I'll tell you if I'm not up for it.  
 - **Some of my best thinking happens late in the evening.** So it's not unusual to see me drop a message in Slack, file an issue, or open a pull request well after hours. That's just the hamster in my brain deciding it's time to sprint on the wheel.  
-- **None of that is an expectation for you.** A message at the edges of my day is never a request for a reply at the edges of yours. I do not ever expect anyone to engage outside their normal working hours, full stop.  
+- **None of that is an expectation for you.** A message at the edges of my day is never an demand for a reply at the edges of yours. I do not ever expect anyone to engage outside their normal working hours, full stop.  
 
 ---
 
@@ -91,6 +83,7 @@ I have **[AuDHD](https://embrace-autism.com/an-introduction-to-audhd/) (autism +
 - **Be clear and kind.** I love warmth, but I also need straightforwardness.  
 - **Explicit is better than implicit.** Subtle hints often sneak right past me.  
 - **Quick check-ins help.** A simple "just confirming you're good with this?" is magic.  
+- **Please include context when you reach out.** A no-context meeting invite or a bare "got a minute?" - especially from someone higher on the org chart - will send my brain directly to "I'm in trouble." I will spend the intervening time catastrophizing. One sentence of context ("just want to sync on X") is enough to save us both from that. You don't need to write an essay, just a grain of signal.  
 
 ---
 
