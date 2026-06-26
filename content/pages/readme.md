@@ -49,7 +49,7 @@ I have **[AuDHD](https://embrace-autism.com/an-introduction-to-audhd/) (autism +
 
 ## What I'm good at
 - **Seeing the shape of a problem, and questioning the premise.** I think a few steps ahead and spot root causes fast, and I'm as likely to ask "should we be doing this at all?" as "how do we do it?" Point me at something messy and I'll often find the answer is to reframe it entirely.  
-- **Shipping instead of waiting.** I'd rather find a gap and start before I feel ready than wait for permission. A lot of what I've built began as "well, someone should make this."  
+- **Shipping instead of waiting.** I'd rather find a gap and start before I feel ready than wait for permission. A lot of what I've built began as "well, someone should make this." I'm comfortable building the plane while flying it - the details often reveal themselves better in motion than on the runway.  
 - **Making technical things legible.** I write and speak about this work as much as I do it. I'm good at translating the deeply technical into something a human can actually use and care about. Jargon is a tax, and I try not to charge it.  
 - **Making room for other people.** I notice who hasn't spoken yet, and I'll ask the question someone else seems hesitant to raise. I'd rather a meeting hear from everyone than move fast and miss the quiet expert in the corner.  
 - **Being a thinking partner.** Hand me a half-formed idea and I'll volley it back until it's sharper. Collaboration is where I do my best work.  
