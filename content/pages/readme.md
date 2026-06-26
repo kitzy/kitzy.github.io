@@ -7,7 +7,7 @@ permalink: /readme/
 
 <div class="markdown-content" markdown="1">
 
-_[updated: June 24, 2026](https://github.com/kitzy/kitzy.github.io/commits/main/content/pages/readme.md)_
+_[updated: June 26, 2026](https://github.com/kitzy/kitzy.github.io/commits/main/content/pages/readme.md)_
 
 *Because people don't come with instruction booklets (but wouldn't it be easier if they did?). This is mine. It's here to help you understand how I tick, how I work best, and how we can collaborate without stepping on rakes together.*  
 
@@ -21,8 +21,7 @@ I'm a mix of big-heartedness, curiosity, and creativity. My [Enneagram](https://
 
 I have **[AuDHD](https://embrace-autism.com/an-introduction-to-audhd/) (autism + ADHD)**, which colors how I think and work:  
 - I usually have about seven trains of thought running at once, sometimes in different directions, sometimes colliding in a glorious mental pile-up.  
-- My brain alternates between hyperfocus (deep in the matrix) and scatter (every shiny thing is suddenly fascinating). Both are normal settings for me.  
-- Time blindness is real. If I'm late to a meeting, I didn't forget you; I just fell down a rabbit hole. A quick ping is like tossing me a rope.  
+- My brain alternates between hyperfocus (deep in the matrix) and scatter (every shiny thing is suddenly fascinating). Both are normal settings for me.   
 - I sometimes interrupt because I think I can already see where you're going, but I'm learning to hit pause and let people land their sentences.  
 - I tend to infodump when I get excited about a topic. If I'm going too deep into the weeds, just redirect me. I won't be offended.  
 - Indirect social cues often fly right over my head. If you need something from me, please just say it directly.
@@ -34,7 +33,7 @@ I have **[AuDHD](https://embrace-autism.com/an-introduction-to-audhd/) (autism +
 - **Empathy as a baseline:** I believe life is better when people look out for each other. Thoughtfulness and small acts of care go a long way with me.  
 - **Curiosity first:** I'd rather ask questions and explore possibilities than pretend to know everything. For me, curiosity is the gateway to clarity.  
 - **Authenticity over polish:** I'd rather things be real and imperfect than fake and shiny. I value honesty and transparency, even when the truth is messy.  
-- **Willingness to say the hard thing:** I'm generally non-confrontational and I don't love delivering uncomfortable news. But that instinct has a hard limit: when something crosses a line I actually care about, the desire to be liked loses every time. I'll say the uncomfortable thing, and I'll say it in public if that's what it takes.  
+- **Willingness to say the hard thing:** I'm generally non-confrontational and I don't love delivering uncomfortable news. But that instinct has a hard limit: when something contradicts a value I hold, the desire to be liked loses every time. I'll say the uncomfortable thing, and I'll say it in public if that's what it takes.  
 - **Growth and learning:** Mistakes happen; what matters is taking responsibility, adapting, and improving. I'll own my work and my missteps, and I appreciate when others do too.  
 - **Playfulness:** Humor and lightness make hard work more sustainable. I believe we can take our work seriously without taking *ourselves* too seriously.  
 
