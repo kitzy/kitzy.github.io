@@ -21,8 +21,7 @@ I'm a mix of big-heartedness, curiosity, and creativity. My [Enneagram](https://
 
 I have **[AuDHD](https://embrace-autism.com/an-introduction-to-audhd/) (autism + ADHD)**, which colors how I think and work:  
 - I usually have about seven trains of thought running at once, sometimes in different directions, sometimes colliding in a glorious mental pile-up.  
-- My brain alternates between hyperfocus (deep in the matrix) and scatter (every shiny thing is suddenly fascinating). Both are normal settings for me.  
-- Time blindness is real. If I'm late to a meeting, I didn't forget you; I just fell down a rabbit hole. A quick ping is like tossing me a rope.  
+- My brain alternates between hyperfocus (deep in the matrix) and scatter (every shiny thing is suddenly fascinating). Both are normal settings for me.   
 - I sometimes interrupt because I think I can already see where you're going, but I'm learning to hit pause and let people land their sentences.  
 - I tend to infodump when I get excited about a topic. If I'm going too deep into the weeds, just redirect me. I won't be offended.  
 - Indirect social cues often fly right over my head. If you need something from me, please just say it directly.
