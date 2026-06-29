@@ -13,45 +13,6 @@ permalink: /talks/
             <div class="speaking-item upcoming">
                 <div class="speaking-header">
                     <h3 class="speaking-title">
-                        <a href="https://mdoyvr.com/" target="_blank" rel="noopener noreferrer">
-                            Automate software deployment with AutoPkg and Fleet
-                        </a>
-                    </h3>
-                    <div class="speaking-meta">
-                        <span class="speaking-date">June 25–26, 2026</span>
-                        <span class="speaking-venue">MacDevOps</span>
-                        <span class="speaking-location">Montreal, QC</span>
-                    </div>
-                </div>
-                <p class="speaking-description">
-                    AutoPkg already handles software packaging and updates for thousands of Mac applications. Fleet manages software deployment across your devices. This talk shows you how to connect them - using FleetImporter, a custom AutoPkg processor that adds software directly to Fleet's package management from your AutoPkg runs. We'll cover both direct API mode for quick deployments and GitOps workflows for version-controlled, declarative management.
-                </p>
-            </div>
-
-            <div class="speaking-item upcoming co-talk">
-                <div class="speaking-header">
-                    <h3 class="speaking-title">
-                        <a href="https://mdoyvr.com/" target="_blank" rel="noopener noreferrer">
-                            Not broken, just different: Working with ADHD, anxiety, and neurodivergence in tech
-                        </a>
-                    </h3>
-                    <div class="speaking-meta">
-                        <span class="speaking-date">June 25–26, 2026</span>
-                        <span class="speaking-venue">MacDevOps</span>
-                        <span class="speaking-location">Montreal, QC</span>
-                    </div>
-                    <div class="speaking-cospeaker">
-                        Co-presented with <a href="https://www.linkedin.com/in/lppepper/" target="_blank" rel="noopener noreferrer">Andrea Pepper</a>
-                    </div>
-                </div>
-                <p class="speaking-description">
-                    Mac Admin work requires staying calm while systems break and priorities shift. For neurodivergent people, this creates predictable challenges. Two neurodivergent technical professionals share practical techniques they use to stay effective: time containment, energy-aware scheduling, professional communication strategies, and when to ask for accommodations. You'll leave with concrete tools you can use during incidents, meetings, and when your brain is loud.
-                </p>
-            </div>
-
-            <div class="speaking-item upcoming">
-                <div class="speaking-header">
-                    <h3 class="speaking-title">
                         <a href="https://psumac2026.sched.com/event/2NBqB/from-recipe-to-reality-automating-software-deployment-with-autopkg-and-fleet" target="_blank" rel="noopener noreferrer">
                             From recipe to reality: Automating software deployment with AutoPkg and Fleet
                         </a>
@@ -93,6 +54,49 @@ permalink: /talks/
     <div class="speaking-section past-talks">
         <h2>Past Talks</h2>
         <div class="speaking-grid">
+            <div class="speaking-item">
+                <div class="speaking-header">
+                    <h3 class="speaking-title">
+                        <a href="https://youtu.be/kOwkn6D4d90?si=0u7hWU__BV1PrlNH" target="_blank" rel="noopener noreferrer">
+                            Automate software deployment with AutoPkg and Fleet
+                        </a>
+                    </h3>
+                    <div class="speaking-meta">
+                        <span class="speaking-date">June 25–26, 2026</span>
+                        <span class="speaking-venue">MacDevOps</span>
+                        <span class="speaking-location">Montreal, QC</span>
+                    </div>
+                </div>
+                <p class="speaking-description">
+                    AutoPkg already handles software packaging and updates for thousands of Mac applications. Fleet manages software deployment across your devices. This talk shows you how to connect them - using FleetImporter, a custom AutoPkg processor that adds software directly to Fleet's package management from your AutoPkg runs. We'll cover both direct API mode for quick deployments and GitOps workflows for version-controlled, declarative management.
+                </p>
+                <p class="speaking-description">
+                    <a href="https://youtu.be/kOwkn6D4d90?si=0u7hWU__BV1PrlNH" target="_blank" rel="noopener noreferrer">▶ Watch the recording</a>
+                </p>
+            </div>
+
+            <div class="speaking-item co-talk">
+                <div class="speaking-header">
+                    <h3 class="speaking-title">
+                        Not broken, just different: Working with ADHD, anxiety, and neurodivergence in tech
+                    </h3>
+                    <div class="speaking-meta">
+                        <span class="speaking-date">June 25–26, 2026</span>
+                        <span class="speaking-venue">MacDevOps</span>
+                        <span class="speaking-location">Montreal, QC</span>
+                    </div>
+                    <div class="speaking-cospeaker">
+                        Co-presented with <a href="https://www.linkedin.com/in/lppepper/" target="_blank" rel="noopener noreferrer">Andrea Pepper</a>
+                    </div>
+                </div>
+                <p class="speaking-description">
+                    Mac Admin work requires staying calm while systems break and priorities shift. For neurodivergent people, this creates predictable challenges. Two neurodivergent technical professionals share practical techniques they use to stay effective: time containment, energy-aware scheduling, professional communication strategies, and when to ask for accommodations. You'll leave with concrete tools you can use during incidents, meetings, and when your brain is loud.
+                </p>
+                <p class="speaking-description">
+                    Link coming soon
+                </p>
+            </div>
+
             <div class="speaking-item">
                 <div class="speaking-header">
                     <h3 class="speaking-title">
