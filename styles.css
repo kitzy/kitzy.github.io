@@ -457,6 +457,12 @@ body {
     color: #e6edf3;
 }
 
+.markdown-content hr {
+    margin: 32px 0;
+    border: none;
+    border-top: 1px solid #30363d;
+}
+
 .markdown-content a {
     color: #58a6ff;
     text-decoration: none;
