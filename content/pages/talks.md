@@ -78,7 +78,9 @@ permalink: /talks/
             <div class="speaking-item co-talk">
                 <div class="speaking-header">
                     <h3 class="speaking-title">
-                        Not broken, just different: Working with ADHD, anxiety, and neurodivergence in tech
+                        <a href="https://youtu.be/LTc5rkkPXl0" target="_blank" rel="noopener noreferrer">
+                            Not broken, just different: Working with ADHD, anxiety, and neurodivergence in tech
+                        </a>
                     </h3>
                     <div class="speaking-meta">
                         <span class="speaking-date">June 25–26, 2026</span>
@@ -93,7 +95,7 @@ permalink: /talks/
                     Mac Admin work requires staying calm while systems break and priorities shift. For neurodivergent people, this creates predictable challenges. Two neurodivergent technical professionals share practical techniques they use to stay effective: time containment, energy-aware scheduling, professional communication strategies, and when to ask for accommodations. You'll leave with concrete tools you can use during incidents, meetings, and when your brain is loud.
                 </p>
                 <p class="speaking-description">
-                    Link coming soon
+                    <a href="https://youtu.be/LTc5rkkPXl0" target="_blank" rel="noopener noreferrer">▶ Watch the recording</a>
                 </p>
             </div>
 
