@@ -1581,3 +1581,40 @@ body {
         gap: 4px;
     }
 }
+
+/* Analytics opt-out page styles */
+.exclude-panel {
+    max-width: 520px;
+}
+
+.exclude-status {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding: 16px;
+    margin: 20px 0;
+    color: #e6edf3;
+}
+
+.exclude-button {
+    background: #21262d;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    color: #e6edf3;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.exclude-button:hover {
+    background: #30363d;
+    border-color: #58a6ff;
+}
+
+.exclude-note {
+    font-size: 13px;
+    color: #7d8590;
+}
