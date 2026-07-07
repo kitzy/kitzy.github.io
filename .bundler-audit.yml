@@ -1,0 +1,8 @@
+---
+# Advisories intentionally ignored by `bundle audit`.
+ignore:
+  # webrick CVE-2026-38969 / GHSA-h4w6-wx8r-p68v — no patched release available yet.
+  # webrick is a transitive Jekyll dependency used only by `jekyll serve` for local
+  # development; it is not part of the built, statically deployed site. Remove this
+  # entry once a fixed webrick version is released.
+  - CVE-2026-38969
