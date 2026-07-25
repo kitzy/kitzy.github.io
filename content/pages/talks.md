@@ -7,13 +7,13 @@ permalink: /talks/
 
 <div class="markdown-content">
 
-    <div class="speaking-section upcoming-talks">
-        <h2>Upcoming Talks</h2>
+    <div class="speaking-section past-talks">
+        <h2>Past Talks</h2>
         <div class="speaking-grid">
-            <div class="speaking-item upcoming">
+            <div class="speaking-item">
                 <div class="speaking-header">
                     <h3 class="speaking-title">
-                        <a href="https://psumac2026.sched.com/event/2NBqB/from-recipe-to-reality-automating-software-deployment-with-autopkg-and-fleet" target="_blank" rel="noopener noreferrer">
+                        <a href="https://youtu.be/lYBnE_kUglI" target="_blank" rel="noopener noreferrer">
                             From recipe to reality: Automating software deployment with AutoPkg and Fleet
                         </a>
                     </h3>
@@ -26,12 +26,15 @@ permalink: /talks/
                 <p class="speaking-description">
                     A deeper dive than the MacDevOps session. Learn how to build end-to-end software deployment workflows using AutoPkg and Fleet's open-source platform - covering practical examples of automating everything from package creation to deployment through GitOps workflows. We'll look at how AutoPkg processors integrate with Fleet's API, how to manage software releases declaratively, and how to build repeatable workflows that scale. Includes real recipe demos, common patterns, and a look at community contributions to FleetImporter.
                 </p>
+                <p class="speaking-description">
+                    <a href="https://youtu.be/lYBnE_kUglI" target="_blank" rel="noopener noreferrer">▶ Watch the recording</a>
+                </p>
             </div>
 
-            <div class="speaking-item upcoming co-talk">
+            <div class="speaking-item co-talk">
                 <div class="speaking-header">
                     <h3 class="speaking-title">
-                        <a href="https://psumac2026.sched.com/event/2NBqn/not-broken-just-different-working-with-adhd-anxiety-and-neurodivergence-in-tech/" target="_blank" rel="noopener noreferrer">
+                        <a href="https://youtu.be/O7d2dYWZHRc" target="_blank" rel="noopener noreferrer">
                             Not broken, just different: Working with ADHD, anxiety, and neurodivergence in tech
                         </a>
                     </h3>
@@ -47,13 +50,11 @@ permalink: /talks/
                 <p class="speaking-description">
                     Mac Admin work requires staying calm while systems break and priorities shift. For neurodivergent people, this creates predictable challenges. Two neurodivergent technical professionals share practical techniques they use to stay effective: time containment, energy-aware scheduling, professional communication strategies, and when to ask for accommodations. You'll leave with concrete tools you can use during incidents, meetings, and when your brain is loud.
                 </p>
+                <p class="speaking-description">
+                    <a href="https://youtu.be/O7d2dYWZHRc" target="_blank" rel="noopener noreferrer">▶ Watch the recording</a>
+                </p>
             </div>
-        </div>
-    </div>
 
-    <div class="speaking-section past-talks">
-        <h2>Past Talks</h2>
-        <div class="speaking-grid">
             <div class="speaking-item">
                 <div class="speaking-header">
                     <h3 class="speaking-title">
