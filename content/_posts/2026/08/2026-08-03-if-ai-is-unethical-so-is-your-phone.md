@@ -6,7 +6,7 @@ date: 2026-08-03
 tags: [AI, capitalism, values]
 ---
 
-I've done a few webinars lately that have touched on using AI in the context of managing devices. Every time, without fail, someone shows up in the chat to mention AI is unethical. Sometimes it's about the training data. Sometimes it's about xthe environmental cost - the water, the electricity, the servers running somewhere I'll never see.
+I've done a few webinars lately that have touched on using AI in the context of managing devices. Every time, without fail, someone shows up in the chat to mention AI is unethical. Sometimes it's about the training data. Sometimes it's about the environmental cost - the water, the electricity, the servers running somewhere I'll never see.
 
 I don't think they're wrong, exactly. I've [argued the training data case myself](/blog/why-do-i-think-my-ai-use-is-okay/). I've written about [the actual number attached to the electricity and water](/blog/what-i-actually-think-about-ai/). I hold these positions. I'm not writing this to defend AI from criticism.
 
@@ -36,9 +36,9 @@ Ethics - privacy, misuse, safety - shows up too, but as a small slice of the tot
 
 But pull on each thread separately and they lead to the same place. Look at what's actually inside that four percent, and inside my webinar chat when someone says "unethical." It's training data. It's an illustrator losing a commission. It's a customer service worker losing a job to a chatbot. Real concerns, and I've argued for them myself. What's never in there is the DRC. Baotou. The Atacama.
 
-And notice what doesn't happen next. Nobody who types "AI is unethical" into that chat follows it up by getting rid of the smartphone or the laptop they typed it on - the same devices built on the cobalt, the rare earths, and the lithium. If that harm were actually what was driving the outrage, giving up the device would be the obvious next move. Almost nobody does it. Me included. The ethics gets aimed at the new thing walking in the door, not at the old thing already sitting in their hand.
+And notice what doesn't happen next. Nobody who types "AI is unethical" into that chat follows it up by getting rid of the smartphone or the laptop they typed it on - the same devices built on the cobalt, the rare earth metalss, and the lithium. If that harm were actually what was driving the outrage, giving up the device would be the obvious next move. Almost nobody does it. Me included. The ethics gets aimed at the new thing walking in the door, not at the thing already sitting in their hand.
 
-Even people raising a genuine ethical objection to AI are drawing the circle of who counts around people they can picture - an artist, a worker, someone whose job looks like theirs. It's the same with the environmental concern: people worried about their own water table rarely extend that worry to a salt flat in Chile. Two different objections, and both of them stop at the same edge. That edge isn't proximity exactly. It's that we - and I mean this specifically, people like me, in wealthy countries - have built a habit of not counting what happens to poor people in places we'll never go.
+Even people raising a genuine ethical objection to AI are drawing the circle of who counts around people they can picture - an artist, a worker, someone whose job looks like theirs. It's the same with the environmental concern: people worried about their own water table rarely extend that worry to a salt flat in Chile. Two different objections, and both of them stop at the same edge. That edge isn't proximity exactly. It's that we - and I mean this specifically, people like me, in wealthy countries - have built a habit of not caring about what happens to poor people in places we'll never go.
 
 ## The car nobody's mad at
 
@@ -50,7 +50,7 @@ This might be the sharpest version of the environmental asymmetry, sharper than 
 
 I want to be careful here, because I don't think "everything has a supply chain, so nothing is worse than anything else" is actually true, and it's not the point I'm making.
 
-Using AI to generate a customer service response that replaces a human worker is not the same as using AI to write a config profile. Using AI to approximate a working illustrator's style without their consent is not the same as using an LLM to help debug infrastructure. [I've written at length about where I draw that line and why](/blog/why-do-i-think-my-ai-use-is-okay/) - consent, and where the value actually flows. Those distinctions matter and I'm not walking them back.
+Using AI to generate a customer service response that replaces a human worker is not the same as using AI to write a config profile. Using AI to approximate a working illustrator's style without their consent is not the same as using AI to help debug infrastructure. [I've written at length about where I draw that line and why](/blog/why-do-i-think-my-ai-use-is-okay/) - consent, and where the value actually flows. Those distinctions matter and I'm not walking them back.
 
 But "not all AI use is equally bad" and "AI deserves uniquely intense scrutiny compared to literally everything else you own" are two different claims, and the second one doesn't follow from the first. You can hold a nuanced position on AI specifically and still be applying a wildly inconsistent standard across your life generally. Both things are true of most of us, me included.
 
