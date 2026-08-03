@@ -10,7 +10,7 @@ I've done a few webinars lately that have touched on using AI in the context of 
 
 I don't think they're wrong, exactly. I've [argued the training data case myself](/blog/why-do-i-think-my-ai-use-is-okay/). I've written about [the actual number attached to the electricity and water](/blog/what-i-actually-think-about-ai/). I hold these positions. I'm not writing this to defend AI from criticism.
 
-I'm writing it to ask a different question: why is this the hill? Out of everything extractive and exploitative embedded in the device that comment got typed on, why is AI the one that gets you into the chat?
+I'm writing it to ask a different question: why is this the hill? Out of everything extractive and exploitative embedded in the tech industry, why is AI the one that gets you into the chat?
 
 ## The mine you're not thinking about
 
