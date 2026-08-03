@@ -24,10 +24,14 @@
   {% assign social_image_url = social_image | prepend: site.url %}
 {% endif %}
 
+{% comment %} Resolve author: page front matter > site default {% endcomment %}
+{% assign page_author = page.author | default: site.author %}
+{% assign page_description = page.description | default: site.description %}
+
 <!-- SEO and Social Media Meta Tags -->
 <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 <meta name="keywords" content="infrastructure, automation, IT engineering, endpoint management, Fleet, DevOps{% if page.tags %}, {{ page.tags | join: ', ' }}{% endif %}">
-<meta name="author" content="{{ site.author }}">
+<meta name="author" content="{{ page_author }}">
 
 <!-- Open Graph Meta Tags for Social Previews -->
 <meta property="og:title" content="{% if page.title %}{{ site.title }} - {{ page.title }}{% else %}{{ site.title }}{% endif %}">
@@ -47,15 +51,55 @@
 <meta name="fediverse:creator" content="@kitzy@hachyderm.io">
 
 <!-- LinkedIn/Professional Networks -->
-<meta property="article:author" content="{{ site.title }}">
 {% if page.layout == 'post' %}
+<meta property="article:author" content="{{ site.author_url }}">
 <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+{% if page.last_modified_at %}
+<meta property="article:modified_time" content="{{ page.last_modified_at | date_to_xmlschema }}">
+{% endif %}
 {% if page.tags %}
 {% for tag in page.tags %}
 <meta property="article:tag" content="{{ tag }}">
 {% endfor %}
 {% endif %}
+{% else %}
+<meta property="profile:username" content="{{ site.github_username }}">
 {% endif %}
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": {% if page.layout == 'post' %}"BlogPosting"{% else %}"WebPage"{% endif %},
+  "headline": {{ page.title | default: site.title | jsonify }},
+  "description": {{ page_description | jsonify }},
+  "image": {{ social_image_url | jsonify }},
+  "url": {{ page.url | prepend: site.url | jsonify }},
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ page.url | prepend: site.url | jsonify }}
+  },
+  {% if page.layout == 'post' %}
+  "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+  "dateModified": {{ page.last_modified_at | default: page.date | date_to_xmlschema | jsonify }},
+  {% if page.tags %}
+  "keywords": {{ page.tags | join: ', ' | jsonify }},
+  {% endif %}
+  {% endif %}
+  "author": {
+    "@type": "Person",
+    "name": {{ page_author | jsonify }},
+    "url": {{ site.author_url | jsonify }},
+    "image": {{ site.author_image | jsonify }},
+    "sameAs": {{ site.author_profiles | jsonify }}
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": {{ site.author | jsonify }},
+    "url": {{ site.url | jsonify }}
+  }
+}
+</script>
 
 <!-- Canonical URL -->
 <link rel="canonical" href="{{ site.url }}{{ page.url }}">
