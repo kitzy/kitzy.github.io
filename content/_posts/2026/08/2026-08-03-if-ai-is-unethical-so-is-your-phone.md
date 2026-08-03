@@ -56,7 +56,7 @@ But "not all AI use is equally bad" and "AI deserves uniquely intense scrutiny c
 
 ## The selectivity is the point
 
-[There's no ethical consumption under capitalism](/blog/yet-you-participate-in-society-curious/) isn't a cop-out, and it isn't a reason to stop caring about anything. It's a description of where we actually are. Nobody can fully audit the supply chain of everything they touch. You'd never leave the house. You'd never turn on a device. The DRC cobalt is in the phone of the person complaining about AI training data, and it's in mine.
+[There's no ethical consumption under capitalism](/blog/yet-you-participate-in-society-curious/) isn't a cop-out, and it isn't a reason to stop caring about anything. It's a description of where we actually are. Nobody can fully audit the supply chain of everything they touch. You'd never leave the house. You'd never turn on a device. The DRC cobalt is in the phone of the person complaining about AI training data, and it's in the laptop I used to write this blog post.
 
 So we all draw a circle around who counts. Not out of malice, and not because the ethical concern or the environmental concern is fake - both are real, and I hold both. But the circle keeps landing in the same place: it includes people we can picture, people close enough to see, people whose loss registers as a loss because they look enough like us. It doesn't include the 40,000 children in DRC cobalt mines, or the families next to the Baotou tailings lake, or the Lickanantay communities watching the Atacama sink. Those aren't outside the circle because the harm is smaller. They're outside it because they're poor, and far away, and we'll never have to look at them while it happens.
 
