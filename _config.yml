@@ -4,6 +4,13 @@ description: "Always automating, always iterating, always helping others."
 baseurl: ""
 url: "https://kitzy.com"
 author: "Kitzy"
+author_url: "https://kitzy.com/readme/"
+author_image: "https://github.com/kitzy.png"
+author_profiles:
+  - "https://github.com/kitzy"
+  - "https://linkedin.com/in/kitzy"
+  - "https://bsky.app/profile/kitzy.com"
+  - "https://hachyderm.io/@kitzy"
 timezone: America/New_York
 
 # GitHub settings

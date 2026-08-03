@@ -9,6 +9,8 @@ layout: default
     
     {% if page.date %}
         <p class="post-meta">
+            <span class="post-author">By <a href="{{ '/readme/' | relative_url }}" rel="author">{{ page.author | default: site.author }}</a></span>
+            <span class="post-meta-separator">•</span>
             <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
             {% assign words = content | number_of_words %}
             {% assign read_time = words | divided_by: 200 | at_least: 1 %}

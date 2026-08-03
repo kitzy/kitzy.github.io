@@ -696,6 +696,16 @@ body {
     color: #484f58;
 }
 
+.post-author a {
+    color: #7d8590;
+    text-decoration: none;
+}
+
+.post-author a:hover {
+    color: #58a6ff;
+    text-decoration: underline;
+}
+
 .post-word-count,
 .post-read-time {
     color: #7d8590;
