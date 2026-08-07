@@ -1,6 +1,7 @@
 require 'net/http'
 require 'uri'
 require 'json'
+require 'fileutils'
 
 # Pulls in every guide/article on fleetdm.com authored by kitzy at build time
 # (via the GitHub code search API against the fleetdm/fleet repo) and exposes
@@ -14,9 +15,11 @@ module Jekyll
     GITHUB_USERNAME = 'kitzy'
     CACHE_TTL = 3600 # seconds; keeps `jekyll serve` from re-fetching on every rebuild
     REQUEST_TIMEOUT = 8
+    MAX_ATTEMPTS = 4
 
     def generate(site)
       cache_path = File.join(site.source, '.jekyll-cache', 'fleet-writing.json')
+      fallback_path = File.join(site.source, '_data', 'fleet_writing_fallback.json')
       articles = cached_articles(cache_path)
 
       if articles.nil?
@@ -25,7 +28,7 @@ module Jekyll
           write_cache(cache_path, articles)
         rescue => e
           Jekyll.logger.warn 'FleetWriting:', "fetch failed (#{e.class}: #{e.message}), falling back to cache"
-          articles = read_cache(cache_path) || []
+          articles = read_json(cache_path) || read_json(fallback_path) || []
         end
       end
 
@@ -37,14 +40,14 @@ module Jekyll
     def cached_articles(cache_path)
       return nil unless File.exist?(cache_path)
       return nil if Time.now - File.mtime(cache_path) > CACHE_TTL
-      read_cache(cache_path)
+      read_json(cache_path)
     end
 
-    def read_cache(cache_path)
-      return nil unless File.exist?(cache_path)
-      JSON.parse(File.read(cache_path))
+    def read_json(path)
+      return nil unless File.exist?(path)
+      JSON.parse(File.read(path))
     rescue => e
-      Jekyll.logger.warn 'FleetWriting:', "cache read failed (#{e.message})"
+      Jekyll.logger.warn 'FleetWriting:', "reading #{path} failed (#{e.message})"
       nil
     end
 
@@ -125,10 +128,38 @@ module Jekyll
       request = Net::HTTP::Get.new(uri.request_uri)
       headers.each { |key, value| request[key] = value }
 
-      response = http.request(request)
-      raise "HTTP #{response.code} for #{url}" unless response.is_a?(Net::HTTPSuccess)
+      attempt = 0
+      begin
+        attempt += 1
+        response = http.request(request)
 
-      response.body
+        if response.is_a?(Net::HTTPSuccess)
+          response.body
+        elsif retryable?(response) && attempt < MAX_ATTEMPTS
+          sleep(retry_delay(response, attempt))
+          retry
+        else
+          raise "HTTP #{response.code} for #{url}"
+        end
+      rescue Timeout::Error, SocketError, Errno::ECONNRESET => e
+        if attempt < MAX_ATTEMPTS
+          sleep(retry_delay(nil, attempt))
+          retry
+        else
+          raise e
+        end
+      end
+    end
+
+    def retryable?(response)
+      %w[403 429 500 502 503 504].include?(response.code)
+    end
+
+    def retry_delay(response, attempt)
+      retry_after = response && response['Retry-After']
+      return retry_after.to_f if retry_after
+
+      2**attempt # 2, 4, 8, 16 seconds
     end
   end
 end
