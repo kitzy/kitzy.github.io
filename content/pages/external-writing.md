@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Fleet Writing
+title: External Writing
 description: "Guides and articles I've written for Fleet"
-permalink: /fleet-writing/
+permalink: /external-writing/
 ---
 
 <div class="markdown-content">
 
-    <p>Guides and articles I've written for <a href="https://fleetdm.com" target="_blank" rel="noopener noreferrer">Fleet</a>. This list is pulled automatically from fleetdm.com at build time, so it's always up to date.</p>
+    <p>Guides and articles I've written for <a href="https://fleetdm.com" target="_blank" rel="noopener noreferrer">Fleet</a>.</p>
 
     {% assign all_writing = site.data.fleet_writing %}
 
