@@ -128,27 +128,24 @@ module Jekyll
       request = Net::HTTP::Get.new(uri.request_uri)
       headers.each { |key, value| request[key] = value }
 
-      attempt = 0
-      begin
-        attempt += 1
-        response = http.request(request)
+      last_error = nil
 
-        if response.is_a?(Net::HTTPSuccess)
-          response.body
-        elsif retryable?(response) && attempt < MAX_ATTEMPTS
-          sleep(retry_delay(response, attempt))
-          retry
-        else
-          raise "HTTP #{response.code} for #{url}"
-        end
-      rescue Timeout::Error, SocketError, Errno::ECONNRESET => e
-        if attempt < MAX_ATTEMPTS
+      (1..MAX_ATTEMPTS).each do |attempt|
+        begin
+          response = http.request(request)
+          return response.body if response.is_a?(Net::HTTPSuccess)
+          raise "HTTP #{response.code} for #{url}" unless retryable?(response)
+
+          last_error = "HTTP #{response.code} for #{url}"
+          sleep(retry_delay(response, attempt)) if attempt < MAX_ATTEMPTS
+        rescue Timeout::Error, SocketError, Errno::ECONNRESET => e
+          last_error = e
+          raise e if attempt >= MAX_ATTEMPTS
           sleep(retry_delay(nil, attempt))
-          retry
-        else
-          raise e
         end
       end
+
+      raise(last_error.is_a?(Exception) ? last_error : last_error.to_s)
     end
 
     def retryable?(response)
