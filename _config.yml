@@ -95,5 +95,7 @@ navigation:
     url: "/talks/"
   - title: "Podcasts"
     url: "/podcasts/"
+  - title: "Fleet Writing"
+    url: "/fleet-writing/"
   - title: "README"
     url: "/readme/"
