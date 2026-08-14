@@ -95,5 +95,7 @@ navigation:
     url: "/talks/"
   - title: "Podcasts"
     url: "/podcasts/"
+  - title: "External Writing"
+    url: "/external-writing/"
   - title: "README"
     url: "/readme/"
