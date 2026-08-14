@@ -1,15 +1,5 @@
 // Jekyll site - minimal JavaScript for enhanced functionality
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu toggle
-    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-    const sidebar = document.querySelector('.sidebar');
-    
-    if (mobileMenuToggle) {
-        mobileMenuToggle.addEventListener('click', function() {
-            sidebar.classList.toggle('active');
-        });
-    }
-    
     // Add anchor links to headings (only on blog posts and readme page)
     const body = document.body;
     const layout = body.getAttribute('data-layout');
