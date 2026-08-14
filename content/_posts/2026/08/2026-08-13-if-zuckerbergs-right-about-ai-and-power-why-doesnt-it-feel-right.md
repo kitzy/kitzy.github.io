@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "If Zuckerberg's Right About AI and Power, Why Doesn't It Feel Right?"
+title: "If Zuckerberg's right about AI and power, why doesn't it feel right?"
 description: "Meta's new AI manifesto makes an argument I've made myself, about concentrated power being the real danger. That's exactly why it's worth taking apart."
 date: 2026-08-13
 tags: [AI, capitalism, values, work]
