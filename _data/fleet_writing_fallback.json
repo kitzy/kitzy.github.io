@@ -3,6 +3,7 @@
     "title": "Manage Fleet during a GitOps outage",
     "url": "https://fleetdm.com/guides/manage-fleet-during-a-gitops-outage",
     "category": "guides",
+    "source": "Fleet",
     "published_on": "2026-08-06",
     "description": "What to do when your CI provider is down and you need to make an urgent change to Fleet outside of GitOps."
   },
@@ -10,6 +11,7 @@
     "title": "Deploy Visual Studio on Windows with Fleet",
     "url": "https://fleetdm.com/guides/deploy-visual-studio-with-fleet",
     "category": "guides",
+    "source": "Fleet",
     "published_on": "2026-08-06",
     "description": "Deploy Visual Studio 2022 on Windows with Fleet. Pin workloads for a fleet, or let developers choose their own."
   },
@@ -17,6 +19,7 @@
     "title": "AI isn't just replacing jobs, it's rewriting the job description",
     "url": "https://fleetdm.com/articles/ai-rewriting-the-job-description",
     "category": "articles",
+    "source": "Fleet",
     "published_on": "2026-06-26",
     "description": "AI isn't eliminating IT jobs. It's changing what IT work looks like, and the divide it's drawing runs through IT teams. Here's what the data shows."
   },
@@ -24,6 +27,7 @@
     "title": "Managed Migration Assistant: Mac-to-Mac migration with Fleet",
     "url": "https://fleetdm.com/guides/managed-migration-assistant-mac-to-mac-migration-with-fleet",
     "category": "guides",
+    "source": "Fleet",
     "published_on": "2026-06-26",
     "description": "macOS 26.4 adds Managed Migration Assistant. Learn how to configure it with Fleet to control what transfers during Mac-to-Mac migrations."
   },
@@ -31,6 +35,7 @@
     "title": "Enforce macOS updates per major version using custom DDM declarations",
     "url": "https://fleetdm.com/guides/enforce-macos-updates-per-major-version",
     "category": "guides",
+    "source": "Fleet",
     "published_on": "2026-06-16",
     "description": "Enforce different minimum patch versions for major macOS versions on the same fleet using custom DDM declarations scoped to labels."
   },
@@ -38,6 +43,7 @@
     "title": "WWDC 2026: What IT admins need to know",
     "url": "https://fleetdm.com/articles/wwdc-2026-what-it-admins-need-to-know",
     "category": "articles",
+    "source": "Fleet",
     "published_on": "2026-06-09",
     "description": "WWDC 2026 delivers sweeping device management changes. Here's what IT admins need to prioritize before OS 27 ships this fall."
   },
@@ -45,6 +51,7 @@
     "title": "Use a canary fleet to catch fleetd conflicts before they reach production",
     "url": "https://fleetdm.com/guides/canary-fleet-for-fleetd-updates",
     "category": "guides",
+    "source": "Fleet",
     "published_on": "2026-05-28",
     "description": "Set up a canary fleet on Fleet's edge update channel to catch fleetd conflicts with your EDR and security stack before they reach production devices."
   },
@@ -52,6 +59,7 @@
     "title": "Use AutoPkg with Fleet",
     "url": "https://fleetdm.com/guides/autopkg-with-fleet",
     "category": "guides",
+    "source": "Fleet",
     "published_on": "2026-04-28",
     "description": "Learn how to use the community-maintained FleetImporter AutoPkg processor to automatically upload packages to Fleet."
   },
@@ -59,6 +67,7 @@
     "title": "What is device attestation, and why does it matter for Apple enrollment?",
     "url": "https://fleetdm.com/articles/what-is-device-attestation",
     "category": "articles",
+    "source": "Fleet",
     "published_on": "2026-04-24",
     "description": "Fleet 4.84.0 adds hardware-attested MDM enrollment for Apple Silicon Macs. Here's what device attestation is and why it matters."
   },
@@ -66,6 +75,7 @@
     "title": "Why AI-powered device management requires GitOps",
     "url": "https://fleetdm.com/articles/why-ai-powered-device-management-requires-gitops",
     "category": "articles",
+    "source": "Fleet",
     "published_on": "2026-04-17",
     "description": "Device management is about to change. AI is why. GitOps is how."
   },
@@ -73,6 +83,7 @@
     "title": "Migrate Fleet server to a new deployment",
     "url": "https://fleetdm.com/guides/migrate-fleet-server",
     "category": "guides",
+    "source": "Fleet",
     "published_on": "2026-02-06",
     "description": "Migrate your Fleet server to a new deployment with this step-by-step guide."
   },
@@ -80,6 +91,7 @@
     "title": "Set a device hostname via the Fleet API",
     "url": "https://fleetdm.com/guides/set-device-hostname-via-fleet-api",
     "category": "guides",
+    "source": "Fleet",
     "published_on": "2026-01-26",
     "description": "Use Fleet's API to set device hostnames on macOS, iOS, and iPadOS. This guide walks through building and sending the MDM command to rename devices."
   },
@@ -87,6 +99,7 @@
     "title": "Manage bootstrap packages with GitOps",
     "url": "https://fleetdm.com/guides/manage-bootstrap-package-with-gitops",
     "category": "guides",
+    "source": "Fleet",
     "published_on": "2026-01-12",
     "description": "Learn how to manage bootstrap packages across fleets using Fleet's GitOps workflow and API endpoints for automated device enrollment."
   },
@@ -94,6 +107,7 @@
     "title": "Deploy Fleet with Docker Compose",
     "url": "https://fleetdm.com/guides/deploy-fleet-on-docker-compose",
     "category": "guides",
+    "source": "Fleet",
     "published_on": "2025-12-01",
     "description": "Learn how to deploy Fleet using Docker Compose."
   }

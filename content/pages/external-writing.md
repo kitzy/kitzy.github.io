@@ -7,13 +7,10 @@ permalink: /external-writing/
 
 <div class="markdown-content">
 
-    <p>Guides and articles I've written for <a href="https://fleetdm.com" target="_blank" rel="noopener noreferrer">Fleet</a>.</p>
-
     {% assign all_writing = site.data.fleet_writing %}
 
     {% if all_writing and all_writing.size > 0 %}
         <div class="speaking-section">
-            <h2>Guides &amp; Articles</h2>
             <div class="speaking-grid">
                 {% for item in all_writing %}
                     <div class="speaking-item">
@@ -25,13 +22,7 @@ permalink: /external-writing/
                             </h3>
                             <div class="speaking-meta">
                                 <span class="speaking-date">{{ item.published_on | date: "%B %-d, %Y" }}</span>
-                                <span class="speaking-venue">
-                                    {% case item.category %}
-                                        {% when 'guides' %}Guide
-                                        {% when 'articles' %}Article
-                                        {% else %}{{ item.category | capitalize }}
-                                    {% endcase %}
-                                </span>
+                                <span class="speaking-venue">{{ item.source }}</span>
                             </div>
                         </div>
                         {% if item.description %}

@@ -92,6 +92,7 @@ module Jekyll
         'title' => title,
         'url' => "https://fleetdm.com/#{category}/#{slug}",
         'category' => category,
+        'source' => 'Fleet',
         'published_on' => published_on,
         'description' => meta_value(content, 'description'),
       }
