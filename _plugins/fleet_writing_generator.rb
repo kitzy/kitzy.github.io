@@ -134,7 +134,7 @@ module Jekyll
       (1..MAX_ATTEMPTS).each do |attempt|
         begin
           response = http.request(request)
-          return response.body if response.is_a?(Net::HTTPSuccess)
+          return response.body.force_encoding('UTF-8') if response.is_a?(Net::HTTPSuccess)
           raise "HTTP #{response.code} for #{url}" unless retryable?(response)
 
           last_error = "HTTP #{response.code} for #{url}"
