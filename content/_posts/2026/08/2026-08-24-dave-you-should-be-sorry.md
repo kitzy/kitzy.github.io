@@ -6,7 +6,7 @@ date: 2026-08-24
 tags: [values, community, AI]
 ---
 
-If you're excited about Omarchy right now, I get it, and you're not alone. David Heinemeier Hansson - known as DHH -  has earned a lot of trust in this industry over a long career. He built Ruby on Rails, a framework a staggering amount of the web still runs on. He co-founded 37signals, and Basecamp and HEY are products a lot of people I know use every day. He was arguing that remote work was viable, even better, years before most of the industry caught up, and he was right. And now he's built Omarchy, a genuinely well-made Arch Linux and Hyprland setup that's showing up in a lot of the feeds I follow, dotfiles and all. None of that is fake. He's earned it.
+If you're excited about Omarchy right now, I get it, and you're not alone. David Heinemeier Hansson - known as DHH -  has earned a lot of trust in this industry over a long career. He built Ruby on Rails, a framework a staggering amount of the web still runs on. He co-founded 37signals, and Basecamp and HEY are products a lot of people I know use every day. He was arguing that remote work was viable, even better, years before most of the industry caught up, and he was right. And now he's built Omarchy, a genuinely well-made Arch Linux and Hyprland setup that's showing up in a lot of the feeds I follow. None of that is fake. He's earned it.
 
 Which is exactly why you should know the rest of what he's been writing lately, because a lot of people are getting introduced to him right now as the Omarchy guy, without any of this other context.
 
