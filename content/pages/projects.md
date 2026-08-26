@@ -3,6 +3,7 @@ layout: default
 title: Projects
 description: "My projects and open source contributions"
 permalink: /projects/
+hide_updated_on: true
 ---
 
 Here are some projects I've created and contributed to. I focus mostly on Mac admin tooling - automating the boring parts of device management so you can focus on the things that actually matter.

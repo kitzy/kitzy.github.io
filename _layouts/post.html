@@ -20,7 +20,9 @@ layout: default
             <span class="post-read-time">{{ read_time }} min read</span>
         </p>
     {% endif %}
-    
+
+    {% include updated-on.html %}
+
     {% if page.tags and page.tags.size > 0 %}
         <p class="post-meta">
             <span class="tag-icon">🏷️</span>

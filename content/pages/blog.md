@@ -3,6 +3,7 @@ layout: default
 title: Blog
 description: "My thoughts on infrastructure, automation, and IT engineering"
 permalink: /
+hide_updated_on: true
 ---
 
 <div class="markdown-content">
