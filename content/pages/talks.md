@@ -3,6 +3,7 @@ layout: default
 title: Talks
 description: "Conference talks and technical presentations"
 permalink: /talks/
+hide_updated_on: true
 ---
 
 <div class="markdown-content">
