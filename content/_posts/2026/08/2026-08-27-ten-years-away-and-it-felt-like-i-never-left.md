@@ -6,7 +6,7 @@ date: 2026-08-27
 tags: [community, mac admin, belonging, fleet, life]
 ---
 
-![Laptop covered in years of Mac admin community stickers, with an X World 2026 presenter badge reading "Kitzy, they/she" on top](/assets/images/x-world-2026-badge.jpg)
+![Laptop covered in years of Mac admin community stickers, with an X World 2026 presenter badge reading "Kitzy, they/she" on top](/content/assets/images/x-world-2026-badge.jpg)
 
 Ten years is a long time to stay away from a place that gave you your name.
 
