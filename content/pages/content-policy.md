@@ -9,7 +9,7 @@ permalink: /content-policy/
 
 ## Whose opinions these are
 
-Everything published on this blog reflects my own opinions. It does not represent the views, positions, or opinions of any employer or other organization I am affiliated with, past or present. No employer or other organization has any editorial input into, or approval over, what I publish here.
+Everything published on this blog reflects my own opinions. It does not represent the views, positions, or opinions of any employer or other organization I am affiliated with, past, present, or future. No employer or other organization has any editorial input into, or approval over, what I publish here.
 
 ## AI use
 

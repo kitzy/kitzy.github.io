@@ -1,0 +1,8 @@
+{% if page.show_updated_on and page.hide_updated_on != true %}
+    <p class="post-meta post-updated">
+        <span>Updated on</span>
+        <a href="https://github.com/{{ site.repository }}/commits/main/{{ page.repo_path }}" target="_blank" rel="noopener">
+            <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{{ page.last_modified_at | date: "%B %d, %Y" }}</time>
+        </a>
+    </p>
+{% endif %}

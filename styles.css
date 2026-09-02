@@ -899,6 +899,15 @@ button {
     color: var(--lcars-muted);
 }
 
+.post-updated a {
+    color: #58a6ff;
+    text-decoration: none;
+}
+
+.post-updated a:hover {
+    text-decoration: underline;
+}
+
 /* Tag styles */
 .post-tags {
     display: inline;

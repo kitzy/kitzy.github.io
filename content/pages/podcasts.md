@@ -3,6 +3,7 @@ layout: default
 title: Podcasts
 description: "Podcast appearances and conversations"
 permalink: /podcasts/
+hide_updated_on: true
 ---
 
 <div class="markdown-content">

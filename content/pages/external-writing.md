@@ -3,6 +3,7 @@ layout: default
 title: External Writing
 description: "Guides and articles I've written for Fleet"
 permalink: /external-writing/
+hide_updated_on: true
 ---
 
 <div class="markdown-content">
