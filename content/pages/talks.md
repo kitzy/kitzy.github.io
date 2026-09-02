@@ -8,10 +8,10 @@ hide_updated_on: true
 
 <div class="markdown-content">
 
-    <div class="speaking-section upcoming-talks">
-        <h2>Upcoming Talks</h2>
+    <div class="speaking-section past-talks">
+        <h2>Past Talks</h2>
         <div class="speaking-grid">
-            <div class="speaking-item upcoming">
+            <div class="speaking-item">
                 <div class="speaking-header">
                     <h3 class="speaking-title">
                         <a href="https://xworld.au/presentation/index/260" target="_blank" rel="noopener noreferrer">
@@ -25,14 +25,17 @@ hide_updated_on: true
                     </div>
                 </div>
                 <p class="speaking-description">
-                    Device management teams are asked to do more with less. More platforms, more compliance requirements, more endpoints, and often the same headcount. AI doesn't solve that by replacing the engineer. It solves it by making each engineer faster, more accurate, and less dependent on tribal knowledge they haven't had time to build yet. In this talk, we'll explore what AI-accelerated device management looks like in practice. We'll cover how to give an AI assistant the context it needs to produce accurate, platform-appropriate output, how to validate what it generates, and how to build review practices that keep humans in the loop on what actually ships. We'll demo AI-assisted policy authoring across macOS, Windows, and Linux, showing how to go from a compliance requirement to a tested, production-ready configuration in a fraction of the time it would take manually. You'll leave with a methodology you can apply to your tooling of choice, practical patterns for writing context that makes AI output trustworthy, and a clearer picture of what device management looks like when AI is doing the work it's actually good at.
+                    Device management teams are asked to do more with less: more platforms, more compliance requirements, the same headcount. This talk covers how to give an AI assistant the context it needs to produce accurate, platform-appropriate output, and how to build review practices that keep humans in the loop. Includes live demos of AI-assisted policy authoring across macOS, Windows, and Linux.
+                </p>
+                <p class="speaking-description">
+                    <em>Recording coming soon</em>
                 </p>
             </div>
 
-            <div class="speaking-item upcoming">
+            <div class="speaking-item">
                 <div class="speaking-header">
                     <h3 class="speaking-title">
-                        <a href="https://xworld.au/presentation/index/255" target="_blank" rel="noopener noreferrer">
+                        <a href="https://youtu.be/q2Wday3ZOi0" target="_blank" rel="noopener noreferrer">
                             Stop clicking and start committing: A pull-request workflow for device management
                         </a>
                     </h3>
@@ -43,15 +46,13 @@ hide_updated_on: true
                     </div>
                 </div>
                 <p class="speaking-description">
-                    Device management is still mostly ClickOps. Config in a GUI, changes made by hand, no audit trail, no rollback, no way to answer "who changed this and why." The case for GitOps, version control, pull request review, and a single source of truth, has been clear for years. What's changed is the urgency. AI is going to fundamentally change how devices are managed. Not eventually, it's already happening. The ergonomic barrier that made config-as-code feel like homework, knowing the schema, writing the YAML, getting the scoping right, is gone. AI coding agents can already turn a sentence of intent into a pull request against your MDM configuration. Teams that have GitOps discipline are positioned to move as each new capability lands. Teams with config in a GUI are going to be doing a migration while everyone else is already running. This session covers why GitOps is the prerequisite for AI-accelerated device management, what that workflow looks like in practice, and what the job looks like when the authoring is handled and the review is what's left. Attendees will leave with a concrete path from ClickOps to a workflow that's ready for what's already here.
+                    Device management is still mostly ClickOps - no audit trail, no rollback, no way to answer who changed what and why. AI coding agents can now turn a sentence of intent into a pull request against your MDM configuration, but only for teams with GitOps discipline already in place. This talk covers why GitOps is the prerequisite for AI-accelerated device management and what that workflow looks like in practice.
+                </p>
+                <p class="speaking-description">
+                    <a href="https://youtu.be/q2Wday3ZOi0" target="_blank" rel="noopener noreferrer">▶ Watch the recording</a>
                 </p>
             </div>
-        </div>
-    </div>
 
-    <div class="speaking-section past-talks">
-        <h2>Past Talks</h2>
-        <div class="speaking-grid">
             <div class="speaking-item">
                 <div class="speaking-header">
                     <h3 class="speaking-title">
