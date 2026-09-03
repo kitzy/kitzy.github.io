@@ -302,6 +302,9 @@ button {
     padding-top: 16px;
     border-top: 2px solid var(--lcars-border);
     font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 }
 
 .sidebar-footer a {
